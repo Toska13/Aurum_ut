@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2a35fdab-d935-406b-bd58-3dd1b8d7d923">
+  <producedTypes>
+    <selectionType typeId="f80396a4-517b-4985-958f-e52020585e6f" valueTypeId="9a2ca8f9-d48e-40c3-ad26-359d59331d45"/>
+    <listType typeId="4ef8c49a-02f1-47f5-94d7-3c110eda6d71" valueTypeId="95db5537-414c-402b-9daf-2b8f2500aa56"/>
+    <managerType typeId="bb36309e-78ab-4778-93ba-c7832d226038" valueTypeId="d342091e-af1e-4156-93d4-e3ddcb639f4f"/>
+    <recordSetType typeId="cb3667d8-84bc-4452-9803-4e7d5f861c3b" valueTypeId="72db6490-0f66-40ee-8de6-ceee18ae15b7"/>
+    <recordKeyType typeId="3d6f3fa7-1db7-474a-a0a9-53fdfeecd1f8" valueTypeId="868749f2-6847-4f17-9ec9-3abf6b153dc2"/>
+    <recordType typeId="a7d66d20-b4d6-4c84-b64e-edf843ed074c" valueTypeId="ca285d0f-3132-46e2-bf6d-5117169ec041"/>
+    <recordManagerType typeId="3368ea20-b4e0-458c-ac9e-c57f74f0e0f7" valueTypeId="c550809f-8ec6-4ad5-9a6a-41e0975f6ed8"/>
+  </producedTypes>
+  <name>КонтурЛогистика_БазовыеСоответствияНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Базовые соответствия номенклатуры (Контур.Логистика)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КонтурЛогистика_БазовыеСоответствияНоменклатуры.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КонтурЛогистика_БазовыеСоответствияНоменклатуры.Form.ФормаНабораЗаписей</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>Соответствия номенклатуры</value>
+  </listPresentation>
+  <resources uuid="e4d3bbf7-15f1-41ad-a913-77ce76ad0f28">
+    <name>Учитывать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учитывать</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:BooleanValue">
+      <value>true</value>
+    </fillValue>
+  </resources>
+  <resources uuid="06e93b1f-e2f9-44de-89d2-036bba96344c">
+    <name>КоэффициентПересчетаМест</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэфф.Количество1С > Мест</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ЧФ=Ч</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ЧФ=Ч</value>
+    </editFormat>
+    <toolTip>
+      <key>ru</key>
+      <value>Коэффициент пересчета количества мест из 1С в Логистику</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="d80e1d8f-834d-4192-a02e-43f9db4126f8">
+    <name>КоэффициентПересчетаКоличествоПаллет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэфф.Количество1С > Паллеты</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ЧФ=Ч</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ЧФ=Ч</value>
+    </editFormat>
+    <toolTip>
+      <key>ru</key>
+      <value>Коэффициент пересчета количества мест из 1С в Логистику</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="7d34b7c8-c03d-4823-9bff-88f0090a1444">
+    <name>КодТНВЭД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код ТНВЭД</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>4</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="d10c572a-b64f-4f1b-ac4b-f4597952e5e9">
+    <name>ОтгрузочноеНаименование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгрузочное наименование</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="892d8c39-e8fc-46b2-8df6-9ccde00693f0">
+    <name>СостояниеГруза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние груза</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="55f11791-16b7-46d3-9326-f417e857bf10">
+    <name>МассаБруттоКг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Масса брутто кг 1 единицы</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a42e188b-2239-4536-87ba-dfbcd18ec191">
+    <name>ОбъемКубМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объем (куб м.) 1 единицы</value>
+    </synonym>
+    <comment>Необязательное поле</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f07b2b25-dc3c-4c8d-b4b6-c87b6795b08c">
+    <name>МассаНеттоКг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Масса нетто кг 1 единицы</value>
+    </synonym>
+    <comment>необязательная, обязательная - Брутто</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="890ced4b-6680-42a4-8a76-449815085d12">
+    <name>ДопИнформация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп информация</value>
+    </synonym>
+    <comment>необязательное поле</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="c9e99d0a-d688-4a92-b50d-ece35515366e">
+    <name>ОбъявленнаяЦенность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объявленная ценность</value>
+    </synonym>
+    <comment>Стоимость (ценность) груза с налогом - всего</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Стоимость (ценность) груза с налогом - всего</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="44066c6a-8010-4be2-b78a-9c1902e0f94b">
+    <name>ОбъявленнаяЦенностьВалюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объявленная ценность валюта</value>
+    </synonym>
+    <comment>Стоимость (ценность) груза с налогом - всего</comment>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Валюта стоимости (ценности)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="66853734-0d5e-4edd-a3b8-159340a325e3">
+    <name>СпособУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ упаковки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="61434b2f-f576-4ed0-96b2-6eb6200b205c">
+    <name>ВидТары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид тары</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_КлассификаторУпаковок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="37d803c0-d388-44c5-8524-09ea61346b87">
+    <name>Плотность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Плотность</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Измеряется в килограммах на кубический метр</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2443e015-ab59-4c25-9b99-e2f3f079c760">
+    <name>УчетГрузаВГИС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учет груза в ГИС</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>поле необязательно, поэтому сброшенный флажок не будет приводить к отправке признака что не подлежит учету в ГИС</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4868a708-2f89-41e1-a49d-c3c212e304fc">
+    <name>ЗначениеМаркировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение маркировки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="64f445c2-b404-40ce-a23d-8a87d4632124">
+    <name>ОписаниеОпасногоГруза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание опасного груза</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ОписанияОпасныхГрузов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8e4df428-ce1a-4a5c-979b-96ee1467c873">
+    <name>Высота</name>
+    <synonym>
+      <key>ru</key>
+      <value>Высота (м)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c6248063-7d37-44f5-82af-a34a2851eb23">
+    <name>Длина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длина (м)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="670ef2b2-1e08-4c1b-a945-b2856d9f3085">
+    <name>Ширина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ширина (м)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a66e118a-a277-48a0-b31a-9f8a7e444e98">
+    <name>Насыпной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Насыпной (наливной)</value>
+    </synonym>
+    <comment>Насыпной</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3e38be55-6041-4717-92f9-137768b7eaa7">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <createOnInput>DontUse</createOnInput>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="07109bce-7cbe-4427-93d1-b1ba1ebec034">
+    <name>УпаковкаЕдиницаИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Упаковка единица измерения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УпаковкиЕдиницыИзмерения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="092e1346-5c56-4ee6-8a4a-d6307610bade">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Номенклатура</name>
+      <field>InformationRegister.КонтурЛогистика_БазовыеСоответствияНоменклатуры.Dimension.Номенклатура</field>
+    </choiceParameterLinks>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="96c47d7f-1a98-4f2f-863c-ff7e48e676a9">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="49e02bf0-683a-4349-bcce-248ab7ec2fca">
+    <name>ФормаНабораЗаписей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма набора записей</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

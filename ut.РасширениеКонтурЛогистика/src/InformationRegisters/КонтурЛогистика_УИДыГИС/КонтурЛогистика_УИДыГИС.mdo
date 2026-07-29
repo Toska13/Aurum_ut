@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a762ebe0-76c9-4e67-8214-39ee390b0303">
+  <producedTypes>
+    <selectionType typeId="72250b41-0029-4878-8eb0-d9ff47126792" valueTypeId="f7c91a6e-6282-4686-afc1-48b3a28273c0"/>
+    <listType typeId="ed820d59-d6fb-441f-b290-daaa67c444fa" valueTypeId="b17f196b-27d2-4e92-a222-8b235a4a3919"/>
+    <managerType typeId="3bbb7eb4-327b-4f19-b433-4fd420337c12" valueTypeId="0dff342e-e682-42ff-a534-de97b44d8221"/>
+    <recordSetType typeId="5c4e1bd9-5405-48d6-9cfb-02ae2aa71b75" valueTypeId="72c5054c-a839-4aa4-b5cf-31fcfc4fc6c8"/>
+    <recordKeyType typeId="906849da-18f1-4a22-b3c9-a21c7f91c64f" valueTypeId="ff3fe024-77b1-448d-ac3b-8c447b7c0486"/>
+    <recordType typeId="34cceb0a-4733-4dec-b96b-6636ccaf2b21" valueTypeId="0d8e6191-de39-4fdd-b7a1-09185dd023ab"/>
+    <recordManagerType typeId="0f1361cd-44f6-4472-b62d-90dfb6ad2959" valueTypeId="039fd943-5cd6-46f9-a52d-d016e6050a4e"/>
+  </producedTypes>
+  <name>КонтурЛогистика_УИДыГИС</name>
+  <synonym>
+    <key>ru</key>
+    <value>УИДы ГИС Минтранса (Контур.Логистика)</value>
+  </synonym>
+  <comment>Хранит пул доступных для использования УИДов минтранса</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КонтурЛогистика_УИДыГИС.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КонтурЛогистика_УИДыГИС.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>УИДы ГИС Минтранса</value>
+  </listPresentation>
+  <resources uuid="a5d9c311-e0fc-4168-b4dd-1d81af01629f">
+    <name>Использован</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использован</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="0a58b24c-9ee8-4e14-8679-41dc4b381c6d">
+    <name>ДатаОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата операции</value>
+    </synonym>
+    <comment>Дата операции добавления / использования</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="c85349d5-d529-4be8-8adc-844c29d38bc8">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ОрганизацииДиадок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4e1498e4-daeb-413e-bd58-883dc042d07e">
+    <name>УИД</name>
+    <synonym>
+      <key>ru</key>
+      <value>УИД</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="24e9f430-f63f-4092-ae96-5e4562fb0eee">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="12364dd4-7d09-4d0e-a768-b1b1c2400749">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="28a12187-3c23-4076-9731-d7f8837f2b34">
+    <name>ФормаЗагрузкиПулаУИД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма загрузки пула УИД</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="23178ea6-eed0-417f-a970-58aaeef9ffc6">
+    <name>ФормаЗагрузкиПулаУИДИзApi</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма загрузки пула УИДИз api</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="bc4797e3-1170-4844-b1df-62657910944e">
+    <name>ЗагрузитьПулИзФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузить новый пул УИДов</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <representation>PictureAndText</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Записать в базу новый пул доступных для использования УИД ГИС Минтранса из списка, полученного от КонтурЛогистика</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.CreateListItem</picture>
+    </picture>
+  </commands>
+  <commands uuid="a828d201-9d64-49fc-8b43-ecc9d82bcf89">
+    <name>ЗагрузитьПулИзApi</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузить пул из api</value>
+    </synonym>
+    <group>FormNavigationPanelImportant</group>
+    <representation>PictureAndText</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Записать в базу новый пул доступных для использования УИД ГИС Минтранса из веба КонтурЛогистика</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.КонтурЛогистика_Загрузить</picture>
+    </picture>
+  </commands>
+</mdclass:InformationRegister>

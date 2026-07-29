@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>СпрЯчейки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдТовара_GUID</dataPath>
+			<field>ИдТовара_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид товара GUID</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдСклада_GUID</dataPath>
+			<field>ИдСклада_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид склада GUID</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдЯчейки_GUID</dataPath>
+			<field>ИдЯчейки_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид ячейки GUID</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяЯчейки</dataPath>
+			<field>ИмяЯчейки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя ячейки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрихкодЯчейки</dataPath>
+			<field>ШтрихкодЯчейки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод ячейки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВЫБОР
+		КОГДА РазмещениеНоменклатурыПоСкладскимЯчейкам.Помещение = ЗНАЧЕНИЕ(Справочник.СкладскиеПомещения.ПустаяСсылка)
+			ТОГДА РазмещениеНоменклатурыПоСкладскимЯчейкам.Склад
+		ИНАЧЕ РазмещениеНоменклатурыПоСкладскимЯчейкам.Помещение
+	КОНЕЦ КАК ИдСклада_GUID,
+	РазмещениеНоменклатурыПоСкладскимЯчейкам.Номенклатура КАК ИдТовара_GUID,
+	РазмещениеНоменклатурыПоСкладскимЯчейкам.Ячейка КАК ИдЯчейки_GUID,
+	РазмещениеНоменклатурыПоСкладскимЯчейкам.Ячейка.Код КАК ИмяЯчейки,
+	"                                       " КАК ШтрихкодЯчейки, // 39 символов, т.к. в это поле будет записываться числовой код по ссылке
+	ВЫБОР
+		КОГДА РазмещениеНоменклатурыПоСкладскимЯчейкам.ОсновнаяЯчейка
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Приоритет
+ИЗ
+	РегистрСведений.РазмещениеНоменклатурыПоСкладскимЯчейкам КАК РазмещениеНоменклатурыПоСкладскимЯчейкам
+ГДЕ
+	НЕ РазмещениеНоменклатурыПоСкладскимЯчейкам.Номенклатура.ПометкаУдаления
+	И ВЫБОР
+			КОГДА РазмещениеНоменклатурыПоСкладскимЯчейкам.Помещение = ЗНАЧЕНИЕ(Справочник.СкладскиеПомещения.ПустаяСсылка)
+				ТОГДА НЕ РазмещениеНоменклатурыПоСкладскимЯчейкам.Склад.ПометкаУдаления
+						И НЕ РазмещениеНоменклатурыПоСкладскимЯчейкам.Склад.ИспользоватьСкладскиеПомещения
+			ИНАЧЕ НЕ РазмещениеНоменклатурыПоСкладскимЯчейкам.Помещение.ПометкаУдаления
+		КОНЕЦ
+	И НЕ РазмещениеНоменклатурыПоСкладскимЯчейкам.Ячейка.ПометкаУдаления</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдСклада_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдТовара_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдЯчейки_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИмяЯчейки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШтрихкодЯчейки</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

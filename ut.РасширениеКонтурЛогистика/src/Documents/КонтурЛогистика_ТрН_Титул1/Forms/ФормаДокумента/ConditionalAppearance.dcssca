@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыНомерСтроки</field>
+			</item>
+			<item>
+				<field>ТоварыТребуемоеДействие</field>
+			</item>
+			<item>
+				<field>ТоварыНоменклатура</field>
+			</item>
+			<item>
+				<field>ТоварыХарактеристика</field>
+			</item>
+			<item>
+				<field>ТоварыКоличество</field>
+			</item>
+			<item>
+				<field>ТоварыУпаковкаЕдиницаИзмерения</field>
+			</item>
+			<item>
+				<field>ТоварыКоличествоМест</field>
+			</item>
+			<item>
+				<field>ТоварыМассаПлановаяБруттоКг</field>
+			</item>
+			<item>
+				<field>ТоварыОбъемКубМ</field>
+			</item>
+			<item>
+				<field>ТоварыОтгрузочноеНаименование</field>
+			</item>
+			<item>
+				<field>ТоварыСостояниеГруза</field>
+			</item>
+			<item>
+				<field>ТоварыКодТНВЭД</field>
+			</item>
+			<item>
+				<field>ТоварыКоличествоПаллет</field>
+			</item>
+			<item>
+				<field>ТоварыМассаПлановаяНеттоКг</field>
+			</item>
+			<item>
+				<field>ТоварыДопИнформация</field>
+			</item>
+			<item>
+				<field>ТоварыОбъявленнаяЦенность</field>
+			</item>
+			<item>
+				<field>ТоварыОбъявленнаяЦенностьВалюта</field>
+			</item>
+			<item>
+				<field>ТоварыСпособУпаковки</field>
+			</item>
+			<item>
+				<field>ТоварыВидТары</field>
+			</item>
+			<item>
+				<field>ТоварыПлотность</field>
+			</item>
+			<item>
+				<field>ТоварыУчетГрузаВГИС</field>
+			</item>
+			<item>
+				<field>ТоварыЗаказчикПеревозки</field>
+			</item>
+			<item>
+				<field>ТоварыЗаказчикОрганизацияДиадок</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.Учитывать</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыТребуемоеДействие</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.ТребуемоеДействие</left>
+				<comparisonType>BeginsWith</comparisonType>
+				<right xsi:type="xs:string">Готов</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыМассаПлановаяБруттоКг</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.МассаПлановаяБруттоКг</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:decimal">0</right>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.Учитывать</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;укажите&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыОтгрузочноеНаименование</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.ОтгрузочноеНаименование</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.Учитывать</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;укажите&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыСостояниеГруза</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.СостояниеГруза</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.Учитывать</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;укажите&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыВидТары</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.ВидТары</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.Учитывать</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;укажите&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыСпособУпаковки</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.СпособУпаковки</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.Учитывать</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;укажите&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыНоменклатура</field>
+			</item>
+			<item>
+				<field>ТоварыХарактеристика</field>
+			</item>
+			<item>
+				<field>ТоварыУпаковкаЕдиницаИзмерения</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.Свернута</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;свернута&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДокументыОснованияДокументОснование</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ДокументыОснования.ДокументОснование</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="dcscor:Field">Объект.ДокументОснование</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДокументыОснованияЭтоДокументЗаполнения</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ДокументыОснования.ДокументОснование</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="dcscor:Field">Объект.ДокументОснование</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;используется для заполнения&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ОпасныеГрузыНомерООН</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыНадлежащееОтгрузочноеНаименование</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыТехническоеНаименование</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыОписание</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКласс</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКлассификационныйКод</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыГруппаУпаковки</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыЗнакОпасности</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыРадионуклиды</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыОписаниеФизХимФормы</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыМаксАктивностьРадиации</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКатегорияУпаковки</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыТранспортныйИндекс</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыИндексБезопасности</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыОпознавательныйЗнакСертификатов</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыПолнаяАктивностьГруза</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыПроцСмеси</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыДатаИстеченияВремениУдержания</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКонтрольнаяТемпература</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыАварийнаяТемпература</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКодОграниченияТуннели</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ОпасныеГрузы.ОписаниеОпасногоГруза</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ОпасныеГрузыНомерООН</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыНадлежащееОтгрузочноеНаименование</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыТехническоеНаименование</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыОписание</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКласс</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКлассификационныйКод</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыГруппаУпаковки</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыЗнакОпасности</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыРадионуклиды</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыОписаниеФизХимФормы</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыМаксАктивностьРадиации</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКатегорияУпаковки</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыТранспортныйИндекс</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыИндексБезопасности</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыОпознавательныйЗнакСертификатов</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыПолнаяАктивностьГруза</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыПроцСмеси</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыДатаИстеченияВремениУдержания</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКонтрольнаяТемпература</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыАварийнаяТемпература</field>
+			</item>
+			<item>
+				<field>ОпасныеГрузыКодОграниченияТуннели</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ОпасныеГрузы.ОписаниеОпасногоГруза</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТоварыОбъявленнаяЦенностьВалюта</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.ОбъявленнаяЦенность</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Товары.ОбъявленнаяЦенностьВалюта</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75567b64-2022-4f34-9bdc-ad0d8ebabb7f">
+  <producedTypes>
+    <selectionType typeId="198de829-fbf7-4a65-9a7b-3af65cc4ae5c" valueTypeId="6a1c076a-724e-4840-810b-bf2ab46f5fe4"/>
+    <listType typeId="2755023d-39b8-4ff4-aec8-2fb1f9fc59cb" valueTypeId="8fdc6fcf-7abb-4e30-a1cb-dbf239abc235"/>
+    <managerType typeId="28a5c4b2-0c8d-4198-b34d-3bb9af7abd7e" valueTypeId="90d1762c-894a-432d-ab71-6fe5da9983eb"/>
+    <recordSetType typeId="c4ddbdff-6078-44cb-bf44-6b5325b7321e" valueTypeId="b9973018-cb18-4067-b966-a70ad124da82"/>
+    <recordKeyType typeId="56161000-71d8-40f0-85c6-e821ef252778" valueTypeId="2f0d28b9-6a87-46ba-b02f-4991f0488f9a"/>
+    <recordType typeId="113ee4ec-e99d-46c5-b556-291419eee7fb" valueTypeId="f540d8c3-931b-4a0d-b003-cfc8bc585e78"/>
+    <recordManagerType typeId="3ae909a9-ee8d-405f-a03c-7267829ceed9" valueTypeId="b9d30b39-8760-4e7f-bb4b-9a98043fc3d4"/>
+  </producedTypes>
+  <name>КонтурЛогистика_ОсобенностиДокументооборота</name>
+  <synonym>
+    <key>ru</key>
+    <value>Особенности документооборота (Контур.Логистика)</value>
+  </synonym>
+  <comment>Время по МСК!</comment>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КонтурЛогистика_ОсобенностиДокументооборота.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="72693195-233d-4d83-80ec-494126311a96">
+    <name>Особенность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Особенность</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КонтурЛогистика_ТипыОсобенностейДокументооборота</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f3947482-6db7-424f-aad2-373a3bea2f93">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтурЛогистика_ЭлектроннаяТранспортнаяНакладная</types>
+      <types>DocumentRef.КонтурЛогистика_ЭлектроннаяСопроводительнаяВедомость</types>
+      <types>DocumentRef.КонтурЛогистика_ЗЗ_Титул1</types>
+      <types>DocumentRef.КонтурЛогистика_ЭлектронныйЗаказНаряд</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул1</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="a6a88e21-f5c6-4a76-8413-a4170c474c15">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

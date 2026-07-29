@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3d001a6d-b50b-4a34-93d5-1ee1048b02c2">
+  <producedTypes>
+    <selectionType typeId="1d6c1f3e-548b-4444-b4e7-f7f01a454272" valueTypeId="cefee77f-511f-412f-8040-aefc0cbceb79"/>
+    <listType typeId="8134bb33-b906-4f81-98b7-4d56ff3097a4" valueTypeId="b6069568-abee-44dd-97a7-036d0e77a4d5"/>
+    <managerType typeId="5b9e5505-2858-48c6-9f16-ec513b266e14" valueTypeId="500ae49b-38e4-4788-bbc3-d5b670261852"/>
+    <recordSetType typeId="92efd642-117f-4c77-9248-359d6af8ef85" valueTypeId="bfb3cdf7-0361-4788-9875-5be87739c2ef"/>
+    <recordKeyType typeId="e2e837f3-5116-4139-8cfa-bb6bec9d2e23" valueTypeId="2fbba7cc-091b-4315-bf85-e4061ded7207"/>
+    <recordType typeId="9ca0dc41-11d7-4f09-a9fe-dcdb84a9eb93" valueTypeId="c2671417-ebf2-4867-a905-59d6cd1f308d"/>
+    <recordManagerType typeId="533290ed-9970-45fa-95c2-fd1c0d98e7af" valueTypeId="e469ab04-1f1b-4ee9-88ad-3f1b0a8badee"/>
+  </producedTypes>
+  <name>СПАРККлассификаторРисков</name>
+  <synonym>
+    <key>ru</key>
+    <value>1СПАРК классификатор рисков</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d4f65c49-9184-419e-9157-49cff44df33a">
+    <name>Название</name>
+    <synonym>
+      <key>ru</key>
+      <value>Название</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="826a69b4-ad4d-4d46-acee-e28afc7d1f0f">
+    <name>ВидКлассификатора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид классификатора</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыКлассификаторовФакторовРискаСПАРК</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fea8c259-4ef4-4e7b-bcdb-510e1be987ba">
+    <name>ИдентификаторРиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор риска</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

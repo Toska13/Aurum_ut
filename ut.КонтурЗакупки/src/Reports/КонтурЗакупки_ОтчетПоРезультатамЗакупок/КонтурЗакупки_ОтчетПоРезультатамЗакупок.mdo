@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="26ef7fce-3edc-446f-989c-60d02a1863b8">
+  <producedTypes>
+    <objectType typeId="4da2b332-3202-4bde-96e5-e77ef36c2472" valueTypeId="9d2c8143-8132-459d-a8b2-ec560736f4d1"/>
+    <managerType typeId="3fac6b05-cf19-4a8d-a5b0-d4008bbf553e" valueTypeId="c80420ab-1235-4477-bf15-88a2824327cf"/>
+  </producedTypes>
+  <name>КонтурЗакупки_ОтчетПоРезультатамЗакупок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет по результатам закупок (Контур.Закупки)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.КонтурЗакупки_ОтчетПоРезультатамЗакупок.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.КонтурЗакупки_ОтчетПоРезультатамЗакупок.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <forms uuid="a1bab1aa-ce14-43a5-8e8a-ab74e1927374">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="82c9559e-4abd-4732-a0a8-36a077c8a3b4">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="5ce8e5c7-7a07-49aa-98f5-15b6e32f8ece">
+    <name>МакетРезультатЗакупки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет результат закупки</value>
+    </synonym>
+  </templates>
+  <commands uuid="2dba95a7-e4da-4b83-9585-ac6adef10067">
+    <name>ОткрытьОтчетПоРезультатамЗакупки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет по результатам закупки</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.КонтурЗакупки_Закупка</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

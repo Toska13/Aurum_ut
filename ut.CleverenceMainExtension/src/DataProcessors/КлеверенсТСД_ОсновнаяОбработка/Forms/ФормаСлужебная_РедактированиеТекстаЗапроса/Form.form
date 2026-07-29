@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Клеверенс: Редактирование текста запроса</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Cleverence: Editing query text</value>
+  </title>
+  <title>
+    <key>kk</key>
+    <value>Cleverence: Сұрау мәтінін өңдеу</value>
+  </title>
+  <title>
+    <key>uz</key>
+    <value>Cleverence: So'rov matnini tahrirlash</value>
+  </title>
+  <title>
+    <key>be</key>
+    <value>Cleverence: Рэдагаванне тэксту запыту</value>
+  </title>
+  <title>
+    <key>uk</key>
+    <value>Cleverence: Редагування тексту запиту</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>Cleverence: მოთხოვნის ტექსტის რედაქტირება</value>
+  </title>
+  <title>
+    <key>tr</key>
+    <value>Cleverence: Sorgu metnini düzenle</value>
+  </title>
+  <title>
+    <key>es</key>
+    <value>Cleverence: Editar texto de consulta</value>
+  </title>
+  <title>
+    <key>ro</key>
+    <value>Cleverence: Editare text interogare</value>
+  </title>
+  <items xsi:type="form:FormField">
+    <name>ТекстЗапроса</name>
+    <id>5</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ТекстЗапроса</segments>
+    </dataPath>
+    <titleLocation>None</titleLocation>
+    <extendedTooltip>
+      <name>ТекстЗапросаРасширеннаяПодсказка</name>
+      <id>7</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ТекстЗапросаКонтекстноеМеню</name>
+      <id>6</id>
+      <items xsi:type="form:Button">
+        <name>ТекстЗапросаКонтекстноеМенюКонструктор</name>
+        <id>8</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ТекстЗапросаКонтекстноеМенюКонструкторРасширеннаяПодсказка</name>
+          <id>9</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.Конструктор</commandName>
+        <representation>PictureAndText</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.QueryWizard</picture>
+        </picture>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <height>10</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <wrap>true</wrap>
+      <multiLine>true</multiLine>
+      <extendedEdit>true</extendedEdit>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаСохранитьИЗакрыть</name>
+      <id>1</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаСохранитьИЗакрытьРасширеннаяПодсказка</name>
+        <id>2</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.СохранитьИЗакрыть</commandName>
+      <representation>PictureAndText</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.WriteAndClose</picture>
+      </picture>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаКонструктор</name>
+      <id>10</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаКонструкторРасширеннаяПодсказка</name>
+        <id>11</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Конструктор</commandName>
+      <representation>PictureAndText</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.QueryWizard</picture>
+      </picture>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаЗакрыть</name>
+      <id>3</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗакрытьРасширеннаяПодсказка</name>
+        <id>4</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <representation>PictureAndText</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.КлеверенсТСД_ОсновнаяОбработка</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ТекстЗапроса</name>
+    <title>
+      <key>ru</key>
+      <value>Текст запроса</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Query text</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Сұрау мәтіні</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Сўров матни</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Тэкст запыту</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Текст запиту</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ტექსტური მოთხოვნა</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Sorgu metni</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Texto de consulta</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Textul cererii</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>СохранитьИЗакрыть</name>
+    <title>
+      <key>ru</key>
+      <value>Сохранить и закрыть</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Save and close</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Сақтау және жабу</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Сақлаш ва ёпиш  </value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Захаваць і зачыніць</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Зберегти і закрити</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შენახვა და დახურვა</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Kaydet ve kapat</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Guardar y cerrar</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Salvați și închideți</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Сохранить и закрыть</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Save and close</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Сақтау және жабу</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Сақлаш ва ёпиш  </value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Захаваць і зачыніць</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Зберегти і закрити</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>შენახვა და დახურვა</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Kaydet ve kapat</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Guardar y cerrar</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Salvați și închideți</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СохранитьИЗакрыть</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Конструктор</name>
+    <title>
+      <key>ru</key>
+      <value>Конструктор запроса...</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Query builder...</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Сұрау құрылысы...</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Сўров конструктори...</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Конструктор запроса...: Канструктар запыту...</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Конструктор запиту...</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კონსტრუქტორი მოთხოვნა...</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Sorgu oluşturucu...</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Constructor de consulta...</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Constructor de interogare...</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Конструктор</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Constructor</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Құрылыс</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Конструктор</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Конструктор: Канструктар</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Конструктор</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>კონსტრუქტორი</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Oluşturucu</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Constructor</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Constructor</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Конструктор</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

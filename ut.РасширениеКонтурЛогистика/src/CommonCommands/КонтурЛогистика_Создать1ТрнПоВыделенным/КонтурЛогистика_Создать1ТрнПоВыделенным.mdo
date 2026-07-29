@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1dde1149-bc08-4fa2-86c6-637ffc3ab929">
+  <name>КонтурЛогистика_Создать1ТрнПоВыделенным</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создать 1 ТрН по выделенным</value>
+  </synonym>
+  <group>CommandGroup.КонтурЛогистика_КомандыВводаДокументов</group>
+  <commandParameterType>
+    <types>DocumentRef.РеализацияТоваровУслуг</types>
+    <types>DocumentRef.ТранспортнаяНакладная</types>
+    <types>DocumentRef.ВозвратТоваровПоставщику</types>
+    <types>DocumentRef.ПоступлениеТоваровНаСклад</types>
+    <types>DocumentRef.КонтурЛогистика_Вспомогательный</types>
+    <types>DocumentRef.ПриобретениеТоваровУслуг</types>
+    <types>DocumentRef.ЗаданиеНаПеревозку</types>
+    <types>DocumentRef.ПеремещениеТоваров</types>
+  </commandParameterType>
+  <parameterUseMode>Multiple</parameterUseMode>
+  <representation>PictureAndText</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Формирует черновик титула по выделенным документам (по выделенным документам - открывает 1 карточку ввода ТрН)</value>
+  </toolTip>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.КонтурЛогистика_Молния</picture>
+  </picture>
+</mdclass:CommonCommand>

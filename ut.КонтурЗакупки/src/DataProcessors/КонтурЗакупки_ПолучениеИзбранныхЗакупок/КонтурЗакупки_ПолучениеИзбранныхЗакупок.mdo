@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="91285583-2109-499b-ab61-f76c9e32c929">
+  <producedTypes>
+    <objectType typeId="bf6ef26a-5e81-4c42-ac52-8055f475cc7a" valueTypeId="51680c33-dd86-4a99-9fb5-dade0fcfd110"/>
+    <managerType typeId="d117772d-9075-4fba-90c6-58dfce744b68" valueTypeId="99eef74b-0e44-45af-b9d1-bcfaa72a2743"/>
+  </producedTypes>
+  <name>КонтурЗакупки_ПолучениеИзбранныхЗакупок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Получение избранных закупок (Контур.Закупки)</value>
+  </synonym>
+  <defaultForm>DataProcessor.КонтурЗакупки_ПолучениеИзбранныхЗакупок.Form.Форма</defaultForm>
+  <attributes uuid="f3921e97-3967-47d2-b743-d19a9876c7d9">
+    <name>ШаблонЗагрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон загрузки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтурЗакупки_ШаблоныЗагрузкиИзбранного</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="87df56e6-0824-4441-9815-4bc22fa23323">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="924b6b9c-304b-403c-8095-e5b240a22732">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4d6a77a8-eeae-4906-ad9f-a7360715029e">
+    <name>СтраницВсего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страниц всего</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4df35ffe-ae65-4afd-9798-ce460311559d">
+    <name>СтраницаТекущая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страница текущая</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d18210e3-4943-43cc-8a63-01d6e02e1cdd">
+    <name>ЗаписейВсего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Записей всего</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b5267e5b-5727-4741-9921-0dd9467607c7">
+    <name>ЗаписейНаСтраницу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Записей на страницу</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="13611994-1b57-4fbe-bd1e-06501f53d3e8">
+    <name>ИспользуетсяВРегламентномЗадании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используется в регламентном задании</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f263994b-4bd2-48df-9d01-275cd5c9e2ea">
+    <name>КоличествоДнейДоТекущейДаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество дней до текущей даты</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="ce4881f0-eec4-48c3-a90c-ed17cf1e74d8">
+    <producedTypes>
+      <objectType typeId="27b763ba-edbb-4d61-ab10-3adad6a0cd25" valueTypeId="0aed2721-85fe-4a40-9d1d-744284c45112"/>
+      <rowType typeId="dbd629b1-c3c2-4885-90c2-338c333d3eb9" valueTypeId="78592c8c-b6b3-4fb7-9c56-a65d15ffe8ee"/>
+    </producedTypes>
+    <name>ИзбранныеЗакупки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Избранные закупки</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="eff61df8-1f4b-4c20-af5d-bf7e03b0498a">
+      <name>ИдентификаторЗакупки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор закупки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="fa733e42-bdf7-4bd5-ba1a-46af778b5d3f">
+      <name>Загружен</name>
+      <synonym>
+        <key>ru</key>
+        <value>Загружен</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f1159336-1bcb-4925-b1a9-4c515cbee858">
+      <name>СсылкаНаЗагруженный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ссылка на загруженный</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.КонтурЗакупки_Закупка</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="35cf32b5-54af-48c5-b04d-5e9a5c40c036">
+      <name>Метка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Метка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КонтурЗакупки_Метки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a706176e-ed1c-4dbe-8503-5ec3b47d78ba">
+      <name>Загружать</name>
+      <synonym>
+        <key>ru</key>
+        <value>Загружать</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="70166f2b-cae6-49ff-acdd-728b11150590">
+    <producedTypes>
+      <objectType typeId="af54c125-a6ff-4bc2-8070-3f6ee0f7f3aa" valueTypeId="e084f3b9-f337-4be8-b301-cb69c58f7bdf"/>
+      <rowType typeId="1c087e3e-ab2c-4d36-b10a-a0a89ade64ef" valueTypeId="c8350549-34e5-4560-9241-0f3676824da9"/>
+    </producedTypes>
+    <name>Метки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метки</value>
+    </synonym>
+    <attributes uuid="44cbdf43-7de1-43c4-9b24-c77b117e053e">
+      <name>Метка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Метка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КонтурЗакупки_Метки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="112e38f1-e2a1-48ef-923a-57cf09820e2f">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fba4688a-f1c9-4450-95b7-c24523dba74d">
+    <name>ФормаВыбораМеток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор меток</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4c3a83d3-ea74-42de-af10-8c479803e106">
+  <name>ДГ_СервисАдминистрированияПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервис администрирования пользователей</value>
+  </synonym>
+  <rootURL>adminka</rootURL>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="644c14e1-4e7f-4b1c-8d11-eb94af2e35fb">
+    <name>ПолучитьСписокСотрудников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить список сотрудников</value>
+    </synonym>
+    <template>/GetEmployees</template>
+    <methods uuid="2294b172-84b6-4ca3-b1dd-97d5d3215c27">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьСписокСотрудниковGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="edb83bcc-d8c8-4076-a405-3ec85eab0067">
+    <name>ПолучитьПрофилиГруппДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить профили групп доступа</value>
+    </synonym>
+    <template>/GetProfiles</template>
+    <methods uuid="4d6fd3e2-1a44-4dc5-ac3a-38c90db6fa8a">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьПрофилиГруппДоступаGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="7699ebbb-6b1e-414e-9129-3ebbbc239753">
+    <name>ПолучитьГруппыДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить группы доступа</value>
+    </synonym>
+    <template>/GetGroups</template>
+    <methods uuid="c7a4b0d8-18da-4b80-b189-c104e72d7147">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьГруппыДоступаGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="d538d7d3-9f41-4b11-83f3-5fbcb2a64c50">
+    <name>ПолучитьПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить пользователей</value>
+    </synonym>
+    <template>/GetUsers</template>
+    <methods uuid="722b2766-7ba3-4bf8-8b79-8a516a39db4f">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьПользователейGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="90d75631-788d-402b-bb7d-45e6ac8483f2">
+    <name>СоздатьОбновитьПользователя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создать обновить пользователя</value>
+    </synonym>
+    <template>/CreateUpdateUser</template>
+    <methods uuid="ab48a00d-e350-4b63-9cc1-c7547c39de6f">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>СоздатьОбновитьПользователяPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="021f6401-ac0c-435a-a57d-73e6d23a3424">
+    <name>ПолучитьПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить подразделения</value>
+    </synonym>
+    <template>/GetDivisions</template>
+    <methods uuid="55645899-1cf3-4da4-8154-89d99f561f8f">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьПодразделенияGet</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="7fa05b5a-fa38-4cdb-9664-00f141a6629e">
+    <name>ПолучитьСтруктуруПредприятия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить структуру предприятия</value>
+    </synonym>
+    <template>/GetUprDivisions</template>
+    <methods uuid="70f2205f-6c85-4add-b782-59f2b96a385b">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьСтруктуруПредприятияGET</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

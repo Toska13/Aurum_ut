@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеПоАнкетированию</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Анкета</dataPath>
+			<field>Анкета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответ</dataPath>
+			<field>Ответ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика1</dataPath>
+			<field>Аналитика1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика2</dataPath>
+			<field>Аналитика2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вопрос</dataPath>
+			<field>Вопрос</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Опрос</dataPath>
+			<field>Опрос</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОткрытыйОтвет</dataPath>
+			<field>ОткрытыйОтвет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонАнкеты</dataPath>
+			<field>ШаблонАнкеты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлементарныйВопрос</dataPath>
+			<field>ЭлементарныйВопрос</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементарный вопрос</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Респондент</dataPath>
+			<field>Респондент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеОпроса</dataPath>
+			<field>НаименованиеОпроса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование опроса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОтветыНаВопросыАнкет.Анкета КАК Анкета,
+	ОтветыНаВопросыАнкет.Вопрос КАК Вопрос,
+	ОтветыНаВопросыАнкет.НомерЯчейки КАК НомерЯчейки,
+	ОтветыНаВопросыАнкет.Ответ КАК Ответ,
+	ОтветыНаВопросыАнкет.ЭлементарныйВопрос КАК ЭлементарныйВопросДанныеРегистра,
+	ОтветыНаВопросыАнкет.ОткрытыйОтвет КАК ОткрытыйОтвет,
+	ВопросыШаблонаАнкеты.ТипВопроса КАК ТипВопроса,
+	ВопросыШаблонаАнкеты.ТипТабличногоВопроса КАК ТипТабличногоВопроса
+ПОМЕСТИТЬ ДанныеРегистра
+ИЗ
+	РегистрСведений.ОтветыНаВопросыАнкет КАК ОтветыНаВопросыАнкет
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВопросыШаблонаАнкеты КАК ВопросыШаблонаАнкеты
+		ПО ОтветыНаВопросыАнкет.Вопрос = ВопросыШаблонаАнкеты.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеРегистра.Анкета КАК Анкета,
+	ДанныеРегистра.Вопрос КАК Вопрос,
+	ДанныеРегистра.Ответ КАК Ответ,
+	ДанныеРегистра.ОткрытыйОтвет КАК ОткрытыйОтвет,
+	ДанныеРегистра.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра
+ПОМЕСТИТЬ ПростыеВопросы
+ИЗ
+	ДанныеРегистра КАК ДанныеРегистра
+ГДЕ
+	ДанныеРегистра.ТипВопроса &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыВопросовШаблонаАнкеты.Табличный)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеРегистра.Анкета КАК Анкета,
+	ДанныеРегистра.Вопрос КАК Вопрос,
+	ДанныеРегистра.НомерЯчейки КАК Аналитика1,
+	ДанныеРегистра.Ответ КАК Ответ,
+	ДанныеРегистра.ЭлементарныйВопросДанныеРегистра КАК Аналитика2,
+	ДанныеРегистра.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра
+ПОМЕСТИТЬ Составной
+ИЗ
+	ДанныеРегистра КАК ДанныеРегистра
+ГДЕ
+	ДанныеРегистра.ТипТабличногоВопроса = ЗНАЧЕНИЕ(Перечисление.ТипыТабличныхВопросов.Составной)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеРегистра.Анкета КАК Анкета,
+	ДанныеРегистра.Вопрос КАК Вопрос,
+	ДанныеРегистра.НомерЯчейки КАК НомерЯчейки,
+	ДанныеРегистра.Ответ КАК Ответ,
+	ВопросыШаблонаАнкетыСоставТабличногоВопроса.НомерСтроки КАК НомерСтроки,
+	ДанныеРегистра.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра
+ПОМЕСТИТЬ ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов
+ИЗ
+	ДанныеРегистра КАК ДанныеРегистра
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ВопросыШаблонаАнкеты.СоставТабличногоВопроса КАК ВопросыШаблонаАнкетыСоставТабличногоВопроса
+		ПО ДанныеРегистра.Вопрос = ВопросыШаблонаАнкетыСоставТабличногоВопроса.Ссылка
+			И ДанныеРегистра.ЭлементарныйВопросДанныеРегистра = ВопросыШаблонаАнкетыСоставТабличногоВопроса.ЭлементарныйВопрос
+ГДЕ
+	(ДанныеРегистра.ТипТабличногоВопроса = ЗНАЧЕНИЕ(Перечисление.ТипыТабличныхВопросов.ПредопределенныеОтветыВСтроках)
+			ИЛИ ДанныеРегистра.ТипТабличногоВопроса = ЗНАЧЕНИЕ(Перечисление.ТипыТабличныхВопросов.ПредопределенныеОтветыВКолонках))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.Анкета КАК Анкета,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.Вопрос КАК Вопрос,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.Ответ КАК Аналитика1,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.НомерЯчейки КАК НомерЯчейки
+ПОМЕСТИТЬ АналитикаОдинНаборПредопределенныхОтветов
+ИЗ
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов КАК ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов
+ГДЕ
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.НомерСтроки = 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.Анкета КАК Анкета,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.Вопрос КАК Вопрос,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.НомерЯчейки КАК НомерЯчейки,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.Ответ КАК Ответ,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра,
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.ЭлементарныйВопросДанныеРегистра КАК Аналитика2
+ПОМЕСТИТЬ ОтветыОдинНаборПредопределенныхОтветов
+ИЗ
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов КАК ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов
+ГДЕ
+	ДанныеТабличныеВопросыОдинНаборПредопределенныхОтветов.НомерСтроки &lt;&gt; 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаОдинНаборПредопределенныхОтветов.Анкета КАК Анкета,
+	АналитикаОдинНаборПредопределенныхОтветов.Вопрос КАК Вопрос,
+	АналитикаОдинНаборПредопределенныхОтветов.Аналитика1 КАК Аналитика1,
+	ОтветыОдинНаборПредопределенныхОтветов.Ответ КАК Ответ,
+	ОтветыОдинНаборПредопределенныхОтветов.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра,
+	ОтветыОдинНаборПредопределенныхОтветов.Аналитика2 КАК Аналитика2
+ПОМЕСТИТЬ ОдинНаборОтветов
+ИЗ
+	АналитикаОдинНаборПредопределенныхОтветов КАК АналитикаОдинНаборПредопределенныхОтветов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОтветыОдинНаборПредопределенныхОтветов КАК ОтветыОдинНаборПредопределенныхОтветов
+		ПО АналитикаОдинНаборПредопределенныхОтветов.Анкета = ОтветыОдинНаборПредопределенныхОтветов.Анкета
+			И АналитикаОдинНаборПредопределенныхОтветов.Вопрос = ОтветыОдинНаборПредопределенныхОтветов.Вопрос
+			И АналитикаОдинНаборПредопределенныхОтветов.НомерЯчейки = ОтветыОдинНаборПредопределенныхОтветов.НомерЯчейки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеРегистра.Анкета КАК Анкета,
+	ДанныеРегистра.Вопрос КАК Вопрос,
+	ДанныеРегистра.НомерЯчейки КАК НомерЯчейки,
+	ДанныеРегистра.Ответ КАК Ответ,
+	ВопросыШаблонаАнкетыСоставТабличногоВопроса.НомерСтроки КАК НомерСтроки,
+	ДанныеРегистра.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра
+ПОМЕСТИТЬ ДанныеТабличныеВопросыДваНабораПредопределенныхОтветов
+ИЗ
+	ДанныеРегистра КАК ДанныеРегистра
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ВопросыШаблонаАнкеты.СоставТабличногоВопроса КАК ВопросыШаблонаАнкетыСоставТабличногоВопроса
+		ПО ДанныеРегистра.Вопрос = ВопросыШаблонаАнкетыСоставТабличногоВопроса.Ссылка
+			И ДанныеРегистра.ЭлементарныйВопросДанныеРегистра = ВопросыШаблонаАнкетыСоставТабличногоВопроса.ЭлементарныйВопрос
+ГДЕ
+	ДанныеРегистра.ТипТабличногоВопроса = ЗНАЧЕНИЕ(Перечисление.ТипыТабличныхВопросов.ПредопределенныеОтветыВСтрокахИКолонках)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Данные.Анкета КАК Анкета,
+	Данные.Вопрос КАК Вопрос,
+	Данные.НомерЯчейки КАК НомерЯчейки,
+	Данные.Ответ КАК Аналитика1
+ПОМЕСТИТЬ Аналитика1ДваНабораПредопределенныхОтветов
+ИЗ
+	ДанныеТабличныеВопросыДваНабораПредопределенныхОтветов КАК Данные
+ГДЕ
+	Данные.НомерСтроки = 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Данные.Анкета КАК Анкета,
+	Данные.Вопрос КАК Вопрос,
+	Данные.НомерЯчейки КАК НомерЯчейки,
+	Данные.Ответ КАК Аналитика2
+ПОМЕСТИТЬ Аналитика2ДваНабораПредопределенныхОтветов
+ИЗ
+	ДанныеТабличныеВопросыДваНабораПредопределенныхОтветов КАК Данные
+ГДЕ
+	Данные.НомерСтроки = 2
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Данные.Анкета КАК Анкета,
+	Данные.Вопрос КАК Вопрос,
+	Данные.НомерЯчейки КАК НомерЯчейки,
+	Данные.Ответ КАК Ответ,
+	Данные.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра
+ПОМЕСТИТЬ ОтветыДваНабораПредопределенныхОтветов
+ИЗ
+	ДанныеТабличныеВопросыДваНабораПредопределенныхОтветов КАК Данные
+ГДЕ
+	Данные.НомерСтроки = 3
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеАналитика1.Анкета КАК Анкета,
+	ДанныеАналитика1.Вопрос КАК Вопрос,
+	ДанныеАналитика1.Аналитика1 КАК Аналитика1,
+	ДанныеАналитика2.Аналитика2 КАК Аналитика2,
+	ДанныеОтветы.Ответ КАК Ответ,
+	ДанныеОтветы.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопросДанныеРегистра
+ПОМЕСТИТЬ ДваНабораОтветов
+ИЗ
+	Аналитика1ДваНабораПредопределенныхОтветов КАК ДанныеАналитика1
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Аналитика2ДваНабораПредопределенныхОтветов КАК ДанныеАналитика2
+		ПО ДанныеАналитика1.Анкета = ДанныеАналитика2.Анкета
+			И ДанныеАналитика1.Вопрос = ДанныеАналитика2.Вопрос
+			И ДанныеАналитика1.НомерЯчейки = ДанныеАналитика2.НомерЯчейки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ОтветыДваНабораПредопределенныхОтветов КАК ДанныеОтветы
+		ПО ДанныеАналитика1.Анкета = ДанныеОтветы.Анкета
+			И ДанныеАналитика1.Вопрос = ДанныеОтветы.Вопрос
+			И ДанныеАналитика1.НомерЯчейки = ДанныеОтветы.НомерЯчейки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПростыеВопросы.Анкета КАК Анкета,
+	ПростыеВопросы.Вопрос КАК Вопрос,
+	NULL КАК Аналитика1,
+	NULL КАК Аналитика2,
+	ПростыеВопросы.Ответ КАК Ответ,
+	ПростыеВопросы.ОткрытыйОтвет КАК ОткрытыйОтвет,
+	ПростыеВопросы.ЭлементарныйВопросДанныеРегистра КАК ЭлементарныйВопрос
+ПОМЕСТИТЬ ДанныеПоВсемТипамВопросов
+ИЗ
+	ПростыеВопросы КАК ПростыеВопросы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Составной.Анкета,
+	Составной.Вопрос,
+	Составной.Аналитика1,
+	Составной.Аналитика2,
+	Составной.Ответ,
+	NULL,
+	Составной.ЭлементарныйВопросДанныеРегистра
+ИЗ
+	Составной КАК Составной
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ОдинНаборОтветов.Анкета,
+	ОдинНаборОтветов.Вопрос,
+	ОдинНаборОтветов.Аналитика1,
+	ОдинНаборОтветов.Аналитика2,
+	ОдинНаборОтветов.Ответ,
+	NULL,
+	ОдинНаборОтветов.ЭлементарныйВопросДанныеРегистра
+ИЗ
+	ОдинНаборОтветов КАК ОдинНаборОтветов
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДваНабораОтветов.Анкета,
+	ДваНабораОтветов.Вопрос,
+	ДваНабораОтветов.Аналитика1,
+	ДваНабораОтветов.Аналитика2,
+	ДваНабораОтветов.Ответ,
+	NULL,
+	ДваНабораОтветов.ЭлементарныйВопросДанныеРегистра
+ИЗ
+	ДваНабораОтветов КАК ДваНабораОтветов
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеПоВсемТипамВопросов.Анкета КАК Анкета,
+	ДанныеПоВсемТипамВопросов.Вопрос КАК Вопрос,
+	ДанныеПоВсемТипамВопросов.Аналитика1 КАК Аналитика1,
+	ДанныеПоВсемТипамВопросов.Аналитика2 КАК Аналитика2,
+	ДанныеПоВсемТипамВопросов.Ответ КАК Ответ,
+	ДанныеПоВсемТипамВопросов.ОткрытыйОтвет КАК ОткрытыйОтвет,
+	ДокументАнкета.Опрос КАК Опрос,
+	НазначениеОпросов.ШаблонАнкеты КАК ШаблонАнкеты,
+	ДанныеПоВсемТипамВопросов.ЭлементарныйВопрос КАК ЭлементарныйВопрос,
+	ДокументАнкета.Респондент КАК Респондент,
+	НазначениеОпросов.Наименование КАК НаименованиеОпроса
+ИЗ
+	ДанныеПоВсемТипамВопросов КАК ДанныеПоВсемТипамВопросов
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.Анкета КАК ДокументАнкета
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.НазначениеОпросов КАК НазначениеОпросов
+			ПО ДокументАнкета.Опрос = НазначениеОпросов.Ссылка
+		ПО ДанныеПоВсемТипамВопросов.Анкета = ДокументАнкета.Ссылка</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>КоличествоОтветов</dataPath>
+		<expression>Ответ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=0</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>МинимальныйОтвет</dataPath>
+		<expression>Ответ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Минимум</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>МаксимальныйОтвет</dataPath>
+		<expression>Ответ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ответ</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СреднийОтвет</dataPath>
+		<expression>Ответ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Среднее</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СуммаОтвет</dataPath>
+		<expression>Ответ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сумма </v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоОтветов</dataPath>
+		<expression>Количество(КоличествоОтветов)</expression>
+		<group>Анкета</group>
+		<group>Вопрос</group>
+		<group>НаименованиеОпроса</group>
+		<group>Опрос</group>
+		<group>Ответ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>МинимальныйОтвет</dataPath>
+		<expression>Минимум(МинимальныйОтвет)</expression>
+		<group>Анкета</group>
+		<group>Вопрос</group>
+		<group>НаименованиеОпроса</group>
+		<group>Опрос</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>МаксимальныйОтвет</dataPath>
+		<expression>Максимум(МаксимальныйОтвет)</expression>
+		<group>Анкета</group>
+		<group>Вопрос</group>
+		<group>НаименованиеОпроса</group>
+		<group>Опрос</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СреднийОтвет</dataPath>
+		<expression>Среднее(СреднийОтвет)</expression>
+		<group>Анкета</group>
+		<group>Вопрос</group>
+		<group>НаименованиеОпроса</group>
+		<group>Опрос</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОтвет</dataPath>
+		<expression>Сумма(СуммаОтвет)</expression>
+		<group>Анкета</group>
+		<group>Вопрос</group>
+		<group>НаименованиеОпроса</group>
+		<group>Опрос</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Результат опроса Бидзаар</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Результат опроса</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксимальныйОтвет</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>cc59db21-5bb3-4e5f-82c9-73dac56b9a3e</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Анкета</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.Анкета.ПустаяСсылка</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Вопрос.ТипВопроса</dcsset:left>
+					<dcsset:comparisonType>NotInList</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ТипыВопросовШаблонаАнкеты.Табличный</dcsset:right>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ТипыВопросовШаблонаАнкеты.Комплексный</dcsset:right>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Ответ</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Респондент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>57ebdfcc-83a1-4dff-a868-058d96aef695</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Вопрос</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВопросыШаблонаАнкеты.ПустаяСсылка</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>dcc264b8-2942-4c9b-9ce6-0c88eb10b562</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Опрос</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.НазначениеОпросов.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>ba750ba3-8e2f-4609-9353-3efad5e07fb4</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>8e6cb7be-1c87-43ae-813b-fac7bc6b4983</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Анкета</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Вопрос</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Опрос</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Ответ</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОткрытыйОтвет</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Респондент</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ШаблонАнкеты</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ЭлементарныйВопрос</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>83b5c1ff-1c55-4ad0-99ae-5002671a3092</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f1609840-4c36-4b90-bb6d-89abab176d11</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат опроса</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:name>ЗКП_Респондент</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Респондент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Вопрос</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>8d648108-f14d-4b31-af30-100be750e7da</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

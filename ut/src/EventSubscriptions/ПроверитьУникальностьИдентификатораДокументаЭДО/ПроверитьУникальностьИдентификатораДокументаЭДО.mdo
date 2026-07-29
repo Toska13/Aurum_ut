@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7f9462ea-7a3e-433c-9a59-450e90bc50d2">
+  <name>ПроверитьУникальностьИдентификатораДокументаЭДО</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверить уникальность идентификатора документа ЭДО</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЭлектронныйДокументИсходящийЭДО</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ЭлектронныеДокументыЭДОЦентрЭДО.ПроверитьУникальностьИдентификатораДокументаЭДОПередЗаписью</handler>
+</mdclass:EventSubscription>

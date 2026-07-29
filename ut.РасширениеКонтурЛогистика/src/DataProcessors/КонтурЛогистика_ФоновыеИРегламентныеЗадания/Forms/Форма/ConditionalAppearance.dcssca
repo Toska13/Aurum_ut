@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыНомерСтроки</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыИспользование</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыНаименование</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыСостояние</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыРасписание</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыВыполнялось</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыПользователь</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыИмяМетаданных</field>
+			</item>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыИдентификатор</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.РегламентныеЗаданияПодсистемы.Использование</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыНомерСтроки</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыРегламентноеЗадание</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыНаименование</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыКлюч</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыИмяМетода</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыСостояние</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыНачало</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыОкончание</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыОписаниеОшибки</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыСообщения</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыПродолжительностьСекунд</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ФоновыеЗаданияПодсистемы.Состояние</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:string">Задание выполнено</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыНачало</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ФоновыеЗаданияПодсистемы.Начало</left>
+				<comparisonType>GreaterOrEqual</comparisonType>
+				<right xsi:type="v8:StandardBeginningDate">
+					<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+				</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ДЛФ=T</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыОкончание</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ФоновыеЗаданияПодсистемы.Окончание</left>
+				<comparisonType>GreaterOrEqual</comparisonType>
+				<right xsi:type="v8:StandardBeginningDate">
+					<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+				</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ДЛФ=T</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>РегламентныеЗаданияПодсистемыВыполнялось</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.РегламентныеЗаданияПодсистемы.Выполнялось</left>
+				<comparisonType>GreaterOrEqual</comparisonType>
+				<right xsi:type="v8:StandardBeginningDate">
+					<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+				</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ДЛФ=T</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыНомерСтроки</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыНаименование</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыСостояние</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыПродолжительностьСекунд</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыНачало</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыОкончание</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыОписаниеОшибки</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыСообщения</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыРегламентноеЗадание</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыКлюч</field>
+			</item>
+			<item>
+				<field>ФоновыеЗаданияПодсистемыИмяМетода</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ФоновыеЗаданияПодсистемы.Состояние</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:string">Задание завершено с ошибками</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

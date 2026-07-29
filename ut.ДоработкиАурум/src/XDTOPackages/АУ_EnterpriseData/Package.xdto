@@ -1,0 +1,25 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.19">
+	<valueType name="СпособыВыставленияДокументов" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Автоматически</enumeration>
+		<enumeration xsi:type="xs:string">УниверсальныйДокумент</enumeration>
+		<enumeration xsi:type="xs:string">ПередаточныйДокументИСчетФактура</enumeration>
+	</valueType>
+	<objectType name="ОбщиеСвойстваДанныеКлассификатора" open="true" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="КлючевыеСвойстваДоговор" open="true" sequenced="true"/>
+	<objectType name="Документ.РеализацияТоваровУслуг">
+		<property name="ЭтоУниверсальныйДокумент" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ПоступлениеТоваровУслуг.Товары.Строка" open="true" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10" name="Контракт" type="d3p1:КлючевыеСвойстваДоговор" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ПоступлениеТоваровУслуг.Услуги.Строка" open="true" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10" name="Контракт" type="d3p1:КлючевыеСвойстваДоговор" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.Номенклатура" open="true" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10" name="КодОКПД2" type="d3p1:ОбщиеСвойстваДанныеКлассификатора" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.10" name="КодРаздел7ДекларацииНДС" type="d3p1:ОбщиеСвойстваДанныеКлассификатора" lowerBound="0"/>
+	</objectType>
+</package>

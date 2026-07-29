@@ -1,0 +1,2012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Подбор пользователей 1С</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Selection of 1C users</value>
+  </title>
+  <title>
+    <key>kk</key>
+    <value>1С пайдаланушыларды таңдау</value>
+  </title>
+  <title>
+    <key>uz</key>
+    <value>1C foydalanuvchilarini tanlash</value>
+  </title>
+  <title>
+    <key>be</key>
+    <value>Падбор карыстальнікаў 1С</value>
+  </title>
+  <title>
+    <key>uk</key>
+    <value>Підбір користувачів 1С</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>1c მომხმარებლების შერჩევა</value>
+  </title>
+  <title>
+    <key>tr</key>
+    <value>1C kullanıcılarının seçimi</value>
+  </title>
+  <title>
+    <key>es</key>
+    <value>Selección de usuarios 1C</value>
+  </title>
+  <title>
+    <key>ro</key>
+    <value>Selectarea utilizatorilor 1C</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаПользователи</name>
+    <id>12</id>
+    <items xsi:type="form:Table">
+      <name>ВсеПользователи</name>
+      <id>1</id>
+      <title>
+        <key>ru</key>
+        <value>Все пользователи базы</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>All users of the database</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Базаның барлық пайдаланушылары</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Barcha baza foydalanuvchilari</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Усе карыстальнікі базы</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Всі користувачі бази</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მონაცემთა ბაზის ყველა მომხმარებელი</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Veritabanının tüm kullanıcıları</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Todos los usuarios de la base</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Toți utilizatorii bazei de date</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ВсеПользователи</segments>
+      </dataPath>
+      <skipOnInput>false</skipOnInput>
+      <titleLocation>Top</titleLocation>
+      <excludedCommands>Add</excludedCommands>
+      <excludedCommands>Change</excludedCommands>
+      <excludedCommands>Copy</excludedCommands>
+      <excludedCommands>Delete</excludedCommands>
+      <excludedCommands>EndEdit</excludedCommands>
+      <excludedCommands>MoveDown</excludedCommands>
+      <excludedCommands>MoveUp</excludedCommands>
+      <excludedCommands>SortListAsc</excludedCommands>
+      <excludedCommands>SortListDesc</excludedCommands>
+      <items xsi:type="form:FormField">
+        <name>ПользователиСсылка</name>
+        <id>4</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ВсеПользователи.Пользователь</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ПользователиСсылкаExtendedTooltip</name>
+          <id>37</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиСсылкаКонтекстноеМеню</name>
+          <id>5</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <autoCommandBar>
+        <name>ВсеПользователиКоманднаяПанель</name>
+        <id>3</id>
+        <items xsi:type="form:Button">
+          <name>ПользователиНайти</name>
+          <id>8</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <skipOnInput>false</skipOnInput>
+          <extendedTooltip>
+            <name>ПользователиНайтиExtendedTooltip</name>
+            <id>34</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ВсеПользователи.StandardCommand.Find</commandName>
+          <representation>Picture</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InCommandBar</locationInCommandBar>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ПользователиОтменитьПоиск</name>
+          <id>9</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <skipOnInput>false</skipOnInput>
+          <extendedTooltip>
+            <name>ПользователиОтменитьПоискExtendedTooltip</name>
+            <id>35</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ВсеПользователи.StandardCommand.CancelSearch</commandName>
+          <representation>Picture</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InCommandBar</locationInCommandBar>
+        </items>
+        <horizontalAlign>Left</horizontalAlign>
+      </autoCommandBar>
+      <handlers>
+        <event>DragCheck</event>
+        <name>ВсеПользователиПроверкаПеретаскивания</name>
+      </handlers>
+      <handlers>
+        <event>Drag</event>
+        <name>ВсеПользователиПеретаскивание</name>
+      </handlers>
+      <searchStringAddition>
+        <name>ВсеПользователиСтрокаПоиска</name>
+        <id>48</id>
+        <extendedTooltip>
+          <name>ВсеПользователиСтрокаПоискаРасширеннаяПодсказка</name>
+          <id>50</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ВсеПользователиСтрокаПоискаКонтекстноеМеню</name>
+          <id>49</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <source>ВсеПользователи</source>
+        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchStringAddition>
+      <viewStatusAddition>
+        <name>ВсеПользователиСостояниеПросмотра</name>
+        <id>51</id>
+        <extendedTooltip>
+          <name>ВсеПользователиСостояниеПросмотраРасширеннаяПодсказка</name>
+          <id>53</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ВсеПользователиСостояниеПросмотраКонтекстноеМеню</name>
+          <id>52</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>ViewStatusAddition</type>
+        <source>ВсеПользователи</source>
+        <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </viewStatusAddition>
+      <searchControlAddition>
+        <name>ВсеПользователиУправлениеПоиском</name>
+        <id>54</id>
+        <extendedTooltip>
+          <name>ВсеПользователиУправлениеПоискомРасширеннаяПодсказка</name>
+          <id>56</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ВсеПользователиУправлениеПоискомКонтекстноеМеню</name>
+          <id>55</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>SearchControlAddition</type>
+        <source>ВсеПользователи</source>
+        <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchControlAddition>
+      <extendedTooltip>
+        <name>ВсеПользователиExtendedTooltip</name>
+        <id>36</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ВсеПользователиКонтекстноеМеню</name>
+        <id>2</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <changeRowSet>true</changeRowSet>
+      <changeRowOrder>true</changeRowOrder>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <autoMaxRowsCount>true</autoMaxRowsCount>
+      <selectionMode>MultiRow</selectionMode>
+      <headerHeight>1</headerHeight>
+      <footerHeight>1</footerHeight>
+      <horizontalScrollBar>AutoUse</horizontalScrollBar>
+      <verticalScrollBar>AutoUse</verticalScrollBar>
+      <autoInsertNewRow>true</autoInsertNewRow>
+      <searchOnInput>Auto</searchOnInput>
+      <initialListView>Auto</initialListView>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <enableStartDrag>true</enableStartDrag>
+      <enableDrag>true</enableDrag>
+      <rowFilter xsi:type="core:UndefinedValue"/>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>КомандыУправленияСписком</name>
+      <id>20</id>
+      <items xsi:type="form:Button">
+        <name>УстановитьКомандуДляВыделенныхПользователей</name>
+        <id>28</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>УстановитьКомандуДляВыделенныхПользователейExtendedTooltip</name>
+          <id>40</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.УстановитьКомандуДляВыделенныхПользователей</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>УстановитьДоступДляВсехПользователей</name>
+        <id>27</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>УстановитьДоступДляВсехПользователейExtendedTooltip</name>
+          <id>41</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.УстановитьДоступДляВсехПользователей</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>УбратьДоступККомандеУВсехПользователей</name>
+        <id>29</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>УбратьДоступККомандеУВсехПользователейExtendedTooltip</name>
+          <id>42</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.УбратьДоступККомандеУВсехПользователей</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <items xsi:type="form:Button">
+        <name>УбратьДоступККомандеУВыделенныхПользователей</name>
+        <id>30</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>УбратьДоступККомандеУВыделенныхПользователейExtendedTooltip</name>
+          <id>43</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.УбратьДоступККомандеУВыделенныхПользователей</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Команды управления списком</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>List Management Commands</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Тізімді басқару командалары</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Ro'yxatni boshqarish buyruqlari</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Каманды кіравання спісам</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Команди управління списком</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>სიის მართვის ბრძანებები</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Liste Yönetimi Komutları</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Comandos de gestión de listas</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Comenzi De Gestionare A Listelor</value>
+      </title>
+      <enableContentChange>true</enableContentChange>
+      <groupVerticalAlign>Center</groupVerticalAlign>
+      <extendedTooltip>
+        <name>КомандыУправленияСпискомExtendedTooltip</name>
+        <id>38</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>Vertical</group>
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Table">
+      <name>ПользователиКороткогоСписка</name>
+      <id>13</id>
+      <title>
+        <key>ru</key>
+        <value>Пользователи для импорта в MobileSMARTS</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Users to import into Cleverence</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Cleverence-ке импорттау үшін пайдаланушылар</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Cleverence-ga import qilish uchun foydalanuvchilar</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Карыстальнікі для імпарту ў Cleverence</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Користувачі для імпорту в Cleverence</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მომხმარებელი იმპორტი შევიდა Cleverence</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Cleverence'a aktarılacak kullanıcılar</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Usuarios para importar a Cleverence</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Utilizatorii să importe în Cleverence</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПользователиКороткогоСписка</segments>
+      </dataPath>
+      <skipOnInput>false</skipOnInput>
+      <titleLocation>Top</titleLocation>
+      <excludedCommands>Add</excludedCommands>
+      <excludedCommands>Change</excludedCommands>
+      <excludedCommands>Copy</excludedCommands>
+      <excludedCommands>Delete</excludedCommands>
+      <excludedCommands>EndEdit</excludedCommands>
+      <excludedCommands>MoveDown</excludedCommands>
+      <excludedCommands>MoveUp</excludedCommands>
+      <excludedCommands>SortListAsc</excludedCommands>
+      <excludedCommands>SortListDesc</excludedCommands>
+      <items xsi:type="form:FormField">
+        <name>ПользователиКороткогоСпискаПользователь</name>
+        <id>16</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ПользователиКороткогоСписка.Пользователь</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ПользователиКороткогоСпискаПользовательExtendedTooltip</name>
+          <id>47</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиКороткогоСпискаПользовательКонтекстноеМеню</name>
+          <id>17</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <autoCommandBar>
+        <name>ПользователиКороткогоСпискаКоманднаяПанель</name>
+        <id>15</id>
+        <items xsi:type="form:Button">
+          <name>ПользователиКороткогоСпискаНайти</name>
+          <id>18</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <skipOnInput>false</skipOnInput>
+          <extendedTooltip>
+            <name>ПользователиКороткогоСпискаНайтиExtendedTooltip</name>
+            <id>44</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ПользователиКороткогоСписка.StandardCommand.Find</commandName>
+          <representation>Picture</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InCommandBar</locationInCommandBar>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ПользователиКороткогоСпискаОтменитьПоиск</name>
+          <id>19</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <skipOnInput>false</skipOnInput>
+          <extendedTooltip>
+            <name>ПользователиКороткогоСпискаОтменитьПоискExtendedTooltip</name>
+            <id>45</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Item.ПользователиКороткогоСписка.StandardCommand.CancelSearch</commandName>
+          <representation>Picture</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InCommandBar</locationInCommandBar>
+        </items>
+        <horizontalAlign>Left</horizontalAlign>
+      </autoCommandBar>
+      <handlers>
+        <event>DragCheck</event>
+        <name>ПользователиКороткогоСпискаПроверкаПеретаскивания</name>
+      </handlers>
+      <handlers>
+        <event>Drag</event>
+        <name>ПользователиКороткогоСпискаПеретаскивание</name>
+      </handlers>
+      <searchStringAddition>
+        <name>ПользователиКороткогоСпискаСтрокаПоиска</name>
+        <id>57</id>
+        <extendedTooltip>
+          <name>ПользователиКороткогоСпискаСтрокаПоискаРасширеннаяПодсказка</name>
+          <id>59</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиКороткогоСпискаСтрокаПоискаКонтекстноеМеню</name>
+          <id>58</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <source>ПользователиКороткогоСписка</source>
+        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchStringAddition>
+      <viewStatusAddition>
+        <name>ПользователиКороткогоСпискаСостояниеПросмотра</name>
+        <id>60</id>
+        <extendedTooltip>
+          <name>ПользователиКороткогоСпискаСостояниеПросмотраРасширеннаяПодсказка</name>
+          <id>62</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиКороткогоСпискаСостояниеПросмотраКонтекстноеМеню</name>
+          <id>61</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>ViewStatusAddition</type>
+        <source>ПользователиКороткогоСписка</source>
+        <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </viewStatusAddition>
+      <searchControlAddition>
+        <name>ПользователиКороткогоСпискаУправлениеПоиском</name>
+        <id>63</id>
+        <extendedTooltip>
+          <name>ПользователиКороткогоСпискаУправлениеПоискомРасширеннаяПодсказка</name>
+          <id>65</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиКороткогоСпискаУправлениеПоискомКонтекстноеМеню</name>
+          <id>64</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>SearchControlAddition</type>
+        <source>ПользователиКороткогоСписка</source>
+        <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchControlAddition>
+      <extendedTooltip>
+        <name>ПользователиКороткогоСпискаExtendedTooltip</name>
+        <id>46</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПользователиКороткогоСпискаКонтекстноеМеню</name>
+        <id>14</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <changeRowSet>true</changeRowSet>
+      <changeRowOrder>true</changeRowOrder>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <autoMaxRowsCount>true</autoMaxRowsCount>
+      <selectionMode>MultiRow</selectionMode>
+      <headerHeight>1</headerHeight>
+      <footerHeight>1</footerHeight>
+      <horizontalScrollBar>AutoUse</horizontalScrollBar>
+      <verticalScrollBar>AutoUse</verticalScrollBar>
+      <autoInsertNewRow>true</autoInsertNewRow>
+      <searchOnInput>Auto</searchOnInput>
+      <initialListView>Auto</initialListView>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <enableStartDrag>true</enableStartDrag>
+      <enableDrag>true</enableDrag>
+      <rowFilter xsi:type="core:UndefinedValue"/>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Пользователи</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Users</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Пайдаланушылар</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Foydalanuvchilar</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Карыстальнік</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Користувач</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მომხმარებლები</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Kullanıcılar</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Usuarios</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Utilizatori</value>
+    </title>
+    <extendedTooltip>
+      <name>ГруппаПользователиExtendedTooltip</name>
+      <id>33</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>Группа1</name>
+    <id>69</id>
+    <items xsi:type="form:FormField">
+      <name>КопироватьПрава</name>
+      <id>66</id>
+      <title>
+        <key>ru</key>
+        <value>Копировать права</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Copy rights</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Құқықтарды көшіру</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Huquqlarni nusxalash</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Капіяваць правы</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Копіювати права</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ასლის უფლებები</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Hakları kopyala</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Copiar derechos</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Drepturi de copiere</value>
+      </title>
+      <titleFont xsi:type="core:FontRef">
+        <font>Style.NormalTextFont</font>
+        <scale>100</scale>
+      </titleFont>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>КопироватьПрава</segments>
+      </dataPath>
+      <titleLocation>Right</titleLocation>
+      <toolTip>
+        <key>ru</key>
+        <value>Скопируйте права доступа для ручной работы в 1С с расширением, основной обработкой и кнопками в документах и справочниках.</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Copy the access rights for manual work to 1C with the extension, basic processing, and buttons in documents and directories.</value>
+      </toolTip>
+      <toolTip>
+        <key>kk</key>
+        <value>Құжаттар мен анықтамалықтардағы кеңейтіммен, негізгі өңдеумен және түймелермен 1С-де қолдан жасалған рұқсаттарды көшіріңіз.</value>
+      </toolTip>
+      <toolTip>
+        <key>uz</key>
+        <value>Hujjatlar va ma'lumotnomalardagi kengaytma, asosiy ishlov berish va tugmalar bilan 1C-da qo'lda ishlash uchun ruxsatlarni nusxalash.</value>
+      </toolTip>
+      <toolTip>
+        <key>be</key>
+        <value>Скапіруйце правы доступу для ручной працы ў 1С з пашырэннем, асноўнай апрацоўкай і кнопкамі ў дакументах і даведніках.</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Скопіюйте права доступу для ручної роботи в 1С з розширенням, основною обробкою і кнопками в документах і довідниках.</value>
+      </toolTip>
+      <toolTip>
+        <key>ka</key>
+        <value>დააკოპირეთ ხელით მუშაობის წვდომის უფლებები 1c-ზე გაფართოებით, ძირითადი დამუშავებით და ღილაკებით დოკუმენტებსა და დირექტორიებში.</value>
+      </toolTip>
+      <toolTip>
+        <key>tr</key>
+        <value>Belgelerdeki ve dizinlerdeki uzantı, ana işleme ve düğmelerle manuel çalışma için erişim haklarını 1c'de kopyalayın.</value>
+      </toolTip>
+      <toolTip>
+        <key>es</key>
+        <value>Copie los derechos de acceso para el trabajo manual en 1C con la extensión, el procesamiento básico y los botones en documentos y directorios.</value>
+      </toolTip>
+      <toolTip>
+        <key>ro</key>
+        <value>Copiați drepturile de acces pentru lucrul manual în 1C cu extensia, procesarea de bază și butoanele din documente și directoare.</value>
+      </toolTip>
+      <toolTipRepresentation>Button</toolTipRepresentation>
+      <extendedTooltip>
+        <name>КопироватьПраваРасширеннаяПодсказка</name>
+        <id>68</id>
+        <title>
+          <key></key>
+          <value>Скопируйте права доступа для ручной работы в 1С с расширением, основной обработкой и кнопками в документах и справочниках.</value>
+        </title>
+        <title>
+          <key>ru</key>
+          <value>Скопируйте права доступа для ручной работы в 1С с расширением, основной обработкой и кнопками в документах и справочниках.</value>
+        </title>
+        <title>
+          <key>en</key>
+          <value>Copy the access rights for manual work to 1C with the extension, basic processing, and buttons in documents and directories.</value>
+        </title>
+        <title>
+          <key>kk</key>
+          <value>Құжаттар мен анықтамалықтардағы кеңейтіммен, негізгі өңдеумен және түймелермен 1С-де қолдан жасалған рұқсаттарды көшіріңіз.</value>
+        </title>
+        <title>
+          <key>uz</key>
+          <value>Hujjatlar va ma'lumotnomalardagi kengaytma, asosiy ishlov berish va tugmalar bilan 1C-da qo'lda ishlash uchun ruxsatlarni nusxalash.</value>
+        </title>
+        <title>
+          <key>be</key>
+          <value>Скапіруйце правы доступу для ручной працы ў 1С з пашырэннем, асноўнай апрацоўкай і кнопкамі ў дакументах і даведніках.</value>
+        </title>
+        <title>
+          <key>uk</key>
+          <value>Скопіюйте права доступу для ручної роботи в 1С з розширенням, основною обробкою і кнопками в документах і довідниках.</value>
+        </title>
+        <title>
+          <key>ka</key>
+          <value>დააკოპირეთ ხელით მუშაობის წვდომის უფლებები 1c-ზე გაფართოებით, ძირითადი დამუშავებით და ღილაკებით დოკუმენტებსა და დირექტორიებში.</value>
+        </title>
+        <title>
+          <key>tr</key>
+          <value>Belgelerdeki ve dizinlerdeki uzantı, ana işleme ve düğmelerle manuel çalışma için erişim haklarını 1c'de kopyalayın.</value>
+        </title>
+        <title>
+          <key>es</key>
+          <value>Copie los derechos de acceso para el trabajo manual en 1C con la extensión, el procesamiento básico y los botones en documentos y directorios.</value>
+        </title>
+        <title>
+          <key>ro</key>
+          <value>Copiați drepturile de acces pentru lucrul manual în 1C cu extensia, procesarea de bază și butoanele din documente și directoare.</value>
+        </title>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Center</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>КопироватьПраваКонтекстноеМеню</name>
+        <id>67</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>CheckBoxField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>Группа1РасширеннаяПодсказка</name>
+      <id>70</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <representation>NormalSeparation</representation>
+      <showLeftMargin>true</showLeftMargin>
+      <showTitle>true</showTitle>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <commandBarLocation>Bottom</commandBarLocation>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ОК</name>
+      <id>10</id>
+      <title>
+        <key>ru</key>
+        <value>Загрузить выбранных пользователей</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Upload selected users</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Таңдалған пайдаланушыларды жүктеу</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Tanlangan foydalanuvchilarni yuklab oling</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Загрузіць выбраных карыстальнікаў</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Завантажити вибраних користувачів</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ატვირთეთ შერჩეული მომხმარებლები</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Seçilen kullanıcıları yükle</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Descargar usuarios seleccionados</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Încărcați utilizatorii selectați</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <defaultItem>true</defaultItem>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>ОКExtendedTooltip</name>
+        <id>31</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ОК</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>Отмена</name>
+      <id>11</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <skipOnInput>false</skipOnInput>
+      <extendedTooltip>
+        <name>ОтменаExtendedTooltip</name>
+        <id>32</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Cancel</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <horizontalAlign>Right</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>ВсеПользователи</name>
+    <title>
+      <key>ru</key>
+      <value>Все пользователи</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>All users</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Барлық пайдаланушылар</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Barcha foydalanuvchilar</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Усе карыстальнікі</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Всі користувачі</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ყველა მომხმარებელი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Tüm kullanıcılar</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Todos los usuarios</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Toți utilizatorii</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Пользователь</name>
+      <title>
+        <key>ru</key>
+        <value>Пользователь</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>User</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Пайдаланушы</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Foydalanuvchi</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Карыстальнік</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Користувач</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მომხმარებელი</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Kullanıcı</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Usuario</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Utilizator</value>
+      </title>
+      <id>2</id>
+      <valueType/>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ПользователиКороткогоСписка</name>
+    <title>
+      <key>ru</key>
+      <value>Пользователи короткого списка</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Short List Users</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Қысқа тізім пайдаланушылары</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Qisqa ro'yxat foydalanuvchilari</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Карыстальнікі кароткага спісу</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Користувачі короткого списку</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მოკლე სია მომხმარებლები</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Kısa Liste Kullanıcıları</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Usuarios preseleccionados</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Utilizatorii Listei Scurte</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Пользователь</name>
+      <title>
+        <key>ru</key>
+        <value>Пользователь</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>User</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Пайдаланушы</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Foydalanuvchi</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Карыстальнік</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Користувач</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მომხმარებელი</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Kullanıcı</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Usuario</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Utilizator</value>
+      </title>
+      <id>1</id>
+      <valueType/>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>СозданныеПользователиИмпорта</name>
+    <title>
+      <key>ru</key>
+      <value>Созданные пользователи импорта</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Created import users</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Құрылған импорттаушы пайдаланушылар</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Yaratilgan import foydalanuvchilari</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Створаныя карыстальнікі імпарту</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Створені користувачі імпорту</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შექმნილია იმპორტის მომხმარებლები</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Oluşturulan içe aktarma kullanıcıları</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Usuarios de importación creados</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Utilizatori de import creați</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>ПодборДляКопированияНастроек</name>
+    <title>
+      <key>ru</key>
+      <value>Подбор для копирования настроек</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Підбір для копіювання налаштувань</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Selection for copying settings</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Параметрлерді көшіру үшін таңдау</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Sozlamalarni nusxalash uchun tanlov</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Падбор для капіявання налад</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შერჩევა გადაწერა პარამეტრები</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Ayarları kopyalamak için seçim</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Selección para copiar la configuración</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Selecție pentru copierea setărilor</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>КопироватьПрава</name>
+    <title>
+      <key></key>
+      <value>Копировать права</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>АвтоТестОткрытияФормы</name>
+    <title>
+      <key>ru</key>
+      <value>Авто тест открытия формы</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Auto form opening test</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Нысанды автоматты түрде ашу сынағы</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Avtomatik shaklni ochish testi</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Аўто тэст адкрыцця формы</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Авто тест відкриття форми</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ავტომატური ფორმის გახსნის ტესტი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Otomatik form açma testi</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Prueba de apertura automática del molde</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Test de deschidere automată a formularului</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ОК</name>
+    <title>
+      <key>ru</key>
+      <value>ОК</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>ok</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Жарайды</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>OK</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>ВОКА</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>ОКО</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>კარგი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Tamam. tamam</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>OJOS</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>ok</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>ОК</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>ok</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Жарайды</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>OK</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>ВОКА</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>ОКО</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>კარგი</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Tamam. tamam</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>OJOS</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>ok</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОК</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>УстановитьДоступДляВсехПользователей</name>
+    <title>
+      <key>ru</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>>></value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>>></value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавить всех пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Add all users</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Барлық пайдаланушыларды қосыңыз</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Barcha foydalanuvchilarni qo'shing</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Дадаць ўсіх карыстальнікаў</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Додати всіх користувачів</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დაამატეთ ყველა მომხმარებელი</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Tüm kullanıcıları ekle</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Añadir todos los usuarios</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Adăugați toți utilizatorii</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>УстановитьДоступДляВсехПользователей</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>УстановитьКомандуДляВыделенныхПользователей</name>
+    <title>
+      <key>ru</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>></value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>></value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавить выделенных пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Add Dedicated Users</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Арнайы пайдаланушыларды қосыңыз</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Maxsus foydalanuvchilarni qo'shing</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Дадаць вылучаных карыстальнікаў</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Додати виділених користувачів</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>დაამატეთ თავდადებული მომხმარებლები</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Özel kullanıcılar ekleyin</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Añadir usuarios dedicados</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Adăugați Utilizatori Dedicați</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>УстановитьКомандуДляВыделенныхПользователей</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>УбратьДоступККомандеУВсехПользователей</name>
+    <title>
+      <key>ru</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>&lt;&lt;</value>
+    </title>
+    <id>4</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Удалить всех пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Delete all users</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Барлық пайдаланушыларды жою</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Barcha foydalanuvchilarni o'chirish</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Выдаліць усіх карыстальнікаў</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Видалити всіх користувачів</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>წაშალეთ ყველა მომხმარებელი</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Tüm kullanıcıları sil</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Eliminar todos los usuarios</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Ștergeți toți utilizatorii</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>УбратьДоступККомандеУВсехПользователей</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>УбратьДоступККомандеУВыделенныхПользователей</name>
+    <title>
+      <key>ru</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>&lt;</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>&lt;</value>
+    </title>
+    <id>5</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Удалить выделенных пользователей</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Delete selected users</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Арнайы пайдаланушыларды жою</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Tanlangan foydalanuvchilarni o'chirish</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Выдаліць вылучаных карыстальнікаў</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Видалити виділених користувачів</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>წაშალეთ შერჩეული მომხმარებლები</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Vurgulanan kullanıcıları silin</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Eliminar usuarios seleccionados</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Ștergeți utilizatorii selectați</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>УбратьДоступККомандеУВыделенныхПользователей</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>ПользователиСБыстрымДоступом</name>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>ПредставлениеКоманды</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>
