@@ -208,6 +208,7 @@
                 <extendedEditMultipleValues>true</extendedEditMultipleValues>
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
+                <textEdit>true</textEdit>
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
@@ -2191,7 +2192,6 @@
                   <showInFooter>true</showInFooter>
                   <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
                 </items>
-                <visible>true</visible>
                 <enabled>true</enabled>
                 <userVisible>
                   <common>true</common>
@@ -2599,7 +2599,7 @@
           <id>1808</id>
           <title>
             <key>ru</key>
-            <value>&lt;color #000000>В настройках складского учета&lt;/>&lt;b>&lt;color #000000> &lt;/>&lt;/>&lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674>не включено&lt;/>&lt;/>&lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674> &lt;/>&lt;/>&lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674>использование&lt;/>&lt;/> ордерных складов, поэтому возможно только справочное указание серий. Для настройки учета остатков по сериям нужно включить использование ордерных складов и настроить в складах использование ордерной схемы &lt;b>при отражении излишков, недостач и порчи&lt;/>. На отгрузку и поступление склады могут оставаться неордерными.</value>
+            <value>&lt;color #000000>В настройках складского учета&lt;/>&lt;b>&lt;color #000000> &lt;/>&lt;/>&lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e>не включено&lt;/>&lt;/>&lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e> &lt;/>&lt;/>&lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e>использование&lt;/>&lt;/> ордерных складов, поэтому возможно только справочное указание серий. Для настройки учета остатков по сериям нужно включить использование ордерных складов и настроить в складах использование ордерной схемы &lt;b>при отражении излишков, недостач и порчи&lt;/>. На отгрузку и поступление склады могут оставаться неордерными.</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -2637,7 +2637,7 @@
           <id>1019</id>
           <title>
             <key>ru</key>
-            <value>В настройках складского учета &lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674>не включено&lt;/>&lt;/>&lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674> &lt;/>&lt;/>&lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674>использование &lt;/>&lt;/>ордерной схемы &lt;b>при отражении излишков недостач и порчи&lt;/>, поэтому возможно только справочное указание серий.</value>
+            <value>В настройках складского учета &lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e>не включено&lt;/>&lt;/>&lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e> &lt;/>&lt;/>&lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e>использование &lt;/>&lt;/>ордерной схемы &lt;b>при отражении излишков недостач и порчи&lt;/>, поэтому возможно только справочное указание серий.</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -2933,6 +2933,9 @@
               <common>true</common>
             </userVisible>
             <titleLocation>None</titleLocation>
+            <excludedCommands>Copy</excludedCommands>
+            <excludedCommands>MoveDown</excludedCommands>
+            <excludedCommands>MoveUp</excludedCommands>
             <items xsi:type="form:FormField">
               <name>ПолитикиУчетаСерийСклад</name>
               <id>84</id>
@@ -3297,7 +3300,7 @@
           <id>485</id>
           <title>
             <key>ru</key>
-            <value>На складе &lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674>не используетс&lt;/>&lt;/>&lt;b>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674>я&lt;/>&lt;/>&lt;colorstyle 0:739c389f-8f7a-48cc-98cf-99322a1f7674> &lt;/>ордерная схема при отражении излишков недостач и порчи, поэтому возможно только справочное указание серий.</value>
+            <value>На складе &lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e>не используетс&lt;/>&lt;/>&lt;b>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e>я&lt;/>&lt;/>&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e> &lt;/>ордерная схема при отражении излишков недостач и порчи, поэтому возможно только справочное указание серий.</value>
           </title>
           <enabled>true</enabled>
           <userVisible>
@@ -3426,6 +3429,15 @@
               <common>true</common>
             </userVisible>
             <titleLocation>None</titleLocation>
+            <excludedCommands>CancelSearch</excludedCommands>
+            <excludedCommands>Change</excludedCommands>
+            <excludedCommands>Copy</excludedCommands>
+            <excludedCommands>CopyToClipboard</excludedCommands>
+            <excludedCommands>EndEdit</excludedCommands>
+            <excludedCommands>Find</excludedCommands>
+            <excludedCommands>OutputList</excludedCommands>
+            <excludedCommands>SortListAsc</excludedCommands>
+            <excludedCommands>SortListDesc</excludedCommands>
             <items xsi:type="form:FormField">
               <name>ТаблицаДопРеквизитовНоменклатурыПредставлениеРеквизита</name>
               <id>462</id>
@@ -3775,6 +3787,15 @@
               <common>true</common>
             </userVisible>
             <titleLocation>None</titleLocation>
+            <excludedCommands>CancelSearch</excludedCommands>
+            <excludedCommands>Change</excludedCommands>
+            <excludedCommands>Copy</excludedCommands>
+            <excludedCommands>CopyToClipboard</excludedCommands>
+            <excludedCommands>EndEdit</excludedCommands>
+            <excludedCommands>Find</excludedCommands>
+            <excludedCommands>OutputList</excludedCommands>
+            <excludedCommands>SortListAsc</excludedCommands>
+            <excludedCommands>SortListDesc</excludedCommands>
             <items xsi:type="form:FormField">
               <name>ТаблицаДопРеквизитовХарактеристикПредставлениеРеквизита</name>
               <id>464</id>
@@ -4123,6 +4144,15 @@
               <common>true</common>
             </userVisible>
             <titleLocation>None</titleLocation>
+            <excludedCommands>CancelSearch</excludedCommands>
+            <excludedCommands>Change</excludedCommands>
+            <excludedCommands>Copy</excludedCommands>
+            <excludedCommands>CopyToClipboard</excludedCommands>
+            <excludedCommands>EndEdit</excludedCommands>
+            <excludedCommands>Find</excludedCommands>
+            <excludedCommands>OutputList</excludedCommands>
+            <excludedCommands>SortListAsc</excludedCommands>
+            <excludedCommands>SortListDesc</excludedCommands>
             <items xsi:type="form:FormField">
               <name>ТаблицаДопРеквизитовСерийПредставлениеРеквизита</name>
               <id>466</id>
@@ -5447,6 +5477,16 @@
             <common>true</common>
           </userVisible>
           <titleLocation>None</titleLocation>
+          <excludedCommands>CancelSearch</excludedCommands>
+          <excludedCommands>Change</excludedCommands>
+          <excludedCommands>Copy</excludedCommands>
+          <excludedCommands>CopyToClipboard</excludedCommands>
+          <excludedCommands>EndEdit</excludedCommands>
+          <excludedCommands>Find</excludedCommands>
+          <excludedCommands>OutputList</excludedCommands>
+          <excludedCommands>SelectAll</excludedCommands>
+          <excludedCommands>SortListAsc</excludedCommands>
+          <excludedCommands>SortListDesc</excludedCommands>
           <items xsi:type="form:FormField">
             <name>РеквизитыБыстрогоОтбораНоменклатурыПредставлениеРеквизита</name>
             <id>216</id>
@@ -5666,6 +5706,16 @@
             <common>true</common>
           </userVisible>
           <titleLocation>None</titleLocation>
+          <excludedCommands>CancelSearch</excludedCommands>
+          <excludedCommands>Change</excludedCommands>
+          <excludedCommands>Copy</excludedCommands>
+          <excludedCommands>CopyToClipboard</excludedCommands>
+          <excludedCommands>EndEdit</excludedCommands>
+          <excludedCommands>Find</excludedCommands>
+          <excludedCommands>OutputList</excludedCommands>
+          <excludedCommands>SelectAll</excludedCommands>
+          <excludedCommands>SortListAsc</excludedCommands>
+          <excludedCommands>SortListDesc</excludedCommands>
           <items xsi:type="form:FormField">
             <name>РеквизитыБыстрогоОтбораХарактеристикПредставлениеРеквизита</name>
             <id>226</id>
@@ -6052,6 +6102,20 @@
                 <common>true</common>
               </userVisible>
               <titleLocation>None</titleLocation>
+              <excludedCommands>Add</excludedCommands>
+              <excludedCommands>CancelSearch</excludedCommands>
+              <excludedCommands>Change</excludedCommands>
+              <excludedCommands>Copy</excludedCommands>
+              <excludedCommands>CopyToClipboard</excludedCommands>
+              <excludedCommands>Delete</excludedCommands>
+              <excludedCommands>EndEdit</excludedCommands>
+              <excludedCommands>Find</excludedCommands>
+              <excludedCommands>MoveDown</excludedCommands>
+              <excludedCommands>MoveUp</excludedCommands>
+              <excludedCommands>OutputList</excludedCommands>
+              <excludedCommands>SelectAll</excludedCommands>
+              <excludedCommands>SortListAsc</excludedCommands>
+              <excludedCommands>SortListDesc</excludedCommands>
               <items xsi:type="form:FormGroup">
                 <name>РеквизитыДляКонтроляНоменклатурыГруппаПредставлениеРеквизита</name>
                 <id>1952</id>
@@ -6858,6 +6922,20 @@
                 <common>true</common>
               </userVisible>
               <titleLocation>None</titleLocation>
+              <excludedCommands>Add</excludedCommands>
+              <excludedCommands>CancelSearch</excludedCommands>
+              <excludedCommands>Change</excludedCommands>
+              <excludedCommands>Copy</excludedCommands>
+              <excludedCommands>CopyToClipboard</excludedCommands>
+              <excludedCommands>Delete</excludedCommands>
+              <excludedCommands>EndEdit</excludedCommands>
+              <excludedCommands>Find</excludedCommands>
+              <excludedCommands>MoveDown</excludedCommands>
+              <excludedCommands>MoveUp</excludedCommands>
+              <excludedCommands>OutputList</excludedCommands>
+              <excludedCommands>SelectAll</excludedCommands>
+              <excludedCommands>SortListAsc</excludedCommands>
+              <excludedCommands>SortListDesc</excludedCommands>
               <items xsi:type="form:FormGroup">
                 <name>РеквизитыДляКонтроляХарактеристикГруппаПредставлениеРеквизита</name>
                 <id>2062</id>
@@ -8359,7 +8437,11 @@
                   </contextMenu>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+                  <extInfo xsi:type="form:PictureDecorationExtInfo">
+                    <picture xsi:type="core:PictureRef">
+                      <picture>CommonPicture.ИнформацияПоНедоступнымПолям</picture>
+                    </picture>
+                  </extInfo>
                 </items>
                 <items xsi:type="form:Decoration">
                   <name>КомментарийИспользованияХарактеристики</name>
@@ -8651,7 +8733,11 @@
                   </contextMenu>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+                  <extInfo xsi:type="form:PictureDecorationExtInfo">
+                    <picture xsi:type="core:PictureRef">
+                      <picture>CommonPicture.ИнформацияПоНедоступнымПолям</picture>
+                    </picture>
+                  </extInfo>
                 </items>
                 <items xsi:type="form:Decoration">
                   <name>КомментарийИспользованияСерии</name>
@@ -8860,7 +8946,11 @@
                   </contextMenu>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+                  <extInfo xsi:type="form:PictureDecorationExtInfo">
+                    <picture xsi:type="core:PictureRef">
+                      <picture>CommonPicture.ИнформацияПоНедоступнымПолям</picture>
+                    </picture>
+                  </extInfo>
                 </items>
                 <items xsi:type="form:Decoration">
                   <name>КомментарийИспользованияУпаковок</name>
@@ -9744,7 +9834,7 @@
                   <id>1720</id>
                   <title>
                     <key>ru</key>
-                    <value>ТНВЭД</value>
+                    <value>ТН ВЭД</value>
                   </title>
                   <visible>true</visible>
                   <enabled>true</enabled>
@@ -9843,7 +9933,7 @@
                 </extendedTooltip>
                 <type>UsualGroup</type>
                 <extInfo xsi:type="form:UsualGroupExtInfo">
-                  <group>HorizontalIfPossible</group>
+                  <group>Vertical</group>
                   <representation>WeakSeparation</representation>
                   <showLeftMargin>true</showLeftMargin>
                   <united>true</united>
@@ -11293,7 +11383,7 @@
                   <id>1782</id>
                   <title>
                     <key>ru</key>
-                    <value>ОКВЭД2</value>
+                    <value>ОКВЭД 2</value>
                   </title>
                   <visible>true</visible>
                   <enabled>true</enabled>
@@ -11742,6 +11832,16 @@
               <common>true</common>
             </userVisible>
             <titleLocation>None</titleLocation>
+            <excludedCommands>CancelSearch</excludedCommands>
+            <excludedCommands>Change</excludedCommands>
+            <excludedCommands>Copy</excludedCommands>
+            <excludedCommands>CopyToClipboard</excludedCommands>
+            <excludedCommands>EndEdit</excludedCommands>
+            <excludedCommands>Find</excludedCommands>
+            <excludedCommands>OutputList</excludedCommands>
+            <excludedCommands>SelectAll</excludedCommands>
+            <excludedCommands>SortListAsc</excludedCommands>
+            <excludedCommands>SortListDesc</excludedCommands>
             <items xsi:type="form:FormField">
               <name>ТаблицаДопСведенийНоменклатурыПредставлениеРеквизита</name>
               <id>468</id>
@@ -12088,6 +12188,16 @@
               <common>true</common>
             </userVisible>
             <titleLocation>None</titleLocation>
+            <excludedCommands>CancelSearch</excludedCommands>
+            <excludedCommands>Change</excludedCommands>
+            <excludedCommands>Copy</excludedCommands>
+            <excludedCommands>CopyToClipboard</excludedCommands>
+            <excludedCommands>EndEdit</excludedCommands>
+            <excludedCommands>Find</excludedCommands>
+            <excludedCommands>OutputList</excludedCommands>
+            <excludedCommands>SelectAll</excludedCommands>
+            <excludedCommands>SortListAsc</excludedCommands>
+            <excludedCommands>SortListDesc</excludedCommands>
             <items xsi:type="form:FormField">
               <name>ТаблицаДопСведенийХарактеристикПредставлениеРеквизита</name>
               <id>470</id>
@@ -12434,6 +12544,16 @@
               <common>true</common>
             </userVisible>
             <titleLocation>None</titleLocation>
+            <excludedCommands>CancelSearch</excludedCommands>
+            <excludedCommands>Change</excludedCommands>
+            <excludedCommands>Copy</excludedCommands>
+            <excludedCommands>CopyToClipboard</excludedCommands>
+            <excludedCommands>EndEdit</excludedCommands>
+            <excludedCommands>Find</excludedCommands>
+            <excludedCommands>OutputList</excludedCommands>
+            <excludedCommands>SelectAll</excludedCommands>
+            <excludedCommands>SortListAsc</excludedCommands>
+            <excludedCommands>SortListDesc</excludedCommands>
             <items xsi:type="form:FormField">
               <name>ТаблицаДопСведенийСерийПредставлениеРеквизита</name>
               <id>472</id>

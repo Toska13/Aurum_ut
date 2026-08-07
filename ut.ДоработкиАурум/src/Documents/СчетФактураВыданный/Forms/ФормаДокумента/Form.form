@@ -429,7 +429,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>РеквизитыКорректируемыеСФНадписьКонтекстноеМеню</name>
-            <id>524</id>
+            <id>813</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>LabelField</type>
@@ -613,6 +613,7 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
+                <autoMaxWidth>true</autoMaxWidth>
                 <maxWidth>28</maxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
                 <wrap>true</wrap>
@@ -717,7 +718,11 @@
                   </contextMenu>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+                  <extInfo xsi:type="form:PictureDecorationExtInfo">
+                    <picture xsi:type="core:PictureRef">
+                      <picture>CommonPicture.ВниманиеКрасный</picture>
+                    </picture>
+                  </extInfo>
                 </items>
                 <visible>true</visible>
                 <enabled>true</enabled>
@@ -834,6 +839,8 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
+                <width>17</width>
+                <autoMaxWidth>true</autoMaxWidth>
                 <maxWidth>14</maxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
                 <horizontalStretch>false</horizontalStretch>
@@ -877,6 +884,8 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
+                <width>14</width>
+                <autoMaxWidth>true</autoMaxWidth>
                 <maxWidth>14</maxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
                 <wrap>true</wrap>
@@ -980,7 +989,11 @@
               </contextMenu>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+              <extInfo xsi:type="form:PictureDecorationExtInfo">
+                <picture xsi:type="core:PictureRef">
+                  <picture>CommonPicture.Предупреждение</picture>
+                </picture>
+              </extInfo>
             </items>
             <items xsi:type="form:Decoration">
               <name>ПредупреждениеКонтрагент</name>
@@ -1102,7 +1115,7 @@
         </items>
         <items xsi:type="form:FormGroup">
           <name>ГруппаПокупатели</name>
-          <id>814</id>
+          <id>598</id>
           <items xsi:type="form:Decoration">
             <name>ДанныеКлиента</name>
             <id>673</id>
@@ -1183,7 +1196,7 @@
           </title>
           <extendedTooltip>
             <name>ГруппаПокупателиРасширеннаяПодсказка</name>
-            <id>816</id>
+            <id>599</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -1219,6 +1232,7 @@
               <key>ru</key>
               <value>Идентификатор платежа используется для автоматического заполнения объекта расчетов в платежном поручении.</value>
             </toolTip>
+            <toolTipRepresentation>Button</toolTipRepresentation>
             <extendedTooltip>
               <name>ИдентификаторПлатежаРасширеннаяПодсказка</name>
               <id>254</id>
@@ -1241,7 +1255,7 @@
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
-              <maxWidth>21</maxWidth>
+              <maxWidth>26</maxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <chooseType>true</chooseType>
@@ -1273,19 +1287,26 @@
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
+            <readOnly>true</readOnly>
             <editMode>Enter</editMode>
             <showInHeader>true</showInHeader>
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
-              <width>7</width>
-              <autoMaxWidth>true</autoMaxWidth>
+              <width>5</width>
+              <maxWidth>5</maxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <horizontalStretch>false</horizontalStretch>
               <openButton>false</openButton>
               <chooseType>true</chooseType>
               <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
+              <choiceParameterLinks>
+                <name>ВалютаОснованияСчетаФактуры</name>
+                <datapath xsi:type="form:DataPath">
+                  <segments>ВалютаОснованияСчетаФактуры</segments>
+                </datapath>
+              </choiceParameterLinks>
             </extInfo>
           </items>
           <visible>true</visible>
@@ -1352,6 +1373,7 @@
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
               <maxWidth>37</maxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
@@ -1849,7 +1871,7 @@
       </items>
       <items xsi:type="form:FormField">
         <name>Автор</name>
-        <id>842</id>
+        <id>816</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -2550,7 +2572,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -2590,7 +2611,7 @@
         <id>703</id>
         <items xsi:type="form:FormField">
           <name>ТоварыСтатусУказанияСерий</name>
-          <id>813</id>
+          <id>524</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -2598,7 +2619,7 @@
           </userVisible>
           <titleLocation>None</titleLocation>
           <extendedTooltip>
-            <name>ТоварыСтатусУказанияСерийExtendedTooltip</name>
+            <name>ТоварыСтатусУказанияСерийРасширеннаяПодсказка</name>
             <id>806</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
@@ -2846,7 +2867,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -2887,7 +2907,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -3041,7 +3060,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <width>10</width>
             <autoMaxWidth>true</autoMaxWidth>
@@ -3083,7 +3101,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <width>10</width>
             <autoMaxWidth>true</autoMaxWidth>
@@ -3191,7 +3208,6 @@
           <editMode>Enter</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <width>10</width>
             <autoMaxWidth>true</autoMaxWidth>
@@ -3233,7 +3249,6 @@
           <editMode>Enter</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <width>10</width>
             <autoMaxWidth>true</autoMaxWidth>
@@ -3383,7 +3398,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <width>10</width>
             <autoMaxWidth>true</autoMaxWidth>
@@ -3425,7 +3439,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <width>10</width>
             <autoMaxWidth>true</autoMaxWidth>
@@ -3500,7 +3513,7 @@
       </items>
       <items xsi:type="form:FormGroup">
         <name>ТоварыГруппаКоличествоПоРНПТ</name>
-        <id>598</id>
+        <id>814</id>
         <items xsi:type="form:FormField">
           <name>ТоварыКоличествоПоРНПТ</name>
           <id>600</id>
@@ -3570,7 +3583,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -3611,7 +3623,6 @@
           <editMode>EnterOnInput</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
-          <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:InputFieldExtInfo">
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -3632,7 +3643,7 @@
         </title>
         <extendedTooltip>
           <name>ТоварыГруппаКоличествоПоРНПТРасширеннаяПодсказка</name>
-          <id>599</id>
+          <id>815</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -4053,6 +4064,7 @@
       <selectionMode>MultiRow</selectionMode>
       <header>true</header>
       <headerHeight>1</headerHeight>
+      <footer>true</footer>
       <footerHeight>1</footerHeight>
       <horizontalScrollBar>AutoUse</horizontalScrollBar>
       <verticalScrollBar>AutoUse</verticalScrollBar>
@@ -4093,6 +4105,9 @@
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <showTitle>true</showTitle>
+      <titleDataPath xsi:type="form:DataPath">
+        <segments>Объект.Товары.RowsCount</segments>
+      </titleDataPath>
       <throughAlign>Auto</throughAlign>
       <currentRowUse>Auto</currentRowUse>
     </extInfo>
@@ -4128,7 +4143,11 @@
       <height>1</height>
       <autoMaxHeight>true</autoMaxHeight>
       <groupVerticalAlign>Center</groupVerticalAlign>
-      <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+      <extInfo xsi:type="form:PictureDecorationExtInfo">
+        <picture xsi:type="core:PictureRef">
+          <picture>CommonPicture.Внимание16</picture>
+        </picture>
+      </extInfo>
     </items>
     <items xsi:type="form:Decoration">
       <name>ДекорацияРучнаяКорректировкаСуммДокументов</name>

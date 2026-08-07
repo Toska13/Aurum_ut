@@ -138,7 +138,11 @@
           </contextMenu>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>StdPicture.Information</picture>
+            </picture>
+          </extInfo>
         </items>
         <items xsi:type="form:Decoration">
           <name>ДекорацияНеобходимыСтатусы</name>
@@ -348,7 +352,11 @@
               <height>1</height>
               <autoMaxHeight>true</autoMaxHeight>
               <verticalStretch>false</verticalStretch>
-              <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+              <extInfo xsi:type="form:PictureDecorationExtInfo">
+                <picture xsi:type="core:PictureRef">
+                  <picture>CommonPicture.ПревышениеЗаказа</picture>
+                </picture>
+              </extInfo>
             </items>
             <items xsi:type="form:FormField">
               <name>НадписьРасхождениеЗаказ</name>
@@ -551,7 +559,11 @@
               <height>1</height>
               <autoMaxHeight>true</autoMaxHeight>
               <verticalStretch>false</verticalStretch>
-              <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+              <extInfo xsi:type="form:PictureDecorationExtInfo">
+                <picture xsi:type="core:PictureRef">
+                  <picture>CommonPicture.ПревышениеЗаказа</picture>
+                </picture>
+              </extInfo>
             </items>
             <items xsi:type="form:FormField">
               <name>НадписьРасхождениеЗаказы</name>
@@ -1006,6 +1018,7 @@
               <dropListButton>false</dropListButton>
               <choiceButton>true</choiceButton>
               <choiceButtonRepresentation>ShowInInputField</choiceButtonRepresentation>
+              <autoMarkIncomplete>false</autoMarkIncomplete>
               <chooseType>true</chooseType>
               <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
@@ -1108,7 +1121,7 @@
       </items>
       <items xsi:type="form:FormGroup">
         <name>ГруппаСостояниеЭДО</name>
-        <id>384</id>
+        <id>449</id>
         <items xsi:type="form:FormField">
           <name>ДекорацияСостояниеЭДО</name>
           <id>406</id>
@@ -1158,7 +1171,7 @@
         </title>
         <extendedTooltip>
           <name>ГруппаСостояниеЭДОРасширеннаяПодсказка</name>
-          <id>399</id>
+          <id>450</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -1168,7 +1181,7 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>Vertical</group>
+          <group>AlwaysHorizontal</group>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
           <throughAlign>Auto</throughAlign>
@@ -3303,6 +3316,9 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>Объект.Товары.RowsCount</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -3463,6 +3479,10 @@
       <items xsi:type="form:FormField">
         <name>НаправлениеДеятельности</name>
         <id>357</id>
+        <title>
+          <key>ru</key>
+          <value>Направление деятельности запасов</value>
+        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>

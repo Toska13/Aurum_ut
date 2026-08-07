@@ -138,7 +138,11 @@
           </contextMenu>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+          <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>StdPicture.Information</picture>
+            </picture>
+          </extInfo>
         </items>
         <items xsi:type="form:Decoration">
           <name>ДекорацияНеобходимыСтатусы</name>
@@ -348,7 +352,11 @@
               <height>1</height>
               <autoMaxHeight>true</autoMaxHeight>
               <verticalStretch>false</verticalStretch>
-              <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+              <extInfo xsi:type="form:PictureDecorationExtInfo">
+                <picture xsi:type="core:PictureRef">
+                  <picture>CommonPicture.ПревышениеЗаказа</picture>
+                </picture>
+              </extInfo>
             </items>
             <items xsi:type="form:FormField">
               <name>НадписьРасхождениеЗаказ</name>
@@ -551,7 +559,11 @@
               <height>1</height>
               <autoMaxHeight>true</autoMaxHeight>
               <verticalStretch>false</verticalStretch>
-              <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+              <extInfo xsi:type="form:PictureDecorationExtInfo">
+                <picture xsi:type="core:PictureRef">
+                  <picture>CommonPicture.ПревышениеЗаказа</picture>
+                </picture>
+              </extInfo>
             </items>
             <items xsi:type="form:FormField">
               <name>НадписьРасхождениеЗаказы</name>
@@ -820,7 +832,7 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
-                <maxWidth>27</maxWidth>
+                <maxWidth>28</maxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
                 <dropListButton>false</dropListButton>
                 <choiceButton>true</choiceButton>
@@ -868,7 +880,7 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
-                <maxWidth>27</maxWidth>
+                <maxWidth>28</maxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
                 <dropListButton>false</dropListButton>
                 <choiceButton>true</choiceButton>
@@ -1133,8 +1145,7 @@
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
           <maxWidth>74</maxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <verticalStretch>false</verticalStretch>
+          <maxHeight>3</maxHeight>
           <wrap>true</wrap>
           <multiLine>true</multiLine>
           <chooseType>true</chooseType>
@@ -2240,7 +2251,7 @@
           </items>
           <items xsi:type="form:Button">
             <name>ТоварыЗагрузитьИзФайла</name>
-            <id>751</id>
+            <id>792</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -2248,7 +2259,7 @@
             </userVisible>
             <extendedTooltip>
               <name>ТоварыЗагрузитьИзФайлаРасширеннаяПодсказка</name>
-              <id>752</id>
+              <id>793</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -2796,6 +2807,9 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>Объект.Товары.RowsCount</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -2838,6 +2852,9 @@
           <maxWidth>9</maxWidth>
           <maxHeight>9</maxHeight>
           <extInfo xsi:type="form:PictureDecorationExtInfo">
+            <picture xsi:type="core:PictureRef">
+              <picture>CommonPicture.ЛоготипОсновнойСервисДоставки</picture>
+            </picture>
             <fileDragMode>AsFileRef</fileDragMode>
           </extInfo>
         </items>
@@ -4878,6 +4895,7 @@
             <userVisible>
               <common>true</common>
             </userVisible>
+            <toolTipRepresentation>Button</toolTipRepresentation>
             <extendedTooltip>
               <name>ДатаПоступленияРасширеннаяПодсказка</name>
               <id>728</id>
@@ -5222,7 +5240,7 @@
   </items>
   <items xsi:type="form:FormGroup">
     <name>ГруппаСостояниеЭДО</name>
-    <id>717</id>
+    <id>755</id>
     <items xsi:type="form:FormGroup">
       <name>ГруппаСостояниеЭПД</name>
       <id>746</id>
@@ -5379,7 +5397,7 @@
     </title>
     <extendedTooltip>
       <name>ГруппаСостояниеЭДОРасширеннаяПодсказка</name>
-      <id>718</id>
+      <id>756</id>
       <type>Label</type>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>

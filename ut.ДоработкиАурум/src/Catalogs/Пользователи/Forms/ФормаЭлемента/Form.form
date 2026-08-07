@@ -32,7 +32,11 @@
       </contextMenu>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+      <extInfo xsi:type="form:PictureDecorationExtInfo">
+        <picture xsi:type="core:PictureRef">
+          <picture>CommonPicture.Предупреждение</picture>
+        </picture>
+      </extInfo>
     </items>
     <items xsi:type="form:Decoration">
       <name>СлужебныйПользовательНадпись</name>
@@ -136,7 +140,11 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <skipOnInput>false</skipOnInput>
-      <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+      <extInfo xsi:type="form:PictureDecorationExtInfo">
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.DialogExclamation</picture>
+        </picture>
+      </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
       <name>СвойстваПояснениеИКоманды</name>
@@ -333,7 +341,11 @@
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <skipOnInput>false</skipOnInput>
-      <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+      <extInfo xsi:type="form:PictureDecorationExtInfo">
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.DialogExclamation</picture>
+        </picture>
+      </extInfo>
     </items>
     <items xsi:type="form:Decoration">
       <name>СопоставлениеПояснениеНесоответствия</name>
@@ -828,6 +840,9 @@
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:PictureDecorationExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Предупреждение</picture>
+          </picture>
           <fileDragMode>AsFileRef</fileDragMode>
         </extInfo>
       </items>
@@ -929,6 +944,9 @@
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:PictureDecorationExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Предупреждение</picture>
+          </picture>
           <fileDragMode>AsFileRef</fileDragMode>
         </extInfo>
       </items>
@@ -1031,6 +1049,9 @@
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:PictureDecorationExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Предупреждение</picture>
+          </picture>
           <fileDragMode>AsFileRef</fileDragMode>
         </extInfo>
       </items>
@@ -1234,7 +1255,7 @@
     <id>70</id>
     <items xsi:type="form:FormGroup">
       <name>Главное</name>
-      <id>448</id>
+      <id>65</id>
       <items xsi:type="form:FormGroup">
         <name>ИмяЭлектроннаяПочтаТелефон</name>
         <id>384</id>
@@ -1243,7 +1264,7 @@
           <id>409</id>
           <items xsi:type="form:FormField">
             <name>ПользовательИБИмя</name>
-            <id>452</id>
+            <id>95</id>
             <title>
               <key>ru</key>
               <value>Имя (для входа)</value>
@@ -1255,7 +1276,7 @@
             </userVisible>
             <extendedTooltip>
               <name>ПользовательИБИмяРасширеннаяПодсказка</name>
-              <id>460</id>
+              <id>222</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1265,7 +1286,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>ПользовательИБИмяКонтекстноеМеню</name>
-              <id>459</id>
+              <id>96</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
@@ -1543,7 +1564,7 @@
       </items>
       <items xsi:type="form:FormGroup">
         <name>СвойстваПользователяИБ</name>
-        <id>65</id>
+        <id>75</id>
         <items xsi:type="form:FormGroup">
           <name>СвойстваАутентификации</name>
           <id>389</id>
@@ -1963,7 +1984,7 @@
           </items>
           <items xsi:type="form:FormGroup">
             <name>СвойстваАутентификацииДополнительные</name>
-            <id>455</id>
+            <id>275</id>
             <items xsi:type="form:FormField">
               <name>ПользовательИБАутентификацияOpenID</name>
               <id>205</id>
@@ -2282,7 +2303,7 @@
             </title>
             <extendedTooltip>
               <name>СвойстваАутентификацииДополнительныеРасширеннаяПодсказка</name>
-              <id>461</id>
+              <id>276</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -2460,8 +2481,8 @@
           <value>Свойства пользователя ИБ</value>
         </title>
         <extendedTooltip>
-          <name>СвойстваПользователяИБExtendedTooltip</name>
-          <id>220</id>
+          <name>СвойстваПользователяИБРасширеннаяПодсказка</name>
+          <id>221</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -2471,12 +2492,9 @@
         </extendedTooltip>
         <type>UsualGroup</type>
         <extInfo xsi:type="form:UsualGroupExtInfo">
-          <group>HorizontalIfPossible</group>
-          <behavior>Auto</behavior>
-          <representation>WeakSeparation</representation>
+          <group>Vertical</group>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
-          <showTitle>true</showTitle>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>
@@ -2492,7 +2510,7 @@
       </title>
       <extendedTooltip>
         <name>ГлавноеРасширеннаяПодсказка</name>
-        <id>458</id>
+        <id>220</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -2508,7 +2526,7 @@
     </items>
     <items xsi:type="form:FormGroup">
       <name>ОтображениеРолей</name>
-      <id>192</id>
+      <id>393</id>
       <items xsi:type="form:Table">
         <name>Роли</name>
         <id>177</id>
@@ -2523,6 +2541,18 @@
         </userVisible>
         <skipOnInput>false</skipOnInput>
         <titleLocation>None</titleLocation>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>Delete</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>HierarchicalList</excludedCommands>
+        <excludedCommands>List</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
+        <excludedCommands>Tree</excludedCommands>
         <items xsi:type="form:FormGroup">
           <name>РолиКолонок</name>
           <id>180</id>
@@ -2949,8 +2979,8 @@
         <value>Разрешенные действия (роли)</value>
       </title>
       <extendedTooltip>
-        <name>ОтображениеРолейExtendedTooltip</name>
-        <id>239</id>
+        <name>ОтображениеРолейРасширеннаяПодсказка</name>
+        <id>394</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -3257,7 +3287,7 @@
       </items>
       <items xsi:type="form:FormGroup">
         <name>ПодменюОтчетыОбычное</name>
-        <id>450</id>
+        <id>362</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -3269,7 +3299,7 @@
         </title>
         <extendedTooltip>
           <name>ПодменюОтчетыОбычноеРасширеннаяПодсказка</name>
-          <id>457</id>
+          <id>363</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>

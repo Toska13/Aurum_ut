@@ -19,7 +19,11 @@
       <userVisible>
         <common>true</common>
       </userVisible>
+      <defaultItem>true</defaultItem>
       <titleLocation>None</titleLocation>
+      <excludedCommands>Find</excludedCommands>
+      <excludedCommands>FindNext</excludedCommands>
+      <excludedCommands>FindPrevious</excludedCommands>
       <extendedTooltip>
         <name>ТаблицаОтчетаExtendedTooltip</name>
         <id>20</id>
@@ -206,6 +210,8 @@
         <key>ru</key>
         <value>Поиск</value>
       </title>
+      <horizontalStretch>false</horizontalStretch>
+      <groupHorizontalAlign>Right</groupHorizontalAlign>
       <extendedTooltip>
         <name>ПоискРасширеннаяПодсказка</name>
         <id>32</id>
@@ -216,8 +222,15 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <extInfo xsi:type="form:ButtonGroupExtInfo">
-        <representation>Compact</representation>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>AlwaysHorizontal</group>
+        <horizontalSpacing>Half</horizontalSpacing>
+        <behavior>Auto</behavior>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">

@@ -34,7 +34,11 @@
       <autoMaxWidth>true</autoMaxWidth>
       <height>1</height>
       <autoMaxHeight>true</autoMaxHeight>
-      <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+      <extInfo xsi:type="form:PictureDecorationExtInfo">
+        <picture xsi:type="core:PictureRef">
+          <picture>StdPicture.Information</picture>
+        </picture>
+      </extInfo>
     </items>
     <items xsi:type="form:Decoration">
       <name>СвязьЗаголовок</name>
@@ -362,6 +366,14 @@
             <common>true</common>
           </userVisible>
           <titleLocation>None</titleLocation>
+          <excludedCommands>Add</excludedCommands>
+          <excludedCommands>Copy</excludedCommands>
+          <excludedCommands>EndEdit</excludedCommands>
+          <excludedCommands>MoveDown</excludedCommands>
+          <excludedCommands>MoveUp</excludedCommands>
+          <excludedCommands>SelectAll</excludedCommands>
+          <excludedCommands>SortListAsc</excludedCommands>
+          <excludedCommands>SortListDesc</excludedCommands>
           <items xsi:type="form:FormGroup">
             <name>ГруппаКартинкаИНаименование</name>
             <id>99</id>
@@ -374,7 +386,7 @@
                 <common>true</common>
               </userVisible>
               <extendedTooltip>
-                <name>ФайлыИндексКартинкиРасширеннаяПодсказка</name>
+                <name>ФайлыИндексКартинкиExtendedTooltip</name>
                 <id>198</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
@@ -424,7 +436,7 @@
                 <value>Наименование файла</value>
               </toolTip>
               <extendedTooltip>
-                <name>ФайлыНаименованиеРасширеннаяПодсказка</name>
+                <name>ФайлыНаименованиеExtendedTooltip</name>
                 <id>199</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
@@ -462,7 +474,7 @@
               <value>Группа картинка и наименование</value>
             </title>
             <extendedTooltip>
-              <name>ГруппаКартинкаИНаименованиеРасширеннаяПодсказка</name>
+              <name>ГруппаКартинкаИНаименованиеExtendedTooltip</name>
               <id>197</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -1097,7 +1109,7 @@
             </extInfo>
           </searchControlAddition>
           <extendedTooltip>
-            <name>ФайлыРасширеннаяПодсказка</name>
+            <name>ФайлыExtendedTooltip</name>
             <id>195</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
@@ -1393,7 +1405,7 @@
             </userVisible>
             <titleLocation>None</titleLocation>
             <extendedTooltip>
-              <name>ВидДокументаРасширеннаяПодсказка</name>
+              <name>ВидДокументаExtendedTooltip</name>
               <id>161</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -1551,7 +1563,7 @@
             <value>Краткое содержание</value>
           </toolTip>
           <extendedTooltip>
-            <name>ОписаниеРасширеннаяПодсказка</name>
+            <name>ОписаниеExtendedTooltip</name>
             <id>173</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
@@ -1597,7 +1609,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ОрганизацияРасширеннаяПодсказка</name>
+              <name>ОрганизацияExtendedTooltip</name>
               <id>167</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -1640,7 +1652,7 @@
               <value>Подписал от нашей организации</value>
             </toolTip>
             <extendedTooltip>
-              <name>ПодписалРасширеннаяПодсказка</name>
+              <name>ПодписалExtendedTooltip</name>
               <id>148</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -1679,11 +1691,7 @@
             <value>Наша организация</value>
           </title>
           <titleFont xsi:type="core:FontRef">
-            <font>Style.NormalTextFont</font>
-            <bold>true</bold>
-            <italic>false</italic>
-            <underline>false</underline>
-            <strikeout>false</strikeout>
+            <font>Style.ОсновнойЭлементСписка</font>
           </titleFont>
           <extendedTooltip>
             <name>ГруппаНашаОрганизацияРасширеннаяПодсказка</name>
@@ -1817,7 +1825,7 @@
               <value>Контактное лицо</value>
             </toolTip>
             <extendedTooltip>
-              <name>КонтактноеЛицоРасширеннаяПодсказка</name>
+              <name>КонтактноеЛицоExtendedTooltip</name>
               <id>151</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -1902,11 +1910,7 @@
             <value>Контрагент</value>
           </title>
           <titleFont xsi:type="core:FontRef">
-            <font>Style.NormalTextFont</font>
-            <bold>true</bold>
-            <italic>false</italic>
-            <underline>false</underline>
-            <strikeout>false</strikeout>
+            <font>Style.ОсновнойЭлементСписка</font>
           </titleFont>
           <extendedTooltip>
             <name>ГруппаКонтрагентРасширеннаяПодсказка</name>
@@ -2929,7 +2933,7 @@
           </userVisible>
           <titleLocation>Top</titleLocation>
           <extendedTooltip>
-            <name>КомментарийРасширеннаяПодсказка</name>
+            <name>КомментарийExtendedTooltip</name>
             <id>217</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
@@ -3009,7 +3013,7 @@
                 <common>true</common>
               </userVisible>
               <extendedTooltip>
-                <name>РегистрационныйНомерРасширеннаяПодсказка</name>
+                <name>РегистрационныйНомерExtendedTooltip</name>
                 <id>164</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
@@ -3053,7 +3057,7 @@
                 <common>true</common>
               </userVisible>
               <extendedTooltip>
-                <name>ДатаРегистрацииРасширеннаяПодсказка</name>
+                <name>ДатаРегистрацииExtendedTooltip</name>
                 <id>165</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
@@ -3156,7 +3160,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ПапкаРасширеннаяПодсказка</name>
+              <name>ПапкаExtendedTooltip</name>
               <id>146</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -3199,7 +3203,7 @@
               <value>Срок исполнения</value>
             </toolTip>
             <extendedTooltip>
-              <name>СрокИсполненияРасширеннаяПодсказка</name>
+              <name>СрокИсполненияExtendedTooltip</name>
               <id>152</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -3240,7 +3244,7 @@
                 <common>true</common>
               </userVisible>
               <extendedTooltip>
-                <name>СуммаРасширеннаяПодсказка</name>
+                <name>СуммаExtendedTooltip</name>
                 <id>170</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
@@ -3283,7 +3287,7 @@
                 <value>Валюта документа</value>
               </toolTip>
               <extendedTooltip>
-                <name>ВалютаРасширеннаяПодсказка</name>
+                <name>ВалютаExtendedTooltip</name>
                 <id>171</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
@@ -3324,7 +3328,7 @@
               <value>Группа сумма</value>
             </title>
             <extendedTooltip>
-              <name>ГруппаСуммаРасширеннаяПодсказка</name>
+              <name>ГруппаСуммаExtendedTooltip</name>
               <id>169</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -3863,7 +3867,7 @@
               <value>Гриф доступа</value>
             </toolTip>
             <extendedTooltip>
-              <name>ГрифДоступаРасширеннаяПодсказка</name>
+              <name>ГрифДоступаExtendedTooltip</name>
               <id>160</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -3906,7 +3910,7 @@
               <value>Вопрос деятельности</value>
             </toolTip>
             <extendedTooltip>
-              <name>ВопросДеятельностиРасширеннаяПодсказка</name>
+              <name>ВопросДеятельностиExtendedTooltip</name>
               <id>168</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -4041,7 +4045,7 @@
                 <common>true</common>
               </userVisible>
               <extendedTooltip>
-                <name>СостояниеРасширеннаяПодсказка</name>
+                <name>СостояниеExtendedTooltip</name>
                 <id>162</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
@@ -4145,7 +4149,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ПодразделениеРасширеннаяПодсказка</name>
+              <name>ПодразделениеExtendedTooltip</name>
               <id>149</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -4183,7 +4187,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ПодготовилРасширеннаяПодсказка</name>
+              <name>ПодготовилExtendedTooltip</name>
               <id>147</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -4221,7 +4225,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ОтветственныйРасширеннаяПодсказка</name>
+              <name>ОтветственныйExtendedTooltip</name>
               <id>216</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -4391,11 +4395,7 @@
               <value>Хранение</value>
             </title>
             <titleFont xsi:type="core:FontRef">
-              <font>Style.NormalTextFont</font>
-              <bold>true</bold>
-              <italic>false</italic>
-              <underline>false</underline>
-              <strikeout>false</strikeout>
+              <font>Style.ОсновнойЭлементСписка</font>
             </titleFont>
             <extendedTooltip>
               <name>ГруппаХранениеРасширеннаяПодсказка</name>
@@ -4427,11 +4427,7 @@
             <value>Реквизиты</value>
           </title>
           <titleFont xsi:type="core:FontRef">
-            <font>Style.NormalTextFont</font>
-            <bold>true</bold>
-            <italic>false</italic>
-            <underline>false</underline>
-            <strikeout>false</strikeout>
+            <font>Style.ОсновнойЭлементСписка</font>
           </titleFont>
           <extendedTooltip>
             <name>ГруппаРеквизитыРасширеннаяПодсказка</name>
@@ -5477,6 +5473,22 @@
           <common>true</common>
         </userVisible>
         <titleLocation>None</titleLocation>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>CancelSearch</excludedCommands>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>CopyToClipboard</excludedCommands>
+        <excludedCommands>Delete</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>Find</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>OutputList</excludedCommands>
+        <excludedCommands>SelectAll</excludedCommands>
+        <excludedCommands>ShowMultipleSelection</excludedCommands>
+        <excludedCommands>ShowRowRearrangement</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
         <items xsi:type="form:FormField">
           <name>ВизыСогласованияКартинкаСтатусаПодписи</name>
           <id>424</id>
@@ -5841,6 +5853,20 @@
           <common>true</common>
         </userVisible>
         <titleLocation>None</titleLocation>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>CancelSearch</excludedCommands>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>CopyToClipboard</excludedCommands>
+        <excludedCommands>Delete</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>Find</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>OutputList</excludedCommands>
+        <excludedCommands>SelectAll</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
         <items xsi:type="form:FormField">
           <name>СвойстваСвойство</name>
           <id>78</id>
@@ -5854,7 +5880,7 @@
             <common>true</common>
           </userVisible>
           <extendedTooltip>
-            <name>СвойстваСвойствоРасширеннаяПодсказка</name>
+            <name>СвойстваСвойствоExtendedTooltip</name>
             <id>214</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
@@ -5896,7 +5922,7 @@
             <common>true</common>
           </userVisible>
           <extendedTooltip>
-            <name>СвойстваЗначениеРасширеннаяПодсказка</name>
+            <name>СвойстваЗначениеExtendedTooltip</name>
             <id>215</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
@@ -6004,7 +6030,7 @@
           </extInfo>
         </searchControlAddition>
         <extendedTooltip>
-          <name>СвойстваРасширеннаяПодсказка</name>
+          <name>СвойстваExtendedTooltip</name>
           <id>213</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -6082,6 +6108,22 @@
           <common>true</common>
         </userVisible>
         <titleLocation>None</titleLocation>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>Change</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
+        <excludedCommands>CopyToClipboard</excludedCommands>
+        <excludedCommands>EndEdit</excludedCommands>
+        <excludedCommands>HierarchicalList</excludedCommands>
+        <excludedCommands>List</excludedCommands>
+        <excludedCommands>MoveDown</excludedCommands>
+        <excludedCommands>MoveUp</excludedCommands>
+        <excludedCommands>OutputList</excludedCommands>
+        <excludedCommands>SelectAll</excludedCommands>
+        <excludedCommands>ShowMultipleSelection</excludedCommands>
+        <excludedCommands>ShowRowRearrangement</excludedCommands>
+        <excludedCommands>SortListAsc</excludedCommands>
+        <excludedCommands>SortListDesc</excludedCommands>
+        <excludedCommands>Tree</excludedCommands>
         <items xsi:type="form:FormField">
           <name>ДеревоСвязейЗаголовок</name>
           <id>369</id>
@@ -6423,6 +6465,7 @@
           <common>true</common>
         </userVisible>
         <titleLocation>None</titleLocation>
+        <excludedCommands>Change</excludedCommands>
         <items xsi:type="form:FormField">
           <name>ТаблицаПодписейКомуВыданСертификатИСтатус</name>
           <id>121</id>
@@ -6513,7 +6556,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ТаблицаПодписейОткрытьПодписьРасширеннаяПодсказка</name>
+              <name>ТаблицаПодписейОткрытьПодписьExtendedTooltip</name>
               <id>202</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -6537,7 +6580,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ТаблицаПодписейПроверитьРасширеннаяПодсказка</name>
+              <name>ТаблицаПодписейПроверитьExtendedTooltip</name>
               <id>203</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -6562,7 +6605,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ТаблицаПодписейПроверитьВсеРасширеннаяПодсказка</name>
+              <name>ТаблицаПодписейПроверитьВсеExtendedTooltip</name>
               <id>204</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -6587,7 +6630,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ТаблицаПодписейСохранитьРасширеннаяПодсказка</name>
+              <name>ТаблицаПодписейСохранитьExtendedTooltip</name>
               <id>205</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -6612,7 +6655,7 @@
               <common>true</common>
             </userVisible>
             <extendedTooltip>
-              <name>ТаблицаПодписейУдалитьРасширеннаяПодсказка</name>
+              <name>ТаблицаПодписейУдалитьExtendedTooltip</name>
               <id>206</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
@@ -6702,7 +6745,7 @@
           </extInfo>
         </searchControlAddition>
         <extendedTooltip>
-          <name>ТаблицаПодписейРасширеннаяПодсказка</name>
+          <name>ТаблицаПодписейExtendedTooltip</name>
           <id>207</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
@@ -6960,6 +7003,9 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>КоличествоЭП</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -6999,7 +7045,7 @@
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ЗаписатьИЗакрытьРасширеннаяПодсказка</name>
+        <name>ЗаписатьИЗакрытьExtendedTooltip</name>
         <id>137</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -7024,7 +7070,7 @@
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ЗаписатьРасширеннаяПодсказка</name>
+        <name>ЗаписатьExtendedTooltip</name>
         <id>138</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -7048,7 +7094,7 @@
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ЗарегистрироватьРасширеннаяПодсказка</name>
+        <name>ЗарегистрироватьExtendedTooltip</name>
         <id>166</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
@@ -7097,7 +7143,7 @@
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ФормаПодписатьДокументРасширеннаяПодсказка</name>
+        <name>ФормаПодписатьДокументExtendedTooltip</name>
         <id>143</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>

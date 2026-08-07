@@ -197,7 +197,11 @@
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <groupVerticalAlign>Center</groupVerticalAlign>
-        <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+        <extInfo xsi:type="form:PictureDecorationExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>CommonPicture.Предупреждение</picture>
+          </picture>
+        </extInfo>
       </items>
       <items xsi:type="form:FormField">
         <name>НадписьОставить</name>
@@ -1570,6 +1574,9 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>Объект.ТоварыПоРаспоряжениям.RowsCount</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -3832,6 +3839,9 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>МаксимальныйНомерСтроки</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <visible>true</visible>

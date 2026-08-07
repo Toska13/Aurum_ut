@@ -478,6 +478,7 @@
           <items xsi:type="form:FormField">
             <name>НадписьРеквизитыПлательщика</name>
             <id>754</id>
+            <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
@@ -908,7 +909,7 @@
           </items>
           <items xsi:type="form:FormGroup">
             <name>ЛокализацияГруппаОперацияССамозанятым</name>
-            <id>1234</id>
+            <id>1183</id>
             <items xsi:type="form:FormField">
               <name>ОперацияССамозанятым</name>
               <id>1185</id>
@@ -934,7 +935,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>ОперацияССамозанятымКонтекстноеМеню</name>
-                <id>1238</id>
+                <id>1186</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>CheckBoxField</type>
@@ -1071,14 +1072,14 @@
           </items>
           <items xsi:type="form:FormField">
             <name>ПредставлениеОтраженияВРеглУчете</name>
-            <id>1035</id>
+            <id>905</id>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
             </userVisible>
             <extendedTooltip>
               <name>ПредставлениеОтраженияВРеглУчетеРасширеннаяПодсказка</name>
-              <id>1062</id>
+              <id>907</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1088,7 +1089,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>ПредставлениеОтраженияВРеглУчетеКонтекстноеМеню</name>
-              <id>1061</id>
+              <id>906</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>LabelField</type>
@@ -1126,7 +1127,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>СписокФизЛицОтключеноКонтекстноеМеню</name>
-                <id>1213</id>
+                <id>1033</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>RadioButtonField</type>
@@ -1197,7 +1198,7 @@
             </title>
             <extendedTooltip>
               <name>ГруппаПодотчетноеЛицоРасширеннаяПодсказка</name>
-              <id>1211</id>
+              <id>1031</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1216,7 +1217,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>СписокФизЛицВключено</name>
-            <id>1208</id>
+            <id>1035</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1257,7 +1258,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>ПеречислениеСотрудникуЧерезБанк</name>
-            <id>1011</id>
+            <id>1028</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1270,7 +1271,7 @@
             <toolTipRepresentation>Button</toolTipRepresentation>
             <extendedTooltip>
               <name>ПеречислениеСотрудникуЧерезБанкРасширеннаяПодсказка</name>
-              <id>1013</id>
+              <id>1087</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1280,7 +1281,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>ПеречислениеСотрудникуЧерезБанкКонтекстноеМеню</name>
-              <id>1012</id>
+              <id>1029</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>RadioButtonField</type>
@@ -1289,15 +1290,8 @@
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:RadioButtonsFieldExtInfo">
-              <choiceList>
-                <presentation>
-                  <key>ru</key>
-                  <value>Банк</value>
-                </presentation>
-                <value xsi:type="core:NumberValue">
-                  <value>1</value>
-                </value>
-              </choiceList>
+              <radioButtonsType>Tumbler</radioButtonsType>
+              <equalElementsWidth>true</equalElementsWidth>
               <choiceList>
                 <presentation>
                   <key>ru</key>
@@ -1305,6 +1299,15 @@
                 </presentation>
                 <value xsi:type="core:NumberValue">
                   <value>0</value>
+                </value>
+              </choiceList>
+              <choiceList>
+                <presentation>
+                  <key>ru</key>
+                  <value>Банк</value>
+                </presentation>
+                <value xsi:type="core:NumberValue">
+                  <value>1</value>
                 </value>
               </choiceList>
             </extInfo>
@@ -1710,7 +1713,11 @@
                   <autoMaxWidth>true</autoMaxWidth>
                   <height>1</height>
                   <autoMaxHeight>true</autoMaxHeight>
-                  <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+                  <extInfo xsi:type="form:PictureDecorationExtInfo">
+                    <picture xsi:type="core:PictureRef">
+                      <picture>CommonPicture.ВниманиеКрасный</picture>
+                    </picture>
+                  </extInfo>
                 </items>
                 <visible>true</visible>
                 <enabled>true</enabled>
@@ -1827,20 +1834,20 @@
           </items>
           <items xsi:type="form:FormGroup">
             <name>ГруппаИндексыСПАРКРиски</name>
-            <id>902</id>
+            <id>918</id>
             <items xsi:type="form:FormGroup">
               <name>ГруппаИндексы</name>
-              <id>904</id>
+              <id>920</id>
               <items xsi:type="form:Decoration">
                 <name>ДекорацияИндексыСПАРКРиски</name>
-                <id>906</id>
+                <id>922</id>
                 <enabled>true</enabled>
                 <userVisible>
                   <common>true</common>
                 </userVisible>
                 <extendedTooltip>
                   <name>ДекорацияИндексыСПАРКРискиРасширеннаяПодсказка</name>
-                  <id>908</id>
+                  <id>924</id>
                   <type>Label</type>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -1850,7 +1857,7 @@
                 </extendedTooltip>
                 <contextMenu>
                   <name>ДекорацияИндексыСПАРКРискиКонтекстноеМеню</name>
-                  <id>907</id>
+                  <id>923</id>
                   <autoFill>true</autoFill>
                 </contextMenu>
                 <type>Label</type>
@@ -1874,7 +1881,7 @@
               </title>
               <extendedTooltip>
                 <name>ГруппаИндексыРасширеннаяПодсказка</name>
-                <id>905</id>
+                <id>921</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -1895,14 +1902,14 @@
             </items>
             <items xsi:type="form:Decoration">
               <name>КартинкаОжиданиеЗагрузкиИндексовСПАРКРиски</name>
-              <id>909</id>
+              <id>925</id>
               <enabled>true</enabled>
               <userVisible>
                 <common>true</common>
               </userVisible>
               <extendedTooltip>
                 <name>КартинкаОжиданиеЗагрузкиИндексовСПАРКРискиРасширеннаяПодсказка</name>
-                <id>911</id>
+                <id>927</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -1912,14 +1919,18 @@
               </extendedTooltip>
               <contextMenu>
                 <name>КартинкаОжиданиеЗагрузкиИндексовСПАРКРискиКонтекстноеМеню</name>
-                <id>910</id>
+                <id>926</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <width>2</width>
               <autoMaxWidth>true</autoMaxWidth>
               <height>1</height>
               <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:PictureDecorationExtInfo"/>
+              <extInfo xsi:type="form:PictureDecorationExtInfo">
+                <picture xsi:type="core:PictureRef">
+                  <picture>CommonPicture.ДлительнаяОперация16</picture>
+                </picture>
+              </extInfo>
             </items>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -1932,7 +1943,7 @@
             </title>
             <extendedTooltip>
               <name>ГруппаИндексыСПАРКРискиРасширеннаяПодсказка</name>
-              <id>903</id>
+              <id>919</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -1988,10 +1999,10 @@
           </items>
           <items xsi:type="form:FormGroup">
             <name>ГруппаРеквизитыОбменаСБанком</name>
-            <id>1186</id>
+            <id>1073</id>
             <items xsi:type="form:FormField">
               <name>НомерДоговораСБанком</name>
-              <id>1204</id>
+              <id>1075</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -1999,7 +2010,7 @@
               </userVisible>
               <extendedTooltip>
                 <name>НомерДоговораСБанкомРасширеннаяПодсказка</name>
-                <id>1215</id>
+                <id>1077</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -2009,7 +2020,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>НомерДоговораСБанкомКонтекстноеМеню</name>
-                <id>1214</id>
+                <id>1076</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -2028,7 +2039,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>ДатаДоговораСБанком</name>
-              <id>1188</id>
+              <id>1078</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -2036,7 +2047,7 @@
               </userVisible>
               <extendedTooltip>
                 <name>ДатаДоговораСБанкомРасширеннаяПодсказка</name>
-                <id>1217</id>
+                <id>1080</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -2046,7 +2057,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>ДатаДоговораСБанкомКонтекстноеМеню</name>
-                <id>1216</id>
+                <id>1079</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -2065,7 +2076,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>ОтделениеБанка</name>
-              <id>1207</id>
+              <id>1081</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -2139,7 +2150,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>КодировкаФайла</name>
-              <id>1233</id>
+              <id>1188</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -2184,7 +2195,7 @@
             </title>
             <extendedTooltip>
               <name>ГруппаРеквизитыОбменаСБанкомРасширеннаяПодсказка</name>
-              <id>1212</id>
+              <id>1074</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -3053,7 +3064,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>КодВидаДохода</name>
-            <id>912</id>
+            <id>998</id>
             <title>
               <key>ru</key>
               <value>КВД</value>
@@ -3081,7 +3092,7 @@
             <toolTipRepresentation>Button</toolTipRepresentation>
             <extendedTooltip>
               <name>КодВидаДоходаРасширеннаяПодсказка</name>
-              <id>914</id>
+              <id>1002</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -3091,7 +3102,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>КодВидаДоходаКонтекстноеМеню</name>
-              <id>913</id>
+              <id>1001</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
@@ -3113,7 +3124,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>КодВыплат</name>
-            <id>936</id>
+            <id>973</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3132,7 +3143,7 @@
             <toolTipRepresentation>Button</toolTipRepresentation>
             <extendedTooltip>
               <name>КодВыплатРасширеннаяПодсказка</name>
-              <id>938</id>
+              <id>975</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -3142,7 +3153,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>КодВыплатКонтекстноеМеню</name>
-              <id>937</id>
+              <id>974</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
@@ -3180,7 +3191,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>ВидЗачисления</name>
-            <id>1230</id>
+            <id>1191</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -3717,7 +3728,7 @@
               </userVisible>
               <extendedTooltip>
                 <name>СуммаКомиссииРасширеннаяПодсказка</name>
-                <id>1064</id>
+                <id>937</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -3727,7 +3738,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>СуммаКомиссииКонтекстноеМеню</name>
-                <id>1063</id>
+                <id>936</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -3746,7 +3757,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>ВалютаКомиссия</name>
-              <id>1028</id>
+              <id>938</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -3840,7 +3851,7 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:LabelFieldExtInfo">
-                <width>3</width>
+                <width>5</width>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
               </extInfo>
@@ -4160,7 +4171,7 @@
                 </userVisible>
                 <extendedTooltip>
                   <name>ВалютаКурсаКонвертацииРасширеннаяПодсказка</name>
-                  <id>1240</id>
+                  <id>1199</id>
                   <type>Label</type>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -4223,7 +4234,7 @@
               </items>
               <items xsi:type="form:Decoration">
                 <name>ВалютаКратностиКурсаКонвертации</name>
-                <id>1228</id>
+                <id>1200</id>
                 <visible>true</visible>
                 <enabled>true</enabled>
                 <userVisible>
@@ -4280,7 +4291,7 @@
             </items>
             <items xsi:type="form:FormGroup">
               <name>ГруппаСчетКомиссии</name>
-              <id>1231</id>
+              <id>1203</id>
               <items xsi:type="form:FormField">
                 <name>БанковскийСчетСписанияКомиссии</name>
                 <id>842</id>
@@ -4333,7 +4344,7 @@
               </title>
               <extendedTooltip>
                 <name>ГруппаСчетКомиссииРасширеннаяПодсказка</name>
-                <id>1239</id>
+                <id>1204</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -4409,10 +4420,10 @@
         </items>
         <items xsi:type="form:FormGroup">
           <name>ГруппаОтсутствиеЗачисленияДСНаСчета</name>
-          <id>1183</id>
+          <id>1065</id>
           <items xsi:type="form:Decoration">
             <name>ДекорацияОтсутствиеЗачисленияДСНаСчета</name>
-            <id>1191</id>
+            <id>1067</id>
             <title>
               <key>ru</key>
               <value>Информация о зачислении ДС</value>
@@ -4423,7 +4434,7 @@
             </userVisible>
             <extendedTooltip>
               <name>ДекорацияОтсутствиеЗачисленияДСНаСчетаРасширеннаяПодсказка</name>
-              <id>1220</id>
+              <id>1069</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -4433,7 +4444,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>ДекорацияОтсутствиеЗачисленияДСНаСчетаКонтекстноеМеню</name>
-              <id>1219</id>
+              <id>1068</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>Label</type>
@@ -4453,7 +4464,7 @@
           </title>
           <extendedTooltip>
             <name>ГруппаОтсутствиеЗачисленияДСНаСчетаРасширеннаяПодсказка</name>
-            <id>1218</id>
+            <id>1066</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -4921,7 +4932,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>РасшифровкаБезРазбиенияОбъектРасчетов</name>
-            <id>1041</id>
+            <id>609</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -4929,7 +4940,7 @@
             </userVisible>
             <extendedTooltip>
               <name>РасшифровкаБезРазбиенияОбъектРасчетовРасширеннаяПодсказка</name>
-              <id>1066</id>
+              <id>611</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -4939,7 +4950,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>РасшифровкаБезРазбиенияОбъектРасчетовКонтекстноеМеню</name>
-              <id>1065</id>
+              <id>610</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
@@ -5233,7 +5244,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>РасшифровкаБезРазбиенияДоговорАренды</name>
-            <id>1038</id>
+            <id>621</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -5241,7 +5252,7 @@
             </userVisible>
             <extendedTooltip>
               <name>РасшифровкаБезРазбиенияДоговорАрендыРасширеннаяПодсказка</name>
-              <id>1068</id>
+              <id>623</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -5251,7 +5262,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>РасшифровкаБезРазбиенияДоговорАрендыКонтекстноеМеню</name>
-              <id>1067</id>
+              <id>622</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
@@ -5270,7 +5281,7 @@
           </items>
           <items xsi:type="form:FormField">
             <name>РасшифровкаБезРазбиенияТипПлатежаПоАренде</name>
-            <id>1044</id>
+            <id>624</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -5278,7 +5289,7 @@
             </userVisible>
             <extendedTooltip>
               <name>РасшифровкаБезРазбиенияТипПлатежаПоАрендеРасширеннаяПодсказка</name>
-              <id>1070</id>
+              <id>626</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -5288,7 +5299,7 @@
             </extendedTooltip>
             <contextMenu>
               <name>РасшифровкаБезРазбиенияТипПлатежаПоАрендеКонтекстноеМеню</name>
-              <id>1069</id>
+              <id>625</id>
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
@@ -5632,7 +5643,7 @@
             </items>
             <items xsi:type="form:FormGroup">
               <name>ГруппаДанныхНДС</name>
-              <id>1029</id>
+              <id>934</id>
               <items xsi:type="form:FormField">
                 <name>РасшифровкаБезРазбиенияСтавкаНДС</name>
                 <id>702</id>
@@ -5670,6 +5681,18 @@
                   <chooseType>true</chooseType>
                   <typeDomainEnabled>true</typeDomainEnabled>
                   <textEdit>true</textEdit>
+                  <choiceParameterLinks>
+                    <name>ОбъектРасчетов</name>
+                    <datapath xsi:type="form:DataPath">
+                      <segments>Items.РасшифровкаПлатежа.CurrentData.ОбъектРасчетов</segments>
+                    </datapath>
+                  </choiceParameterLinks>
+                  <choiceParameterLinks>
+                    <name>НалогообложениеНДС</name>
+                    <datapath xsi:type="form:DataPath">
+                      <segments>Items.РасшифровкаПлатежа.CurrentData.НалогообложениеНДС</segments>
+                    </datapath>
+                  </choiceParameterLinks>
                 </extInfo>
               </items>
               <items xsi:type="form:FormField">
@@ -5755,7 +5778,7 @@
               </title>
               <extendedTooltip>
                 <name>ГруппаДанныхНДСРасширеннаяПодсказка</name>
-                <id>1071</id>
+                <id>935</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -6345,7 +6368,7 @@
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
-              <width>10</width>
+              <width>11</width>
               <autoMaxHeight>true</autoMaxHeight>
               <horizontalStretch>false</horizontalStretch>
               <wrap>true</wrap>
@@ -6708,7 +6731,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>РасшифровкаПлатежаОбъектРасчетов</name>
-              <id>1050</id>
+              <id>34</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -6716,7 +6739,7 @@
               </userVisible>
               <extendedTooltip>
                 <name>РасшифровкаПлатежаОбъектРасчетовРасширеннаяПодсказка</name>
-                <id>1073</id>
+                <id>281</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -6726,7 +6749,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>РасшифровкаПлатежаОбъектРасчетовКонтекстноеМеню</name>
-                <id>1072</id>
+                <id>35</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -6779,6 +6802,18 @@
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
                 <textEdit>true</textEdit>
+                <choiceParameterLinks>
+                  <name>Отбор.Контрагент</name>
+                  <datapath xsi:type="form:DataPath">
+                    <segments>Объект.Контрагент</segments>
+                  </datapath>
+                </choiceParameterLinks>
+                <choiceParameterLinks>
+                  <name>Отбор.Организация</name>
+                  <datapath xsi:type="form:DataPath">
+                    <segments>Объект.Организация</segments>
+                  </datapath>
+                </choiceParameterLinks>
                 <choiceParameters>
                   <name>Отбор.ПометкаУдаления</name>
                   <value xsi:type="form:FormChoiceListDesTimeValue">
@@ -6973,7 +7008,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>РасшифровкаПлатежаДоговорАренды</name>
-              <id>1047</id>
+              <id>446</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -6981,7 +7016,7 @@
               </userVisible>
               <extendedTooltip>
                 <name>РасшифровкаПлатежаДоговорАрендыРасширеннаяПодсказка</name>
-                <id>1075</id>
+                <id>448</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -6991,7 +7026,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>РасшифровкаПлатежаДоговорАрендыКонтекстноеМеню</name>
-                <id>1074</id>
+                <id>447</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -7010,7 +7045,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>РасшифровкаПлатежаТипПлатежаПоАренде</name>
-              <id>1056</id>
+              <id>449</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -7018,7 +7053,7 @@
               </userVisible>
               <extendedTooltip>
                 <name>РасшифровкаПлатежаТипПлатежаПоАрендеРасширеннаяПодсказка</name>
-                <id>1077</id>
+                <id>451</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -7028,7 +7063,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>РасшифровкаПлатежаТипПлатежаПоАрендеКонтекстноеМеню</name>
-                <id>1076</id>
+                <id>450</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -7282,6 +7317,18 @@
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
                 <textEdit>true</textEdit>
+                <choiceParameterLinks>
+                  <name>НалогообложениеНДС</name>
+                  <datapath xsi:type="form:DataPath">
+                    <segments>Items.РасшифровкаПлатежа.CurrentData.НалогообложениеНДС</segments>
+                  </datapath>
+                </choiceParameterLinks>
+                <choiceParameterLinks>
+                  <name>ОбъектРасчетов</name>
+                  <datapath xsi:type="form:DataPath">
+                    <segments>Items.РасшифровкаПлатежа.CurrentData.ОбъектРасчетов</segments>
+                  </datapath>
+                </choiceParameterLinks>
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
@@ -7638,7 +7685,7 @@
             </items>
             <items xsi:type="form:FormField">
               <name>РасшифровкаПлатежаПредставлениеОтраженияВРеглУчете</name>
-              <id>1053</id>
+              <id>902</id>
               <visible>true</visible>
               <enabled>true</enabled>
               <userVisible>
@@ -7646,7 +7693,7 @@
               </userVisible>
               <extendedTooltip>
                 <name>РасшифровкаПлатежаПредставлениеОтраженияВРеглУчетеРасширеннаяПодсказка</name>
-                <id>1079</id>
+                <id>904</id>
                 <type>Label</type>
                 <autoMaxWidth>true</autoMaxWidth>
                 <autoMaxHeight>true</autoMaxHeight>
@@ -7656,7 +7703,7 @@
               </extendedTooltip>
               <contextMenu>
                 <name>РасшифровкаПлатежаПредставлениеОтраженияВРеглУчетеКонтекстноеМеню</name>
-                <id>1078</id>
+                <id>903</id>
                 <autoFill>true</autoFill>
               </contextMenu>
               <type>InputField</type>
@@ -8010,7 +8057,7 @@
               </items>
               <items xsi:type="form:Button">
                 <name>ЗаполнитьОстаткамиНевыданныхСуммКонтрагенту</name>
-                <id>1031</id>
+                <id>908</id>
                 <visible>true</visible>
                 <enabled>true</enabled>
                 <userVisible>
@@ -8018,7 +8065,7 @@
                 </userVisible>
                 <extendedTooltip>
                   <name>ЗаполнитьОстаткамиНевыданныхСуммКонтрагентуРасширеннаяПодсказка</name>
-                  <id>1080</id>
+                  <id>909</id>
                   <type>Label</type>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -8034,7 +8081,7 @@
               </items>
               <items xsi:type="form:Button">
                 <name>ЗаполнитьОстаткамиНевыданныхСуммСотруднику</name>
-                <id>1033</id>
+                <id>910</id>
                 <visible>true</visible>
                 <enabled>true</enabled>
                 <userVisible>
@@ -8042,7 +8089,7 @@
                 </userVisible>
                 <extendedTooltip>
                   <name>ЗаполнитьОстаткамиНевыданныхСуммСотрудникуРасширеннаяПодсказка</name>
-                  <id>1081</id>
+                  <id>911</id>
                   <type>Label</type>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -8305,11 +8352,14 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>Объект.РасшифровкаПлатежа.RowsCount</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
       <name>СтраницаЛицевыеСчетаСотрудников</name>
-      <id>1210</id>
+      <id>1038</id>
       <items xsi:type="form:Table">
         <name>ЛицевыеСчетаСотрудников</name>
         <id>1040</id>
@@ -8321,7 +8371,7 @@
         <titleLocation>None</titleLocation>
         <items xsi:type="form:FormField">
           <name>ЛицевыеСчетаСотрудниковНомерСтроки</name>
-          <id>1199</id>
+          <id>1053</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -8358,7 +8408,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>ЛицевыеСчетаСотрудниковФизическоеЛицо</name>
-          <id>1203</id>
+          <id>1056</id>
           <title>
             <key>ru</key>
             <value>Сотрудник</value>
@@ -8407,7 +8457,7 @@
           </userVisible>
           <extendedTooltip>
             <name>ЛицевыеСчетаСотрудниковЛицевойСчетРасширеннаяПодсказка</name>
-            <id>1225</id>
+            <id>1061</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -8436,7 +8486,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>ЛицевыеСчетаСотрудниковСумма</name>
-          <id>1200</id>
+          <id>1062</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -8444,7 +8494,7 @@
           </userVisible>
           <extendedTooltip>
             <name>ЛицевыеСчетаСотрудниковСуммаРасширеннаяПодсказка</name>
-            <id>1227</id>
+            <id>1064</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -8454,7 +8504,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>ЛицевыеСчетаСотрудниковСуммаКонтекстноеМеню</name>
-            <id>1226</id>
+            <id>1063</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -8510,7 +8560,7 @@
         </items>
         <autoCommandBar>
           <name>ЛицевыеСчетаСотрудниковКоманднаяПанель</name>
-          <id>1221</id>
+          <id>1041</id>
           <items xsi:type="form:Button">
             <name>ЛицевыеСчетаСотрудниковЗаполнитьСтатьюДвиженияДенежныхСредств</name>
             <id>1112</id>
@@ -8544,7 +8594,7 @@
         </autoCommandBar>
         <searchStringAddition>
           <name>ЛицевыеСчетаСотрудниковСтрокаПоиска</name>
-          <id>1222</id>
+          <id>1044</id>
           <extendedTooltip>
             <name>ЛицевыеСчетаСотрудниковСтрокаПоискаРасширеннаяПодсказка</name>
             <id>1046</id>
@@ -8567,7 +8617,7 @@
         </searchStringAddition>
         <viewStatusAddition>
           <name>ЛицевыеСчетаСотрудниковСостояниеПросмотра</name>
-          <id>1223</id>
+          <id>1050</id>
           <extendedTooltip>
             <name>ЛицевыеСчетаСотрудниковСостояниеПросмотраРасширеннаяПодсказка</name>
             <id>1052</id>
@@ -8591,7 +8641,7 @@
         </viewStatusAddition>
         <searchControlAddition>
           <name>ЛицевыеСчетаСотрудниковУправлениеПоиском</name>
-          <id>1224</id>
+          <id>1047</id>
           <extendedTooltip>
             <name>ЛицевыеСчетаСотрудниковУправлениеПоискомРасширеннаяПодсказка</name>
             <id>1049</id>
@@ -8674,6 +8724,9 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>Объект.ЛицевыеСчетаСотрудников.RowsCount</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -8688,6 +8741,8 @@
           <common>true</common>
         </userVisible>
         <titleLocation>None</titleLocation>
+        <excludedCommands>Add</excludedCommands>
+        <excludedCommands>Copy</excludedCommands>
         <items xsi:type="form:FormField">
           <name>БанковскиеСчетаСпискаКонтрагентовНомерСтроки</name>
           <id>1140</id>
@@ -8973,6 +9028,9 @@
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
         <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>Объект.БанковскиеСчетаСпискаКонтрагентов.RowsCount</segments>
+        </titleDataPath>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -9718,7 +9776,7 @@
     <id>1205</id>
     <items xsi:type="form:FormField">
       <name>СостояниеBankFeeds</name>
-      <id>1236</id>
+      <id>1207</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -9737,7 +9795,7 @@
       </extendedTooltip>
       <contextMenu>
         <name>СостояниеBankFeedsКонтекстноеМеню</name>
-        <id>1241</id>
+        <id>1208</id>
         <autoFill>true</autoFill>
       </contextMenu>
       <type>LabelField</type>
