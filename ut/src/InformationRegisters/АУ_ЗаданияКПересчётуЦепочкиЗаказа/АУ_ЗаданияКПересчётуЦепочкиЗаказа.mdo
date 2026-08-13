@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75cfdc71-2b54-48fa-a6b7-bd92c7d2a31d">
+  <producedTypes>
+    <selectionType typeId="86add14f-ae01-429b-a44f-d73be40b78d5" valueTypeId="dc7c34c5-91ee-4ea1-abed-81e6d50079c1"/>
+    <listType typeId="dc721f0c-5324-4ff7-9ad3-6cdc354cdde1" valueTypeId="ebe3f8ab-e642-40b6-9af9-03e808690e55"/>
+    <managerType typeId="1b2e1dd6-092b-4927-a857-c90bc65affc8" valueTypeId="c8ab5614-0d29-477f-805e-a35c727dda4e"/>
+    <recordSetType typeId="573f1b31-0e59-4cce-983f-c99e9fdb22b6" valueTypeId="7111a89c-e6fc-48ba-bd20-3b1c99ce8e2d"/>
+    <recordKeyType typeId="52fdd95a-4fab-4b3f-8c96-8d21fac12ab3" valueTypeId="5a85ac6b-0cb4-4059-b3b7-40e0005c45a3"/>
+    <recordType typeId="31c52306-dc66-4dc0-ae98-0ed7715e5352" valueTypeId="a4176aa5-8896-4052-8134-eba82f6b64c5"/>
+    <recordManagerType typeId="74b2ef35-a161-4c94-b4d6-f701df74f557" valueTypeId="2290eb16-7c1f-40e3-944d-9eb00a03b1d0"/>
+  </producedTypes>
+  <name>АУ_ЗаданияКПересчётуЦепочкиЗаказа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Задания к пересчёту цепочки заказа</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="889c7051-0c0c-457a-9988-db4b4bb447f1">
+    <name>ДокументИнициатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ инициатор</value>
+    </synonym>
+    <type>
+      <types>DefinedType.АУ_ДокументИнициаторЦепочкиЗаказаКлиента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="47722b99-78ed-4ae9-a749-054451a59180">
+    <name>ДатаПометки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата пометки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="9ce19ade-83f4-4b76-aba6-e41f3aa053ed">
+    <name>ЗаказКлиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ клиента</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказКлиента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
