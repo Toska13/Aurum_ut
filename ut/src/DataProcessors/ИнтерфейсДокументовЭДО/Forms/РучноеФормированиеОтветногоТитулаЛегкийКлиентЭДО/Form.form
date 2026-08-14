@@ -544,6 +544,7 @@
             <extInfo xsi:type="form:InputFieldExtInfo">
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
+              <clearButton>true</clearButton>
               <listChoiceMode>true</listChoiceMode>
               <chooseType>true</chooseType>
               <typeDomainEnabled>true</typeDomainEnabled>
@@ -646,6 +647,86 @@
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:CheckBoxFieldExtInfo">
             <checkBoxType>Switcher</checkBoxType>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>СведенияОВыбытииМаркированныхТоваров</name>
+          <id>224</id>
+          <title>
+            <key>ru</key>
+            <value>Сведения о выбытии маркированных товаров</value>
+          </title>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>СведенияОВыбытииМаркированныхТоваров</segments>
+          </dataPath>
+          <titleLocation>Top</titleLocation>
+          <extendedTooltip>
+            <name>СведенияОВыбытииМаркированныхТоваровРасширеннаяПодсказка</name>
+            <id>226</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СведенияОВыбытииМаркированныхТоваровКонтекстноеМеню</name>
+            <id>225</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <maxWidth>69</maxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <listChoiceMode>true</listChoiceMode>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>1 - Покупка товаров юрлицами и ИП в целях использования для собственных нужд, не связанных с их последующей реализацией</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>1</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>2 - Безвозмездная передача товаров юрлицами и ИП, не связанная с их последующей реализацией</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>2</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>3 - Использование товаров для производственных целей, не связанных с их последующей реализацией</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>3</value>
+              </value>
+            </choiceList>
+            <choiceList>
+              <presentation>
+                <key>ru</key>
+                <value>4 - Продажа товаров по государственному (муниципальному) контракту (приоритетно к использованию)</value>
+              </presentation>
+              <value xsi:type="core:StringValue">
+                <value>4</value>
+              </value>
+            </choiceList>
           </extInfo>
         </items>
         <items xsi:type="form:FormGroup">
@@ -2844,6 +2925,32 @@
         <placementArea>UserCmds</placementArea>
         <representationInContextMenu>Auto</representationInContextMenu>
       </items>
+      <items xsi:type="form:Button">
+        <name>Подписать</name>
+        <id>261</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>ПодписатьРасширеннаяПодсказка</name>
+          <id>262</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualButton</type>
+        <commandName>Form.Command.Подписать</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -3913,6 +4020,22 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>СведенияОВыбытииМаркированныхТоваров</name>
+    <id>59</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ПодписатьИОтправить</name>
     <title>
@@ -3943,6 +4066,23 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ОтклонитьПодписание</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Подписать</name>
+    <title>
+      <key>ru</key>
+      <value>Подписать</value>
+    </title>
+    <id>3</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Подписать</name>
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>

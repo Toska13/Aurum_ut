@@ -751,6 +751,144 @@
         </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
+        <name>ГруппаПодключениеЯндексПэй</name>
+        <id>264</id>
+        <items xsi:type="form:FormField">
+          <name>ПриниматьОплатуЯндексПэй</name>
+          <id>266</id>
+          <title>
+            <key>ru</key>
+            <value>Яндекс Пэй</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПриниматьОплатуЯндексПэй</segments>
+          </dataPath>
+          <titleLocation>Right</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>ПриниматьОплатуЯндексПэйПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ПриниматьОплатуЯндексПэйРасширеннаяПодсказка</name>
+            <id>268</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПриниматьОплатуЯндексПэйКонтекстноеМеню</name>
+            <id>267</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+            <checkBoxType>Switcher</checkBoxType>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>НастройкаПодключенияКЯндексПэй</name>
+          <id>270</id>
+          <title>
+            <key>ru</key>
+            <value>Яндекс Пэй</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>НастройкаПодключенияКЯндексПэй</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>НастройкаПодключенияКЯндексПэйПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>НастройкаПодключенияКЯндексПэйРасширеннаяПодсказка</name>
+            <id>272</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НастройкаПодключенияКЯндексПэйКонтекстноеМеню</name>
+            <id>271</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <handlers>
+              <event>StartChoice</event>
+              <name>НастройкаПодключенияКЯндексПэйНачалоВыбора</name>
+            </handlers>
+            <handlers>
+              <event>Creating</event>
+              <name>НастройкаПодключенияКЯндексПэйСоздание</name>
+            </handlers>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <extendedEditMultipleValues>true</extendedEditMultipleValues>
+            <clearButton>true</clearButton>
+            <autoMarkIncomplete>true</autoMarkIncomplete>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <inputHint>
+              <key>ru</key>
+              <value>Настройка подключения к Яндекс Пэй</value>
+            </inputHint>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Яндекс Пэй</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаПодключениеЯндексПэйРасширеннаяПодсказка</name>
+          <id>265</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>AlwaysHorizontal</group>
+          <behavior>Auto</behavior>
+          <showLeftMargin>true</showLeftMargin>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
         <name>ГруппаПоБанковскимРеквизитамФизЛица</name>
         <id>115</id>
         <items xsi:type="form:FormField">
@@ -985,7 +1123,6 @@
       <type>Page</type>
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
-        <showTitle>true</showTitle>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
@@ -1224,7 +1361,6 @@
       <type>Page</type>
       <extInfo xsi:type="form:PageGroupExtInfo">
         <group>Vertical</group>
-        <showTitle>true</showTitle>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -1683,6 +1819,39 @@
       <value>Изменены настройки оплат фискализации</value>
     </title>
     <id>20</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НастройкаПодключенияКЯндексПэй</name>
+    <title>
+      <key>ru</key>
+      <value>Настройка подключения к Яндекс Пэй</value>
+    </title>
+    <id>21</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
+  </attributes>
+  <attributes>
+    <name>ПриниматьОплатуЯндексПэй</name>
+    <title>
+      <key>ru</key>
+      <value>Принимать оплату Яндекс Пэй</value>
+    </title>
+    <id>22</id>
     <valueType>
       <types>Boolean</types>
     </valueType>

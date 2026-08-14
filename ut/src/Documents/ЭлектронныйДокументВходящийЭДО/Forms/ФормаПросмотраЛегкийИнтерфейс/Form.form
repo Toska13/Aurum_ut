@@ -3246,6 +3246,46 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
             </extInfo>
           </items>
+          <items xsi:type="form:FormField">
+            <name>СоставПакетаВУчете</name>
+            <id>975</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>СоставПакета.ВУчете</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>СоставПакетаВУчетеРасширеннаяПодсказка</name>
+              <id>977</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>СоставПакетаВУчетеКонтекстноеМеню</name>
+              <id>976</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <width>6</width>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
           <commandBarLocation>None</commandBarLocation>
           <autoCommandBar>
             <name>СоставПакетаКоманднаяПанель</name>
@@ -5693,7 +5733,7 @@
                           </handlers>
                           <extendedTooltip>
                             <name>НомерДокументаДляРедактированияРасширеннаяПодсказка</name>
-                            <id>976</id>
+                            <id>989</id>
                             <type>Label</type>
                             <autoMaxWidth>true</autoMaxWidth>
                             <autoMaxHeight>true</autoMaxHeight>
@@ -5703,7 +5743,7 @@
                           </extendedTooltip>
                           <contextMenu>
                             <name>НомерДокументаДляРедактированияКонтекстноеМеню</name>
-                            <id>975</id>
+                            <id>988</id>
                             <autoFill>true</autoFill>
                           </contextMenu>
                           <type>InputField</type>
@@ -8138,7 +8178,7 @@
           </items>
           <items xsi:type="form:FormGroup">
             <name>СтраницаСообщения</name>
-            <id>977</id>
+            <id>987</id>
             <items xsi:type="form:FormField">
               <name>ВсеСообщения</name>
               <id>979</id>
@@ -8248,7 +8288,6 @@
               <placementArea>UserCmds</placementArea>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
-            <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
@@ -9293,6 +9332,27 @@
         <common>true</common>
       </edit>
     </columns>
+    <columns>
+      <name>ВУчете</name>
+      <title>
+        <key>ru</key>
+        <value>В учете</value>
+      </title>
+      <id>190</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+      <functionalOptions>FunctionalOption.ИспользоватьКонтрольОтраженияВУчетеЭДО</functionalOptions>
+    </columns>
   </attributes>
   <attributes>
     <name>ИдентификаторПакета</name>
@@ -10008,7 +10068,7 @@
       <key>ru</key>
       <value>Изменен вид документа</value>
     </title>
-    <id>191</id>
+    <id>195</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -10063,6 +10123,23 @@
       <value>Устанавливать прочтение сообщений</value>
     </title>
     <id>194</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТребуетсяОднородностьОтвета</name>
+    <title>
+      <key>ru</key>
+      <value>Требуется однородность ответа</value>
+    </title>
+    <id>191</id>
     <valueType>
       <types>Boolean</types>
     </valueType>
@@ -11005,10 +11082,6 @@
       <value>Подписать и отправить</value>
     </title>
     <id>49</id>
-    <toolTip>
-      <key>ru</key>
-      <value>Подписать и отправить электронный документ</value>
-    </toolTip>
     <use>
       <common>true</common>
     </use>

@@ -3610,8 +3610,7 @@
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
-              <width>2</width>
-              <maxWidth>2</maxWidth>
+              <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
               <extendedEditMultipleValues>true</extendedEditMultipleValues>
@@ -3624,7 +3623,7 @@
               <choiceList>
                 <presentation>
                   <key>ru</key>
-                  <value>Признак отсутствует</value>
+                  <value>0 - Отсутствует</value>
                 </presentation>
                 <value xsi:type="core:StringValue">
                   <value>0</value>
@@ -3633,7 +3632,7 @@
               <choiceList>
                 <presentation>
                   <key>ru</key>
-                  <value>Есть право на освобождение от внесения обеспечительного платежа</value>
+                  <value>1 – Освобождение от внесения обеспечительного платежа</value>
                 </presentation>
                 <value xsi:type="core:StringValue">
                   <value>1</value>
@@ -3642,7 +3641,7 @@
               <choiceList>
                 <presentation>
                   <key>ru</key>
-                  <value>Иной признак</value>
+                  <value>2 – Иной признак</value>
                 </presentation>
                 <value xsi:type="core:StringValue">
                   <value>2</value>
@@ -12378,6 +12377,10 @@
       </cmiFragmentRecord>
       <cmiFragmentRecord>
         <command>0</command>
+        <userVisible/>
+      </cmiFragmentRecord>
+      <cmiFragmentRecord>
+        <command>InformationRegister.ДокументыОПредстоящейПоставке.StandardCommand.OpenByValue.Организация</command>
         <userVisible/>
       </cmiFragmentRecord>
     </navigationPanel>

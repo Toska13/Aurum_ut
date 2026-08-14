@@ -1643,7 +1643,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Объект.Операции[0].LineNumber</segments>
+          <segments>Объект.Операции.Растяжка</segments>
         </dataPath>
         <titleLocation>None</titleLocation>
         <extendedTooltip>
@@ -1663,6 +1663,7 @@
         </contextMenu>
         <type>InputField</type>
         <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
@@ -1671,7 +1672,6 @@
           <wrap>true</wrap>
           <extendedEditMultipleValues>true</extendedEditMultipleValues>
           <chooseType>true</chooseType>
-          <typeDomainEnabled>true</typeDomainEnabled>
           <textEdit>true</textEdit>
         </extInfo>
       </items>
@@ -2451,6 +2451,29 @@
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <savedData>true</savedData>
+    <additionalColumns>
+      <tablePath xsi:type="form:DataPath">
+        <segments>Объект.Операции</segments>
+      </tablePath>
+      <columns>
+        <name>Растяжка</name>
+        <title>
+          <key>ru</key>
+          <value>Растяжка</value>
+        </title>
+        <id>29</id>
+        <valueType>
+          <types>String</types>
+          <stringQualifiers/>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
+    </additionalColumns>
   </attributes>
   <attributes>
     <name>ЭлектронныйБилетФИОПассажира</name>
