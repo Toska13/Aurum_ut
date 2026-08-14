@@ -345,7 +345,7 @@
 		<enumeration>lit3</enumeration>
 		<enumeration>lit4</enumeration>
 	</valueType>
-	<valueType name="tTAX_PayReason" base="xs:string" variety="Atomic">
+	<valueType xmlns:d2p1="http://www.roskazna.ru/eb/domain/TSE_0401060_D07/formular" name="tTAX_PayReason" base="d2p1:tMax2Text" variety="Atomic">
 		<enumeration xsi:type="xs:string">ТП</enumeration>
 		<enumeration xsi:type="xs:string">ЗД</enumeration>
 		<enumeration xsi:type="xs:string">БФ</enumeration>
@@ -543,7 +543,7 @@
 		<property name="TAX_KBK" type="d2p1:tText0_20" lowerBound="0"/>
 		<property name="TAX_OKTMO" type="d2p1:t_OKTMO" lowerBound="0"/>
 		<property name="TAX_PayReason" type="d2p1:ttext1_2" lowerBound="0"/>
-		<property name="TAX_Period" type="d2p1:t_Text_10" lowerBound="0"/>
+		<property name="TAX_Period" type="d2p1:tText_10" lowerBound="0"/>
 		<property name="TAX_DocNo" type="d2p1:tText_15" lowerBound="0"/>
 		<property name="TAX_DocDate" type="d2p1:tmaxText_10" lowerBound="0"/>
 		<property name="TAX_TypeNP" type="d2p1:tTAX_PayReason" lowerBound="0"/>

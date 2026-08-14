@@ -922,6 +922,102 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
+          <name>ВидМобильнойПодписи</name>
+          <id>665</id>
+          <title>
+            <key>ru</key>
+            <value>Отправить в</value>
+          </title>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ВидМобильнойПодписи</segments>
+          </dataPath>
+          <titleLocation>Top</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>ВидПодписиПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ВидМобильнойПодписиРасширеннаяПодсказка</name>
+            <id>667</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ВидМобильнойПодписиКонтекстноеМеню</name>
+            <id>666</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <extendedEditMultipleValues>true</extendedEditMultipleValues>
+            <listChoiceMode>true</listChoiceMode>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>НастройкаОтправки</name>
+          <id>668</id>
+          <title>
+            <key>ru</key>
+            <value>Настройка отправки</value>
+          </title>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>НастройкаОтправки</segments>
+          </dataPath>
+          <titleLocation>Top</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>НастройкаОтправкиПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>НастройкаОтправкиРасширеннаяПодсказка</name>
+            <id>670</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НастройкаОтправкиКонтекстноеМеню</name>
+            <id>669</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <extendedEditMultipleValues>true</extendedEditMultipleValues>
+            <choiceButton>false</choiceButton>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
           <name>ПакетнаяОтправка</name>
           <id>530</id>
           <title>
@@ -2814,6 +2910,67 @@
     <settingsSavedData xsi:type="form:DataPath">
       <segments>ПодписыватьПослеВводаПароля</segments>
     </settingsSavedData>
+  </attributes>
+  <attributes>
+    <name>ТекущаяВерсияБСП</name>
+    <title>
+      <key>ru</key>
+      <value>Текущая версия БСП</value>
+    </title>
+    <id>40</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ВидМобильнойПодписи</name>
+    <title>
+      <key>ru</key>
+      <value>Вид мобильной подписи</value>
+    </title>
+    <id>41</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НастройкаОтправки</name>
+    <title>
+      <key>ru</key>
+      <value>Настройка отправки</value>
+    </title>
+    <id>42</id>
+    <valueType>
+      <types>CatalogRef</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПараметрыОтправителя</name>
+    <id>43</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
   </attributes>
   <formCommands>
     <name>Подписать</name>

@@ -20,7 +20,7 @@
   <defaultRoles>Role.АдминистраторСистемы</defaultRoles>
   <defaultRoles>Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</defaultRoles>
   <vendor>Фирма &quot;1С&quot;</vendor>
-  <version>11.5.27.58</version>
+  <version>11.5.27.70</version>
   <updateCatalogAddress>http://downloads.v8.1c.ru/tmplts/</updateCatalogAddress>
   <useManagedFormInOrdinaryApplication>true</useManagedFormInOrdinaryApplication>
   <useOrdinaryFormInManagedApplication>true</useOrdinaryFormInManagedApplication>
@@ -93,7 +93,6 @@
     <value>http://v8.1c.ru/trade/</value>
   </configurationInformationAddress>
   <dataLockControlMode>Managed</dataLockControlMode>
-  <binaryDataBlockStorageUseMode>Use</binaryDataBlockStorageUseMode>
   <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
   <modalityUseMode>UseWithWarnings</modalityUseMode>
   <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
@@ -318,6 +317,8 @@
   <styleItems>StyleItem.ФонПомеченнойКнопкиЦвет</styleItems>
   <styleItems>StyleItem.ФонРезультатовПоиска</styleItems>
   <styleItems>StyleItem.ФонУправляющегоПоля</styleItems>
+  <styleItems>StyleItem.ЦветБезРасхождений</styleItems>
+  <styleItems>StyleItem.ЦветБезРасхожденийТакси</styleItems>
   <styleItems>StyleItem.ЦветВажнойНадписиБИП</styleItems>
   <styleItems>StyleItem.ЦветВыделенияКонтрагентаСОшибкойБРД</styleItems>
   <styleItems>StyleItem.ЦветВыделенияУчастникаЭПД</styleItems>
@@ -334,6 +335,8 @@
   <styleItems>StyleItem.ЦветИтоговыхПоказателейДокументов</styleItems>
   <styleItems>StyleItem.ЦветКнопкиПоУмолчаниюДепозитыОбменСБанками</styleItems>
   <styleItems>StyleItem.ЦветКомандЗеленыйСборкаИДоставка</styleItems>
+  <styleItems>StyleItem.ЦветКритичныеРасхождения</styleItems>
+  <styleItems>StyleItem.ЦветКритичныеРасхожденияТакси</styleItems>
   <styleItems>StyleItem.ЦветМеткиГолубой</styleItems>
   <styleItems>StyleItem.ЦветМеткиЖелтый</styleItems>
   <styleItems>StyleItem.ЦветМеткиЗеленый</styleItems>
@@ -350,7 +353,11 @@
   <styleItems>StyleItem.ЦветНеактивногоРегиона</styleItems>
   <styleItems>StyleItem.ЦветНеАктивнойСтроки</styleItems>
   <styleItems>StyleItem.ЦветНедоступногоТекста</styleItems>
+  <styleItems>StyleItem.ЦветНезначительныеРасхождения</styleItems>
+  <styleItems>StyleItem.ЦветНезначительныеРасхожденияТакси</styleItems>
   <styleItems>StyleItem.ЦветНекорректныхДанныхЭПД</styleItems>
+  <styleItems>StyleItem.ЦветНеСверялось</styleItems>
+  <styleItems>StyleItem.ЦветНеСверялосьТакси</styleItems>
   <styleItems>StyleItem.ЦветОбрабатываемогоПриглашенияКЭДО</styleItems>
   <styleItems>StyleItem.ЦветОтклоненногоПриглашенияКЭДО</styleItems>
   <styleItems>StyleItem.ЦветОтличающейсяСтрокиДокумента</styleItems>
@@ -360,6 +367,8 @@
   <styleItems>StyleItem.ЦветРазделаПанелиФункций</styleItems>
   <styleItems>StyleItem.ЦветРазделителяГруппЭлементовЭПД</styleItems>
   <styleItems>StyleItem.ЦветРамкиПредпросмотраЭлектронногоДокумента</styleItems>
+  <styleItems>StyleItem.ЦветСверялось</styleItems>
+  <styleItems>StyleItem.ЦветСверялосьТакси</styleItems>
   <styleItems>StyleItem.ЦветСводнойСерииДиаграммы</styleItems>
   <styleItems>StyleItem.ЦветСерииФинансовогоАнализа</styleItems>
   <styleItems>StyleItem.ЦветСостоянияСерыйЭПД</styleItems>
@@ -456,6 +465,8 @@
   <styleItems>StyleItem.ЦветФонаПоясненияОшибкиБИП</styleItems>
   <styleItems>StyleItem.ЦветФонаПредупреждения</styleItems>
   <styleItems>StyleItem.ЦветФонаПредупрежденияБРД</styleItems>
+  <styleItems>StyleItem.ЦветФонаСверка</styleItems>
+  <styleItems>StyleItem.ЦветФонаСверкаТакси</styleItems>
   <styleItems>StyleItem.ЦветФонаСкидкиТорговыхПредложений</styleItems>
   <styleItems>StyleItem.ЦветФонаСкидкиТорговыхПредложенийОсветление</styleItems>
   <styleItems>StyleItem.ЦветФонаЧастичноОбеспечен</styleItems>
@@ -761,6 +772,7 @@
   <commonPictures>CommonPicture.ДиспетчированиеНазначитьСборщикаСборкаИДоставка</commonPictures>
   <commonPictures>CommonPicture.ДлительнаяОперация16</commonPictures>
   <commonPictures>CommonPicture.ДлительнаяОперация32БЭД</commonPictures>
+  <commonPictures>CommonPicture.ДлительнаяОперация32ОбменСБанками</commonPictures>
   <commonPictures>CommonPicture.ДлительнаяОперация48</commonPictures>
   <commonPictures>CommonPicture.ДлительнаяОперацияСиняяСНоменклатурой</commonPictures>
   <commonPictures>CommonPicture.Добавить</commonPictures>
@@ -1335,6 +1347,7 @@
   <commonPictures>CommonPicture.НастроитьИнтеграциюАвтоматически</commonPictures>
   <commonPictures>CommonPicture.НастроитьСостоянияОригиналаПервичногоДокумента</commonPictures>
   <commonPictures>CommonPicture.НастройкаБЭД</commonPictures>
+  <commonPictures>CommonPicture.НастройкаНазначенияПлатежа</commonPictures>
   <commonPictures>CommonPicture.НастройкаОбменаДаннымиАктивна</commonPictures>
   <commonPictures>CommonPicture.НастройкаПоискаАссоциацийНоменклатурыПродаваемойСовместно</commonPictures>
   <commonPictures>CommonPicture.НастройкаПродажи</commonPictures>
@@ -1607,9 +1620,9 @@
   <commonPictures>CommonPicture.ПодключениеБЭД</commonPictures>
   <commonPictures>CommonPicture.ПодключениеБЭДЖелтая</commonPictures>
   <commonPictures>CommonPicture.ПодключениеБЭДЗеленая</commonPictures>
+  <commonPictures>CommonPicture.АУ_Аурум</commonPictures>
   <commonPictures>CommonPicture.ПодключениеБЭДСерая</commonPictures>
   <commonPictures>CommonPicture.ПодключениеОбсуждений</commonPictures>
-  <commonPictures>CommonPicture.АУ_Аурум</commonPictures>
   <commonPictures>CommonPicture.Подменю</commonPictures>
   <commonPictures>CommonPicture.ПодменюСервис</commonPictures>
   <commonPictures>CommonPicture.ПодобратьРаботы</commonPictures>
@@ -1892,6 +1905,8 @@
   <commonPictures>CommonPicture.СервисСверкиРасчетовЗакрыть</commonPictures>
   <commonPictures>CommonPicture.СервисСверкиРасчетовЛогоМалое</commonPictures>
   <commonPictures>CommonPicture.СервисСверкиРасчетовСтатусыПодключенияОрганизаций</commonPictures>
+  <commonPictures>CommonPicture.СервисСверкиСдвинутьВверх</commonPictures>
+  <commonPictures>CommonPicture.СервисСверкиСдвинутьВниз</commonPictures>
   <commonPictures>CommonPicture.СерииНоменклатурыКолонкаСтатусов</commonPictures>
   <commonPictures>CommonPicture.СерииНоменклатурыКолонкаСтатусов16_32</commonPictures>
   <commonPictures>CommonPicture.СерииНоменклатурыМожноУказать</commonPictures>
@@ -2525,6 +2540,7 @@
   <roles>Role.ДобавлениеИзменениеГруппРассылокИОповещений</roles>
   <roles>Role.ДобавлениеИзменениеГруппФинансовогоУчета</roles>
   <roles>Role.ДобавлениеИзменениеДанныхДокументовЭлектронногоАктированияЕИС</roles>
+  <roles>Role.ДобавлениеИзменениеДанныхОПоставкахВРазрезеДОПП</roles>
   <roles>Role.ДобавлениеИзменениеДанныхРаботаСНоменклатурой</roles>
   <roles>Role.ДобавлениеИзменениеДатЗапретаЗагрузки</roles>
   <roles>Role.ДобавлениеИзменениеДатЗапретаИзменения</roles>
@@ -3175,11 +3191,11 @@
   <roles>Role.УтверждениеАвансовыхОтчетов</roles>
   <roles>Role.УтверждениеВидовЦен</roles>
   <roles>Role.УтверждениеЗаявокНаРасходованиеДенежныхСредств</roles>
-  <roles>Role.УтверждениеПлановВнутреннихПотреблений</roles>
   <roles>Role.АУ_БазовыеПрава</roles>
   <roles>Role.АУ_РаботаСБюджетомПолныеПрава</roles>
   <roles>Role.АУ_ОтчетыПоФинансовмуРезультату</roles>
   <roles>Role.АУ_ТолькоПросмотр</roles>
+  <roles>Role.УтверждениеПлановВнутреннихПотреблений</roles>
   <roles>Role.УтверждениеПлановЗакупок</roles>
   <roles>Role.УтверждениеПлановОстатков</roles>
   <roles>Role.УтверждениеПлановПродаж</roles>
@@ -3249,6 +3265,7 @@
   <roles>Role.ЧтениеГруппАналитическогоУчетаНоменклатуры</roles>
   <roles>Role.ЧтениеГруппФинансовогоУчета</roles>
   <roles>Role.ЧтениеДанныхДокументовЭлектронногоАктированияЕИС</roles>
+  <roles>Role.ЧтениеДанныхОПоставкахВРазрезеДОПП</roles>
   <roles>Role.ЧтениеДанныхРаботаСНоменклатурой</roles>
   <roles>Role.ЧтениеДанныхСервисаDSS</roles>
   <roles>Role.ЧтениеДанныхСПАРКРиски</roles>
@@ -3281,9 +3298,9 @@
   <roles>Role.ЧтениеДокументовСписанияПоступленияБезналичныхДС</roles>
   <roles>Role.ЧтениеДокументовЭПД</roles>
   <roles>Role.ЧтениеДополнительныхОтчетовИОбработок</roles>
+  <roles>Role.АУ_Экономист</roles>
   <roles>Role.ЧтениеДополнительныхСведений</roles>
   <roles>Role.ЧтениеЗаболеванийУсловийРегионализацииВЕТИС</roles>
-  <roles>Role.АУ_Экономист</roles>
   <roles>Role.ЧтениеЗагрузкиОстатковЕГАИС</roles>
   <roles>Role.ЧтениеЗаданий</roles>
   <roles>Role.ЧтениеЗаданийНаПеревозку</roles>
@@ -3302,11 +3319,11 @@
   <roles>Role.ЧтениеЗапросовОстатковПартийСАТУРН</roles>
   <roles>Role.ЧтениеЗапросовСкладскогоЖурналаВЕТИС</roles>
   <roles>Role.ЧтениеЗапросОстатковПартийЗЕРНО</roles>
-  <roles>Role.ЧтениеЗапросыКоммерческихПредложенийОтКлиентов</roles>
-  <roles>Role.ЧтениеЗапросыКоммерческихПредложенийПоставщиков</roles>
   <roles>Role.АУ_Менеджер</roles>
   <roles>Role.АУ_Бухгалтер</roles>
   <roles>Role.АУ_Кладовщик</roles>
+  <roles>Role.ЧтениеЗапросыКоммерческихПредложенийОтКлиентов</roles>
+  <roles>Role.ЧтениеЗапросыКоммерческихПредложенийПоставщиков</roles>
   <roles>Role.ЧтениеЗаявленийОВвозеТоваров</roles>
   <roles>Role.ЧтениеЗаявокНаЗакупку</roles>
   <roles>Role.ЧтениеЗаявокНаКомандировку</roles>
@@ -3340,13 +3357,13 @@
   <roles>Role.ЧтениеКорректировокВидовДеятельностиНДС</roles>
   <roles>Role.ЧтениеКорректировокНазначенияТоваров</roles>
   <roles>Role.ЧтениеКорректировокОбособленногоУчетаЗапасов</roles>
-  <roles>Role.ЧтениеКорректировокПриобретений</roles>
-  <roles>Role.ЧтениеКорректировокРасчетовСПодотчетнымиЛицами</roles>
   <roles>Role.АУ_СервиснаяБазаДанныхПолынеПрава</roles>
   <roles>Role.АУ_СервиснаяБазаДанныхРабота</roles>
   <roles>Role.АУ_СервиснаяБазаДанныхТолькоПросмтр</roles>
   <roles>Role.АУ_Юрист</roles>
   <roles>Role.АУ_МенеджерПоОборудованию</roles>
+  <roles>Role.ЧтениеКорректировокПриобретений</roles>
+  <roles>Role.ЧтениеКорректировокРасчетовСПодотчетнымиЛицами</roles>
   <roles>Role.ЧтениеКорректировокРеализаций</roles>
   <roles>Role.ЧтениеКурсовВалют</roles>
   <roles>Role.ЧтениеЛимитовРасходаДенежныхСредств</roles>
@@ -3383,9 +3400,9 @@
   <roles>Role.ЧтениеНоменклатурыПартнеров</roles>
   <roles>Role.ЧтениеНомеровГТД</roles>
   <roles>Role.ЧтениеНормативноСправочнойИнформации</roles>
+  <roles>Role.АУ_ТолькоПросмотрДиадок</roles>
   <roles>Role.ЧтениеНормативовРаспределения</roles>
   <roles>Role.ЧтениеОбменовОнлайнОплаты</roles>
-  <roles>Role.АУ_ТолькоПросмотрДиадок</roles>
   <roles>Role.ЧтениеОбменСБанками</roles>
   <roles>Role.ЧтениеОбъединенийЗаписейСкладскогоЖурналаВЕТИС</roles>
   <roles>Role.ЧтениеОжидаемыхПоступленийДенежныхСредств</roles>
@@ -3424,9 +3441,9 @@
   <roles>Role.ЧтениеОтветовНаВопросыАнкет</roles>
   <roles>Role.ЧтениеОтгрузкаТоваровИСМП</roles>
   <roles>Role.ЧтениеОтгрузкиТоваровСХранения</roles>
+  <roles>Role.АУ_МенеджерПоЗакупкам</roles>
   <roles>Role.ЧтениеОтгрузокТоваровКлиентам</roles>
   <roles>Role.ЧтениеОтносительныхКурсовВалют</roles>
-  <roles>Role.АУ_МенеджерПоЗакупкам</roles>
   <roles>Role.ЧтениеОтчетИСМП</roles>
   <roles>Role.ЧтениеОтчетовБанкаПоОперациямЭквайринга</roles>
   <roles>Role.ЧтениеОтчетовЕГАИС</roles>
@@ -3473,9 +3490,9 @@
   <roles>Role.ЧтениеПримененияЕНВД</roles>
   <roles>Role.ЧтениеПриобретенийТоваровУслугВозвратовПоставщикам</roles>
   <roles>Role.ЧтениеПриобретенийУслугПрочихАктивов</roles>
+  <roles>Role.АУ_Казначей</roles>
   <roles>Role.ЧтениеПриоритетов</roles>
   <roles>Role.ЧтениеПричинБлокировкиТоваров</roles>
-  <roles>Role.АУ_Казначей</roles>
   <roles>Role.ЧтениеПричинОтменыЗаказовКлиентов</roles>
   <roles>Role.ЧтениеПричинОтменыЗаказовПоставщикам</roles>
   <roles>Role.ЧтениеПроверокСостоянияСистемы</roles>
@@ -3503,9 +3520,9 @@
   <roles>Role.ЧтениеРегистровПланов</roles>
   <roles>Role.ЧтениеРегламентныхОпераций</roles>
   <roles>Role.ЧтениеРезультатовПроверкиУчета</roles>
+  <roles>Role.АУ_Логист</roles>
   <roles>Role.ЧтениеРейсов</roles>
   <roles>Role.ЧтениеСборокТоваров</roles>
-  <roles>Role.АУ_Логист</roles>
   <roles>Role.ЧтениеСверокВзаиморасчетов</roles>
   <roles>Role.ЧтениеСделок</roles>
   <roles>Role.ЧтениеСебестоимостиТоваров</roles>
@@ -3805,6 +3822,7 @@
   <commonTemplates>CommonTemplate.РезультатыСверкиКнигаПродаж</commonTemplates>
   <commonTemplates>CommonTemplate.СервисПрогнозированияФильтрЗагрузкиПрогноза</commonTemplates>
   <commonTemplates>CommonTemplate.СервисПрогнозированияФильтрОтправляемыхДанных</commonTemplates>
+  <commonTemplates>CommonTemplate.СервисСверкиРасчетовЗаявлениеОПереключенииЛогинаИТС</commonTemplates>
   <commonTemplates>CommonTemplate.СертификатыНУЦМинцифры_ru</commonTemplates>
   <commonTemplates>CommonTemplate.СоответствиеТэговОбщимФормам</commonTemplates>
   <commonTemplates>CommonTemplate.СтруктураПодчиненности</commonTemplates>
@@ -4318,6 +4336,7 @@
   <commonModules>CommonModule.ИнтеграцияПодсистемБСПКлиент</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБСПКлиентПовтИсп</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБСППовтИсп</commonModules>
+  <commonModules>CommonModule.ИнтеграцияПодсистемБСС</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБТС</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБТСКлиент</commonModules>
   <commonModules>CommonModule.ИнтеграцияПодсистемБТСКлиентПовтИсп</commonModules>
@@ -5300,8 +5319,8 @@
   <commonModules>CommonModule.ОтчетОСписанииТоваровСХраненияЛокализация</commonModules>
   <commonModules>CommonModule.ОтчетПоКомиссииМеждуОрганизациямиЛокализация</commonModules>
   <commonModules>CommonModule.ОтчетПоКомиссииМеждуОрганизациямиОСписанииЛокализация</commonModules>
-  <commonModules>CommonModule.ОтчетыЕГАИС</commonModules>
   <commonModules>CommonModule.АУ_СозданиеЭлементовФормы</commonModules>
+  <commonModules>CommonModule.ОтчетыЕГАИС</commonModules>
   <commonModules>CommonModule.ОтчетыЕГАИСВызовСервера</commonModules>
   <commonModules>CommonModule.ОтчетыЕГАИСКлиент</commonModules>
   <commonModules>CommonModule.ОтчетыЕГАИСПереопределяемый</commonModules>
@@ -5443,6 +5462,7 @@
   <commonModules>CommonModule.ПлатежиВБюджетКлиентСервер</commonModules>
   <commonModules>CommonModule.ПлатежныеСистемы</commonModules>
   <commonModules>CommonModule.ПлатежныеСистемыКлиент</commonModules>
+  <commonModules>CommonModule.ПлатежныеСистемыКлиентПереопределяемый</commonModules>
   <commonModules>CommonModule.ПлатежныеСистемыКлиентСервер</commonModules>
   <commonModules>CommonModule.ПлатежныеСистемыКлиентСобытия</commonModules>
   <commonModules>CommonModule.ПлатежныеСистемыПереопределяемый</commonModules>
@@ -5723,10 +5743,10 @@
   <commonModules>CommonModule.РаботаСExcelКлиент</commonModules>
   <commonModules>CommonModule.РаботаСXMLЕГАИС</commonModules>
   <commonModules>CommonModule.РаботаСXMLИС</commonModules>
-  <commonModules>CommonModule.РаботаСАбонентамиЭДО</commonModules>
-  <commonModules>CommonModule.РаботаСАбонентамиЭДОВызовСервера</commonModules>
   <commonModules>CommonModule.АУ_ОбщиеПроцедурыИФункцииСервер</commonModules>
   <commonModules>CommonModule.АУ_Привелигированный</commonModules>
+  <commonModules>CommonModule.РаботаСАбонентамиЭДО</commonModules>
+  <commonModules>CommonModule.РаботаСАбонентамиЭДОВызовСервера</commonModules>
   <commonModules>CommonModule.РаботаСАбонентамиЭДОКлиент</commonModules>
   <commonModules>CommonModule.РаботаСАбонентамиЭДОКлиентСервер</commonModules>
   <commonModules>CommonModule.РаботаСАбонентамиЭДОСлужебный</commonModules>
@@ -6095,6 +6115,7 @@
   <commonModules>CommonModule.СервисСверкиРасчетовКлиент</commonModules>
   <commonModules>CommonModule.СервисСверкиРасчетовКлиентПереопределяемый</commonModules>
   <commonModules>CommonModule.СервисСверкиРасчетовМенеджерОбмена</commonModules>
+  <commonModules>CommonModule.СервисСверкиРасчетовПереключениеЛогинаИТС</commonModules>
   <commonModules>CommonModule.СервисСверкиРасчетовПереопределяемый</commonModules>
   <commonModules>CommonModule.СервисСверкиРасчетовСверкаДекларацийНДС</commonModules>
   <commonModules>CommonModule.СервисСверкиРасчетовСверкаДекларацийНДСВызовСервера</commonModules>
@@ -6189,11 +6210,11 @@
   <commonModules>CommonModule.СобытияФормСАТУРНКлиентПереопределяемый</commonModules>
   <commonModules>CommonModule.СобытияФормСАТУРНПереопределяемый</commonModules>
   <commonModules>CommonModule.СогласиеОПредоставленииИнформацииГИСМТ</commonModules>
+  <commonModules>CommonModule.АУ_ПолучениеДанныхСервис</commonModules>
+  <commonModules>CommonModule.АУ_ПолучениеДанныхСервер</commonModules>
   <commonModules>CommonModule.СогласиеОПредоставленииИнформацииГИСМТВызовСервера</commonModules>
   <commonModules>CommonModule.СогласиеОПредоставленииИнформацииГИСМТКлиент</commonModules>
   <commonModules>CommonModule.СоединенияИБ</commonModules>
-  <commonModules>CommonModule.АУ_ПолучениеДанныхСервис</commonModules>
-  <commonModules>CommonModule.АУ_ПолучениеДанныхСервер</commonModules>
   <commonModules>CommonModule.СоединенияИБВызовСервера</commonModules>
   <commonModules>CommonModule.СоединенияИБКлиент</commonModules>
   <commonModules>CommonModule.СоединенияИБКлиентСервер</commonModules>
@@ -6341,16 +6362,16 @@
   <commonModules>CommonModule.Тестирование</commonModules>
   <commonModules>CommonModule.ТехнологияСервиса</commonModules>
   <commonModules>CommonModule.ТехнологияСервисаСлужебныйЗапросы</commonModules>
+  <commonModules>CommonModule.АУ_ОбщиеПроцедурыИФункцииВызовСервера</commonModules>
   <commonModules>CommonModule.ТМЦВЭксплуатацииКлиент</commonModules>
   <commonModules>CommonModule.ТМЦВЭксплуатацииКлиентСервер</commonModules>
   <commonModules>CommonModule.ТМЦВЭксплуатацииЛокализация</commonModules>
-  <commonModules>CommonModule.АУ_ОбщиеПроцедурыИФункцииВызовСервера</commonModules>
-  <commonModules>CommonModule.ТМЦВЭксплуатацииПовтИсп</commonModules>
-  <commonModules>CommonModule.ТМЦВЭксплуатацииСервер</commonModules>
-  <commonModules>CommonModule.ТорговыеПредложения</commonModules>
   <commonModules>CommonModule.АУ_РаботаССервисомТСДСервис</commonModules>
   <commonModules>CommonModule.АУ_РаботаССервисомТСДСервер</commonModules>
   <commonModules>CommonModule.АУ_КонструкторПечатныхФормСервер</commonModules>
+  <commonModules>CommonModule.ТМЦВЭксплуатацииПовтИсп</commonModules>
+  <commonModules>CommonModule.ТМЦВЭксплуатацииСервер</commonModules>
+  <commonModules>CommonModule.ТорговыеПредложения</commonModules>
   <commonModules>CommonModule.ТорговыеПредложенияВызовСервера</commonModules>
   <commonModules>CommonModule.ТорговыеПредложенияВызовСервераУТ</commonModules>
   <commonModules>CommonModule.ТорговыеПредложенияКлиент</commonModules>
@@ -6446,11 +6467,11 @@
   <commonModules>CommonModule.УправлениеПечатьюУТСервер</commonModules>
   <commonModules>CommonModule.УправлениеСвойствами</commonModules>
   <commonModules>CommonModule.УправлениеСвойствамиКлиент</commonModules>
+  <commonModules>CommonModule.АУ_Уведомления</commonModules>
+  <commonModules>CommonModule.АУ_УправлениеСогласованиемДокументов</commonModules>
   <commonModules>CommonModule.УправлениеСвойствамиПереопределяемый</commonModules>
   <commonModules>CommonModule.УправлениеСвойствамиПовтИсп</commonModules>
   <commonModules>CommonModule.УправлениеСвойствамиСлужебный</commonModules>
-  <commonModules>CommonModule.АУ_Уведомления</commonModules>
-  <commonModules>CommonModule.АУ_УправлениеСогласованиемДокументов</commonModules>
   <commonModules>CommonModule.УправлениеСвойствамиУТ</commonModules>
   <commonModules>CommonModule.УправлениеЭлектроннойПочтой</commonModules>
   <commonModules>CommonModule.УправлениеЭлектроннойПочтойКлиент</commonModules>
@@ -6593,10 +6614,10 @@
   <commonModules>CommonModule.ШтрихкодированиеИСКлиентПереопределяемый</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСКлиентСервер</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСКлиентСерверПереопределяемый</commonModules>
+  <commonModules>CommonModule.АУ_ОбщиеПроцедурыИФункцииКлиент</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСМП</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСМПВызовСервера</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСМПКлиент</commonModules>
-  <commonModules>CommonModule.АУ_ОбщиеПроцедурыИФункцииКлиент</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСМПКлиентСервер</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСМПКлиентСерверПереопределяемый</commonModules>
   <commonModules>CommonModule.ШтрихкодированиеИСМПСлужебный</commonModules>
@@ -6704,11 +6725,10 @@
   <commonModules>CommonModule.ЭтапыОплатыКлиент</commonModules>
   <commonModules>CommonModule.ЭтапыОплатыКлиентСервер</commonModules>
   <commonModules>CommonModule.ЭтапыОплатыПовтИсп</commonModules>
+  <commonModules>CommonModule.АУ_ОбщиеПроцедурыИФункцииСерверПовтИсп</commonModules>
   <commonModules>CommonModule.ЭтапыОплатыСервер</commonModules>
   <commonModules>CommonModule.ЭтапыОплатыСерверЛокализация</commonModules>
   <commonModules>CommonModule.ЯндексПереводчик</commonModules>
-  <commonModules>CommonModule.АУ_ОбщиеПроцедурыИФункцииСерверПовтИсп</commonModules>
-  <commonModules>CommonModule.АУ_КонтрольЗаказаКлиентаСервер</commonModules>
   <commonAttributes>CommonAttribute.КомментарийЯзык1</commonAttributes>
   <commonAttributes>CommonAttribute.КомментарийЯзык2</commonAttributes>
   <commonAttributes>CommonAttribute.НаименованиеЯзык1</commonAttributes>
@@ -7510,7 +7530,6 @@
   <eventSubscriptions>EventSubscription.УстановитьСтатусИзмененияПометкиУдаленияДокумента</eventSubscriptions>
   <eventSubscriptions>EventSubscription.УстановитьСтатусИзмененияПометкиУдаленияОбъекта</eventSubscriptions>
   <eventSubscriptions>EventSubscription.УстановитьСтатусИзмененияПометкиУдаленияПользователя</eventSubscriptions>
-  <eventSubscriptions>EventSubscription.АУ_ЦепочкаЗаказаПометитьКПересчёту</eventSubscriptions>
   <scheduledJobs>ScheduledJob.ABCКлассификацияНоменклатуры</scheduledJobs>
   <scheduledJobs>ScheduledJob.ABCКлассификацияПартнеров</scheduledJobs>
   <scheduledJobs>ScheduledJob.XYZКлассификацияНоменклатуры</scheduledJobs>
@@ -7690,6 +7709,7 @@
   <scheduledJobs>ScheduledJob.СводныеПриложенияВыгрузка</scheduledJobs>
   <scheduledJobs>ScheduledJob.СводныеПриложенияПланированиеЗагрузки</scheduledJobs>
   <scheduledJobs>ScheduledJob.СерверЛояльностиОбработкаСостоянияБонусовПодарочныхСертификатов</scheduledJobs>
+  <scheduledJobs>ScheduledJob.СервисСверкиРасчетовОбработатьУчастниковСверки</scheduledJobs>
   <scheduledJobs>ScheduledJob.СинхронизацияДанных</scheduledJobs>
   <scheduledJobs>ScheduledJob.СинхронизацияДанныхСПриложениемВИнтернете</scheduledJobs>
   <scheduledJobs>ScheduledJob.СинхронизацияССервисомИнтеграции</scheduledJobs>
@@ -7704,14 +7724,14 @@
   <scheduledJobs>ScheduledJob.УведомлениеИсполнителейОНовыхЗадачах</scheduledJobs>
   <scheduledJobs>ScheduledJob.УдалениеВзаимодействийПоРассылкамИОповещениям</scheduledJobs>
   <scheduledJobs>ScheduledJob.УдалениеДублейКлючейРеестраДокументов</scheduledJobs>
-  <scheduledJobs>ScheduledJob.УдалениеНеактуальнойИнформацииСинхронизации</scheduledJobs>
   <scheduledJobs>ScheduledJob.АУ_ЗагрузкаСтавкиРефинансирования</scheduledJobs>
+  <scheduledJobs>ScheduledJob.УдалениеНеактуальнойИнформацииСинхронизации</scheduledJobs>
   <scheduledJobs>ScheduledJob.УдалениеНеактуальныхДанных</scheduledJobs>
-  <scheduledJobs>ScheduledJob.УдалениеНеиспользованныхКодовМаркировкиИСМП</scheduledJobs>
   <scheduledJobs>ScheduledJob.АУ_УведомленияОСрокеВыполненияКонтракта</scheduledJobs>
   <scheduledJobs>ScheduledJob.АУ_ФормированиеУведомленийПоРасписанию</scheduledJobs>
   <scheduledJobs>ScheduledJob.АУ_ФормированиеУведомленийПоСобытиям</scheduledJobs>
   <scheduledJobs>ScheduledJob.АУ_ОтправкаУведомлений</scheduledJobs>
+  <scheduledJobs>ScheduledJob.УдалениеНеиспользованныхКодовМаркировкиИСМП</scheduledJobs>
   <scheduledJobs>ScheduledJob.УдалениеНеиспользуемыхВнешнихКомпонент</scheduledJobs>
   <scheduledJobs>ScheduledJob.УдалениеНеиспользуемыхДанныхОПринадлежностиЗапасовТорговыхТочек</scheduledJobs>
   <scheduledJobs>ScheduledJob.УдалениеОтложенныхЧековККМ</scheduledJobs>
@@ -7732,7 +7752,6 @@
   <scheduledJobs>ScheduledJob.ФормированиеСообщенийПоРассылкамКлиентам</scheduledJobs>
   <scheduledJobs>ScheduledJob.ЧтениеНовостейСлужбыПоддержки</scheduledJobs>
   <scheduledJobs>ScheduledJob.ЭкспортОценкиПроизводительности</scheduledJobs>
-  <scheduledJobs>ScheduledJob.АУ_ПересчётКэшаЦепочкиЗаказаКлиента</scheduledJobs>
   <settingsStorages>SettingsStorage.БуферыОбменаНовостей</settingsStorages>
   <settingsStorages>SettingsStorage.НастройкиНовостей</settingsStorages>
   <settingsStorages>SettingsStorage.ХранилищеВариантовОтчетов</settingsStorages>
@@ -8784,8 +8803,6 @@
   <definedTypes>DefinedType.ШаблонСообщенияБИП</definedTypes>
   <definedTypes>DefinedType.ШаблонЭтикеткиИС</definedTypes>
   <definedTypes>DefinedType.ШтрихкодУпаковкиИС</definedTypes>
-  <definedTypes>DefinedType.АУ_ДокументИнициаторЦепочкиЗаказаКлиента</definedTypes>
-  <definedTypes>DefinedType.АУ_ДокументИнициаторЦепочкиЗаказаКлиентаОбъект</definedTypes>
   <commonCommands>CommonCommand.АвтономнаяРабота</commonCommands>
   <commonCommands>CommonCommand.АвтономнаяРаботаВМоделиСервиса</commonCommands>
   <commonCommands>CommonCommand.АрхивСообщенийОбменов</commonCommands>
@@ -9171,6 +9188,7 @@
   <constants>Constant.ВариантОбособленияТоваровВПродажах</constants>
   <constants>Constant.ВариантОбособленияТоваровВСборке</constants>
   <constants>Constant.ВариантПриемкиТоваров</constants>
+  <constants>Constant.ВариантПроверкиСертификатовМЧДЭДО</constants>
   <constants>Constant.ВариантПроверкиСтатусовСертификатовНоменклатурыРосаккредитации</constants>
   <constants>Constant.ВариантУпорядочиванияПотребностейПоЗаказамДляОбеспечения</constants>
   <constants>Constant.ВариантУчетаСезонныхКолебаний</constants>
@@ -9241,6 +9259,8 @@
   <constants>Constant.ДатаОбновленияНаВерсиюСПрочтенностью</constants>
   <constants>Constant.ДатаОбновленияПовторноИспользуемыхЗначенийМРО</constants>
   <constants>Constant.ДатаОбновленияСобытийСПАРКРиски</constants>
+  <constants>Constant.ДатаОтключенияAPIТакскомЭДО</constants>
+  <constants>Constant.ДатаПереводаАбонентовИзТакскомЭДО</constants>
   <constants>Constant.ДатаПереходаНаПартионныйУчетВерсии22</constants>
   <constants>Constant.ДатаПереходаНаЦенообразование25</constants>
   <constants>Constant.ДатаПолученияДанныхСервисаСверкиРасчетов</constants>
@@ -10071,7 +10091,6 @@
   <constants>Constant.ФормироватьОтчетностьПоНДС</constants>
   <constants>Constant.ФормироватьУправленческийБаланс</constants>
   <constants>Constant.ФормироватьФинансовыйРезультат</constants>
-  <constants>Constant.ХешРасхожденийСервисаСверкиРасчетов</constants>
   <constants>Constant.ХранитьИсториюРассылкиОтчетов</constants>
   <constants>Constant.ХранитьУспешныеОперацииРазрешения</constants>
   <constants>Constant.ХранитьФайлыВТомахНаДиске</constants>
@@ -10969,6 +10988,7 @@
   <documents>Document.ГрафикИсполненияДоговора</documents>
   <documents>Document.ДвижениеПрочихАктивовПассивов</documents>
   <documents>Document.ДоверенностьВыданная</documents>
+  <documents>Document.ДокументОПредстоящейПоставке</documents>
   <documents>Document.ЗаданиеНаПеревозку</documents>
   <documents>Document.ЗаданиеТорговомуПредставителю</documents>
   <documents>Document.ЗаказКлиента</documents>
@@ -11117,8 +11137,8 @@
   <documents>Document.РаспределениеДоходовПоНаправлениямДеятельности</documents>
   <documents>Document.РаспределениеНДС</documents>
   <documents>Document.РаспределениеПрочихЗатрат</documents>
-  <documents>Document.РаспределениеРасходовБудущихПериодов</documents>
   <documents>Document.АУ_ПланБюджета</documents>
+  <documents>Document.РаспределениеРасходовБудущихПериодов</documents>
   <documents>Document.РассылкаКлиентам</documents>
   <documents>Document.РасходныйКассовыйОрдер</documents>
   <documents>Document.РасходныйОрдерНаТовары</documents>
@@ -11161,8 +11181,8 @@
   <documents>Document.СчетФактураКомиссионеру</documents>
   <documents>Document.СчетФактураКомитента</documents>
   <documents>Document.СчетФактураНалоговыйАгент</documents>
-  <documents>Document.СчетФактураНаНеподтвержденнуюРеализацию0</documents>
   <documents>Document.АУ_ОбращенияВСервис</documents>
+  <documents>Document.СчетФактураНаНеподтвержденнуюРеализацию0</documents>
   <documents>Document.СчетФактураПолученный</documents>
   <documents>Document.СчетФактураПолученныйАванс</documents>
   <documents>Document.СчетФактураПолученныйНалоговыйАгент</documents>
@@ -11179,8 +11199,8 @@
   <documents>Document.УведомлениеОВвозеМаркированныхТоваровИзЕАЭСГИСМ</documents>
   <documents>Document.УведомлениеОВвозеПрослеживаемыхТоваров</documents>
   <documents>Document.УведомлениеОЗачисленииВалюты</documents>
-  <documents>Document.УведомлениеОПеремещенииПрослеживаемыхТоваров</documents>
   <documents>Document.АУ_ЗаявкаНаТранспорт</documents>
+  <documents>Document.УведомлениеОПеремещенииПрослеживаемыхТоваров</documents>
   <documents>Document.УведомлениеОПланируемомИмпортеЕГАИС</documents>
   <documents>Document.УведомлениеОПоступленииМаркированныхТоваровГИСМ</documents>
   <documents>Document.УведомлениеОСписанииКиЗГИСМ</documents>
@@ -11194,15 +11214,15 @@
   <documents>Document.УсловияРетроБонусовПоставщика</documents>
   <documents>Document.УстановкаБлокировокЯчеек</documents>
   <documents>Document.УстановкаКвотАссортимента</documents>
-  <documents>Document.УстановкаЦенНоменклатуры</documents>
   <documents>Document.АУ_РеестрПлатежей</documents>
+  <documents>Document.УстановкаЦенНоменклатуры</documents>
   <documents>Document.УточнениеСведенийОКодахМаркировкиИСМП</documents>
   <documents>Document.ФормированиеПартийЗЕРНО</documents>
   <documents>Document.ФормированиеПартийИзДругихПартийЗЕРНО</documents>
   <documents>Document.ФормированиеПартийПриПроизводствеЗЕРНО</documents>
   <documents>Document.ЧекЕГАИС</documents>
-  <documents>Document.ЧекЕГАИСВозврат</documents>
   <documents>Document.АУ_ГарантийныйТалон</documents>
+  <documents>Document.ЧекЕГАИСВозврат</documents>
   <documents>Document.ЧекККМ</documents>
   <documents>Document.ЧекККМВозврат</documents>
   <documents>Document.ЧекККМКоррекции</documents>
@@ -11307,6 +11327,7 @@
   <enums>Enum.ВариантыПриемкиТоваров</enums>
   <enums>Enum.ВариантыПроведенияЭкспертизыВЕТИС</enums>
   <enums>Enum.ВариантыПроверкиПоступившейПродукцииИС</enums>
+  <enums>Enum.ВариантыПроверкиСертификатовМЧДЭДО</enums>
   <enums>Enum.ВариантыПроверкиСтатусовСертификатовНоменклатурыРосаккредитации</enums>
   <enums>Enum.ВариантыПубликацииДополнительныхОтчетовИОбработок</enums>
   <enums>Enum.ВариантыПубликацииОстатковТорговыеПредложения</enums>
@@ -11651,6 +11672,7 @@
   <enums>Enum.СоставыСписковРетроБонусов</enums>
   <enums>Enum.СоставыТоваровРетроБонусов</enums>
   <enums>Enum.СоставыУчастниковРетроБонусов</enums>
+  <enums>Enum.СостояниеДОПП</enums>
   <enums>Enum.СостояниеМПЭПД</enums>
   <enums>Enum.СостояниеОформленияДокументовПоРаспоряжению</enums>
   <enums>Enum.СостояниеСверкиВзаиморасчетовСБПc2b</enums>
@@ -11935,9 +11957,9 @@
   <enums>Enum.СтатусыРейсов</enums>
   <enums>Enum.СтатусыСборкиИДоставки</enums>
   <enums>Enum.СтатусыСборокТоваров</enums>
+  <enums>Enum.СпособыВыставленияДокументов</enums>
   <enums>Enum.СтатусыСверокВзаиморасчетов</enums>
   <enums>Enum.СтатусыСверокВзаиморасчетов2_5_11</enums>
-  <enums>Enum.СпособыВыставленияДокументов</enums>
   <enums>Enum.СтатусыСделок</enums>
   <enums>Enum.СтатусыСДИЗЗЕРНО</enums>
   <enums>Enum.СтатусыСертификатовНоменклатуры</enums>
@@ -12122,12 +12144,12 @@
   <enums>Enum.ТипыТарифов</enums>
   <enums>Enum.ТипыТекстовЭлектронныхПисем</enums>
   <enums>Enum.ТипыТокеновАвторизации</enums>
+  <enums>Enum.АУ_СтатусыПорученийЭкспедиторам</enums>
   <enums>Enum.ТипыТранзакцийСРеестромМЧД</enums>
   <enums>Enum.ТипыТранспортаВЕТИС</enums>
-  <enums>Enum.АУ_СтатусыПорученийЭкспедиторам</enums>
+  <enums>Enum.АУ_ВариантыУказанияСроковПоставки</enums>
   <enums>Enum.ТипыТранспортаЕГАИС</enums>
   <enums>Enum.ТипыТранспортнойОперацииВЕТИС</enums>
-  <enums>Enum.АУ_ВариантыУказанияСроковПоставки</enums>
   <enums>Enum.ТипыТСПИоТ</enums>
   <enums>Enum.ТипыУпаковок</enums>
   <enums>Enum.ТипыУпаковокНоменклатуры</enums>
@@ -12145,13 +12167,13 @@
   <enums>Enum.ТипыШтрихкодов</enums>
   <enums>Enum.ТипыЭлементовРегламентаЭДО</enums>
   <enums>Enum.ТочностиУказанияСрокаГодности</enums>
-  <enums>Enum.ТочностьЗаполненияПериодаВЕТИС</enums>
-  <enums>Enum.ТребованияКПодписаниюЭД</enums>
   <enums>Enum.АУ_ВидыЗаданий</enums>
   <enums>Enum.АУ_СпособыУведомлений</enums>
   <enums>Enum.АУ_ВидыСобытийОбъектов</enums>
   <enums>Enum.АУ_ВидыУведомлений</enums>
   <enums>Enum.АУ_СтатусыСогласованияДокументов</enums>
+  <enums>Enum.ТочностьЗаполненияПериодаВЕТИС</enums>
+  <enums>Enum.ТребованияКПодписаниюЭД</enums>
   <enums>Enum.ТребуемоеДействиеДокументЭДО</enums>
   <enums>Enum.УдалитьВариантыУчетаСтоимостиТМЦ</enums>
   <enums>Enum.УдалитьВидыОповещенийПользователей</enums>
@@ -12543,7 +12565,6 @@
   <reports>Report.УчетныеПолитикиОрганизаций</reports>
   <reports>Report.ФинансовоеСостояние</reports>
   <reports>Report.ЭффективностьСделокСКлиентами</reports>
-  <reports>Report.АУ_КонтрольЗаказовКлиентов</reports>
   <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
   <dataProcessors>DataProcessor.АктивныеЗаказыСУЗ</dataProcessors>
   <dataProcessors>DataProcessor.АктивныеПользователи</dataProcessors>
@@ -13020,6 +13041,7 @@
   <informationRegisters>InformationRegister.ДетализацияСебестоимостиТоваровПостатейныеЗатраты</informationRegisters>
   <informationRegisters>InformationRegister.ДетализацияСебестоимостиТоваровПостатейныеЗатратыНЗП</informationRegisters>
   <informationRegisters>InformationRegister.ДлительныеОперации</informationRegisters>
+  <informationRegisters>InformationRegister.ДокументыОПредстоящейПоставке</informationRegisters>
   <informationRegisters>InformationRegister.ДокументыОФД</informationRegisters>
   <informationRegisters>InformationRegister.ДокументыПоВыпущеннойПродукции</informationRegisters>
   <informationRegisters>InformationRegister.ДокументыСОшибкамиПроверкиКонтрагентов</informationRegisters>
@@ -13373,6 +13395,7 @@
   <informationRegisters>InformationRegister.ОчередьЧековККТ</informationRegisters>
   <informationRegisters>InformationRegister.ОшибкиВыполненияОтложенныхЗаданий</informationRegisters>
   <informationRegisters>InformationRegister.ОшибкиОчередейЗаданий</informationRegisters>
+  <informationRegisters>InformationRegister.ОшибкиПереводаАбонентовВХАБЭДО</informationRegisters>
   <informationRegisters>InformationRegister.ОшибкиПередачиЭДО</informationRegisters>
   <informationRegisters>InformationRegister.ОшибкиПодтвержденияНСПК</informationRegisters>
   <informationRegisters>InformationRegister.ОшибкиРасчетаПартийИСебестоимости</informationRegisters>
@@ -13429,9 +13452,9 @@
   <informationRegisters>InformationRegister.ПравилаПреобразованияФорматов</informationRegisters>
   <informationRegisters>InformationRegister.ПравилаПроверкиПолномочийПоМЧД</informationRegisters>
   <informationRegisters>InformationRegister.ПравилаРазмещенияТоваровВЯчейках</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_ПерегруженныеОбъектыПоДатам</informationRegisters>
   <informationRegisters>InformationRegister.ПредельныеЗначенияОКВЭД2</informationRegisters>
   <informationRegisters>InformationRegister.ПредметыПапкиВзаимодействий</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_ПерегруженныеОбъектыПоДатам</informationRegisters>
   <informationRegisters>InformationRegister.ПредопределенныеВариантыОтчетовВерсийРасширений</informationRegisters>
   <informationRegisters>InformationRegister.ПредприятияЗонОтветственностиВЕТИС</informationRegisters>
   <informationRegisters>InformationRegister.ПредставлениеЗаданийРаспознаваниеДокументов</informationRegisters>
@@ -13538,7 +13561,9 @@
   <informationRegisters>InformationRegister.СервисСверкиРасчетовОчередьЗапросов</informationRegisters>
   <informationRegisters>InformationRegister.СервисСверкиРасчетовРеестрДокументов</informationRegisters>
   <informationRegisters>InformationRegister.СервисСверкиРасчетовСтатусыРасхождений</informationRegisters>
+  <informationRegisters>InformationRegister.СервисСверкиРасчетовУстаревшиеIDУчастниковСверки</informationRegisters>
   <informationRegisters>InformationRegister.СервисСверкиРасчетовУстраненныеРасхождения</informationRegisters>
+  <informationRegisters>InformationRegister.СервисСверкиРасчетовУчастникиСверкиСОбновленнымиID</informationRegisters>
   <informationRegisters>InformationRegister.СертификатыЗаявокНаРегистрациюВЭДО</informationRegisters>
   <informationRegisters>InformationRegister.СертификатыПодписантовМобильнойПодписиБЭД</informationRegisters>
   <informationRegisters>InformationRegister.СертификатыПолучателейРассылкиОтчетов</informationRegisters>
@@ -13584,11 +13609,11 @@
   <informationRegisters>InformationRegister.СопоставлениеКлассификатораОграниченийСОбъектамиБЭД</informationRegisters>
   <informationRegisters>InformationRegister.СоставПакетовДокументовЭДО</informationRegisters>
   <informationRegisters>InformationRegister.СоставыГруппПользователей</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_ОповещенияОПоступленияхТоваров</informationRegisters>
   <informationRegisters>InformationRegister.СостояниеБонусовСерверЛояльности</informationRegisters>
   <informationRegisters>InformationRegister.СостояниеОрганизацийБЭД</informationRegisters>
   <informationRegisters>InformationRegister.СостояниеПереходаНаЦенообразованиеВерсии25</informationRegisters>
   <informationRegisters>InformationRegister.СостояниеПодарочныхСертификатовСерверЛояльности</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_ОповещенияОПоступленияхТоваров</informationRegisters>
   <informationRegisters>InformationRegister.СостояниеПодписанияЭД</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияCDNПлощадокИСМП</informationRegisters>
   <informationRegisters>InformationRegister.СостоянияАвтоматическогоПолученияЭДО</informationRegisters>
@@ -13648,12 +13673,12 @@
   <informationRegisters>InformationRegister.СтатусыДокументовЕГАИС</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыДокументовЕИС</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыДокументовИСМП</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_ТаблицаСоответствияКонтрактовРасходки</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_ПочтаДляОтправки</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыДокументовСАТУРН</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыЗапросовДляПоискаКоммерческихПредложений</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыЗаявокНаВыпускКиЗГИСМ</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыИнформированияГИСМ</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_ТаблицаСоответствияКонтрактовРасходки</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_ПочтаДляОтправки</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыОбменаДаннымиССервисомПрогнозированияПродаж</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыОбъектовСинхронизацииЗЕРНО</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыОнлайнОплат</informationRegisters>
@@ -13673,23 +13698,23 @@
   <informationRegisters>InformationRegister.СтатусыУведомленийОбОтгрузкеМаркированныхТоваровГИСМ</informationRegisters>
   <informationRegisters>InformationRegister.СтатусыУведомленийОПоступленииМаркированныхТоваровГИСМ</informationRegisters>
   <informationRegisters>InformationRegister.СтоимостьТоваров</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_СтавкиРефинансированияЦБ</informationRegisters>
   <informationRegisters>InformationRegister.СубъектыДляРасчетаСроковХранения</informationRegisters>
   <informationRegisters>InformationRegister.СубъектыДляСкрытияПерсональныхДанных</informationRegisters>
   <informationRegisters>InformationRegister.СуммыДокументовВВалютахУчета</informationRegisters>
   <informationRegisters>InformationRegister.СхемыОбеспечения</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_СтавкиРефинансированияЦБ</informationRegisters>
   <informationRegisters>InformationRegister.СчетаФактурыКомиссионерамКОформлению</informationRegisters>
   <informationRegisters>InformationRegister.СчетаФактурыКомитентовКРегистрации</informationRegisters>
   <informationRegisters>InformationRegister.СчетаФактурыПоставщиковКПеревыставлениюКомитентам</informationRegisters>
   <informationRegisters>InformationRegister.ТаблицыГруппДоступа</informationRegisters>
   <informationRegisters>InformationRegister.ТекстовыеСообщенияДокументовЭДО</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_СформированныеУведомления</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_УведомленияПоСобытиям</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_ИсторияСогласованияДокументов</informationRegisters>
   <informationRegisters>InformationRegister.ТекущиеОтправляемыеТранспортныеКонтейнерыЭДО</informationRegisters>
   <informationRegisters>InformationRegister.ТикетыОбменСБанками</informationRegisters>
   <informationRegisters>InformationRegister.ТоварныеГруппыДокументаГИСМТ</informationRegisters>
   <informationRegisters>InformationRegister.ТоварныеОграничения</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_СформированныеУведомления</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_УведомленияПоСобытиям</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_ИсторияСогласованияДокументов</informationRegisters>
   <informationRegisters>InformationRegister.ТоварыДругогоКачества</informationRegisters>
   <informationRegisters>InformationRegister.ТоварыКДоставке</informationRegisters>
   <informationRegisters>InformationRegister.ТоварыНаСкладахТорговыхПлощадокЗаДень</informationRegisters>
@@ -13743,6 +13768,7 @@
   <informationRegisters>InformationRegister.УточнениеКодовФИАСПоМОДамИСМП</informationRegisters>
   <informationRegisters>InformationRegister.УточненияПринадлежностиЗапасовТорговыхТочек</informationRegisters>
   <informationRegisters>InformationRegister.УчетнаяПолитикаФинансовогоУчета</informationRegisters>
+  <informationRegisters>InformationRegister.УчетныеЗаписиПереведенныеИзТакскомЭДО</informationRegisters>
   <informationRegisters>InformationRegister.УчетныеЗаписиЭДО</informationRegisters>
   <informationRegisters>InformationRegister.ФайлыВРабочемКаталоге</informationRegisters>
   <informationRegisters>InformationRegister.ФайлыВременногоХранилища</informationRegisters>
@@ -13764,14 +13790,12 @@
   <informationRegisters>InformationRegister.ЧастиВыгрузкиЗагрузкиОбластейДанных</informationRegisters>
   <informationRegisters>InformationRegister.ЧерновикиЭлектронныхДокументовЛегкийКлиентЭДО</informationRegisters>
   <informationRegisters>InformationRegister.ШаблоныНазначенийПлатежей</informationRegisters>
+  <informationRegisters>InformationRegister.АУ_ПросмотренныеЗадачиИсполнителей</informationRegisters>
   <informationRegisters>InformationRegister.ШтрихкодыНоменклатуры</informationRegisters>
   <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
   <informationRegisters>InformationRegister.ЭлектронныеПодписиМЧД</informationRegisters>
   <informationRegisters>InformationRegister.ЭлектронныеПодписиПоМЧД</informationRegisters>
   <informationRegisters>InformationRegister.ЭлектронныеПодписиТЭДО</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_ПросмотренныеЗадачиИсполнителей</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_КэшЦепочкиЗаказаКлиента</informationRegisters>
-  <informationRegisters>InformationRegister.АУ_ЗаданияКПересчётуЦепочкиЗаказа</informationRegisters>
   <accumulationRegisters>AccumulationRegister.БонусныеБаллы</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВыручкаИСебестоимостьПродаж</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ДвиженияДенежныеСредстваДоходыРасходы</accumulationRegisters>

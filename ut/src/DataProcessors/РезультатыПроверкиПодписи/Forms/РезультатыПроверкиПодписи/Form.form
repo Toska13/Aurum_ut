@@ -3654,6 +3654,7 @@
                       <autoFill>true</autoFill>
                     </contextMenu>
                     <type>Label</type>
+                    <width>47</width>
                     <autoMaxWidth>true</autoMaxWidth>
                     <autoMaxHeight>true</autoMaxHeight>
                     <textColor xsi:type="core:ColorRef">
@@ -3663,45 +3664,6 @@
                       <font>Style.УвеличенныйШрифтБЭД</font>
                     </font>
                     <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </items>
-                  <items xsi:type="form:Decoration">
-                    <name>РекомендацииПодписьМЧД</name>
-                    <id>2378</id>
-                    <title>
-                      <key>ru</key>
-                      <value>Рекомендации</value>
-                    </title>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <extendedTooltip>
-                      <name>РекомендацииПодписьМЧДРасширеннаяПодсказка</name>
-                      <id>2380</id>
-                      <type>Label</type>
-                      <autoMaxWidth>true</autoMaxWidth>
-                      <autoMaxHeight>true</autoMaxHeight>
-                      <extInfo xsi:type="form:LabelDecorationExtInfo">
-                        <horizontalAlign>Left</horizontalAlign>
-                      </extInfo>
-                    </extendedTooltip>
-                    <contextMenu>
-                      <name>РекомендацииПодписьМЧДКонтекстноеМеню</name>
-                      <id>2379</id>
-                      <autoFill>true</autoFill>
-                    </contextMenu>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <handlers>
-                        <event>Click</event>
-                        <name>РекомендацииПодписьМЧДНажатие</name>
-                      </handlers>
-                      <hyperlink>true</hyperlink>
                       <horizontalAlign>Left</horizontalAlign>
                     </extInfo>
                   </items>
@@ -3769,23 +3731,177 @@
                       <horizontalAlign>Left</horizontalAlign>
                     </extInfo>
                   </items>
-                  <items xsi:type="form:FormField">
-                    <name>ПредставлениеПроверкаПодписиМЧДНеВыполненоПоле</name>
-                    <id>1423</id>
-                    <displayImportance>VeryLow</displayImportance>
+                  <items xsi:type="form:FormGroup">
+                    <name>ГруппаПроверкаПодписиМЧДНеВыполненоВложенная</name>
+                    <id>2384</id>
+                    <items xsi:type="form:FormField">
+                      <name>ПредставлениеПроверкаПодписиМЧДНеВыполненоПоле</name>
+                      <id>1423</id>
+                      <displayImportance>VeryLow</displayImportance>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <dataPath xsi:type="form:DataPath">
+                        <segments>ПредставлениеПроверкаПодписиМЧДНеВыполненоПоле</segments>
+                      </dataPath>
+                      <skipOnInput>true</skipOnInput>
+                      <titleLocation>None</titleLocation>
+                      <extendedTooltip>
+                        <name>ПредставлениеПроверкаПодписиМЧДНеВыполненоПолеРасширеннаяПодсказка</name>
+                        <id>1425</id>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </extendedTooltip>
+                      <contextMenu>
+                        <name>ПредставлениеПроверкаПодписиМЧДНеВыполненоПолеКонтекстноеМеню</name>
+                        <id>1424</id>
+                        <autoFill>true</autoFill>
+                      </contextMenu>
+                      <type>InputField</type>
+                      <editMode>Enter</editMode>
+                      <showInHeader>true</showInHeader>
+                      <headerHorizontalAlign>Left</headerHorizontalAlign>
+                      <showInFooter>true</showInFooter>
+                      <extInfo xsi:type="form:InputFieldExtInfo">
+                        <width>42</width>
+                        <maxWidth>32</maxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <verticalStretch>false</verticalStretch>
+                        <wrap>true</wrap>
+                        <multiLine>true</multiLine>
+                        <typeDomainEnabled>true</typeDomainEnabled>
+                        <borderColor xsi:type="core:ColorRef">
+                          <color>Style.FormBackColor</color>
+                        </borderColor>
+                      </extInfo>
+                    </items>
+                    <items xsi:type="form:FormGroup">
+                      <name>ГруппаПроверкаПодписиМЧДНеВыполненоВложеннаяГоризонтальная</name>
+                      <id>2386</id>
+                      <items xsi:type="form:Decoration">
+                        <name>РекомендацииПодписьМЧД</name>
+                        <id>2378</id>
+                        <title>
+                          <key>ru</key>
+                          <value>Рекомендации</value>
+                        </title>
+                        <visible>true</visible>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <extendedTooltip>
+                          <name>РекомендацииПодписьМЧДРасширеннаяПодсказка</name>
+                          <id>2380</id>
+                          <type>Label</type>
+                          <autoMaxWidth>true</autoMaxWidth>
+                          <autoMaxHeight>true</autoMaxHeight>
+                          <extInfo xsi:type="form:LabelDecorationExtInfo">
+                            <horizontalAlign>Left</horizontalAlign>
+                          </extInfo>
+                        </extendedTooltip>
+                        <contextMenu>
+                          <name>РекомендацииПодписьМЧДКонтекстноеМеню</name>
+                          <id>2379</id>
+                          <autoFill>true</autoFill>
+                        </contextMenu>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <handlers>
+                            <event>Click</event>
+                            <name>РекомендацииПодписьМЧДНажатие</name>
+                          </handlers>
+                          <hyperlink>true</hyperlink>
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </items>
+                      <items xsi:type="form:Decoration">
+                        <name>НастройкаПроверки</name>
+                        <id>2381</id>
+                        <title>
+                          <key>ru</key>
+                          <value>Настроить проверку</value>
+                        </title>
+                        <enabled>true</enabled>
+                        <userVisible>
+                          <common>true</common>
+                        </userVisible>
+                        <extendedTooltip>
+                          <name>НастройкаПроверкиРасширеннаяПодсказка</name>
+                          <id>2383</id>
+                          <type>Label</type>
+                          <autoMaxWidth>true</autoMaxWidth>
+                          <autoMaxHeight>true</autoMaxHeight>
+                          <extInfo xsi:type="form:LabelDecorationExtInfo">
+                            <horizontalAlign>Left</horizontalAlign>
+                          </extInfo>
+                        </extendedTooltip>
+                        <contextMenu>
+                          <name>НастройкаПроверкиКонтекстноеМеню</name>
+                          <id>2382</id>
+                          <autoFill>true</autoFill>
+                        </contextMenu>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <handlers>
+                            <event>Click</event>
+                            <name>НастройкаПроверкиНажатие</name>
+                          </handlers>
+                          <hyperlink>true</hyperlink>
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </items>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <title>
+                        <key>ru</key>
+                        <value>Группа проверка подписи МЧДНе выполнено вложенная горизонтальная</value>
+                      </title>
+                      <extendedTooltip>
+                        <name>ГруппаПроверкаПодписиМЧДНеВыполненоВложеннаяГоризонтальнаяРасширеннаяПодсказка</name>
+                        <id>2387</id>
+                        <type>Label</type>
+                        <autoMaxWidth>true</autoMaxWidth>
+                        <autoMaxHeight>true</autoMaxHeight>
+                        <extInfo xsi:type="form:LabelDecorationExtInfo">
+                          <horizontalAlign>Left</horizontalAlign>
+                        </extInfo>
+                      </extendedTooltip>
+                      <type>UsualGroup</type>
+                      <extInfo xsi:type="form:UsualGroupExtInfo">
+                        <group>HorizontalIfPossible</group>
+                        <behavior>Auto</behavior>
+                        <showLeftMargin>true</showLeftMargin>
+                        <united>true</united>
+                        <throughAlign>Auto</throughAlign>
+                        <currentRowUse>Auto</currentRowUse>
+                      </extInfo>
+                    </items>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
                       <common>true</common>
                     </userVisible>
-                    <dataPath xsi:type="form:DataPath">
-                      <segments>ПредставлениеПроверкаПодписиМЧДНеВыполненоПоле</segments>
-                    </dataPath>
-                    <skipOnInput>true</skipOnInput>
-                    <titleLocation>None</titleLocation>
+                    <title>
+                      <key>ru</key>
+                      <value>Группа проверка подписи МЧДНе выполнено вложенная</value>
+                    </title>
                     <extendedTooltip>
-                      <name>ПредставлениеПроверкаПодписиМЧДНеВыполненоПолеРасширеннаяПодсказка</name>
-                      <id>1425</id>
+                      <name>ГруппаПроверкаПодписиМЧДНеВыполненоВложеннаяРасширеннаяПодсказка</name>
+                      <id>2385</id>
                       <type>Label</type>
                       <autoMaxWidth>true</autoMaxWidth>
                       <autoMaxHeight>true</autoMaxHeight>
@@ -3793,26 +3909,14 @@
                         <horizontalAlign>Left</horizontalAlign>
                       </extInfo>
                     </extendedTooltip>
-                    <contextMenu>
-                      <name>ПредставлениеПроверкаПодписиМЧДНеВыполненоПолеКонтекстноеМеню</name>
-                      <id>1424</id>
-                      <autoFill>true</autoFill>
-                    </contextMenu>
-                    <type>InputField</type>
-                    <editMode>Enter</editMode>
-                    <showInHeader>true</showInHeader>
-                    <headerHorizontalAlign>Left</headerHorizontalAlign>
-                    <showInFooter>true</showInFooter>
-                    <extInfo xsi:type="form:InputFieldExtInfo">
-                      <maxWidth>32</maxWidth>
-                      <autoMaxHeight>true</autoMaxHeight>
-                      <verticalStretch>false</verticalStretch>
-                      <wrap>true</wrap>
-                      <multiLine>true</multiLine>
-                      <typeDomainEnabled>true</typeDomainEnabled>
-                      <borderColor xsi:type="core:ColorRef">
-                        <color>Style.FormBackColor</color>
-                      </borderColor>
+                    <type>UsualGroup</type>
+                    <extInfo xsi:type="form:UsualGroupExtInfo">
+                      <group>Vertical</group>
+                      <behavior>Auto</behavior>
+                      <showLeftMargin>true</showLeftMargin>
+                      <united>true</united>
+                      <throughAlign>Auto</throughAlign>
+                      <currentRowUse>Auto</currentRowUse>
                     </extInfo>
                   </items>
                   <visible>true</visible>

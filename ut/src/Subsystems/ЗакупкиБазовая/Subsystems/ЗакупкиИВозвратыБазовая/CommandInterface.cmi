@@ -2,10 +2,6 @@
 <cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
   <commandsVisibility>
     <visibilityFragments>
-      <command>DataProcessor.ЖурналДокументовЗакупки.StandardCommand.Open</command>
-      <visible/>
-    </visibilityFragments>
-    <visibilityFragments>
       <command>Document.КорректировкаПриобретения.Command.КорректировкиПриобретений</command>
       <visible/>
     </visibilityFragments>
@@ -25,8 +21,16 @@
       <command>Document.ПриобретениеУслугПрочихАктивов.Command.ПриобретенияУслугПрочихАктивов</command>
       <visible/>
     </visibilityFragments>
+    <visibilityFragments>
+      <command>DataProcessor.ЖурналДокументовЗакупки.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
   </commandsVisibility>
   <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelImportant</group>
+      <commands>DataProcessor.ЖурналДокументовЗакупки.Command.ДокументыЗакупки</commands>
+    </orderFragments>
     <orderFragments>
       <group>NavigationPanelOrdinary</group>
       <commands>Document.ВозвратТоваровПоставщику.Command.ВозвратыТоваровПоставщикам</commands>
@@ -36,16 +40,13 @@
       <commands>Document.ВозвратТоваровПоставщику.StandardCommand.OpenList</commands>
       <commands>Document.ДоверенностьВыданная.StandardCommand.OpenList</commands>
       <commands>Document.ДоверенностьВыданная.Command.ДоверенностиНаПолучениеДС</commands>
+      <commands>Document.ДокументОПредстоящейПоставке.StandardCommand.OpenList</commands>
       <commands>Document.ПриобретениеТоваровУслуг.StandardCommand.OpenList</commands>
       <commands>Document.ОтчетКомитентуОСписании.StandardCommand.OpenList</commands>
       <commands>Document.СчетФактураПолученный.StandardCommand.OpenList</commands>
       <commands>Document.СчетФактураКомитента.Command.СчетаФактурыКомитентов</commands>
       <commands>Document.ПриобретениеУслугПрочихАктивов.Command.ПриобретенияУслугПрочихАктивов</commands>
       <commands>DataProcessor.ЖурналДокументовЗакупки.Command.НакладныеКОформлению</commands>
-    </orderFragments>
-    <orderFragments>
-      <group>NavigationPanelImportant</group>
-      <commands>DataProcessor.ЖурналДокументовЗакупки.Command.ДокументыЗакупки</commands>
     </orderFragments>
   </commandsOrder>
 </cmi:CommandInterface>

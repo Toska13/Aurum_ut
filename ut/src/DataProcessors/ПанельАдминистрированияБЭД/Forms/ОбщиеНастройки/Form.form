@@ -1343,7 +1343,7 @@
               <titleLocation>None</titleLocation>
               <toolTip>
                 <key>ru</key>
-                <value>При выборе варианта &quot;Нет, не блокировать&quot;, результат проверки полномочий доверенности и действительности сертификата не будет влиять на дальнейшую работу с электронными документами (для всех пользователей).</value>
+                <value>При выборе варианта &quot;Нет, не блокировать&quot;, результат проверки полномочий доверенности не будет влиять на дальнейшую работу с электронными документами (для всех пользователей).</value>
               </toolTip>
               <toolTipRepresentation>ShowBottom</toolTipRepresentation>
               <handlers>
@@ -1414,6 +1414,177 @@
             <type>UsualGroup</type>
             <extInfo xsi:type="form:UsualGroupExtInfo">
               <group>Vertical</group>
+              <behavior>Auto</behavior>
+              <showLeftMargin>true</showLeftMargin>
+              <united>true</united>
+              <throughAlign>Auto</throughAlign>
+              <currentRowUse>Auto</currentRowUse>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormGroup">
+            <name>ГруппаВариантПроверкиСертификатов</name>
+            <id>2625</id>
+            <items xsi:type="form:Decoration">
+              <name>ДекорацияПроверкаСертификатовОтступВерх</name>
+              <id>2633</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ДекорацияПроверкаСертификатовОтступВерхРасширеннаяПодсказка</name>
+                <id>2635</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ДекорацияПроверкаСертификатовОтступВерхКонтекстноеМеню</name>
+                <id>2634</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <height>1.0</height>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </items>
+            <items xsi:type="form:FormField">
+              <name>Константа_ВариантПроверкиСертификатовМЧД</name>
+              <id>2627</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <dataPath xsi:type="form:DataPath">
+                <segments>Константа_ВариантПроверкиСертификатовМЧДЭДО</segments>
+              </dataPath>
+              <titleLocation>Top</titleLocation>
+              <handlers>
+                <event>OnChange</event>
+                <name>Константа_ВариантПроверкиСертификатовМЧДПриИзменении</name>
+              </handlers>
+              <extendedTooltip>
+                <name>Константа_ВариантПроверкиСертификатовМЧДРасширеннаяПодсказка</name>
+                <id>2629</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>Константа_ВариантПроверкиСертификатовМЧДКонтекстноеМеню</name>
+                <id>2628</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>InputField</type>
+              <editMode>Enter</editMode>
+              <showInHeader>true</showInHeader>
+              <headerHorizontalAlign>Left</headerHorizontalAlign>
+              <showInFooter>true</showInFooter>
+              <extInfo xsi:type="form:InputFieldExtInfo">
+                <handlers>
+                  <event>Clearing</event>
+                  <name>Константа_ВариантПроверкиСертификатовМЧДОчистка</name>
+                </handlers>
+                <handlers>
+                  <event>ChoiceProcessing</event>
+                  <name>Константа_ВариантПроверкиСертификатовМЧДОбработкаВыбора</name>
+                </handlers>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <wrap>true</wrap>
+                <listChoiceMode>true</listChoiceMode>
+                <chooseType>true</chooseType>
+                <choiceList>
+                  <presentation>
+                    <key>ru</key>
+                    <value>Проверять всё</value>
+                  </presentation>
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.ВариантыПроверкиСертификатовМЧДЭДО.EnumValue.ПолнаяПроверка</value>
+                  </value>
+                </choiceList>
+                <choiceList>
+                  <presentation>
+                    <key>ru</key>
+                    <value>Проверять всё, кроме срока действия сертификата</value>
+                  </presentation>
+                  <value xsi:type="core:ReferenceValue">
+                    <value>Enum.ВариантыПроверкиСертификатовМЧДЭДО.EnumValue.НеПроверятьПоСрокуДействия</value>
+                  </value>
+                </choiceList>
+              </extInfo>
+            </items>
+            <items xsi:type="form:Decoration">
+              <name>ДекорацияПроверкаСертификатовОтступНиз</name>
+              <id>2630</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ДекорацияПроверкаСертификатовОтступНизРасширеннаяПодсказка</name>
+                <id>2632</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <contextMenu>
+                <name>ДекорацияПроверкаСертификатовОтступНизКонтекстноеМеню</name>
+                <id>2631</id>
+                <autoFill>true</autoFill>
+              </contextMenu>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <font xsi:type="core:FontRef">
+                <font>Style.NormalTextFont</font>
+                <height>1.0</height>
+              </font>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Группа вариант проверки сертификатов</value>
+            </title>
+            <extendedTooltip>
+              <name>ГруппаВариантПроверкиСертификатовРасширеннаяПодсказка</name>
+              <id>2626</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <type>UsualGroup</type>
+            <extInfo xsi:type="form:UsualGroupExtInfo">
+              <group>Vertical</group>
+              <verticalSpacing>None</verticalSpacing>
               <behavior>Auto</behavior>
               <showLeftMargin>true</showLeftMargin>
               <united>true</united>
@@ -7402,6 +7573,23 @@
     <id>57</id>
     <valueType>
       <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>Константа_ВариантПроверкиСертификатовМЧДЭДО</name>
+    <title>
+      <key>ru</key>
+      <value>Как проверять сертификат подписи доверителя</value>
+    </title>
+    <id>59</id>
+    <valueType>
+      <types>EnumRef.ВариантыПроверкиСертификатовМЧДЭДО</types>
     </valueType>
     <view>
       <common>true</common>

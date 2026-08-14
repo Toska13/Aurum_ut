@@ -2705,17 +2705,75 @@
         <autoCommandBar>
           <name>СписокСертификатовКоманднаяПанель</name>
           <id>25</id>
-          <items xsi:type="form:Button">
-            <name>СписокСертификатовДобавитьИзСервисаМояПодпись</name>
-            <id>268</id>
+          <items xsi:type="form:FormGroup">
+            <name>ДобавитьИзСервисовМобильногоПодписания</name>
+            <id>274</id>
+            <items xsi:type="form:Button">
+              <name>СписокСертификатовДобавитьИзСервисаМояПодпись</name>
+              <id>268</id>
+              <title>
+                <key>ru</key>
+                <value>Моя подпись</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>СписокСертификатовДобавитьИзСервисаМояПодписьРасширеннаяПодсказка</name>
+                <id>269</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ДобавитьИзСервисаМояПодпись</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
+            <items xsi:type="form:Button">
+              <name>СписокСертификатовДобавитьИзСервисаГосКлючУКЭП</name>
+              <id>276</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>СписокСертификатовДобавитьИзСервисаГосКлючУКЭПРасширеннаяПодсказка</name>
+                <id>277</id>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.ДобавитьИзСервисаГосКлючУКЭП</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
               <common>true</common>
             </userVisible>
+            <title>
+              <key>ru</key>
+              <value>Добавить из сервисов мобильного подписания</value>
+            </title>
             <extendedTooltip>
-              <name>СписокСертификатовДобавитьИзСервисаМояПодписьРасширеннаяПодсказка</name>
-              <id>269</id>
+              <name>ДобавитьИзСервисовМобильногоПодписанияРасширеннаяПодсказка</name>
+              <id>275</id>
               <type>Label</type>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
@@ -2723,12 +2781,10 @@
                 <horizontalAlign>Left</horizontalAlign>
               </extInfo>
             </extendedTooltip>
-            <commandName>Form.Command.ДобавитьИзСервисаМояПодпись</commandName>
-            <representation>Auto</representation>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <placementArea>UserCmds</placementArea>
-            <representationInContextMenu>Auto</representationInContextMenu>
+            <type>Popup</type>
+            <extInfo xsi:type="form:PopupGroupExtInfo">
+              <representation>Auto</representation>
+            </extInfo>
           </items>
           <horizontalAlign>Left</horizontalAlign>
           <autoFill>true</autoFill>
@@ -4017,6 +4073,40 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ПереносДокументовВЦентрЭДО</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ДобавитьИзСервисаГосКлючУКЭП</name>
+    <title>
+      <key>ru</key>
+      <value>ГосКлюч (УКЭП)</value>
+    </title>
+    <id>11</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДобавитьИзСервисаГосКлючУКЭП</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ДобавитьИзСервисаГосКлючУНЭП</name>
+    <title>
+      <key>ru</key>
+      <value>ГосКлюч (УНЭП)</value>
+    </title>
+    <id>12</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ДобавитьИзСервисаГосКлючУНЭП</name>
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
