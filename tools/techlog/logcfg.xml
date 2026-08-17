@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+	<!--
+		Диагностика медленной операции на одном компьютере / у одного пользователя.
+		Платформа 8.3.27. history — часы. durationus — микросекунды (1000000 = 1 с).
+		Каталоги location должны быть ПУСТЫМИ (чужие файлы → журнал не создаётся).
+		После сбора данных УДАЛИТЬ этот logcfg.xml — CALL/SDBL снижают производительность.
+	-->
+
+	<!-- Долгие события (>= 1 с). Порог уменьшить до 300000, если 1 с ничего не ловит. -->
+	<log location="C:\Logs\1c_techlog\long" history="8">
+		<!-- Фильтр по пользователю ИБ: раскомментировать и подставить имя из списка пользователей.
+		<event>
+			<eq property="name" value="call"/>
+			<eq property="usr" value="ИмяПользователяИБ"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		-->
+		<event>
+			<eq property="name" value="call"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="scall"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="sdbl"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="dbmssql"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="dbpostgrs"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="dboracle"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="dbv8dbeng"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="tlock"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="scom"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<event>
+			<eq property="name" value="sesn"/>
+			<ge property="durationus" value="1000000"/>
+		</event>
+		<property name="all"/>
+	</log>
+
+	<!-- Исключения, лицензии, соединения — без фильтра по длительности. -->
+	<log location="C:\Logs\1c_techlog\always" history="8">
+		<event>
+			<eq property="name" value="excp"/>
+		</event>
+		<event>
+			<eq property="name" value="excpcntx"/>
+		</event>
+		<event>
+			<eq property="name" value="attn"/>
+		</event>
+		<event>
+			<eq property="name" value="tdeadlock"/>
+		</event>
+		<event>
+			<eq property="name" value="ttimeout"/>
+		</event>
+		<event>
+			<eq property="name" value="qerr"/>
+		</event>
+		<event>
+			<eq property="name" value="proc"/>
+		</event>
+		<event>
+			<eq property="name" value="conn"/>
+		</event>
+		<event>
+			<eq property="name" value="lic"/>
+		</event>
+		<event>
+			<eq property="name" value="hasp"/>
+		</event>
+		<property name="all"/>
+	</log>
+
+	<dump create="false"/>
+</config>
