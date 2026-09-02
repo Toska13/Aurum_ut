@@ -1,0 +1,362 @@
+{
+  "columns": 17,
+  "defaultWidth": 88,
+  "columnWidths": { "1": 280, "2-17": 88 },
+  "fonts": {
+    "default": { "face": "Arial", "size": 8 },
+    "bold": { "face": "Arial", "size": 8, "bold": true },
+    "title": { "face": "Arial", "size": 10, "bold": true }
+  },
+  "styles": {
+    "title": { "font": "title", "align": "left", "wrap": true },
+    "hdr": { "font": "bold", "align": "center", "valign": "center", "border": "all", "wrap": true },
+    "rowText": { "font": "default", "align": "left", "border": "all", "wrap": true },
+    "rowNum": { "font": "default", "align": "right", "border": "all", "format": "ЧДЦ=2; ЧН=0,00" },
+    "rowQty": { "font": "default", "align": "right", "border": "all", "format": "ЧДЦ=3; ЧН=0,000" },
+    "rowDate": { "font": "default", "align": "left", "border": "all", "format": "ДФ=dd.MM.yyyy HH:mm" },
+    "conn": { "font": "default", "align": "center" }
+  },
+  "areas": [
+    {
+      "name": "Отчет_Шапка",
+      "rows": [{ "height": 80, "cells": [
+        { "col": 1, "style": "title", "param": "ЗаголовокЗаказа" },
+        { "col": 2, "style": "rowDate", "param": "ДатаРасчета" }
+      ]}]
+    },
+    {
+      "name": "Ур1_Шапка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "hdr", "text": "Представление" },
+        { "col": 2, "style": "hdr", "text": "Сумма заказано" },
+        { "col": 3, "style": "hdr", "text": "Сумма пришло" },
+        { "col": 4, "style": "hdr", "text": "Заявлено" },
+        { "col": 5, "style": "hdr", "text": "Оплачено поставщ." },
+        { "col": 6, "style": "hdr", "text": "Себестоимость" },
+        { "col": 7, "style": "hdr", "text": "Прибыль" },
+        { "col": 8, "style": "hdr", "text": "Кол-во заказано" },
+        { "col": 9, "style": "hdr", "text": "Отгружено" },
+        { "col": 10, "style": "hdr", "text": "Отгружено складом" },
+        { "col": 11, "style": "hdr", "text": "Заказано поставщ." },
+        { "col": 12, "style": "hdr", "text": "Приобретено" },
+        { "col": 13, "style": "hdr", "text": "Принято складом" },
+        { "col": 14, "style": "hdr", "text": "Осталось заказать" },
+        { "col": 15, "style": "hdr", "text": "В сборке" },
+        { "col": 16, "style": "hdr", "text": "Собрано" },
+        { "col": 17, "style": "hdr", "text": "Осталось собрать" }
+      ]}]
+    },
+    {
+      "name": "Ур1_Строка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "rowText", "param": "Представление" },
+        { "col": 2, "style": "rowNum", "param": "СуммаЗаказано" },
+        { "col": 3, "style": "rowNum", "param": "СуммаПришло" },
+        { "col": 4, "style": "rowNum", "param": "Заявлено" },
+        { "col": 5, "style": "rowNum", "param": "ОплаченоПоставщику" },
+        { "col": 6, "style": "rowNum", "param": "СуммаСебестоимости" },
+        { "col": 7, "style": "rowNum", "param": "Прибыль" },
+        { "col": 8, "style": "rowQty", "param": "Заказано" },
+        { "col": 9, "style": "rowQty", "param": "Отгружено" },
+        { "col": 10, "style": "rowQty", "param": "ОтгруженоСкладом" },
+        { "col": 11, "style": "rowQty", "param": "ЗаказаноПоставщику" },
+        { "col": 12, "style": "rowQty", "param": "Приобретено" },
+        { "col": 13, "style": "rowQty", "param": "ПринятоСкладом" },
+        { "col": 14, "style": "rowQty", "param": "ОсталосьЗаказать" },
+        { "col": 15, "style": "rowQty", "param": "ВСборке" },
+        { "col": 16, "style": "rowQty", "param": "Собрано" },
+        { "col": 17, "style": "rowQty", "param": "ОсталосьСобрать" }
+      ]}]
+    },
+    {
+      "name": "Ур2З_Шапка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "hdr", "text": "Представление" },
+        { "col": 2, "style": "hdr", "text": "Сумма заказано" },
+        { "col": 3, "style": "hdr", "text": "Сумма пришло" },
+        { "col": 4, "style": "hdr", "text": "Заявлено" },
+        { "col": 5, "style": "hdr", "text": "Оплачено поставщ." },
+        { "col": 6, "style": "hdr", "text": "Прибыль" },
+        { "col": 7, "style": "hdr", "text": "Кол-во заказано" },
+        { "col": 8, "style": "hdr", "text": "Отгружено" },
+        { "col": 9, "style": "hdr", "text": "Отгружено складом" },
+        { "col": 10, "style": "hdr", "text": "Заказано поставщ." },
+        { "col": 11, "style": "hdr", "text": "Приобретено" },
+        { "col": 12, "style": "hdr", "text": "Принято складом" },
+        { "col": 13, "style": "hdr", "text": "Осталось заказать" },
+        { "col": 14, "style": "hdr", "text": "В сборке" },
+        { "col": 15, "style": "hdr", "text": "Собрано" },
+        { "col": 16, "style": "hdr", "text": "Осталось собрать" }
+      ]}]
+    },
+    {
+      "name": "Ур2З_Строка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "rowText", "param": "Представление" },
+        { "col": 2, "style": "rowNum", "param": "СуммаЗаказано" },
+        { "col": 3, "style": "rowNum", "param": "СуммаПришло" },
+        { "col": 4, "style": "rowNum", "param": "Заявлено" },
+        { "col": 5, "style": "rowNum", "param": "ОплаченоПоставщику" },
+        { "col": 6, "style": "rowNum", "param": "Прибыль" },
+        { "col": 7, "style": "rowQty", "param": "Заказано" },
+        { "col": 8, "style": "rowQty", "param": "Отгружено" },
+        { "col": 9, "style": "rowQty", "param": "ОтгруженоСкладом" },
+        { "col": 10, "style": "rowQty", "param": "ЗаказаноПоставщику" },
+        { "col": 11, "style": "rowQty", "param": "Приобретено" },
+        { "col": 12, "style": "rowQty", "param": "ПринятоСкладом" },
+        { "col": 13, "style": "rowQty", "param": "ОсталосьЗаказать" },
+        { "col": 14, "style": "rowQty", "param": "ВСборке" },
+        { "col": 15, "style": "rowQty", "param": "Собрано" },
+        { "col": 16, "style": "rowQty", "param": "ОсталосьСобрать" }
+      ]}]
+    },
+    {
+      "name": "Ур2С_Шапка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "hdr", "text": "Представление" },
+        { "col": 2, "style": "hdr", "text": "Сумма заказано" },
+        { "col": 3, "style": "hdr", "text": "Сумма пришло" },
+        { "col": 4, "style": "hdr", "text": "Заявлено" },
+        { "col": 5, "style": "hdr", "text": "Оплачено поставщ." },
+        { "col": 6, "style": "hdr", "text": "Прибыль" },
+        { "col": 7, "style": "hdr", "text": "Кол-во заказано" },
+        { "col": 8, "style": "hdr", "text": "Отгружено" },
+        { "col": 9, "style": "hdr", "text": "Отгружено складом" },
+        { "col": 10, "style": "hdr", "text": "Заказано поставщ." },
+        { "col": 11, "style": "hdr", "text": "Приобретено" },
+        { "col": 12, "style": "hdr", "text": "Принято складом" },
+        { "col": 13, "style": "hdr", "text": "Осталось заказать" },
+        { "col": 14, "style": "hdr", "text": "В сборке" },
+        { "col": 15, "style": "hdr", "text": "Собрано" },
+        { "col": 16, "style": "hdr", "text": "Осталось собрать" }
+      ]}]
+    },
+    {
+      "name": "Ур2С_Строка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "rowText", "param": "Представление" },
+        { "col": 2, "style": "rowNum", "param": "СуммаЗаказано" },
+        { "col": 3, "style": "rowNum", "param": "СуммаПришло" },
+        { "col": 4, "style": "rowNum", "param": "Заявлено" },
+        { "col": 5, "style": "rowNum", "param": "ОплаченоПоставщику" },
+        { "col": 6, "style": "rowNum", "param": "Прибыль" },
+        { "col": 7, "style": "rowQty", "param": "Заказано" },
+        { "col": 8, "style": "rowQty", "param": "Отгружено" },
+        { "col": 9, "style": "rowQty", "param": "ОтгруженоСкладом" },
+        { "col": 10, "style": "rowQty", "param": "ЗаказаноПоставщику" },
+        { "col": 11, "style": "rowQty", "param": "Приобретено" },
+        { "col": 12, "style": "rowQty", "param": "ПринятоСкладом" },
+        { "col": 13, "style": "rowQty", "param": "ОсталосьЗаказать" },
+        { "col": 14, "style": "rowQty", "param": "ВСборке" },
+        { "col": 15, "style": "rowQty", "param": "Собрано" },
+        { "col": 16, "style": "rowQty", "param": "ОсталосьСобрать" }
+      ]}]
+    },
+    {
+      "name": "Ур2Ск_Шапка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "hdr", "text": "Представление" },
+        { "col": 2, "style": "hdr", "text": "Сумма заказано" },
+        { "col": 3, "style": "hdr", "text": "Сумма пришло" },
+        { "col": 4, "style": "hdr", "text": "Себестоимость" },
+        { "col": 5, "style": "hdr", "text": "Прибыль" },
+        { "col": 6, "style": "hdr", "text": "Кол-во заказано" },
+        { "col": 7, "style": "hdr", "text": "Отгружено" },
+        { "col": 8, "style": "hdr", "text": "Отгружено складом" },
+        { "col": 9, "style": "hdr", "text": "Заказано поставщ." },
+        { "col": 10, "style": "hdr", "text": "Приобретено" },
+        { "col": 11, "style": "hdr", "text": "Принято складом" },
+        { "col": 12, "style": "hdr", "text": "Осталось заказать" },
+        { "col": 13, "style": "hdr", "text": "В сборке" },
+        { "col": 14, "style": "hdr", "text": "Собрано" },
+        { "col": 15, "style": "hdr", "text": "Осталось собрать" }
+      ]}]
+    },
+    {
+      "name": "Ур2Ск_Строка",
+      "rows": [{ "cells": [
+        { "col": 1, "style": "rowText", "param": "Представление" },
+        { "col": 2, "style": "rowNum", "param": "СуммаЗаказано" },
+        { "col": 3, "style": "rowNum", "param": "СуммаПришло" },
+        { "col": 4, "style": "rowNum", "param": "СуммаСебестоимости" },
+        { "col": 5, "style": "rowNum", "param": "Прибыль" },
+        { "col": 6, "style": "rowQty", "param": "Заказано" },
+        { "col": 7, "style": "rowQty", "param": "Отгружено" },
+        { "col": 8, "style": "rowQty", "param": "ОтгруженоСкладом" },
+        { "col": 9, "style": "rowQty", "param": "ЗаказаноПоставщику" },
+        { "col": 10, "style": "rowQty", "param": "Приобретено" },
+        { "col": 11, "style": "rowQty", "param": "ПринятоСкладом" },
+        { "col": 12, "style": "rowQty", "param": "ОсталосьЗаказать" },
+        { "col": 13, "style": "rowQty", "param": "ВСборке" },
+        { "col": 14, "style": "rowQty", "param": "Собрано" },
+        { "col": 15, "style": "rowQty", "param": "ОсталосьСобрать" }
+      ]}]
+    },
+    { "name": "Ур3О_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Сумма пришло" }
+    ]}]},
+    { "name": "Ур3О_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowNum", "param": "СуммаПришло" }
+    ]}]},
+    { "name": "Ур3П_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" }
+    ]}]},
+    { "name": "Ур3П_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" }
+    ]}]},
+    { "name": "Ур3Т_ЗнС_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "В сборке" }
+    ]}]},
+    { "name": "Ур3Т_ЗнС_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "ВСборке" }
+    ]}]},
+    { "name": "Ур3Т_ЗП_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Контрагент" },
+      { "col": 3, "style": "hdr", "text": "Договор" },
+      { "col": 4, "style": "hdr", "text": "Заказано поставщику" }
+    ]}]},
+    { "name": "Ур3Т_ЗП_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowText", "param": "Контрагент" },
+      { "col": 3, "style": "rowText", "param": "Договор" },
+      { "col": 4, "style": "rowQty", "param": "ЗаказаноПоставщику" }
+    ]}]},
+    { "name": "Ур3Т_РТУ_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Отгружено" }
+    ]}]},
+    { "name": "Ур3Т_РТУ_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "Отгружено" }
+    ]}]},
+    { "name": "Ур4Т_ПТУ_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Контрагент" },
+      { "col": 3, "style": "hdr", "text": "Договор" },
+      { "col": 4, "style": "hdr", "text": "Приобретено" }
+    ]}]},
+    { "name": "Ур4Т_ПТУ_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowText", "param": "Контрагент" },
+      { "col": 3, "style": "rowText", "param": "Договор" },
+      { "col": 4, "style": "rowQty", "param": "Приобретено" }
+    ]}]},
+    { "name": "Ур4Т_ЗП_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Контрагент" },
+      { "col": 3, "style": "hdr", "text": "Договор" },
+      { "col": 4, "style": "hdr", "text": "Заказано поставщику" }
+    ]}]},
+    { "name": "Ур4Т_ЗП_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowText", "param": "Контрагент" },
+      { "col": 3, "style": "rowText", "param": "Договор" },
+      { "col": 4, "style": "rowQty", "param": "ЗаказаноПоставщику" }
+    ]}]},
+    { "name": "Ур4П_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Контрагент" },
+      { "col": 3, "style": "hdr", "text": "Договор" },
+      { "col": 4, "style": "hdr", "text": "Заявлено" }
+    ]}]},
+    { "name": "Ур4П_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowText", "param": "Контрагент" },
+      { "col": 3, "style": "rowText", "param": "Договор" },
+      { "col": 4, "style": "rowNum", "param": "Заявлено" }
+    ]}]},
+    { "name": "Ур4С_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Сумма себестоимости" }
+    ]}]},
+    { "name": "Ур4С_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowNum", "param": "СуммаСебестоимости" }
+    ]}]},
+    { "name": "Ур5Т_ПТУ_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Контрагент" },
+      { "col": 3, "style": "hdr", "text": "Договор" },
+      { "col": 4, "style": "hdr", "text": "Приобретено" }
+    ]}]},
+    { "name": "Ур5Т_ПТУ_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowText", "param": "Контрагент" },
+      { "col": 3, "style": "rowText", "param": "Договор" },
+      { "col": 4, "style": "rowQty", "param": "Приобретено" }
+    ]}]},
+    { "name": "Ур5П_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Контрагент" },
+      { "col": 3, "style": "hdr", "text": "Договор" },
+      { "col": 4, "style": "hdr", "text": "Оплачено поставщику" }
+    ]}]},
+    { "name": "Ур5П_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowText", "param": "Контрагент" },
+      { "col": 3, "style": "rowText", "param": "Договор" },
+      { "col": 4, "style": "rowNum", "param": "ОплаченоПоставщику" }
+    ]}]},
+    { "name": "Ур6Т_ПО_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Принято складом" }
+    ]}]},
+    { "name": "Ур6Т_ПО_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "ПринятоСкладом" }
+    ]}]},
+    { "name": "Ур7ШК_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Принято" },
+      { "col": 3, "style": "hdr", "text": "Остаток" }
+    ]}]},
+    { "name": "Ур7ШК_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "Принято" },
+      { "col": 3, "style": "rowQty", "param": "Остаток" }
+    ]}]},
+    { "name": "Ур7Т_Сборка_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Собрано" }
+    ]}]},
+    { "name": "Ур7Т_Сборка_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "Собрано" }
+    ]}]},
+    { "name": "Ур8Т_РТУ_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Отгружено" }
+    ]}]},
+    { "name": "Ур8Т_РТУ_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "Отгружено" }
+    ]}]},
+    { "name": "Ур9Т_РО_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Отгружено складом" }
+    ]}]},
+    { "name": "Ур9Т_РО_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "ОтгруженоСкладом" }
+    ]}]},
+    { "name": "Ур10ШК_Шапка", "rows": [{ "cells": [
+      { "col": 1, "style": "hdr", "text": "Представление" },
+      { "col": 2, "style": "hdr", "text": "Отгружено" },
+      { "col": 3, "style": "hdr", "text": "Остаток" }
+    ]}]},
+    { "name": "Ур10ШК_Строка", "rows": [{ "cells": [
+      { "col": 1, "style": "rowText", "param": "Представление" },
+      { "col": 2, "style": "rowQty", "param": "Отгружено" },
+      { "col": 3, "style": "rowQty", "param": "Остаток" }
+    ]}]},
+    { "name": "КоннекторВерхПравоНиз", "rows": [{ "height": 60, "cells": [{ "col": 1, "style": "conn" }] }] },
+    { "name": "КоннекторВерхПраво", "rows": [{ "height": 60, "cells": [{ "col": 1, "style": "conn" }] }] },
+    { "name": "КоннекторВерхНиз", "rows": [{ "height": 60, "cells": [{ "col": 1, "style": "conn" }] }] },
+    { "name": "Отступ", "rows": [{ "height": 60, "cells": [{ "col": 1, "style": "conn" }] }] }
+  ]
+}
