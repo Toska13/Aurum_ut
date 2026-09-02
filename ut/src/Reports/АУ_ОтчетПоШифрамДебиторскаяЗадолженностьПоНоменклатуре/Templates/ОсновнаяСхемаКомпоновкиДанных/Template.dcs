@@ -221,7 +221,7 @@
 				Т.Заказ
 			ИЗ
 				ВТДанныеЗаказов КАК Т)
-	И Оплаты.СуммаПриход <> 0
+	И Оплаты.СуммаПриход &lt;&gt; 0
 
 СГРУППИРОВАТЬ ПО
 	Оплаты.ЗаказКлиента,
@@ -411,7 +411,7 @@
 				Т.Заказ
 			ИЗ
 				ВТДанныеЗаказов КАК Т)
-	И Оплаты.СуммаПриход <> 0</query>
+	И Оплаты.СуммаПриход &lt;&gt; 0</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>РасшифровкаОтгрузки</name>
@@ -572,35 +572,79 @@
 	<totalField>
 		<dataPath>ДокументОплаты</dataPath>
 		<expression>Массив(ДокументОплаты)</expression>
+		<group>Заказ</group>
+		<group>Дата</group>
+		<group>Договор</group>
+		<group>ДатаГК</group>
+		<group>КоличествоДнейНаПоставку</group>
+		<group>Проект</group>
+		<group>КраткийКод</group>
+		<group>Шифр</group>
+		<group>Номенклатура</group>
+		<group>СуммаЗаказа</group>
+		<group>СуммаОплаты</group>
+		<group>СуммаОтгрузки</group>
+		<group>Количество</group>
+		<group>КоличествоОтгрузки</group>
+		<group>ДатаВводаВЭсплуатацию</group>
 	</totalField>
 	<totalField>
 		<dataPath>ДокументОтгрузки</dataPath>
 		<expression>Массив(ДокументОтгрузки)</expression>
+		<group>Заказ</group>
+		<group>Дата</group>
+		<group>Договор</group>
+		<group>ДатаГК</group>
+		<group>КоличествоДнейНаПоставку</group>
+		<group>Проект</group>
+		<group>КраткийКод</group>
+		<group>Шифр</group>
+		<group>Номенклатура</group>
+		<group>СуммаЗаказа</group>
+		<group>СуммаОплаты</group>
+		<group>СуммаОтгрузки</group>
+		<group>Количество</group>
+		<group>КоличествоОтгрузки</group>
+		<group>ДатаВводаВЭсплуатацию</group>
 	</totalField>
 	<totalField>
 		<dataPath>ДатаОплаты</dataPath>
 		<expression>Массив(ДатаОплаты)</expression>
+		<group>Заказ</group>
+		<group>Дата</group>
+		<group>Договор</group>
+		<group>ДатаГК</group>
+		<group>КоличествоДнейНаПоставку</group>
+		<group>Проект</group>
+		<group>КраткийКод</group>
+		<group>Шифр</group>
+		<group>Номенклатура</group>
+		<group>СуммаЗаказа</group>
+		<group>СуммаОплаты</group>
+		<group>СуммаОтгрузки</group>
+		<group>Количество</group>
+		<group>КоличествоОтгрузки</group>
+		<group>ДатаВводаВЭсплуатацию</group>
 	</totalField>
 	<totalField>
 		<dataPath>ДатаОтгрузки</dataPath>
 		<expression>Массив(ДатаОтгрузки)</expression>
+		<group>Заказ</group>
+		<group>Дата</group>
+		<group>Договор</group>
+		<group>ДатаГК</group>
+		<group>КоличествоДнейНаПоставку</group>
+		<group>Проект</group>
+		<group>КраткийКод</group>
+		<group>Шифр</group>
+		<group>Номенклатура</group>
+		<group>СуммаЗаказа</group>
+		<group>СуммаОплаты</group>
+		<group>СуммаОтгрузки</group>
+		<group>Количество</group>
+		<group>КоличествоОтгрузки</group>
+		<group>ДатаВводаВЭсплуатацию</group>
 	</totalField>
-	<resource>
-		<field>ДокументОплаты</field>
-		<expression>Массив(ДокументОплаты)</expression>
-	</resource>
-	<resource>
-		<field>ДокументОтгрузки</field>
-		<expression>Массив(ДокументОтгрузки)</expression>
-	</resource>
-	<resource>
-		<field>ДатаОплаты</field>
-		<expression>Массив(ДатаОплаты)</expression>
-	</resource>
-	<resource>
-		<field>ДатаОтгрузки</field>
-		<expression>Массив(ДатаОтгрузки)</expression>
-	</resource>
 	<resource>
 		<field>СуммаОплаты</field>
 		<expression>Сумма(СуммаОплаты)</expression>
