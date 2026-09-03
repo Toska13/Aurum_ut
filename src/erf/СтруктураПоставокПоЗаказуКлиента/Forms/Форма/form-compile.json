@@ -1,0 +1,67 @@
+{
+  "title": "Структура поставок по заказу клиента",
+  "properties": {
+    "autoTitle": false
+  },
+  "elements": [
+    {
+      "input": "ЗаказКлиента",
+      "path": "ЗаказКлиента",
+      "title": "Заказ клиента",
+      "choiceButton": true,
+      "clearButton": true,
+      "autoMaxWidth": false,
+      "maxWidth": 27
+    },
+    {
+      "spreadsheet": "ТабличныйДокумент",
+      "path": "ТабличныйДокумент",
+      "titleLocation": "none",
+      "readOnly": true,
+      "output": "Disable",
+      "verticalStretch": true,
+      "horizontalStretch": true,
+      "events": {
+        "DetailProcessing": "ТабличныйДокументОбработкаРасшифровки"
+      }
+    },
+    {
+      "autoCmdBar": "ФормаКоманднаяПанель",
+      "autofill": true,
+      "children": [
+        {
+          "button": "Сформировать",
+          "command": "Сформировать",
+          "defaultButton": true,
+          "title": "Сформировать"
+        },
+        {
+          "button": "Закрыть",
+          "stdCommand": "Close"
+        }
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Объект",
+      "type": "ExternalReportObject.СтруктураПоставокПоЗаказуКлиента",
+      "main": true
+    },
+    {
+      "name": "ЗаказКлиента",
+      "type": "DocumentRef.ЗаказКлиента"
+    },
+    {
+      "name": "ТабличныйДокумент",
+      "type": "mxl:SpreadsheetDocument"
+    }
+  ],
+  "commands": [
+    {
+      "name": "Сформировать",
+      "action": "Сформировать",
+      "title": "Сформировать"
+    }
+  ]
+}

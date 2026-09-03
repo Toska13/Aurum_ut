@@ -1,0 +1,122 @@
+{
+  "page": "A4-landscape",
+  "columns": 7,
+  "columnWidths": {
+    "1": "8x",
+    "2": "4x",
+    "3": "4x",
+    "4": "2x",
+    "5": "2x",
+    "6": "2x",
+    "7": "2x"
+  },
+  "fonts": {
+    "default": { "face": "Arial", "size": 9 },
+    "bold": { "face": "Arial", "size": 9, "bold": true },
+    "header": { "face": "Arial", "size": 12, "bold": true }
+  },
+  "styles": {
+    "title": { "font": "header", "align": "left" },
+    "header": { "font": "bold", "align": "left" },
+    "order": { "font": "bold", "align": "left" },
+    "po": { "font": "default", "align": "left" },
+    "acq": { "font": "default", "align": "left" },
+    "goods": { "font": "default", "align": "left" },
+    "num": { "font": "default", "align": "right", "format": "ЧДЦ=2" },
+    "qty": { "font": "default", "align": "right", "format": "ЧДЦ=3" },
+    "note": { "font": "default", "align": "left" }
+  },
+  "areas": [
+    {
+      "name": "Шапка",
+      "rows": [
+        {
+          "height": 60,
+          "cells": [
+            { "col": 1, "span": 7, "style": "title", "text": "Структура поставок по заказу клиента" }
+          ]
+        },
+        {
+          "height": 42,
+          "cells": [
+            { "col": 1, "style": "header", "text": "Документ / номенклатура" },
+            { "col": 2, "style": "header", "text": "Поставщик" },
+            { "col": 3, "style": "header", "text": "Комментарий / характеристика" },
+            { "col": 4, "style": "header", "text": "Кол-во" },
+            { "col": 5, "style": "header", "text": "Валюта" },
+            { "col": 6, "style": "header", "text": "Цена" },
+            { "col": 7, "style": "header", "text": "Сумма" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЗаказКлиента",
+      "rows": [
+        {
+          "height": 48,
+          "cells": [
+            { "col": 1, "style": "order", "param": "ПредставлениеДокумента", "detail": "Ссылка" },
+            { "col": 5, "style": "po", "param": "Валюта" },
+            { "col": 7, "style": "num", "param": "СуммаДокумента" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЗаказПоставщику",
+      "rows": [
+        {
+          "height": 45,
+          "cells": [
+            { "col": 1, "style": "po", "param": "ПредставлениеДокумента", "detail": "Ссылка" },
+            { "col": 2, "style": "po", "param": "Поставщик" },
+            { "col": 5, "style": "po", "param": "Валюта" },
+            { "col": 7, "style": "num", "param": "СуммаДокумента" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Приобретение",
+      "rows": [
+        {
+          "height": 45,
+          "cells": [
+            { "col": 1, "style": "acq", "param": "ПредставлениеДокумента", "detail": "Ссылка" },
+            { "col": 2, "style": "acq", "param": "Поставщик" },
+            { "col": 3, "style": "acq", "param": "Комментарий" },
+            { "col": 5, "style": "acq", "param": "Валюта" },
+            { "col": 7, "style": "num", "param": "СуммаДокумента" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Номенклатура",
+      "rows": [
+        {
+          "height": 42,
+          "cells": [
+            { "col": 1, "style": "goods", "param": "ПредставлениеНоменклатуры", "detail": "Номенклатура" },
+            { "col": 3, "style": "goods", "param": "ПредставлениеХарактеристики", "detail": "Характеристика" },
+            { "col": 4, "style": "qty", "param": "Количество" },
+            { "col": 6, "style": "num", "param": "Цена" },
+            { "col": 7, "style": "num", "param": "Сумма" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "НетСвязанных",
+      "rows": [
+        {
+          "height": 42,
+          "cells": [
+            { "col": 1, "span": 7, "style": "note", "text": "Нет связанных документов" }
+          ]
+        }
+      ]
+    }
+  ]
+}

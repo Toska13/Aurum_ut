@@ -1,0 +1,63 @@
+{
+  "title": "Переформирование сумм в назначении платежа",
+  "properties": {
+    "autoTitle": false
+  },
+  "events": {
+    "OnCreateAtServer": "ПриСозданииНаСервере"
+  },
+  "elements": [
+    {
+      "periodField": "Период",
+      "path": "Период",
+      "title": "Период"
+    },
+    {
+      "input": "Результат",
+      "path": "Результат",
+      "multiLine": true,
+      "readOnly": true,
+      "title": "Результат",
+      "height": 8,
+      "autoMaxWidth": false
+    },
+    {
+      "autoCmdBar": "ФормаКоманднаяПанель",
+      "autofill": true,
+      "children": [
+        {
+          "button": "Выполнить",
+          "command": "ВыполнитьПереформирование",
+          "defaultButton": true,
+          "title": "Выполнить"
+        },
+        {
+          "button": "Закрыть",
+          "stdCommand": "Close"
+        }
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Объект",
+      "type": "ExternalDataProcessorObject.ПереформированиеСуммНазначенияПлатежа",
+      "main": true
+    },
+    {
+      "name": "Период",
+      "type": "StandardPeriod"
+    },
+    {
+      "name": "Результат",
+      "type": "string"
+    }
+  ],
+  "commands": [
+    {
+      "name": "ВыполнитьПереформирование",
+      "action": "ВыполнитьПереформирование",
+      "title": "Выполнить"
+    }
+  ]
+}
