@@ -4,6 +4,10 @@
 		<name>ИсточникДанных1</name>
 		<dataSourceType>Local</dataSourceType>
 	</dataSource>
+	<dataSource>
+		<name>DataSource1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
 	<dataSet xsi:type="DataSetQuery">
 		<name>ОсновныеДанные</name>
 		<field xsi:type="DataSetFieldField">
@@ -161,7 +165,7 @@
 				</v8:item>
 			</title>
 		</field>
-		<dataSource>ИсточникДанных1</dataSource>
+		<dataSource>DataSource1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗаказКлиентаТовары.Ссылка КАК Заказ,
 	ЗаказКлиентаТовары.Номенклатура КАК Номенклатура,
@@ -379,7 +383,7 @@
 				</dcscor:item>
 			</appearance>
 		</field>
-		<dataSource>ИсточникДанных1</dataSource>
+		<dataSource>DataSource1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗаказКлиента.Ссылка КАК Заказ
 ПОМЕСТИТЬ ВТДанныеЗаказов
@@ -490,7 +494,7 @@
 				</dcscor:item>
 			</appearance>
 		</field>
-		<dataSource>ИсточникДанных1</dataSource>
+		<dataSource>DataSource1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗаказКлиента.Ссылка КАК Заказ
 ПОМЕСТИТЬ ВТДанныеЗаказов
@@ -645,26 +649,9 @@
 		<group>КоличествоОтгрузки</group>
 		<group>ДатаВводаВЭсплуатацию</group>
 	</totalField>
-	<resource>
-		<field>СуммаОплаты</field>
-		<expression>Сумма(СуммаОплаты)</expression>
-	</resource>
-	<resource>
-		<field>СуммаОтгрузки</field>
-		<expression>Сумма(СуммаОтгрузки)</expression>
-	</resource>
-	<resource>
-		<field>КоличествоОтгрузки</field>
-		<expression>Сумма(КоличествоОтгрузки)</expression>
-	</resource>
 	<parameter>
 		<name>ДатаНачала</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Дата начала</v8:content>
-			</v8:item>
-		</title>
+		<title xsi:type="xs:string">Дата начала</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
 			<v8:DateQualifiers>
@@ -678,12 +665,7 @@
 	</parameter>
 	<parameter>
 		<name>ДатаОкончания</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Дата окончания</v8:content>
-			</v8:item>
-		</title>
+		<title xsi:type="xs:string">Дата окончания</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
 			<v8:DateQualifiers>
