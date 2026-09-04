@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a3736cc9-3e3d-44e4-9f2b-ab501de174c6">
+  <producedTypes>
+    <selectionType typeId="52e8ea79-19d5-4688-a8da-6ea9920faef6" valueTypeId="ae75a80e-e2e2-4328-80c9-240057c543f4"/>
+    <listType typeId="d5317827-4324-4c0c-8790-2d9d06ac9438" valueTypeId="15fad5c5-95c3-4f25-b0a6-af961434e156"/>
+    <managerType typeId="23c54fc4-bc20-4628-bed2-78bdcde2c4a1" valueTypeId="58929b88-c696-4dbc-b154-f4ac8603570f"/>
+    <recordSetType typeId="a438dca7-05e0-481d-a3f6-8e8d258ee26c" valueTypeId="e2b1dc8b-e377-47b0-91ef-ef38d0436e53"/>
+    <recordKeyType typeId="b311662f-bd25-43a2-98e8-b5ed7596e2c7" valueTypeId="9adef30f-d925-4d46-9113-1fef22738405"/>
+    <recordType typeId="80e645b1-fd80-421f-afa7-c4d558258e32" valueTypeId="3cb35f6d-6b00-46c6-84ce-37381745937e"/>
+    <recordManagerType typeId="87b28275-fefe-4456-bf8b-7b0749ae5ff0" valueTypeId="2056731b-593b-4e8f-b979-3ee3752a9c75"/>
+  </producedTypes>
+  <name>АУ_ТаблицаСоответствияКонтрактовРасходки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Таблица соответствия контрактов расходки (Аурум)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.АУ_ТаблицаСоответствияКонтрактовРасходки.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.АУ_ТаблицаСоответствияКонтрактовРасходки.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="978d9f94-edef-4126-af26-180edd62c8e8">
+    <name>Программа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Программа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АУ_Программы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="67a0060e-b485-4837-aba0-7efa494b77e0">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="be56d2ce-d82e-49fe-847f-0dd52e9ce2f5">
+    <name>ОбъектСтрока</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="384f6801-a233-4ea6-9851-fd314c1b61a1">
+    <name>НаименованиеЛПУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование ЛПУ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="bae05faa-0168-4a12-8e82-080633a48cf0">
+    <name>НомерКонтракта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер контракта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="8c6800e6-15cc-46ca-80e6-3698d7124443">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="aa36d5fa-62ed-4d59-aac8-912e4087ff8f">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

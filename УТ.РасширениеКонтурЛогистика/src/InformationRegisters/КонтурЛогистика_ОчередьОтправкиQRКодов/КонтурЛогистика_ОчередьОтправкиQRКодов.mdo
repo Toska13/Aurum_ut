@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="767f7890-82a6-48d7-b4f3-a8ce6b979f25">
+  <producedTypes>
+    <selectionType typeId="e03ac23b-4916-4e02-b589-68c2ca0f5b5d" valueTypeId="9928d8c6-8c53-4be0-8e1a-a9dbf9704fdb"/>
+    <listType typeId="4cfd0e5b-fc3c-4567-8dae-ecd98fdf6b1d" valueTypeId="831e42b6-4265-45f9-9191-21f5b657ebd6"/>
+    <managerType typeId="8128b777-bfc9-4389-ae7f-74430a80e70c" valueTypeId="e23d1bab-ae5c-4831-9448-72dd13e997c3"/>
+    <recordSetType typeId="5f20fd9c-ca58-4700-9a05-314341c5e9d3" valueTypeId="8ba338c4-30fe-4cb1-966e-3d9422dea0cc"/>
+    <recordKeyType typeId="012cc174-434a-44f4-882f-d59435ecc24e" valueTypeId="4972820c-450a-48b4-8464-00f3407da928"/>
+    <recordType typeId="3dd78551-53d6-4b79-9c67-d8f55cb9e8b4" valueTypeId="a55a6176-f3e4-4f2f-94b4-44b748944559"/>
+    <recordManagerType typeId="51fdaaa4-e163-4096-89af-16b047bb6cb8" valueTypeId="e044b27b-e346-488a-bfd6-40912248925d"/>
+  </producedTypes>
+  <name>КонтурЛогистика_ОчередьОтправкиQRКодов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь отправки QR кодов (Контур.Логистика)</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>Очередь отправки QR кодов</value>
+  </listPresentation>
+  <resources uuid="70411503-bc1c-4f01-b136-278eb29a9f7d">
+    <name>КодПолучен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код получен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ab33ec79-924f-4a11-955b-153b290eed4d">
+    <name>ДатаНачалаПолучения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала получения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="20099c99-0b9b-4083-9934-b5cd01de6baf">
+    <name>УИДМинтранса</name>
+    <synonym>
+      <key>ru</key>
+      <value>УИДМинтранса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="bba0fca9-dcf1-4385-9efc-9fedf7231786">
+    <name>kl_id</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор в сервисе Логистика (kl-id)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="ba484600-0680-4426-a5a4-3fdd2b62b467">
+    <name>ДанныеКода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные кода</value>
+    </synonym>
+    <comment>ДвоичныеДанные</comment>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c6deda7e-ddbd-4236-a4ed-4558d586b5ae">
+    <name>Письмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письмо</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект ИнтернетПочтовоеСообщение</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="0c7a9d60-8be8-4a55-b030-aedcd481ea05">
+    <name>ТекстОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <dimensions uuid="640a44f3-8c09-4dc2-81c4-41b4d69b6b12">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтурЛогистика_ЭлектроннаяТранспортнаяНакладная</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул1_5_02</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул1</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

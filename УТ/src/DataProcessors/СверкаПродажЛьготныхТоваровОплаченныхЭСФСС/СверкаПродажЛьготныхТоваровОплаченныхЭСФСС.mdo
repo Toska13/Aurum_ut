@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3ded71b8-7c56-41d1-a9aa-eb697747c979">
+  <producedTypes>
+    <objectType typeId="3552dc1e-8939-49d1-a4f4-cebcfa9885b4" valueTypeId="dece0771-42ec-494d-9a42-18de322a5aea"/>
+    <managerType typeId="7ecf7a3f-d14e-484c-ac69-01af0094b57d" valueTypeId="993f4d2a-c2fb-44e0-a2ef-0cfa07765b21"/>
+  </producedTypes>
+  <name>СверкаПродажЛьготныхТоваровОплаченныхЭСФСС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сверка продаж льготных товаров, оплаченных ЭС ФСС (ФЗ-491)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.СверкаПродажЛьготныхТоваровОплаченныхЭСФСС.Form.Форма</defaultForm>
+  <attributes uuid="805be1a8-77f3-4646-9ac1-930b6cfe6d29">
+    <name>ЗадержкаМеждуОтправкойПакетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задержка между отправкой пакетов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:StringValue">
+      <value>100</value>
+    </minValue>
+    <maxValue xsi:type="core:StringValue">
+      <value>9999</value>
+    </maxValue>
+  </attributes>
+  <attributes uuid="e97c48d2-aeea-4a71-80c9-6646d88444d5">
+    <name>ПредельноеЧислоОшибок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предельное число ошибок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:StringValue">
+      <value>0</value>
+    </maxValue>
+  </attributes>
+  <attributes uuid="b40495d2-5664-4040-847b-4904f1527517">
+    <name>ВыводитьСообщенияОбОшибкахЗагрузкиВОкноСообщений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выводить сообщения об ошибках загрузки в окно сообщений</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f69186c1-94db-4f44-874e-71bd6ac63fc2">
+    <name>КомпоновщикНастроекОтбор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компоновщик настроек отбор</value>
+    </synonym>
+    <type>
+      <types>DataCompositionSettingsComposer</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3fcc6fc5-5a8b-4697-891f-8d809b9b1c7b">
+    <name>КомпоновщикНастроекОтчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компоновщик настроек отчет</value>
+    </synonym>
+    <type>
+      <types>DataCompositionSettingsComposer</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="abff48c1-0153-4d9f-ae15-73cf02eb53a5">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="1141e4ff-2bc4-4b11-b049-b0c7161dce3f">
+    <name>Период</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период</value>
+    </synonym>
+    <type>
+      <types>StandardPeriod</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <tabularSections uuid="591e89b9-57a6-4de4-91be-6ccaca776e36">
+    <producedTypes>
+      <objectType typeId="5bbadddb-6585-4fd4-98ce-e86d025b1326" valueTypeId="e22028be-1bcd-4be8-a278-0efe028f0079"/>
+      <rowType typeId="0beb98b1-3e96-47a0-bf5d-c2d7d8aaf721" valueTypeId="cd4ab79b-6313-45bd-8cc9-426e7127eaed"/>
+    </producedTypes>
+    <name>ДанныеДляФормированияОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные для формирования отчета</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="4d1ee421-b1ed-4d46-93af-9c4100c79551">
+      <name>ЧекСсылка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Чек ссылка</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ЧекККМВозврат</types>
+        <types>DocumentRef.ЧекККМ</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c2ab370e-a9bb-46f7-86d2-2a5e329ca224">
+      <name>ИдентификаторКорзины</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор корзины</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>24</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="c7daaf74-32c0-42d6-94d1-eeb4d81e93a2">
+      <name>НомерЭлектронногоСертификата</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер электронного сертификата</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>25</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="3c8a13d8-4df1-43bd-82c2-db98f2726da0">
+      <name>КодТРУ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код ТРУ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="4afe7e6f-f79e-4d25-b155-943686216e8c">
+      <name>КодНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код номенклатуры</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>11</length>
+          <fixed>true</fixed>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value>           </value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="1869c64e-a7b8-4464-9e87-59b9aa5fc9e3">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b38a3045-4986-4ca7-9df8-025c935f8b10">
+      <name>Цена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <type>
+        <types>DefinedType.Цена</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="9f53d56d-5d9c-4ff7-bf4e-939d1e48e900">
+    <producedTypes>
+      <objectType typeId="66fd5f91-976a-487c-9d34-75fa43e117ed" valueTypeId="fd0e783c-b949-4277-9b7d-50ae968e2a5c"/>
+      <rowType typeId="0c09ef1c-55aa-4682-a5f5-b0d7b78a1332" valueTypeId="8ee071a6-5e7c-4151-9cbb-0b3d31f448af"/>
+    </producedTypes>
+    <name>ЧекиДляЗагрузкиДанныхИзНСПК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Чеки для загрузки данных из НСПК</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="299d2d76-2481-478e-9f62-8e3b9431161b">
+      <name>ЧекСсылка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Чек ссылка</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ЧекККМВозврат</types>
+        <types>DocumentRef.ЧекККМ</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="379dd13f-72ed-4313-8f9a-618ec5feae52">
+      <name>ИдентификаторКорзины</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор корзины</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>24</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="4b1d21f3-85de-401e-9463-703b1f3983de">
+      <name>ИдентификаторКассы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор кассы</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="09477d86-780c-46d0-9a3e-d6edbf777891">
+      <name>КлючКассы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ кассы</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="89b0954f-ac50-42af-8b68-8617c77083cf">
+      <name>ПротоколОбмена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Протокол обмена</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ПротоколОбменаФЭСНСПК</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="cfb37dce-6739-4b89-ac35-25e9e95fd77d">
+      <name>ОписаниеОшибки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Описание ошибки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <multiLine>true</multiLine>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="49e33cb4-70c3-4cbc-a353-202fc57ab21a">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="c06a3659-672c-4cc7-8c90-253b7e8cf75f">
+    <name>МакетДанныеДляОбработки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет данные для обработки</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="6adf23ff-8deb-4fe2-87dd-26c8aa2fc77d">
+    <name>МакетОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет отчета</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:DataProcessor>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dd9029bf-60a3-4262-9e76-4ba83ac1c82a">
+  <producedTypes>
+    <selectionType typeId="0059506c-28c0-4f34-a8bf-e77a7fe32658" valueTypeId="34084914-9bec-4ad5-85b3-cde04a7e9ba1"/>
+    <listType typeId="9e60498d-c398-4b44-96b0-5281a8f7d6fc" valueTypeId="42e410dc-d25c-4d5c-acdc-f95aa6168889"/>
+    <managerType typeId="d5320782-8970-4978-afd2-6045d7815143" valueTypeId="776ec52b-4816-4ff6-8a3b-49a5a03c20d0"/>
+    <recordSetType typeId="8ab62952-d8f2-46a8-afe4-85d78a7dc517" valueTypeId="cfd8e352-34b4-4dda-b2b3-5ecdb957023c"/>
+    <recordKeyType typeId="39e6e7e9-784d-449d-ac95-2d205ab31a9e" valueTypeId="e5b5074e-9216-4c8e-be42-bc2f7901467d"/>
+    <recordType typeId="166d27d2-759c-4d05-b5a2-dbc3bf6a4c2c" valueTypeId="773d6e3f-b3ff-4101-8457-444a97ea802a"/>
+    <recordManagerType typeId="c3dc8278-e4fa-42f5-9609-96fb8d449400" valueTypeId="f352ccc9-47c1-4d40-984a-0eb008c9aa08"/>
+  </producedTypes>
+  <name>КонтурЛогистика_СтатусыТитулов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы документов (Контур.Логистика)</value>
+  </synonym>
+  <comment>Время по МСК!</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КонтурЛогистика_СтатусыТитулов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КонтурЛогистика_СтатусыТитулов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b9308b58-7c4f-46be-81ee-6024c346f3d9">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КонтурЛогистика_СтатусыТитулов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d49d6d2a-cfa8-45e4-a058-a9f48c9f47b6">
+    <name>ТипОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ошибки</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КонтурЛогистика_ТипыОшибокСтатусаТитула</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3df5c9f3-00f9-4d37-860a-0fa503b770e8">
+    <name>КодОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="9ac88192-59d1-453b-9d75-507417b02a37">
+    <name>ОписаниеОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="3e5ff881-248e-4f15-a020-a7699d79c833">
+    <name>КоличествоОшибок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество ошибок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="28cb6654-f849-423f-a12c-9c89314ce2ff">
+    <name>Пользователь1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь1 С</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c874d34e-38c1-4260-b33c-7d294b2a09d0">
+    <name>ПодробноеОписаниеОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подробное описание ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <dimensions uuid="e11895ea-8ee2-4252-9834-aa3433976202">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул1</types>
+      <types>DocumentRef.КонтурЛогистика_СВ_ТитулГП</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул4</types>
+      <types>DocumentRef.КонтурЛогистика_ЗН_Титул1</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул2_5_02</types>
+      <types>DocumentRef.КонтурЛогистика_СВ_ТитулГО</types>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул4</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул3</types>
+      <types>DocumentRef.КонтурЛогистика_ДФ_Титул1</types>
+      <types>DocumentRef.КонтурЛогистика_ЭкспедиторскаяРасписка</types>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул5</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул5_5_02</types>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул7</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул1_5_02</types>
+      <types>DocumentRef.КонтурЛогистика_ЗН_Титул3</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул4_5_02</types>
+      <types>DocumentRef.КонтурЛогистика_ЗЗ_Титул2</types>
+      <types>DocumentRef.КонтурЛогистика_ЗН_Титул2</types>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул6</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул5</types>
+      <types>DocumentRef.КонтурЛогистика_ЗЗ_Титул1</types>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул8</types>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул3</types>
+      <types>DocumentRef.КонтурЛогистика_ЗН_Титул4</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул3_5_02</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул1</types>
+      <types>DocumentRef.КонтурЛогистика_ТрН_Титул2</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул2</types>
+      <types>DocumentRef.КонтурЛогистика_СВ_ТитулПВ</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул6</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="039d0937-e99f-4c94-9818-24360bc34e87">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e8a4ce32-7086-4aaf-b2c4-bda4fe00db97">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

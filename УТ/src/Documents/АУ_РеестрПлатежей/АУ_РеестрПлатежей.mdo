@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1bcf2454-98f6-4c55-8f1f-d42aa8d34866">
+  <producedTypes>
+    <objectType typeId="d4d78b1c-d7cd-4d5e-b820-2648cace591e" valueTypeId="751c979c-7a81-4aee-82cb-dd3e9ce5199b"/>
+    <refType typeId="ead0cb34-42f0-4b9d-ac9c-a33a1fb3b0e0" valueTypeId="8db8a263-077d-4ff0-9e89-0cad09e28f56"/>
+    <selectionType typeId="27d205de-6943-435d-b1b9-c15953f072f1" valueTypeId="60838113-9fce-4c68-bc46-5d979c684efb"/>
+    <listType typeId="3b146670-1332-499a-b552-5a9a3e27c2f7" valueTypeId="8c0d1ffd-f7de-4aaf-a48d-497dc88468a8"/>
+    <managerType typeId="9abff67b-3fa0-4278-8ab7-d86e54923939" valueTypeId="855f2acc-ac40-4072-acda-559940f27883"/>
+  </producedTypes>
+  <name>АУ_РеестрПлатежей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реестр платежей (Аурум)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.АУ_РеестрПлатежей.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Day</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.АУ_РеестрПлатежей.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.АУ_РеестрПлатежей.Form.ФормаСписка</defaultListForm>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="4f3f351a-e9ff-475b-b3b7-caa48e7e325f">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4aed6f54-a7b8-494d-b4ba-0a68ddf49789">
+    <name>СотрудникКонтроля</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник контроля</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3ed516ec-f2da-4245-ab9e-e091eb0c8004">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="375c0347-bb15-4520-bd46-6bf56a4e2e13">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="55fcb7d7-f317-4b0d-8b04-0e878f7cbeca">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="0c29b298-0480-4129-9d9e-46f816ab1fc9">
+    <producedTypes>
+      <objectType typeId="f1492e2b-aa68-4f1b-9613-d53b66e9ab7c" valueTypeId="cbe6c9ea-aaf3-4ef1-a6d5-e4d06f796ee1"/>
+      <rowType typeId="fb066dba-8c81-4946-b1d5-875bf9311646" valueTypeId="bea9f27a-e0fe-4bf5-acf1-b0f641b59926"/>
+    </producedTypes>
+    <name>Платежи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Платежи</value>
+    </synonym>
+    <attributes uuid="dc091a8d-f11e-4855-8309-d251168beecb">
+      <name>ЗаявкаНаРасходованиеДенежныхСредств</name>
+      <synonym>
+        <key>ru</key>
+        <value>Заявка на расходование денежных средств</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ЗаявкаНаРасходованиеДенежныхСредств</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7191257e-164e-4424-bfc0-2a6f13f4c574">
+      <name>Комментарий</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>1024</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="c2be1238-f4c7-40d0-8cc9-ad3a3ad87900">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

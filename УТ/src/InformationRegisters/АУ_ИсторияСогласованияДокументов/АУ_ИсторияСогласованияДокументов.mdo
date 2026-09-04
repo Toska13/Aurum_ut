@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7da15ec7-e30f-415b-b804-154a2a7127bf">
+  <producedTypes>
+    <selectionType typeId="a8210e8a-ef29-41e3-ab59-903f44dfd9af" valueTypeId="332e22fa-fc02-4255-ac0d-a0c74e39b927"/>
+    <listType typeId="b998f386-c558-45e0-acb2-78ecfde130c1" valueTypeId="8b9be9ce-c4f1-4d27-a1b6-89c9ce608c90"/>
+    <managerType typeId="d373befe-2a49-4607-96c9-bd3cd0fd931a" valueTypeId="5561a548-ed5c-4d28-94e3-55343c12f890"/>
+    <recordSetType typeId="6e7d09ff-d7bb-48d7-ade0-666fd4c24cf6" valueTypeId="38cdd9e4-fdd6-4319-a0b9-99df64312170"/>
+    <recordKeyType typeId="26f29332-ecc4-47ce-9f8d-e885be2b0cfe" valueTypeId="bde61786-a314-45d0-9170-2be904363285"/>
+    <recordType typeId="3f828577-230d-482d-96e8-2ce51edeea10" valueTypeId="7f3cbdde-1741-4bb1-ba23-e3cf6edaf15c"/>
+    <recordManagerType typeId="2049ee49-bd91-456a-aa72-76aca686b0e5" valueTypeId="48fc3339-79f6-4b2c-9566-6bd1bf6a450d"/>
+  </producedTypes>
+  <name>АУ_ИсторияСогласованияДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>История согласования документов (Аурум)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8d390ae5-18a0-4706-a11e-361d970cb441">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.АУ_СтатусыСогласованияДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e68f0407-4460-4353-a00c-6e3d4e4da275">
+    <name>Исполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исполнитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="d8196e50-79d2-493f-9ef3-3ba773af529e">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="70e22c53-a9ce-4a92-8ff9-adf3646d344a">
+    <name>Задача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задача</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="a4c3b880-12f4-4dc1-91c5-1d8677ce5e0a">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаСборку</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

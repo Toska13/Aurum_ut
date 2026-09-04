@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f8c2384d-30b5-474d-9753-68888a40dfdd">
+  <producedTypes>
+    <selectionType typeId="8561026e-d094-4bd2-a0f9-a3d75c2737b1" valueTypeId="7cdb226e-9dbd-4bc9-ab2f-272286b66fde"/>
+    <listType typeId="fec0ca6e-a7fb-4a37-9781-5c7363304aac" valueTypeId="749e8167-a6b0-43f9-b008-a31812b46197"/>
+    <managerType typeId="a3886e63-9145-41c7-979e-761361756bb2" valueTypeId="02a3ae11-5ed4-43ae-9768-b1cc86a135eb"/>
+    <recordSetType typeId="067e759d-f10b-4bfe-af3b-13c0100ce3f8" valueTypeId="6f31989c-887a-4429-ad0c-95b781b20687"/>
+    <recordKeyType typeId="136e6c1d-9432-474d-9b18-de493a6c9c77" valueTypeId="4204f847-297f-4bd5-a729-71a981de585b"/>
+    <recordType typeId="f2111007-028e-4521-b421-1a7eb6541b13" valueTypeId="64ba97ff-cd8b-4ac2-ada7-1fbf599e4d46"/>
+    <recordManagerType typeId="71ef23e2-4e2a-4903-bc56-1fa7355ce639" valueTypeId="b2b233a1-49d8-4ec1-8bcd-1551580199b9"/>
+  </producedTypes>
+  <name>КонтурЛогистика_ДвижениеДокументооборота</name>
+  <synonym>
+    <key>ru</key>
+    <value>Движение документооборота (Контур.Логистика)</value>
+  </synonym>
+  <comment>время периода по МСК!</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КонтурЛогистика_ДвижениеДокументооборота.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e04290c4-8a18-418b-bc81-3d3df537a737">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <comment>kl-status из сервиса: Титул.CustomData</comment>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_СостоянияДвиженияДокументооборота</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="1fa6e5fe-ba93-4849-af95-714199990184">
+    <name>Пользователь1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь1 С</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ebd61b36-fde6-423c-ad52-94282596cade">
+    <name>ФайлОбмена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файл обмена</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ФайлыОбмена</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="187520b0-4d92-46b4-b6d8-9b6ec1633c4f">
+    <name>ИдентификаторСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор события</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="40357a76-ac3e-4774-8abc-54fa9aebf6f5">
+    <name>КаналТранспорта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Канал транспорта</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КонтурЛогистика_КаналыТранспорта</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="121c6622-c67e-4c4e-8eab-719d90ce999d">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтурЛогистика_ЭлектроннаяТранспортнаяНакладная</types>
+      <types>DocumentRef.КонтурЛогистика_ЭкспедиторскаяРасписка</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул1_5_02</types>
+      <types>DocumentRef.КонтурЛогистика_ЭлектроннаяСопроводительнаяВедомость</types>
+      <types>DocumentRef.КонтурЛогистика_ЗЗ_Титул1</types>
+      <types>DocumentRef.КонтурЛогистика_ЭлектронныйЗаказНаряд</types>
+      <types>DocumentRef.КонтурЛогистика_ПЛ_Титул1</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="93d42010-861b-4ea8-b543-564d7c869980">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

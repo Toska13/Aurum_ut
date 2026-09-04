@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="aff5604b-06ef-4adf-b24e-e3c3196b3124">
+  <producedTypes>
+    <selectionType typeId="34dd6927-e1ab-42f6-adea-3210fb60c0ed" valueTypeId="2d9218b6-dba3-49ed-8906-a4ba7565648a"/>
+    <listType typeId="8d166fbc-5a19-466b-b0a3-0354b944d561" valueTypeId="81be455c-8efa-4728-9d09-400241500a75"/>
+    <managerType typeId="aa09079f-74f2-4925-bec5-f71a90bb553c" valueTypeId="4aab6f1a-e1a0-4c6c-b8f4-9a9ec22c750d"/>
+    <recordSetType typeId="3a9b6532-1bb0-4ce6-a609-743a5c14f4cf" valueTypeId="d9d6de97-4dac-41a2-a397-de052ce5e847"/>
+    <recordKeyType typeId="862dd50a-4e65-47a0-be62-a112f21ff24f" valueTypeId="abf244b9-7863-4807-a1e1-93b5d3dbfcae"/>
+    <recordType typeId="8c7b5e9a-6791-43a1-8ee6-394e7945ae18" valueTypeId="c3f950cf-9415-4bd0-a763-b2b8bdcc2843"/>
+    <recordManagerType typeId="5a2708ae-f528-4002-a65c-ec60b4d35f12" valueTypeId="bef36cba-e45e-46f2-8f40-860a22ceb75a"/>
+  </producedTypes>
+  <name>НастройкиУчетаНДСПриУСНКомитентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки учета НДС при УСН Комитентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НастройкиУчетаНДСПриУСНКомитентов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.НастройкиУчетаНДСПриУСНКомитентов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="73ad1e46-0118-4f95-809f-71945eb5b254">
+    <name>ОсновноеНалогообложение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основное налогообложение</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыНалогообложенияНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ТипыНалогообложенияНДС.EnumValue.ПродажаНеОблагаетсяНДС</value>
+    </fillValue>
+  </resources>
+  <resources uuid="c501f760-8ef4-48ee-b0ec-af41bbe0a842">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтавкиНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>ОсновноеНалогообложение</name>
+      <field>InformationRegister.НастройкиУчетаНДСПриУСНКомитентов.Resource.ОсновноеНалогообложение</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Отбор.НачалоПериода</name>
+      <field>InformationRegister.НастройкиУчетаНДСПриУСНКомитентов.StandardAttribute.Period</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.СтавкиНДС.EmptyRef</value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="5540a1ea-e8e1-4a6e-826b-960082af2725">
+    <name>Комитент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комитент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="32656507-b0b6-4ad3-904c-307710d0863f">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="776228d5-9b02-4406-aca5-16e5327900ab">
+    <name>РедактированиеИстории</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактирование истории</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="840251a5-aa7f-42b6-a203-6fbd40cdd4b0">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

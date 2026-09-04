@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="56558b91-5568-48b4-8866-7c40a1fd3d99">
+  <producedTypes>
+    <objectType typeId="7c442bbb-f277-4cee-9e74-e1ed60d7858c" valueTypeId="24f1686d-b7f0-4d18-a170-7cc93bcea992"/>
+    <refType typeId="9d85b0c2-d0b9-47ad-b0e2-40b3dc16a711" valueTypeId="4eab4bd5-2622-46f3-8c11-103c9be34332"/>
+    <selectionType typeId="46495d8b-b31b-4385-a0c5-d4f6ca0b8754" valueTypeId="7789d9c6-0a28-486e-b5d8-a49e13e35a31"/>
+    <listType typeId="1fe7a412-1deb-4547-b48c-8b0b7e3cd3ce" valueTypeId="74adfada-be91-402e-917e-70e24da6c96b"/>
+    <managerType typeId="4a2646bc-6157-4126-a546-3d0da5582274" valueTypeId="8332ae8f-52d4-4846-872c-0ea618aedc09"/>
+  </producedTypes>
+  <name>АУ_ПланБюджета</name>
+  <synonym>
+    <key>ru</key>
+    <value>План бюджета</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.АУ_ПланБюджета.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.АУ_ПланБюджета.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.АУ_ПланБюджета.Form.ФормаСписка</defaultListForm>
+  <registerRecords>AccumulationRegister.АУ_ПланФактБюджета</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="aea72293-6ea7-4158-ae81-e2b197102207">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9b355079-fc06-4be8-9572-6052cf5c278e">
+    <name>Месяц</name>
+    <synonym>
+      <key>ru</key>
+      <value>Месяц</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="3878f2e0-a3c9-4b23-82aa-f317e01c95ae">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="077b635a-f201-4ce0-b1d8-fa3619adfb90">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="36137d7a-45e1-4008-84b4-82796205f9de">
+    <producedTypes>
+      <objectType typeId="ea4a79eb-bf82-4004-aca1-4931475ec0a5" valueTypeId="64596460-5e13-43b0-9b50-3777fe4c6da6"/>
+      <rowType typeId="abfa49c8-4500-447c-bcbf-6827fd2cc658" valueTypeId="94765df7-a653-48e9-bb91-daa888731473"/>
+    </producedTypes>
+    <name>СтатьиБюджета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статьи бюджета</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="cc20d77f-d91d-4dc7-86e4-d47065abefd7">
+      <name>СтатьяБюджета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статья бюджета</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.АУ_СтатьиБюджета</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bc593129-74b5-459b-974e-7fac95b0cadd">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

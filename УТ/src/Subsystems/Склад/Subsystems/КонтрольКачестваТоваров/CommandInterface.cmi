@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsVisibility>
+    <visibilityFragments>
+      <command>Catalog.ПричиныБлокировкиТоваров.StandardCommand.OpenList</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Report.АнализПрохожденияКонтроляКачестваТоваров.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Constant.ИспользоватьКонтрольКачестваТоваров.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+  </commandsVisibility>
+  <commandsPlacement>
+    <placementFragments>
+      <group>NavigationPanelImportant</group>
+      <commands>Document.ЗаявкаНаКонтрольКачестваТоваров.StandardCommand.OpenList</commands>
+    </placementFragments>
+  </commandsPlacement>
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>Document.АктКонтроляКачестваТоваров.StandardCommand.OpenList</commands>
+      <commands>Document.ЗаявкаНаКонтрольКачестваТоваров.StandardCommand.OpenList</commands>
+      <commands>Catalog.ПричиныБлокировкиТоваров.StandardCommand.OpenList</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>NavigationPanelImportant</group>
+      <commands>DataProcessor.ТоварыНаКонтролеКачества.Command.ТоварыНаКонтролеКачества</commands>
+      <commands>Document.ЗаявкаНаКонтрольКачестваТоваров.StandardCommand.OpenList</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

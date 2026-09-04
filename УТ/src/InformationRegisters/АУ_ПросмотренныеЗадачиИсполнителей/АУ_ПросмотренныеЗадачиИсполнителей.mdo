@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="65e17b36-8363-4bf9-867d-8adaa436974a">
+  <producedTypes>
+    <selectionType typeId="37c1305f-86bb-4f50-a285-afb682e3acab" valueTypeId="9fab3a46-f7e3-4197-8f2a-ed961438836f"/>
+    <listType typeId="97d2f972-b8a4-4e74-968a-ecc29f5524fc" valueTypeId="71dc5975-1aa3-40ce-8269-2d1110490bde"/>
+    <managerType typeId="3dc88020-fe93-4483-83c7-354321a9ba9c" valueTypeId="b6b56e3b-5213-496a-b3f9-09d2652fffc6"/>
+    <recordSetType typeId="cd04c328-0a6d-400c-9bfa-b004b1eca17e" valueTypeId="e47fa6eb-7ecc-4763-8757-069c783f1426"/>
+    <recordKeyType typeId="2c57476c-efe5-4cfa-9330-a0a64181fefa" valueTypeId="4d8755e2-b9cb-47e3-a9f7-bf3fd8ac5780"/>
+    <recordType typeId="36500425-7c10-4776-824d-38ef17c46c14" valueTypeId="2b91ca7d-74a3-4f66-ad67-9614cc89d591"/>
+    <recordManagerType typeId="58ff1c54-c04a-4aef-8cf4-7c10579ea01a" valueTypeId="6c5c32b0-9bc8-4746-ae0e-47a2d70c9293"/>
+  </producedTypes>
+  <name>АУ_ПросмотренныеЗадачиИсполнителей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Просмотренные задачи исполнителей (Аурум)</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="388d0726-c078-4ab5-819c-0d29b3b7daed">
+    <name>ДатаПервогоОткрытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата первого открытия</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c305f288-f03d-4556-9130-f8f61415903d">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="95359a0c-fbf9-4e86-9167-c930c2f2e99f">
+    <name>ЗадачаИсполнителя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задача исполнителя</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

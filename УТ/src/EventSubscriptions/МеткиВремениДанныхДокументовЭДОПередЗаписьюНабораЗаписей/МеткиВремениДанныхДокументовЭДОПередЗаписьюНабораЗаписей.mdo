@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="69dad068-38c6-46c5-81f2-0172b1a236fe">
+  <name>МеткиВремениДанныхДокументовЭДОПередЗаписьюНабораЗаписей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Метки времени данных документов ЭДОПеред записью набора записей</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ЭлектронныеПодписиПоМЧД</types>
+    <types>InformationRegisterRecordSet.ЭлектронныеПодписи</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.МеткиВремениДанныхЭДО.МеткиВремениДанныхДокументовЭДОПередЗаписьюНабораЗаписей</handler>
+</mdclass:EventSubscription>

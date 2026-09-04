@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d463e209-65cf-42b1-9c32-35e376b8cdbb">
+  <producedTypes>
+    <objectType typeId="542f3b3c-2bcd-491a-804a-916f388f3656" valueTypeId="b4508092-ee03-41b0-aa15-fcda5ce8bd87"/>
+    <refType typeId="af21e83b-40f9-4f5b-bd49-a46a30323bb2" valueTypeId="bc4a2375-0eef-4fa2-95e8-d2afe4139cc0"/>
+    <selectionType typeId="d866cf31-6c2a-4ff8-9505-c5d1421b4971" valueTypeId="48fbfe1a-c6ca-4bce-8742-5b62fd8b8b3b"/>
+    <listType typeId="0879e616-ba49-4bf0-b536-beb8c7212c62" valueTypeId="b64dd6c4-19f1-4862-b8f2-4da5aec3fe45"/>
+    <managerType typeId="2f90d8a4-113b-435b-b434-aee1d0933c50" valueTypeId="8caf6d6e-97c8-40c4-bb08-8b795721f805"/>
+  </producedTypes>
+  <name>АУ_Программы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Программы (Аурум)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.АУ_Программы.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="cb1c9a65-d52f-46a8-9369-548f700edbb0">
+    <name>СтатьяБюджетаПоУмолчаниюДляЗаказаКлиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья бюджета по умолчанию для заказа клиента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АУ_СтатьиБюджета</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="cb7050db-0333-41c4-a33f-b2bb9bd50d01">
+    <producedTypes>
+      <objectType typeId="84355aae-f506-4704-a26c-1ca181375250" valueTypeId="6280237d-b96e-4471-8cb7-4f06a56aea61"/>
+      <rowType typeId="dc2937ff-5836-4ff7-9128-cb44067930df" valueTypeId="ec454434-4917-46cb-9f26-fbae93f3db1f"/>
+    </producedTypes>
+    <name>Ответственные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственные</value>
+    </synonym>
+    <attributes uuid="c9ea4829-dc7e-4daa-8750-1d2fc5690fc5">
+      <name>Ответственный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ответственный</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

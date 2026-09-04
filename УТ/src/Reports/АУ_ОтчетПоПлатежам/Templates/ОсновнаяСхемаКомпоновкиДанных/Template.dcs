@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерКонтракта</dataPath>
+			<field>НомерКонтракта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Программа</dataPath>
+			<field>Программа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяБюджета</dataPath>
+			<field>СтатьяБюджета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаБюджета</dataPath>
+			<field>ДатаБюджета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Шифр</dataPath>
+			<field>Шифр</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПроведенияБанком</dataPath>
+			<field>ДатаПроведенияБанком</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">17</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НазначениеПлатежа</dataPath>
+			<field>НазначениеПлатежа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПризнакРасходов</dataPath>
+			<field>ПризнакРасходов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак расходов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодСтатьи</dataPath>
+			<field>КодСтатьи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код статьи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Списание</dataPath>
+			<field>Списание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списание</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поступление</dataPath>
+			<field>Поступление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧастнаяСуммаСписание</dataPath>
+			<field>ЧастнаяСуммаСписание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Частная сумма (списание)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧастнаяСуммаПоступление</dataPath>
+			<field>ЧастнаяСуммаПоступление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Частная сумма (поступление)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка КАК Документ,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.СтатьяБюджета КАК СтатьяБюджета,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Сумма КАК ЧастнаяСуммаСписание,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.ДатаБюджета КАК ДатаБюджета,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Программа КАК Программа,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Объект КАК Объект,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.НомерКонтракта КАК НомерКонтракта,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.ЗаказКлиента КАК ЗаказКлиента,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Комментарий КАК Комментарий,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Шифр КАК Шифр,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Номер КАК Номер,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Дата КАК Дата,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.ДатаПроведенияБанком КАК ДатаПроведенияБанком,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.НазначениеПлатежа КАК НазначениеПлатежа,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.СуммаДокумента КАК Списание,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Валюта КАК Валюта,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Контрагент КАК Контрагент,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.ПризнакРасходов КАК ПризнакРасходов,
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.СтатьяБюджета.Код КАК КодСтатьи,
+	0 КАК Поступление,
+	0 КАК ЧастнаяСуммаПоступление
+ИЗ
+	Документ.СписаниеБезналичныхДенежныхСредств.АУ_СтатьиБюджета КАК СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета
+ГДЕ
+	СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Проведен
+	И СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.ПроведеноБанком
+	И СписаниеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.ДатаПроведенияБанком МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонца
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.СтатьяБюджета,
+	0,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.ДатаБюджета,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Программа,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Объект,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.НомерКонтракта,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.ЗаказКлиента,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Комментарий,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Шифр,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Номер,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Дата,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.ДатаПроведенияБанком,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.НазначениеПлатежа,
+	0,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Валюта,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Контрагент,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.ПризнакРасходов,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.СтатьяБюджета.Код,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.СуммаДокумента,
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Сумма
+ИЗ
+	Документ.ПоступлениеБезналичныхДенежныхСредств.АУ_СтатьиБюджета КАК ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета
+ГДЕ
+	ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.Проведен
+	И ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.ПроведеноБанком
+	И ПоступлениеБезналичныхДенежныхСредствАУ_СтатьиБюджета.Ссылка.ДатаПроведенияБанком МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонца</query>
+	</dataSet>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаКонца</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата конца</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;ПериодОтчета.ДатаОкончания, "ДЕНЬ")</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>АУ_ОтчетПоПлатежам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по платежам (Аурум)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПроведенияБанком</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧастнаяСуммаПоступление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧастнаяСуммаСписание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Валюта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НазначениеПлатежа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерКонтракта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Программа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПризнакРасходов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодСтатьи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Объект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Шифр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Поступление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Списание</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Документ.Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>e474df68-9a47-4659-b016-3a5ce6dbb8a2</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>25308d82-3514-4388-b6b0-ba131c69c17c</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаПроведенияБанком</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет по платежам (Аурум)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

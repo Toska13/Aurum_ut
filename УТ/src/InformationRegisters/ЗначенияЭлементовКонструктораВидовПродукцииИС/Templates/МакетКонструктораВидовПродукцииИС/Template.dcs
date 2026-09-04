@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОсновнойНаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлементКонструктораЗначение</dataPath>
+			<field>ЭлементКонструктораЗначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элемент конструктора значение</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПродукции</dataPath>
+			<field>ВидПродукции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид продукции</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоПрименения</dataPath>
+			<field>МестоПрименения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПараметризуемоеЗначение</dataPath>
+			<field>ПараметризуемоеЗначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные значения</v8:content>
+				</v8:item>
+			</title>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПараметризуемыйЭлемент</dataPath>
+			<field>ЭтоПараметризуемыйЭлемент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это параметризуемый элемент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьОтмеченныеЗначения</dataPath>
+			<field>ЕстьОтмеченныеЗначения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть отмеченные значения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлементКонструктора</dataPath>
+			<field>ЭлементКонструктора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеИзмененоПользователем</dataPath>
+			<field>ЗначениеИзмененоПользователем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение изменено пользователем</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьИзмененныеЗначения</dataPath>
+			<field>ЕстьИзмененныеЗначения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть измененные значения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЭлементыКонструктора.Ссылка КАК ЭлементКонструктора
+ПОМЕСТИТЬ НеИнициализированныеЭлементыКонструктора
+ИЗ
+	Справочник.ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктора
+ГДЕ ЛОЖЬ
+;
+ВЫБРАТЬ
+	ЭлементыКонструктора.Ссылка КАК ЭлементКонструктора
+ПОМЕСТИТЬ НеПараметризуемыеЭлементыКонструктора
+ИЗ
+	Справочник.ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктора
+ГДЕ ЛОЖЬ
+;
+ВЫБРАТЬ
+	ЭлементыКонструктора.Ссылка КАК ЭлементКонструктора
+ПОМЕСТИТЬ ЭлементыКонструктораПримитивныхТипов
+ИЗ
+	Справочник.ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктора
+ГДЕ ЛОЖЬ
+;
+ВЫБРАТЬ
+	ЭлементыКонструктора.Ссылка КАК ЭлементКонструктора
+ПОМЕСТИТЬ ЭлементыКонструктораСОднимЗначением
+ИЗ
+	Справочник.ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктора
+ГДЕ ЛОЖЬ
+;
+ВЫБРАТЬ
+	ЭлементыКонструктора.Ссылка КАК ЭлементКонструктора,
+	ТИП(Справочник.ЭлементыКонструктораВидовПродукцииИС) КАК ТипЭлементаКонструктора
+ПОМЕСТИТЬ ТипыСсылочныхЭлементовКонструктора
+ИЗ
+	Справочник.ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктора
+ГДЕ ЛОЖЬ
+;
+ВЫБРАТЬ
+	ТИП(Справочник.ЭлементыКонструктораВидовПродукцииИС) КАК ТипЭлементаКонструктора,
+	ТаблицаДанных.Ссылка КАК Ссылка
+ПОМЕСТИТЬ СсылочныеЗначенияЭлементовКонструктораПоТипам
+ИЗ
+	Перечисление.ВидыУпаковокИС КАК ТаблицаДанных
+ГДЕ ЛОЖЬ
+;
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЭлементыКонструктораВидовПродукцииИС.Ссылка КАК ЭлементКонструктора
+ПОМЕСТИТЬ ЭлементыКонструктораВидовПродукцииИС
+ИЗ
+	Справочник.ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктораВидовПродукцииИС
+		ЛЕВОЕ СОЕДИНЕНИЕ НеИнициализированныеЭлементыКонструктора КАК НеИнициализированныеЭлементыКонструктора
+		ПО ЭлементыКонструктораВидовПродукцииИС.Ссылка = НеИнициализированныеЭлементыКонструктора.ЭлементКонструктора
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.МестаПримененияЭлементовКонструктораВидовПродукцииИС КАК МестаПрименения
+		ПО (ЭлементыКонструктораВидовПродукцииИС.Ссылка = МестаПрименения.ЭлементКонструктора)
+		И НЕ МестаПрименения.ПометкаУдаления
+ГДЕ
+	НЕ ЭлементыКонструктораВидовПродукцииИС.ЭтоГруппа
+	И ЭлементыКонструктораВидовПродукцииИС.Предопределенный
+	И НеИнициализированныеЭлементыКонструктора.ЭлементКонструктора ЕСТЬ NULL
+{ГДЕ
+	ЭлементыКонструктораВидовПродукцииИС.Ссылка,
+	МестаПрименения.МестоПрименения}
+;
+ВЫБРАТЬ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияЭлементовКонструктора.ВидПродукции КАК ВидПродукции,
+	ЗначенияЭлементовКонструктора.Значение КАК Значение,
+	ЛОЖЬ КАК ПометкаУдаления,
+	ЛОЖЬ КАК ЗначениеИзмененоПользователем
+ПОМЕСТИТЬ ЗначенияЭлементовКонструктора
+ИЗ
+	ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктораВидовПродукцииИС
+	ЛЕВОЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОднимЗначением КАК ЭлементыКонструктораСОднимЗначением
+		ПО ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора = ЭлементыКонструктораСОднимЗначением.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияЭлементовКонструктораВидовПродукцииИС КАК ЗначенияЭлементовКонструктора
+		ПО ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора = ЗначенияЭлементовКонструктора.ЭлементКонструктора
+	ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+		ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора
+		И ЗначенияЭлементовКонструктора.ВидПродукции = ЗначенияПользователяЭлементовКонструктора.ВидПродукции
+		И ЗначенияЭлементовКонструктора.Значение = ЗначенияПользователяЭлементовКонструктора.Значение
+	ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктораСОднимЗначением
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОднимЗначением КАК ЭлементыКонструктораСОднимЗначениемОтбор
+			ПО ЗначенияПользователяЭлементовКонструктораСОднимЗначением.ЭлементКонструктора = ЭлементыКонструктораСОднимЗначениемОтбор.ЭлементКонструктора
+		ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЗначенияПользователяЭлементовКонструктораСОднимЗначением.ЭлементКонструктора
+		И ЗначенияЭлементовКонструктора.ВидПродукции = ЗначенияПользователяЭлементовКонструктораСОднимЗначением.ВидПродукции
+ГДЕ
+	ВЫБОР
+		КОГДА ЭлементыКонструктораСОднимЗначением.ЭлементКонструктора ЕСТЬ NULL
+		ТОГДА ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+		ИНАЧЕ ЗначенияПользователяЭлементовКонструктораСОднимЗначением.ЭлементКонструктора ЕСТЬ NULL
+	КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияПользователяЭлементовКонструктора.ВидПродукции КАК ВидПродукции,
+	ЗначенияПользователяЭлементовКонструктора.Значение КАК Значение,
+	ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления КАК ПометкаУдаления,
+	ИСТИНА КАК ЗначениеИзмененоПользователем
+ИЗ
+	ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктораВидовПродукцииИС
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+		ПО ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора = ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора
+;
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора
+ПОМЕСТИТЬ ЭлементыКонструктораСОграничениямиЗначений
+ИЗ
+	ТипыСсылочныхЭлементовКонструктора КАК ТипыСсылочныхЭлементовКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначения
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ДоступныеЗначения.ЭлементКонструктора
+	И НЕ ДоступныеЗначения.ПометкаУдаления
+;
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ДоступныеЗначенияПоМестамПрименения.ЭлементКонструктора КАК ЭлементКонструктора
+ПОМЕСТИТЬ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+ИЗ
+	РегистрСведений.ДоступныеЗначенияПоМестамПримененияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначенияПоМестамПрименения
+ГДЕ
+	&amp;ИспользуетсяОтборПоМестуПрименения
+	И НЕ ДоступныеЗначенияПоМестамПрименения.ПометкаУдаления
+{ГДЕ
+	ДоступныеЗначенияПоМестамПрименения.МестоПрименения КАК МестоПрименения}
+;
+ВЫБРАТЬ
+	ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	СсылочныеЗначенияЭлементовКонструктораПоТипам.Ссылка КАК ПараметризуемоеЗначение
+ПОМЕСТИТЬ ПараметризуемыеЭлементыКонструктора
+ИЗ
+	ТипыСсылочныхЭлементовКонструктора КАК ТипыСсылочныхЭлементовКонструктора
+	ЛЕВОЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначений КАК ЭлементыКонструктораСОграничениямиЗначений
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначений.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ СсылочныеЗначенияЭлементовКонструктораПоТипам КАК СсылочныеЗначенияЭлементовКонструктораПоТипам
+	ПО ТипыСсылочныхЭлементовКонструктора.ТипЭлементаКонструктора = СсылочныеЗначенияЭлементовКонструктораПоТипам.ТипЭлементаКонструктора
+ГДЕ
+	ЭлементыКонструктораСОграничениямиЗначений.ЭлементКонструктора ЕСТЬ NULL
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ДоступныеЗначения.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ТипыСсылочныхЭлементовКонструктора КАК ТипыСсылочныхЭлементовКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначений КАК ЭлементыКонструктораСОграничениямиЗначений
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначений.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначения
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ДоступныеЗначения.ЭлементКонструктора
+	И НЕ ДоступныеЗначения.ПометкаУдаления
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ДоступныеЗначения.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+ГДЕ
+	ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора ЕСТЬ NULL
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ДоступныеЗначения.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ТипыСсылочныхЭлементовКонструктора КАК ТипыСсылочныхЭлементовКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначений КАК ЭлементыКонструктораСОграничениямиЗначений
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначений.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначения
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ДоступныеЗначения.ЭлементКонструктора
+	И НЕ ДоступныеЗначения.ПометкаУдаления
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ДоступныеЗначения.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияПоМестамПримененияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначенияПоМестамПрименения
+	ПО ДоступныеЗначения.ЭлементКонструктора = ДоступныеЗначенияПоМестамПрименения.ЭлементКонструктора
+	И ДоступныеЗначения.Значение = ДоступныеЗначенияПоМестамПрименения.Значение
+	И НЕ ДоступныеЗначенияПоМестамПрименения.ПометкаУдаления
+{ГДЕ
+	ДоступныеЗначенияПоМестамПрименения.МестоПрименения КАК МестоПрименения}	
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияЭлементовКонструктора.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ТипыСсылочныхЭлементовКонструктора КАК ТипыСсылочныхЭлементовКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначений КАК ЭлементыКонструктораСОграничениямиЗначений
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначений.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЗначенияЭлементовКонструктора КАК ЗначенияЭлементовКонструктора
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ЗначенияЭлементовКонструктора.ЭлементКонструктора
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+ГДЕ
+	ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора ЕСТЬ NULL
+	
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияЭлементовКонструктора.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ТипыСсылочныхЭлементовКонструктора КАК ТипыСсылочныхЭлементовКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначений КАК ЭлементыКонструктораСОграничениямиЗначений
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначений.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЗначенияЭлементовКонструктора КАК ЗначенияЭлементовКонструктора
+	ПО ТипыСсылочныхЭлементовКонструктора.ЭлементКонструктора = ЗначенияЭлементовКонструктора.ЭлементКонструктора
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияПоМестамПримененияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначенияПоМестамПрименения
+	ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ДоступныеЗначенияПоМестамПрименения.ЭлементКонструктора
+	И ЗначенияЭлементовКонструктора.Значение = ДоступныеЗначенияПоМестамПрименения.Значение
+	И НЕ ДоступныеЗначенияПоМестамПрименения.ПометкаУдаления
+{ГДЕ
+	ДоступныеЗначенияПоМестамПрименения.МестоПрименения КАК МестоПрименения}
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДоступныеЗначения.ЭлементКонструктора КАК ЭлементКонструктора,
+	ДоступныеЗначения.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ЭлементыКонструктораПримитивныхТипов КАК ЭлементыКонструктораПримитивныхТипов
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначения
+	ПО ЭлементыКонструктораПримитивныхТипов.ЭлементКонструктора = ДоступныеЗначения.ЭлементКонструктора
+	И НЕ ДоступныеЗначения.ПометкаУдаления
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ДоступныеЗначения.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+ГДЕ
+	ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора ЕСТЬ NULL
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДоступныеЗначения.ЭлементКонструктора КАК ЭлементКонструктора,
+	ДоступныеЗначения.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ЭлементыКонструктораПримитивныхТипов КАК ЭлементыКонструктораПримитивныхТипов
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначения
+	ПО ЭлементыКонструктораПримитивныхТипов.ЭлементКонструктора = ДоступныеЗначения.ЭлементКонструктора
+	И НЕ ДоступныеЗначения.ПометкаУдаления
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ДоступныеЗначения.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияПоМестамПримененияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначенияПоМестамПрименения
+	ПО ДоступныеЗначения.ЭлементКонструктора = ДоступныеЗначенияПоМестамПрименения.ЭлементКонструктора
+	И ДоступныеЗначения.Значение = ДоступныеЗначенияПоМестамПрименения.Значение
+	И НЕ ДоступныеЗначенияПоМестамПрименения.ПометкаУдаления
+{ГДЕ
+	ДоступныеЗначенияПоМестамПрименения.МестоПрименения КАК МестоПрименения}
+	
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияЭлементовКонструктора.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ЭлементыКонструктораПримитивныхТипов КАК ЭлементыКонструктораПримитивныхТипов
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЗначенияЭлементовКонструктора КАК ЗначенияЭлементовКонструктора
+	ПО ЭлементыКонструктораПримитивныхТипов.ЭлементКонструктора = ЗначенияЭлементовКонструктора.ЭлементКонструктора
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+ГДЕ
+	ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора ЕСТЬ NULL
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияЭлементовКонструктора.Значение КАК ПараметризуемоеЗначение
+ИЗ
+	ЭлементыКонструктораПримитивныхТипов КАК ЭлементыКонструктораПримитивныхТипов
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЗначенияЭлементовКонструктора КАК ЗначенияЭлементовКонструктора
+	ПО ЭлементыКонструктораПримитивныхТипов.ЭлементКонструктора = ЗначенияЭлементовКонструктора.ЭлементКонструктора
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения КАК ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения
+	ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЭлементыКонструктораСОграничениямиЗначенийПоМестамПрименения.ЭлементКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДоступныеЗначенияПоМестамПримененияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначенияПоМестамПрименения
+	ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ДоступныеЗначенияПоМестамПрименения.ЭлементКонструктора
+	И ЗначенияЭлементовКонструктора.Значение = ДоступныеЗначенияПоМестамПрименения.Значение
+	И НЕ ДоступныеЗначенияПоМестамПрименения.ПометкаУдаления
+{ГДЕ
+	ДоступныеЗначенияПоМестамПрименения.МестоПрименения КАК МестоПрименения}
+;
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВидыПродукцииИС.Ссылка КАК ВидПродукции,
+	ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора КАК ЭлементКонструктора,
+	НеПараметризуемыеЭлементыКонструктора.ЭлементКонструктора ЕСТЬ NULL КАК ЭтоПараметризуемыйЭлемент,
+	ПараметризуемыеЭлементыКонструктора.ПараметризуемоеЗначение КАК ПараметризуемоеЗначение,
+	ВЫБОР
+		КОГДА ЗначенияЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+			ИЛИ ЗначенияЭлементовКонструктора.ПометкаУдаления
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЭлементКонструктораЗначение,
+	ВЫБОР
+		КОГДА ЗначенияЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+			ИЛИ ЗначенияЭлементовКонструктора.ПометкаУдаления
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЕстьОтмеченныеЗначения,
+	ВЫБОР
+		КОГДА ИзмененныеЗначенияЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЕстьИзмененныеЗначения,
+	ЕСТЬNULL(ЗначенияЭлементовКонструктора.ЗначениеИзмененоПользователем, ЛОЖЬ) КАК ЗначениеИзмененоПользователем
+ИЗ
+	Справочник.ВидыПродукцииИС КАК ВидыПродукцииИС
+		ПОЛНОЕ СОЕДИНЕНИЕ ЭлементыКонструктораВидовПродукцииИС КАК ЭлементыКонструктораВидовПродукцииИС
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ ПараметризуемыеЭлементыКонструктора КАК ПараметризуемыеЭлементыКонструктора
+		ПО ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора = ПараметризуемыеЭлементыКонструктора.ЭлементКонструктора
+		ЛЕВОЕ СОЕДИНЕНИЕ НеПараметризуемыеЭлементыКонструктора КАК НеПараметризуемыеЭлементыКонструктора
+		ПО ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора = НеПараметризуемыеЭлементыКонструктора.ЭлементКонструктора
+		ЛЕВОЕ СОЕДИНЕНИЕ ЗначенияЭлементовКонструктора КАК ЗначенияЭлементовКонструктора
+		ПО ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора = ЗначенияЭлементовКонструктора.ЭлементКонструктора
+			И ВидыПродукцииИС.Ссылка = ЗначенияЭлементовКонструктора.ВидПродукции
+			И (ЗначенияЭлементовКонструктора.Значение = НЕОПРЕДЕЛЕНО
+				ИЛИ ЗначенияЭлементовКонструктора.Значение = ПараметризуемыеЭлементыКонструктора.ПараметризуемоеЗначение)
+		ЛЕВОЕ СОЕДИНЕНИЕ ЗначенияЭлементовКонструктора КАК ИзмененныеЗначенияЭлементовКонструктора
+		ПО ЭлементыКонструктораВидовПродукцииИС.ЭлементКонструктора = ИзмененныеЗначенияЭлементовКонструктора.ЭлементКонструктора
+			И ИзмененныеЗначенияЭлементовКонструктора.ЗначениеИзмененоПользователем
+		</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ЭлементКонструктораЗначение</dataPath>
+		<expression>Выбор Когда ЭтоПараметризуемыйЭлемент Тогда Максимум(ЭлементКонструктораЗначение) Иначе Ложь Конец</expression>
+		<group>ПараметризуемоеЗначение</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЭлементКонструктораЗначение</dataPath>
+		<expression>Выбор Когда Не ЭтоПараметризуемыйЭлемент И Не ЭлементКонструктора.ЭтоГруппа Тогда Максимум(ЭлементКонструктораЗначение) Иначе Ложь Конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЭтоПараметризуемыйЭлемент</dataPath>
+		<expression>Максимум(ЭтоПараметризуемыйЭлемент)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕстьОтмеченныеЗначения</dataPath>
+		<expression>Максимум(ЕстьОтмеченныеЗначения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеИзмененоПользователем</dataPath>
+		<expression>Выбор Когда ЭтоПараметризуемыйЭлемент Тогда Максимум(ЗначениеИзмененоПользователем) Иначе Ложь Конец</expression>
+		<group>ПараметризуемоеЗначение</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеИзмененоПользователем</dataPath>
+		<expression>Выбор Когда Не ЭтоПараметризуемыйЭлемент И Не ЭлементКонструктора.ЭтоГруппа Тогда Максимум(ЗначениеИзмененоПользователем) Иначе Ложь Конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕстьИзмененныеЗначения</dataPath>
+		<expression>Максимум(ЕстьИзмененныеЗначения)</expression>
+	</totalField>
+	<parameter>
+		<name>ИспользуетсяОтборПоМестуПрименения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по месту применения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ВидПродукции</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:TextFont" kind="StyleItem" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ОриентацияТекста</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">90</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">100</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">ВидПродукцииРасшифровка</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ВидПродукции</dcsat:name>
+			<dcsat:expression>Представление(ВидПродукции)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>ВидПродукцииРасшифровка</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>ВидПродукции</dcsat:field>
+				<dcsat:expression>ВидПродукции</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ЭлементКонструктораЗначение</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">ЭлементКонструктораЗначениеРасшифровка</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ЭлементКонструктораЗначение</dcsat:name>
+			<dcsat:expression>ЭлементКонструктораЗначение</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>ЭлементКонструктораЗначениеРасшифровка</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>Значение</dcsat:field>
+				<dcsat:expression>ЭлементКонструктораЗначение</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЭлементКонструктора</dcsat:field>
+				<dcsat:expression>ЭлементКонструктора</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ВидПродукции</dcsat:field>
+				<dcsat:expression>ВидПродукции</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ПараметризуемоеЗначение</dcsat:field>
+				<dcsat:expression>ПараметризуемоеЗначение</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЭлементКонструктораЭтоГруппа</dcsat:field>
+				<dcsat:expression>ЭлементКонструктора.ЭтоГруппа</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеИзмененоПользователем</dcsat:field>
+				<dcsat:expression>ЗначениеИзмененоПользователем</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<fieldTemplate>
+		<field>ЭлементКонструктораЗначение</field>
+		<template>Макет2</template>
+	</fieldTemplate>
+	<groupTemplate>
+		<groupField>ВидПродукции</groupField>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидПродукции</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВидПродукции</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЭлементКонструктораЗначение</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВидПродукции</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>МаксимальнаяВысота</dcscor:parameter>
+									<dcscor:value xsi:type="xs:decimal">70</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+							<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+							<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+							<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+							<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+							<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+							<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+							<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+							<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЭлементКонструктораЗначение</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЭлементКонструктораЗначение</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Картинка</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Picture" ref="v8ui:УспешнаяПроверкаНаличияГосИС"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЭлементКонструктораЗначение</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string"/>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ВертикальноеПоложениеКартинки</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ГоризонтальноеПоложениеКартинки</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЭлементКонструктораЗначение</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеИзмененоПользователем</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаИзмененногоЗначенияПользователяГосИС</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ЭлементКонструктора</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЭлементКонструктора.ЭтоГруппа</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:TableHeaderBackColor</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="style:ВажнаяНадписьШрифт" kind="StyleItem"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЭтоПараметризуемыйЭлемент</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:TableHeaderBackColor</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ПараметризуемоеЗначение</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ЭтоПараметризуемыйЭлемент</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>ПараметризуемоеЗначение</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter/>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ДФ=dd.MM.yyyy</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
+						<dcsset:outputParameters>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+								<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>Заголовок</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType"/>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+								<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+							</dcscor:item>
+						</dcsset:outputParameters>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

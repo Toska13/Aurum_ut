@@ -1,0 +1,2125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Клеверенс: Выбор документа для загрузки</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Cleverence: Selecting a document for upload</value>
+  </title>
+  <title>
+    <key>kk</key>
+    <value>Cleverence: Жүктеу үшін құжатты таңдау</value>
+  </title>
+  <title>
+    <key>uz</key>
+    <value>Cleverence: Yuklash uchun hujjatni tanlash</value>
+  </title>
+  <title>
+    <key>be</key>
+    <value>Cleverence: Выбар дакумента для загрузкі</value>
+  </title>
+  <title>
+    <key>uk</key>
+    <value>Cleverence: Вибір документа для завантаження</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>Cleverence: დოკუმენტის არჩევა ჩატვირთვისთვის</value>
+  </title>
+  <title>
+    <key>tr</key>
+    <value>Cleverence: Yükleme için belge seçimi</value>
+  </title>
+  <title>
+    <key>es</key>
+    <value>Cleverence: Selección de documento para carga</value>
+  </title>
+  <title>
+    <key>ro</key>
+    <value>Cleverence: Selectarea documentului pentru descărcare</value>
+  </title>
+  <items xsi:type="form:FormField">
+    <name>ВыгрузкаНаУстройство</name>
+    <id>1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ВыгрузкаНаУстройство</segments>
+    </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>ВыгрузкаНаУстройствоПриИзменении</name>
+    </handlers>
+    <extendedTooltip>
+      <name>ВыгрузкаНаУстройствоРасширеннаяПодсказка</name>
+      <id>3</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ВыгрузкаНаУстройствоКонтекстноеМеню</name>
+      <id>2</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+      <checkBoxType>Tumbler</checkBoxType>
+      <itemWidth>20</itemWidth>
+      <itemHeight>1</itemHeight>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаПользователиMS</name>
+    <id>99</id>
+    <items xsi:type="form:Decoration">
+      <name>НадписьПользователям</name>
+      <id>101</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>НадписьПользователямРасширеннаяПодсказка</name>
+        <id>103</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>НадписьПользователямКонтекстноеМеню</name>
+        <id>102</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxHeight>true</autoMaxHeight>
+      <textColor xsi:type="core:ColorDef">
+        <red>28</red>
+        <green>86</green>
+        <blue>174</blue>
+      </textColor>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Table">
+      <name>ПользователиMS</name>
+      <id>8</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПользователиMS</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <items xsi:type="form:FormField">
+        <name>ПользователиMSВыгружать</name>
+        <id>21</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ПользователиMS.Выгружать</segments>
+        </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>ПользователиMSВыгружатьПриИзменении</name>
+        </handlers>
+        <extendedTooltip>
+          <name>ПользователиMSВыгружатьРасширеннаяПодсказка</name>
+          <id>23</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиMSВыгружатьКонтекстноеМеню</name>
+          <id>22</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ПользователиMSГруппаПользователь</name>
+        <id>24</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ПользователиMS.ГруппаПользователь</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ПользователиMSГруппаПользовательРасширеннаяПодсказка</name>
+          <id>26</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиMSГруппаПользовательКонтекстноеМеню</name>
+          <id>25</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <autoCommandBar>
+        <name>ПользователиMSКоманднаяПанель</name>
+        <id>10</id>
+        <items xsi:type="form:Button">
+          <name>ПользователиMSВыделитьВсе</name>
+          <id>55</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ПользователиMSВыделитьВсеРасширеннаяПодсказка</name>
+            <id>56</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ВыделитьВсе</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ПользователиMSОчиститьВыделение</name>
+          <id>57</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ПользователиMSОчиститьВыделениеРасширеннаяПодсказка</name>
+            <id>58</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ОчиститьВыделение</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <horizontalAlign>Left</horizontalAlign>
+      </autoCommandBar>
+      <searchStringAddition>
+        <name>ПользователиMSСтрокаПоиска</name>
+        <id>12</id>
+        <extendedTooltip>
+          <name>ПользователиMSСтрокаПоискаРасширеннаяПодсказка</name>
+          <id>14</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиMSСтрокаПоискаКонтекстноеМеню</name>
+          <id>13</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <source>ПользователиMS</source>
+        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchStringAddition>
+      <viewStatusAddition>
+        <name>ПользователиMSСостояниеПросмотра</name>
+        <id>15</id>
+        <extendedTooltip>
+          <name>ПользователиMSСостояниеПросмотраРасширеннаяПодсказка</name>
+          <id>17</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиMSСостояниеПросмотраКонтекстноеМеню</name>
+          <id>16</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>ViewStatusAddition</type>
+        <source>ПользователиMS</source>
+        <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </viewStatusAddition>
+      <searchControlAddition>
+        <name>ПользователиMSУправлениеПоиском</name>
+        <id>18</id>
+        <extendedTooltip>
+          <name>ПользователиMSУправлениеПоискомРасширеннаяПодсказка</name>
+          <id>20</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПользователиMSУправлениеПоискомКонтекстноеМеню</name>
+          <id>19</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>SearchControlAddition</type>
+        <source>ПользователиMS</source>
+        <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchControlAddition>
+      <extendedTooltip>
+        <name>ПользователиMSРасширеннаяПодсказка</name>
+        <id>11</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПользователиMSКонтекстноеМеню</name>
+        <id>9</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <representation>Tree</representation>
+      <changeRowSet>true</changeRowSet>
+      <changeRowOrder>true</changeRowOrder>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <autoMaxRowsCount>true</autoMaxRowsCount>
+      <selectionMode>MultiRow</selectionMode>
+      <header>true</header>
+      <headerHeight>1</headerHeight>
+      <footerHeight>1</footerHeight>
+      <horizontalScrollBar>AutoUse</horizontalScrollBar>
+      <verticalScrollBar>AutoUse</verticalScrollBar>
+      <horizontalLines>true</horizontalLines>
+      <verticalLines>true</verticalLines>
+      <autoInsertNewRow>true</autoInsertNewRow>
+      <searchOnInput>Auto</searchOnInput>
+      <initialListView>Auto</initialListView>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <enableStartDrag>true</enableStartDrag>
+      <enableDrag>true</enableDrag>
+      <fileDragMode>AsFileRef</fileDragMode>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Группа пользователи Клеверенс</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Group of Cleverence users</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Cleverence пайдаланушылар тобы</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Cleverence foydalanuvchilari guruh</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Група карыстальнікі Cleverence</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Група користувачі Cleverence</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ჯგუფი მომხმარებელი Cleverence-ს</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Cleverence kullanıcıları grubu</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Grupo de usuarios de Cleverence</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Grupul de utilizatori Cleverence</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа пользователи Клеверенс</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Group of Cleverence users</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Cleverence пайдаланушылар тобы</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Cleverence foydalanuvchilari guruh</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Група карыстальнікі Cleverence</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Група користувачі Cleverence</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ჯგუფი მომხმარებელი Cleverence-ს</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Cleverence kullanıcıları grubu</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Grupo de usuarios de Cleverence</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Grupul de utilizatori Cleverence</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ГруппаПользователиMSРасширеннаяПодсказка</name>
+      <id>100</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>УстройстваMS</name>
+    <id>59</id>
+    <items xsi:type="form:Decoration">
+      <name>НадписьНаУстройство</name>
+      <id>96</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>НадписьНаУстройствоРасширеннаяПодсказка</name>
+        <id>98</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>НадписьНаУстройствоКонтекстноеМеню</name>
+        <id>97</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>Label</type>
+      <autoMaxHeight>true</autoMaxHeight>
+      <textColor xsi:type="core:ColorDef">
+        <red>28</red>
+        <green>86</green>
+        <blue>174</blue>
+      </textColor>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ПинКод</name>
+      <id>61</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПинКод</segments>
+      </dataPath>
+      <defaultItem>true</defaultItem>
+      <extendedTooltip>
+        <name>ПинКодРасширеннаяПодсказка</name>
+        <id>63</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПинКодКонтекстноеМеню</name>
+        <id>62</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>InputField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:InputFieldExtInfo">
+        <handlers>
+          <event>EditTextChange</event>
+          <name>ПинКодИзменениеТекстаРедактирования</name>
+        </handlers>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
+        <editTextUpdate>OnValueChange</editTextUpdate>
+        <font xsi:type="core:FontRef">
+          <font>Style.NormalTextFont</font>
+          <height>24.0</height>
+          <bold>true</bold>
+          <italic>false</italic>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+        </font>
+      </extInfo>
+    </items>
+    <items xsi:type="form:Table">
+      <name>ТаблицаУстройстваMS</name>
+      <id>67</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>УстройстваMS</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <items xsi:type="form:FormField">
+        <name>ТаблицаУстройстваMSПинКод</name>
+        <id>89</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>УстройстваMS.ПинКод</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ТаблицаУстройстваMSПинКодРасширеннаяПодсказка</name>
+          <id>91</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ТаблицаУстройстваMSПинКодКонтекстноеМеню</name>
+          <id>90</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>4</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormField">
+        <name>ТаблицаУстройстваMSГруппаПользователь</name>
+        <id>83</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>УстройстваMS.ГруппаПользователь</segments>
+        </dataPath>
+        <extendedTooltip>
+          <name>ТаблицаУстройстваMSГруппаПользовательРасширеннаяПодсказка</name>
+          <id>85</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ТаблицаУстройстваMSГруппаПользовательКонтекстноеМеню</name>
+          <id>84</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <readOnly>true</readOnly>
+        <editMode>EnterOnInput</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <wrap>true</wrap>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+        </extInfo>
+      </items>
+      <autoCommandBar>
+        <name>ТаблицаУстройстваMSКоманднаяПанель</name>
+        <id>69</id>
+        <horizontalAlign>Left</horizontalAlign>
+      </autoCommandBar>
+      <handlers>
+        <event>Selection</event>
+        <name>ТаблицаУстройстваMSВыбор</name>
+      </handlers>
+      <searchStringAddition>
+        <name>ТаблицаУстройстваMSСтрокаПоиска</name>
+        <id>71</id>
+        <extendedTooltip>
+          <name>ТаблицаУстройстваMSСтрокаПоискаРасширеннаяПодсказка</name>
+          <id>73</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ТаблицаУстройстваMSСтрокаПоискаКонтекстноеМеню</name>
+          <id>72</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <source>ТаблицаУстройстваMS</source>
+        <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchStringAddition>
+      <viewStatusAddition>
+        <name>ТаблицаУстройстваMSСостояниеПросмотра</name>
+        <id>74</id>
+        <extendedTooltip>
+          <name>ТаблицаУстройстваMSСостояниеПросмотраРасширеннаяПодсказка</name>
+          <id>76</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ТаблицаУстройстваMSСостояниеПросмотраКонтекстноеМеню</name>
+          <id>75</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>ViewStatusAddition</type>
+        <source>ТаблицаУстройстваMS</source>
+        <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </viewStatusAddition>
+      <searchControlAddition>
+        <name>ТаблицаУстройстваMSУправлениеПоиском</name>
+        <id>77</id>
+        <extendedTooltip>
+          <name>ТаблицаУстройстваMSУправлениеПоискомРасширеннаяПодсказка</name>
+          <id>79</id>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ТаблицаУстройстваMSУправлениеПоискомКонтекстноеМеню</name>
+          <id>78</id>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>SearchControlAddition</type>
+        <source>ТаблицаУстройстваMS</source>
+        <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+          <autoMaxWidth>true</autoMaxWidth>
+        </extInfo>
+      </searchControlAddition>
+      <extendedTooltip>
+        <name>ТаблицаУстройстваMSРасширеннаяПодсказка</name>
+        <id>70</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ТаблицаУстройстваMSКонтекстноеМеню</name>
+        <id>68</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <representation>Tree</representation>
+      <changeRowSet>true</changeRowSet>
+      <changeRowOrder>true</changeRowOrder>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <autoMaxRowsCount>true</autoMaxRowsCount>
+      <selectionMode>MultiRow</selectionMode>
+      <rowSelectionMode>Row</rowSelectionMode>
+      <header>true</header>
+      <headerHeight>1</headerHeight>
+      <footerHeight>1</footerHeight>
+      <horizontalScrollBar>AutoUse</horizontalScrollBar>
+      <verticalScrollBar>AutoUse</verticalScrollBar>
+      <horizontalLines>true</horizontalLines>
+      <verticalLines>true</verticalLines>
+      <autoInsertNewRow>true</autoInsertNewRow>
+      <searchOnInput>Auto</searchOnInput>
+      <initialListView>Auto</initialListView>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+      <enableStartDrag>true</enableStartDrag>
+      <enableDrag>true</enableDrag>
+      <fileDragMode>AsFileRef</fileDragMode>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Устройства Клеверенс</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Cleverence devices</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Cleverence құрылғылары</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Cleverence qurilmalari</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Прылады Cleverence</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Пристрої Cleverence</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Cleverence მოწყობილები</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Cleverence cihazları</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Dispositivos Cleverence</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Dispozitive Cleverence</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Устройства Клеверенс</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Cleverence devices</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Cleverence құрылғылары</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Cleverence qurilmalari</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Прылады Cleverence</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Пристрої Cleverence</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>Cleverence მოწყობილები</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Cleverence cihazları</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Dispositivos Cleverence</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Dispozitive Cleverence</value>
+    </toolTip>
+    <width>60</width>
+    <extendedTooltip>
+      <name>УстройстваMSРасширеннаяПодсказка</name>
+      <id>60</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаЗагрузить</name>
+      <id>4</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗагрузитьРасширеннаяПодсказка</name>
+        <id>5</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Выгрузить</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаЗакрыть</name>
+      <id>6</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗакрытьРасширеннаяПодсказка</name>
+        <id>7</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <representation>PictureAndText</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <handlers>
+    <event>OnClose</event>
+    <name>ПриЗакрытии</name>
+  </handlers>
+  <width>60</width>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.КлеверенсТСД_ОсновнаяОбработка</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ВыгрузкаНаУстройство</name>
+    <title>
+      <key>ru</key>
+      <value>Вариант выгрузки</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Unloading option</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Шығару варианты</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Yuklash varianti</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Варыянт выгрузкі</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Варіант вивантаження</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>გამოსახული ვარიანტი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Dışa aktarma seçeneği</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Opción de descarga</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Opțiune de descărcare</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПользователиMS</name>
+    <title>
+      <key>ru</key>
+      <value>Пользователи Клеверенс</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Cleverence users</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Cleverence пайдаланушылары</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Cleverence foydalanuvchilari</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Карыстальнікі Cleverence</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Користувачі Cleverence</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Cleverence-ის მომხმარებები</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Cleverence kullanıcıları</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Usuarios de Cleverence</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Utilizatori Cleverence</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Выгружать</name>
+      <id>1</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ГруппаПользователь</name>
+      <title>
+        <key>ru</key>
+        <value>Группа/пользователь</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Group/user</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Топ/Пайдаланушы</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Guruh/Foydalanuvchi</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Група/карыстальнік</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Група/користувач</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>ჯგუფი/მომხმარებელი</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Grup/kullanıcı</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Grupo/Usuario</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Grupul/utilizator</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИдГруппыПользователя</name>
+      <title>
+        <key>ru</key>
+        <value>Ид группы пользователя</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>User group ID</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Пайдалушы тобының ID</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Foydalanuvchi guruh IDsi</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Ід групы карыстальніка</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Ідентифікатор групи користувача</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მომხმარებლის ჯგუფის ID</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Kullanıcı Grubu Kimliği</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>ID del grupo de usuario</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>ID grup utilizator</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>УстройстваMS</name>
+    <title>
+      <key>ru</key>
+      <value>Устройства Клеверенс</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Cleverence devices</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Cleverence құрылғылары</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Cleverence qurilmalari</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Прылады Cleverence</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Пристрої Cleverence</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>Cleverence მოწყობილები</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Cleverence cihazları</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Dispositivos Cleverence</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Dispozitive Cleverence</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>ValueTree</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Выгружать</name>
+      <id>1</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ГруппаПользователь</name>
+      <title>
+        <key>ru</key>
+        <value>Устройство</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Device</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Құрылғы</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Qurilma</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Прылада</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Пристрій</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მოწყობილობა</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Cihaz</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Dispositivo</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Dispozitiv</value>
+      </title>
+      <id>2</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИдГруппыПользователя</name>
+      <title>
+        <key>ru</key>
+        <value>ИД устройства</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>Device ID</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>Құрылғы ID</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Qurilma IDsi</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>ІД прылады</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>ІД пристрою</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>მოწყობილის ID</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Cihaz Kimliği</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>ID del dispositivo</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>ID dispozitiv</value>
+      </title>
+      <id>3</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ПинКод</name>
+      <title>
+        <key>ru</key>
+        <value>ПИН-код</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>PIN code</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>ПИН-код</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>ПИН-код</value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>ПІН-код</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>ПІН-код</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>პინ-კოდი</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Pin kodu</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>PIN</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>Cod PIN</value>
+      </title>
+      <id>4</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ПинКодВведен</name>
+    <id>3</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПинКод</name>
+    <title>
+      <key>ru</key>
+      <value>Введите ПИН-код нужного устройства</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Enter the PIN code of the required device</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Қажетті құрылғының ПИН-кодын енгізіңіз</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Керакли қурилма ПИН-кодини киритинг</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Увядзіце ПІН-код неабходнага прылады</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Введіть ПІН-код потрібного пристрою</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შეიყვანეთ საჭირო მოწყობილობის PIN-კოდი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>İlgili cihazın PIN kodunu girin</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Introduzca el código PIN del dispositivo necesario</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Introduceți codul PIN al dispozitivului necesar</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>4</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>МассивУстройствMSАдрес</name>
+    <title>
+      <key>ru</key>
+      <value>Массив устройств MSАдрес</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Array of MSAddress devices</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>MSАдрес құрылғылар тізімі</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>MSАдрес қурилмалар таркиби</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Массив устройств MSАдрес: Масіў прылад MSАдрас</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Масив пристроїв MSАдрес</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>MSAdress მოწყობილების მასივი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>MSAdres cihaz dizisi</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Matriz de dispositivos MSAddress</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Matricea dispozitivelor MSAdres</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ОдиночныйРежимВыделения</name>
+    <title>
+      <key>ru</key>
+      <value>Одиночный режим выделения</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Single selection mode</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Тек режимді таңдау</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Yagona tanlash rejimi  </value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Адзінкавы рэжым вылучэння</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Одиночний режим виділення</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ცალკე არჩევანის რეჟიმი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Tek seçim modu</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Modo de selección individual</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Modul de selecție unic</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ИмяБизнесПроцесса</name>
+    <title>
+      <key>ru</key>
+      <value>Имя бизнес процесса</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Business process name</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Бизнес процесс аты</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Biznes protsess nomi</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Імя бізнес працэса</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Ім'я бізнес-процесу</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ბიზნეს პროცესის სახელი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>İş Süreci Adı</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Nombre del proceso de negocio</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Nume proces de afaceri</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НазначитьПользователю</name>
+    <title>
+      <key>ru</key>
+      <value>Назначить пользователю</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Assign to user</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Пайдаланушыға тағайындау</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Foydalanuvchiga tayinlash</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Прызначыць карыстальніку</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Призначити користувачу</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>მომხმარებელს დანიშვნება</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Kullanıcıya atama yap</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Asignar al usuario</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Atribuiți utilizatorului</value>
+    </title>
+    <id>10</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>НесколькоДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Несколько документов</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Several documents</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Бірнеше құжаттар</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Bir nechta hujjatlar</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Некалькі дакументаў</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Декілька документів</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>რამდენიმე დოკუმენტი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Birden fazla belge</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Varios documentos</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Mai multe documente</value>
+    </title>
+    <id>11</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТипБазы</name>
+    <title>
+      <key>ru</key>
+      <value>Тип базы</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Database type</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>База түрі</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Bazaning turi</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Тып базы</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Тип бази</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ბაზის ტიპი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Veritabanı Türü</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Tipo de base</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Tip de bază</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>Выгрузить</name>
+    <title>
+      <key>ru</key>
+      <value>Выгрузить</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Unload</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Шығару</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Yuklash</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Выгрузіць</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Вивантажити</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>გამოტანა</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Dışa aktar</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Descargar</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Descărcați</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Выгрузить</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Unload</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Шығару</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Yuklash</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Выгрузіць</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Вивантажити</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>გამოტანა</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Dışa aktar</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Descargar</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Descărcați</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ChooseValue</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Выгрузить</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ВыделитьВсе</name>
+    <title>
+      <key>ru</key>
+      <value>Выделить все</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Select all</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Барлығын таңдау</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Barchasini belgilash</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Вылучыць усё</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Виділити все</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ყველას მონიშნე</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Tümünü seç</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Seleccionar todo</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Selectați tot</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Выделить все</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Select all</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Барлығын таңдау</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Barchasini belgilash</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Вылучыць усё</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Виділити все</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ყველას მონიშნე</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Tümünü seç</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Seleccionar todo</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Selectați tot</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.CheckAll</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ВыделитьВсе</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ОчиститьВыделение</name>
+    <title>
+      <key>ru</key>
+      <value>Очистить выделение</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Clear selection</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Таңдалғандарды алмасу</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Belgilanganlarni tozalash</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Ачысціць вылучэнне</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Очистити виділення</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>გასუფთავება შერჩეული</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Seçimi temizle</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Limpiar selección</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Ștergeți evidențierea</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Очистить выделение</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Clear selection</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Таңдалғандарды алмасу</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Belgilanganlarni tozalash</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Ачысціць вылучэнне</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Очистити виділення</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>გასუფთავება შერჩეული</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Seçimi temizle</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Limpiar selección</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Ștergeți evidențierea</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.UncheckAll</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОчиститьВыделение</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

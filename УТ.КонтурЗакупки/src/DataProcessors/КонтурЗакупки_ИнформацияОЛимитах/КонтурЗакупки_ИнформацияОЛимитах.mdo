@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b180471-f1c0-4aff-8e5c-b198e753ef36">
+  <producedTypes>
+    <objectType typeId="d74d6073-3320-4261-a0b0-5022de8a62d2" valueTypeId="405d32ad-044d-4e3b-b6a8-7a6b145a76e1"/>
+    <managerType typeId="b6aa083e-0ed5-4cda-ac10-68023eaffb60" valueTypeId="5e4e26f8-5607-4389-a8ef-7bef0c3f6b52"/>
+  </producedTypes>
+  <name>КонтурЗакупки_ИнформацияОЛимитах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Информация о лимитах (Контур.Закупки)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КонтурЗакупки_ИнформацияОЛимитах.Form.Форма</defaultForm>
+  <tabularSections uuid="12d3e02e-76d4-47ab-93c2-11294739edcb">
+    <producedTypes>
+      <objectType typeId="7f596dc0-eda5-4c85-83d6-91dd119e2357" valueTypeId="4654a132-d656-48ae-8c6b-09637555899d"/>
+      <rowType typeId="131db66f-7768-4d44-a1fa-0828c493bcd5" valueTypeId="6292997f-2bbc-44d0-bc4f-878aa5115afb"/>
+    </producedTypes>
+    <name>ИнформацияОЛимитах</name>
+    <synonym>
+      <key>ru</key>
+      <value>Информация о лимитах</value>
+    </synonym>
+    <attributes uuid="f012f48f-9f56-4e3a-b43d-d21f366b058d">
+      <name>ГруппаЛимитов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Группа лимитов</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="de8ec2cc-4694-43ac-979c-d5d9adcb103b">
+      <name>ДоступноЗапросов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Доступно запросов</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="94e21914-249d-463b-8a05-0a423b3aa4db">
+      <name>ОбщийЛимит</name>
+      <synonym>
+        <key>ru</key>
+        <value>Общий лимит</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="76ceb202-1acf-4bc5-b173-450efd387429">
+      <name>ЭтоПериодический</name>
+      <synonym>
+        <key>ru</key>
+        <value>Это периодический</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="d567d5fe-d85a-4f85-ae12-202e244a9dec">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
