@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<dataSource>
-		<dataSourceType>Local</dataSourceType>
 		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
 	</dataSource>
 	<dataSet xsi:type="DataSetQuery">
 		<name>ОсновныеДанные</name>
@@ -331,10 +331,6 @@
 			<field>ЗаказКлиента</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Номенклатура</dataPath>
-			<field>Номенклатура</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ДокументОплаты</dataPath>
 			<field>ДокументОплаты</field>
 			<title xsi:type="v8:LocalStringType">
@@ -369,6 +365,10 @@
 				</dcscor:item>
 			</appearance>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗаказКлиента.Ссылка КАК Заказ
@@ -381,7 +381,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗЛИЧНЫЕ
 	Оплаты.ЗаказКлиента КАК ЗаказКлиента,
 	Оплаты.Номенклатура КАК Номенклатура,
 	Оплаты.Шифр КАК Шифр,
@@ -500,11 +500,7 @@
 			ТОГДА РеализацияТоваровУслугТовары.Ссылка.ЗаказКлиента
 		ИНАЧЕ РеализацияТоваровУслугТовары.ЗаказКлиента
 	КОНЕЦ КАК ЗаказКлиента,
-	ПОДСТРОКА(СокрЛП(ВЫБОР
-		КОГДА РеализацияТоваровУслугТовары.Характеристика &lt;&gt; ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
-			ТОГДА ПОДСТРОКА(РеализацияТоваровУслугТовары.Характеристика.Наименование, 1, 10)
-		ИНАЧЕ ПОДСТРОКА(РеализацияТоваровУслугТовары.АУ_Шифр, 1, 10)
-	КОНЕЦ), 1, 10) КАК Шифр,
+	РеализацияТоваровУслугТовары.АУ_Шифр КАК Шифр,
 	РеализацияТоваровУслугТовары.Ссылка КАК ДокументОтгрузки,
 	РеализацияТоваровУслугТовары.Ссылка.Дата КАК ДатаОтгрузки
 ИЗ
@@ -533,12 +529,6 @@
 		<destinationDataSet>РасшифровкаОплат</destinationDataSet>
 		<sourceExpression>Шифр</sourceExpression>
 		<destinationExpression>Шифр</destinationExpression>
-	</dataSetLink>
-	<dataSetLink>
-		<sourceDataSet>ОсновныеДанные</sourceDataSet>
-		<destinationDataSet>РасшифровкаОплат</destinationDataSet>
-		<sourceExpression>Номенклатура</sourceExpression>
-		<destinationExpression>Номенклатура</destinationExpression>
 	</dataSetLink>
 	<dataSetLink>
 		<sourceDataSet>ОсновныеДанные</sourceDataSet>
@@ -576,7 +566,12 @@
 	</totalField>
 	<parameter>
 		<name>ДатаНачала</name>
-		<title xsi:type="xs:string">Дата начала</title>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
 			<v8:DateQualifiers>
@@ -590,7 +585,12 @@
 	</parameter>
 	<parameter>
 		<name>ДатаОкончания</name>
-		<title xsi:type="xs:string">Дата окончания</title>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
 		<valueType>
 			<v8:Type>xs:dateTime</v8:Type>
 			<v8:DateQualifiers>
