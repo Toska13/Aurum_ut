@@ -1,38 +1,57 @@
-﻿# =============================================================================
-# AI / Cursor rules & tooling (local install — do not commit)
-# Source: C:\Данные\AI 1C\Rules
-# =============================================================================
-.cursor/
-openspec/
-.ai-rules.json
+# Служебные файлы проекта (инструменты 1c-rules, MCP, IDE, OpenSpec)
+
+# Параметры проекта / секреты (не коммитить)
 .dev.env
-AGENTS.md
-LLM-RULES.md
-memory.md
-USER-RULES.md
-.v8-project.example.json
-.user files
 
-# 1c-batch credentials / local project binding
-.1c-devbase.ps1
-.1c-devbase.bat
-.v8-project.json
+# Инструменты AI-агентов (правила, агенты, команды, скиллы, конфиги)
+.ai-rules.json
+.cursor/
+**/*.md
+**/tools
+**/.Сценарии
 
-# Build / dump artifacts from AI skills
-build/
-base/
-*.epf
-*.erf
-*.log
-
-# Project MCP metadata report / indexes
-Report.mcp/
-
-# Project MCP (indexes, compose, env) — do not commit
+# MCP-серверы проекта: базы данных, логи, конфигурация Docker-стека
 .mcp/
 
-# Beads / Dolt files (added by bd init)
-.dolt/
-*.db
-.beads-credential-key
-.beads/
+# Отчёты «ОтчетПоКонфигурации…» — генерируются MCP-индексацией
+Report.mcp/
+
+# OpenSpec workspace (изменения/спеки) — по решению команды не в git
+openspec/
+
+# Служебные скрипты (LM Studio и пр.)
+scripts/
+
+# =============================================================================
+# Исходники конфигурации 1С (УТ_для_edt*, *.Расширение*, *.Доставка*)
+# src/ — исходники (трекаются). Исключаем только служебные файлы 1С:EDT / Конфигуратора.
+# =============================================================================
+
+# 1С:EDT workspace metadata (Eclipse-based) — .project, .settings/, DT-INF/
+**/.project
+**/.settings/
+**/DT-INF/
+
+# Служебные файлы 1С:EDT / Конфигуратора
+**/.classpath
+**/.factorypath
+**/.tern-project
+**/*.bak
+**/*.log
+**/*.bin
+**/*.distr
+**/*.cf
+**/*.cfe
+**/*.epf
+**/*.erf
+
+# Beta MCP (новый дистрибутив, изолированный контур)
+.beta-mcp/
+
+#users
+**/build
+**/docs
+**/.Инструкции
+**/.beads
+**/.tools
+/.1c-devbase.ps1
