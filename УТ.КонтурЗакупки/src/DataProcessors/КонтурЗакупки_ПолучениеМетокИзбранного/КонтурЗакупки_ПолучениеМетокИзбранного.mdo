@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f5d68266-6214-4b0f-8968-321644bb9ba5">
+  <producedTypes>
+    <objectType typeId="8692339e-a130-4ee6-9f81-d14d283039b0" valueTypeId="d5138ea2-00fb-456d-9375-e11fd3b4ed6a"/>
+    <managerType typeId="acbdd45d-8d41-4ab1-8165-b14ce07e113f" valueTypeId="9a596dcd-8d3d-4c72-a390-060700cf917e"/>
+  </producedTypes>
+  <name>КонтурЗакупки_ПолучениеМетокИзбранного</name>
+  <synonym>
+    <key>ru</key>
+    <value>Получение меток избранного (Контур.Закупки)</value>
+  </synonym>
+  <defaultForm>DataProcessor.КонтурЗакупки_ПолучениеМетокИзбранного.Form.Форма</defaultForm>
+  <tabularSections uuid="ee33205b-7691-4493-84c0-31df9aba91b4">
+    <producedTypes>
+      <objectType typeId="821950fe-c17d-4f7b-be45-15b45ccab13c" valueTypeId="af6fc815-f5a1-46b4-bb46-b6e29e4890da"/>
+      <rowType typeId="d2c49b1e-e657-4d32-94f5-26183e5f145d" valueTypeId="ccd4d100-7b3b-47a2-88ad-355783eddc4f"/>
+    </producedTypes>
+    <name>Метки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метки</value>
+    </synonym>
+    <attributes uuid="e0ac1084-6fd5-4da3-ba84-496be45197af">
+      <name>Метка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Метка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КонтурЗакупки_Метки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f144435a-90be-4a0e-b7b1-521872c6fe45">
+      <name>ИдентификаторМетки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор метки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="defb0f6c-c607-4157-a119-d9c639e7e9f6">
+      <name>НаименованиеМетки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование метки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="6c7ad597-a1d2-4ff4-a0cd-74cd3816d8a7">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

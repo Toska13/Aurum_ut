@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Номенклатура</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_Name</dataPath>
+			<field>Product_Name</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product name</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_КлючХарактеристик_GUID</dataPath>
+			<field>Product_КлючХарактеристик_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product ключ характеристик GUID</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_Name</dataPath>
+			<field>Packing_Name</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing name</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_ЭтоГруппа</dataPath>
+			<field>Product_ЭтоГруппа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product это группа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_Id_GUID</dataPath>
+			<field>Product_Id_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_Marking</dataPath>
+			<field>Product_Marking</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product marking</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_ПоХарактеристикам</dataPath>
+			<field>Product_ПоХарактеристикам</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product по характеристикам</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_ИдЕдиницыИзмерения_GUID</dataPath>
+			<field>Packing_ИдЕдиницыИзмерения_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing ид единицы измерения GUID</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_Barcode</dataPath>
+			<field>Product_Barcode</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product barcode</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_ПоСериям</dataPath>
+			<field>Product_ПоСериям</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product по сериям</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_КлючСерий_GUID</dataPath>
+			<field>Product_КлючСерий_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product ключ серий GUID</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_Алко</dataPath>
+			<field>Product_Алко</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product алко</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_Весовой</dataPath>
+			<field>Product_Весовой</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product весовой</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_ИдХарактеристики_GUID</dataPath>
+			<field>Packing_ИдХарактеристики_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_Barcode</dataPath>
+			<field>Packing_Barcode</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_UnitsQuantity</dataPath>
+			<field>Packing_UnitsQuantity</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing units quantity</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_ИмяХарактеристики</dataPath>
+			<field>Packing_ИмяХарактеристики</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing имя характеристики</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_ИдСерии_GUID</dataPath>
+			<field>Packing_ИдСерии_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_price</dataPath>
+			<field>Packing_price</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_qty</dataPath>
+			<field>Packing_qty</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_Id_GUID</dataPath>
+			<field>Packing_Id_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Назначение</dataPath>
+			<field>Назначение</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Помещение</dataPath>
+			<field>Помещение</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_BasePackingId_GUID</dataPath>
+			<field>Product_BasePackingId_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product base packing id GUID</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_ПоСН</dataPath>
+			<field>Product_ПоСН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product по СН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Product_Маркировка</dataPath>
+			<field>Product_Маркировка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Product маркировка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_АлкоПроизвКПП</dataPath>
+			<field>Packing_АлкоПроизвКПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing алко произв КПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_АлкоМарк</dataPath>
+			<field>Packing_АлкоМарк</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing алко марк</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_АлкоПроизвИНН</dataPath>
+			<field>Packing_АлкоПроизвИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing алко произв ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_АлкоКод</dataPath>
+			<field>Packing_АлкоКод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing алко код</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_АлкоОбъем</dataPath>
+			<field>Packing_АлкоОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing алко объем</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_АлкоКрепость</dataPath>
+			<field>Packing_АлкоКрепость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing алко крепость</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Packing_АлкоПроизводитель</dataPath>
+			<field>Packing_АлкоПроизводитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Packing алко производитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>// ВНИМАНИЕ!!! НЕ ПОЛЬЗОВАТЬСЯ КОНСТРУКТОРОМ, ИНАЧЕ ВСЕ КОММЕНТАРИИ УДАЛЯТСЯ!!!
+
+//	РежимЗапроса  - Число - принимает значения от 0 до 6, определяет, какие данные будут получены из 1С
+// 				0 - получение товара с упаковкой по ID
+// 				1 - получение товара по штрихкоду/Коду/Артикулу
+// 				2 - получение ID Товара + ID Упаковки (наименование)
+// 				3 - получение упаковки по ID упаковки и ID товара
+// 				4 - получение списка товаров по ID и по ID упаковок
+// 				5 - получение списка товаров по родителям
+// 				6 - получение списка товаров по наименованию
+
+// Запрос для отбора номенклатуры по ШК и алкокоду для режима = 1
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Штрихкоды.Номенклатура
+ПОМЕСТИТЬ ВТ_НоменклатураПоКодам
+ИЗ
+	РегистрСведений.ШтрихкодыНоменклатуры КАК Штрихкоды
+ГДЕ
+	НЕ Штрихкоды.Номенклатура.ПометкаУдаления	
+	//&lt;*ТекстЗаменыУсловиеВТ_НоменклатураПоКодам_Штрихкод*&gt;
+
+;
+
+// Запрос для получения реквизитов номенклатуры с учетом режима и отборов
+// Ключ уникальности - номенклатура
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ  //%ПЕРВЫЕ_N%
+	Номенклатура.Ссылка КАК Номенклатура,
+	Номенклатура.ВидНоменклатуры КАК ВидНоменклатуры,
+	Номенклатура.НаборУпаковок КАК НаборУпаковок,
+	"" КАК Маркировка,
+	ЕСТЬNULL(Номенклатура.ЕдиницаИзмерения, ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)) КАК ЕдиницаИзмерения,	
+	ЕСТЬNULL(Номенклатура.Производитель.Наименование, "") КАК Производитель,
+	ВЫБОР
+		КОГДА &amp;ВыгружатьАртикул
+			ТОГДА ЕСТЬNULL(Номенклатура.Артикул, "")
+		ИНАЧЕ ""
+	КОНЕЦ КАК Артикул,			
+	ВЫБОР
+		КОГДА Номенклатура.ЕдиницаИзмерения.ТипИзмеряемойВеличины = ЗНАЧЕНИЕ(Перечисление.ТипыИзмеряемыхВеличин.Вес)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Весовой,
+	ВЫБОР
+		КОГДА &amp;ВыгружатьКод
+			ТОГДА Номенклатура.Код
+		ИНАЧЕ ""
+	КОНЕЦ КАК Код,			
+	Номенклатура.Наименование,	
+	Номенклатура.ЭтоГруппа,
+	ЕСТЬNULL(Номенклатура.ВидНоменклатуры.ИспользоватьСерии, ЛОЖЬ) И ЕСТЬNULL(Номенклатура.ВидНоменклатуры.НастройкаИспользованияСерий, ЛОЖЬ) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.НастройкиИспользованияСерийНоменклатуры.ЭкземплярТовара) КАК ИспользоватьСерии,
+	ЕСТЬNULL(Номенклатура.ВидНоменклатуры.ИспользоватьСерии, ЛОЖЬ) И ЕСТЬNULL(Номенклатура.ВидНоменклатуры.НастройкаИспользованияСерий, ЛОЖЬ) = ЗНАЧЕНИЕ(Перечисление.НастройкиИспользованияСерийНоменклатуры.ЭкземплярТовара) КАК ИспользоватьСерийныеНомера,	
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ЕСТЬNULL(Номенклатура.ВидНоменклатуры.ИспользоватьХарактеристики, ЛОЖЬ) 
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ИспользоватьХарактеристики,	
+	Номенклатура.ВидНоменклатуры.ИспользованиеХарактеристик КАК ИспользованиеХарактеристик,
+	ВЫБОР 
+		КОГДА Номенклатура.ВидНоменклатуры.ВладелецХарактеристик &lt;&gt; ЗНАЧЕНИЕ(Справочник.ВидыНоменклатуры.ПустаяСсылка)
+			ТОГДА Номенклатура.ВидНоменклатуры.ВладелецХарактеристик
+		ИНАЧЕ Номенклатура.ВладелецХарактеристик
+	КОНЕЦ КАК ВладелецХарактеристик 		
+ПОМЕСТИТЬ ВТ_Номенклатура
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	НЕ Номенклатура.ПометкаУдаления
+	//&lt;*ТекстЗаменыУсловиеВТ_Номенклатура*&gt;	
+{ГДЕ
+	Номенклатура.Ссылка.* КАК Product_Id_GUID}
+
+//%УПОРЯДОЧИТЬ ПО Номенклатура.ЭтоГруппа УБЫВ
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура
+;
+
+// Номенклатура, по которой включено использование характеристик
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура,
+	ВТ_Номенклатура.ЕдиницаИзмерения
+ПОМЕСТИТЬ ВТ_Номенклатура_СХарактеристиками
+ИЗ ВТ_Номенклатура КАК ВТ_Номенклатура
+ГДЕ
+	&amp;ИспользоватьХарактеристикиНоменклатуры
+	И ВТ_Номенклатура.ИспользоватьХарактеристики
+;
+
+// выбрали все упаковки и привязанные к ним ШК, алкокоды, если они есть
+// ключ уникальности - (код + номенклатура + характеристика + упаковка)
+////////////////////////////////////////////////////////////////////////////////
+ 
+// выбираем все упаковки для отобранной номенклатуры, даже если у них нет ШК
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура КАК Номенклатура,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ЕСТЬNULL(ШтрихкодыНоменклатуры.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка))
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	КОНЕЦ КАК Характеристика,
+	ЕСТЬNULL(УпаковкиЕдиницыИзмерения.Ссылка, ВТ_Номенклатура.ЕдиницаИзмерения) КАК Упаковка,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(УпаковкиЕдиницыИзмерения.Числитель, 0) &lt;&gt; 0
+			ТОГДА УпаковкиЕдиницыИзмерения.Числитель
+		ИНАЧЕ 1
+	КОНЕЦ КАК Коэффициент,
+	ЕСТЬNULL(ШтрихкодыНоменклатуры.Штрихкод, "") КАК Штрихкод,
+	ЛОЖЬ КАК Базовый
+ПОМЕСТИТЬ ВТ_ШК_ДляУпаковки
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.УпаковкиЕдиницыИзмерения КАК УпаковкиЕдиницыИзмерения
+		ПО (УпаковкиЕдиницыИзмерения.Владелец = ВЫБОР
+				КОГДА ВТ_Номенклатура.НаборУпаковок = ЗНАЧЕНИЕ(Справочник.НаборыУпаковок.ИндивидуальныйДляНоменклатуры)
+					ТОГДА ВТ_Номенклатура.Номенклатура
+				ИНАЧЕ ВТ_Номенклатура.НаборУпаковок
+			КОНЕЦ)
+			И (НЕ УпаковкиЕдиницыИзмерения.ПометкаУдаления)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ВТ_Номенклатура.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+			И (УпаковкиЕдиницыИзмерения.Ссылка = ШтрихкодыНоменклатуры.Упаковка)
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;РежимЗапроса = "ПоискПоАртикулуКодуШК"
+				ТОГДА ШтрихкодыНоменклатуры.Штрихкод = &amp;СтрокаПоиска
+						ИЛИ ШтрихкодыНоменклатуры.Штрихкод = &amp;ЧислоПоиска
+			КОГДА &amp;РежимЗапроса = "ПоискПоНоменклатуреУпаковке"
+					ИЛИ &amp;РежимЗапроса = "ПоискПоМассивамНоменклатурыУпаковки"
+				ТОГДА УпаковкиЕдиницыИзмерения.Ссылка В (&amp;ПараметрУпаковки)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+    			                        
+     ОБЪЕДИНИТЬ ВСЕ
+    
+// выбираем все единицы хранения, даже если у них нет ШК
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ЕСТЬNULL(ШтрихкодыНоменклатуры.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка))
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	КОНЕЦ,
+	ВТ_Номенклатура.ЕдиницаИзмерения,
+	1,
+	ЕСТЬNULL(ШтрихкодыНоменклатуры.Штрихкод, ""),
+	ИСТИНА
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ВТ_Номенклатура.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+			И (ШтрихкодыНоменклатуры.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка))
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;РежимЗапроса = "ПоискПоАртикулуКодуШК"
+				ТОГДА ШтрихкодыНоменклатуры.Штрихкод = &amp;СтрокаПоиска
+						ИЛИ ШтрихкодыНоменклатуры.Штрихкод = &amp;ЧислоПоиска
+			КОГДА &amp;РежимЗапроса = "ПоискПоНоменклатуреУпаковке"
+					ИЛИ &amp;РежимЗапроса = "ПоискПоМассивамНоменклатурыУпаковки"
+				ТОГДА ВТ_Номенклатура.ЕдиницаИзмерения В (&amp;ПараметрУпаковки)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+    
+// выбираем единицы хранения без характеристик для номенклатуры, по которой включено использование характеристик
+// (для возможности просмотра на ТСД всего списка характеристик, а не только тех, по которым заведены штрихкоды)
+ВЫБРАТЬ
+	ВТ_Номенклатура_СХарактеристиками.Номенклатура,
+	ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка),
+	ВТ_Номенклатура_СХарактеристиками.ЕдиницаИзмерения,
+	1,
+	ВЫБОР
+		КОГДА &amp;РежимЗапроса &lt;&gt; "ПоискПоАртикулуКодуШК"
+				И &amp;РежимЗапроса &lt;&gt; "ПоискПоНоменклатуреУпаковке"
+				И &amp;РежимЗапроса &lt;&gt; "ПоискПоМассивамНоменклатурыУпаковки"
+				И ЕСТЬNULL(ШтрихкодыНоменклатуры.Штрихкод, "") ПОДОБНО "2_[0-9][0-9][0-9][0-9][0-9]00000_"
+			ТОГДА ЕСТЬNULL(ПОДСТРОКА(ШтрихкодыНоменклатуры.Штрихкод, 3, 5), "")
+		ИНАЧЕ ЕСТЬNULL(ШтрихкодыНоменклатуры.Штрихкод, "")
+	КОНЕЦ,
+	ИСТИНА
+ИЗ
+	ВТ_Номенклатура_СХарактеристиками КАК ВТ_Номенклатура_СХарактеристиками
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ВТ_Номенклатура_СХарактеристиками.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+			И (ШтрихкодыНоменклатуры.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка))
+			И (ШтрихкодыНоменклатуры.Характеристика = ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка))
+ГДЕ
+	ВЫБОР
+		КОГДА &amp;РежимЗапроса = "ПоискПоАртикулуКодуШК"
+			ТОГДА ШтрихкодыНоменклатуры.Штрихкод = &amp;СтрокаПоиска
+					ИЛИ ШтрихкодыНоменклатуры.Штрихкод = &amp;ЧислоПоиска
+		КОГДА &amp;РежимЗапроса = "ПоискПоНоменклатуреУпаковке"
+				ИЛИ &amp;РежимЗапроса = "ПоискПоМассивамНоменклатурыУпаковки"
+			ТОГДА ВТ_Номенклатура_СХарактеристиками.ЕдиницаИзмерения В (&amp;ПараметрУпаковки)
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+		
+// выбираем все весовые ШК
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ЕСТЬNULL(ШтрихкодыНоменклатуры.Характеристика, ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка))
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ШтрихкодыНоменклатуры.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ВТ_Номенклатура.ЕдиницаИзмерения
+		ИНАЧЕ ШтрихкодыНоменклатуры.Упаковка
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ШтрихкодыНоменклатуры.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА 1
+		ИНАЧЕ ВЫБОР
+				КОГДА ЕСТЬNULL(ШтрихкодыНоменклатуры.Упаковка.Числитель, 0) &lt;&gt; 0
+					ТОГДА ШтрихкодыНоменклатуры.Упаковка.Числитель
+				ИНАЧЕ 1
+			КОНЕЦ
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА &amp;РежимЗапроса = "ПоискПоАртикулуКодуШК"
+				ИЛИ &amp;РежимЗапроса = "ПоискПоНоменклатуреУпаковке"
+				ИЛИ &amp;РежимЗапроса = "ПоискПоМассивамНоменклатурыУпаковки"
+			ТОГДА ЕСТЬNULL(ШтрихкодыНоменклатуры.Штрихкод, "")
+		ИНАЧЕ ЕСТЬNULL(ПОДСТРОКА(ШтрихкодыНоменклатуры.Штрихкод, 3, 5), "")
+	КОНЕЦ,
+	ИСТИНА
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ВТ_Номенклатура.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+			И (ШтрихкодыНоменклатуры.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка))
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;РежимЗапроса = "ПоискПоАртикулуКодуШК"
+				ТОГДА ШтрихкодыНоменклатуры.Штрихкод = &amp;СтрокаПоиска
+			КОГДА &amp;РежимЗапроса = "ПоискПоНоменклатуреУпаковке"
+					ИЛИ &amp;РежимЗапроса = "ПоискПоМассивамНоменклатурыУпаковки"
+				ТОГДА ВТ_Номенклатура.ЕдиницаИзмерения В (&amp;ПараметрУпаковки)
+			ИНАЧЕ ШтрихкодыНоменклатуры.Штрихкод ПОДОБНО "2[0-9_][0-9][0-9][0-9][0-9][0-9]00000[0-9_]"
+		КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ВТ_ШК_ДляУпаковки.Номенклатура КАК Номенклатура,
+	ВТ_ШК_ДляУпаковки.Характеристика КАК Характеристика,
+	ВТ_ШК_ДляУпаковки.Упаковка КАК Упаковка,
+	ВТ_ШК_ДляУпаковки.Коэффициент КАК Коэффициент,
+	ВТ_ШК_ДляУпаковки.Штрихкод КАК Штрихкод,
+	ВТ_ШК_ДляУпаковки.Базовый КАК Базовый
+ПОМЕСТИТЬ ВТ_ШК_Упаковки
+ИЗ
+	ВТ_ШК_ДляУпаковки КАК ВТ_ШК_ДляУпаковки
+{ГДЕ
+	ВТ_ШК_ДляУпаковки.Номенклатура.* КАК Product_Id_GUID}
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Характеристика
+;
+
+
+// Цены. Ключ уникальности - (номенклатура + характеристика)
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЦеныНоменклатурыСрезПоследних.Номенклатура,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ЦеныНоменклатурыСрезПоследних.Характеристика
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	КОНЕЦ КАК Характеристика,
+	ВЫБОР
+		КОГДА ЦеныНоменклатурыСрезПоследних.Упаковка &lt;&gt; ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ЦеныНоменклатурыСрезПоследних.Упаковка
+		ИНАЧЕ ЦеныНоменклатурыСрезПоследних.Номенклатура.ЕдиницаИзмерения
+	КОНЕЦ КАК Упаковка,
+	МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.Цена) КАК Цена
+ПОМЕСТИТЬ ВТ_Цены
+ИЗ
+	РегистрСведений.ЦеныНоменклатуры.СрезПоследних(
+			{(&amp;ДатаЦен)},
+			Номенклатура В 
+				(ВЫБРАТЬ
+					ВТ_Номенклатура.Номенклатура
+				ИЗ
+					ВТ_Номенклатура
+				ГДЕ ВЫБОР
+						КОГДА &amp;РежимЗапроса = "СписокНоменклатурыДляГрупп"
+							ТОГДА НЕ ВТ_Номенклатура.ЭтоГруппа
+						ИНАЧЕ ИСТИНА
+					КОНЕЦ)
+			И &amp;ВыгружатьЦены {(ВидЦены = &amp;ВидЦены)}) КАК ЦеныНоменклатурыСрезПоследних
+
+СГРУППИРОВАТЬ ПО
+	ЦеныНоменклатурыСрезПоследних.Номенклатура,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ЦеныНоменклатурыСрезПоследних.Характеристика
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	КОНЕЦ
+	
+ИНДЕКСИРОВАТЬ ПО	
+	Номенклатура,
+	Характеристика,
+	Упаковка	
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Номенклатура КАК Номенклатура,
+	Характеристика,
+	Упаковка,
+	Цена
+ПОМЕСТИТЬ ВТ_ЦеныТолькоБазовые
+ИЗ ВТ_Цены
+ГДЕ
+	ВТ_Цены.Упаковка = ВТ_Цены.Номенклатура.ЕдиницаИзмерения
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура, Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ Номенклатура, Характеристика, МИНИМУМ(Упаковка)
+ПОМЕСТИТЬ ВТ_ОднаУпаковка
+ИЗ ВТ_Цены 
+СГРУППИРОВАТЬ ПО 
+	Номенклатура, Характеристика
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура, Характеристика
+;	
+
+////////////////////////////////////////////////////////////////////////////////
+// Цены по одной паре (номенклатура, характеристиа), в приоритете базовая упаковка
+ВЫБРАТЬ
+	Номенклатура КАК Номенклатура,
+	Характеристика,
+	Упаковка,
+	Цена 
+ПОМЕСТИТЬ ВТ_ЦеныБазовые
+ИЗ ВТ_ЦеныТолькоБазовые
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_Цены.Номенклатура КАК Номенклатура,
+	ВТ_Цены.Характеристика,
+	ВТ_Цены.Номенклатура.ЕдиницаИзмерения,
+	ВТ_Цены.Цена / (
+		ВЫБОР
+			КОГДА ВТ_Цены.Упаковка.Числитель &lt;&gt; 0
+				ТОГДА ВТ_Цены.Упаковка.Числитель
+			ИНАЧЕ 1
+		КОНЕЦ / ВЫБОР
+			КОГДА ВТ_Цены.Упаковка.Знаменатель &lt;&gt; 0
+				ТОГДА ВТ_Цены.Упаковка.Знаменатель
+			ИНАЧЕ 1
+		КОНЕЦ) 
+ИЗ ВТ_Цены КАК ВТ_Цены
+
+	ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЦеныТолькоБазовые КАК ВТ_ЦеныТолькоБазовые
+	ПО ВТ_Цены.Номенклатура = ВТ_ЦеныТолькоБазовые.Номенклатура
+		И ВТ_Цены.Характеристика = ВТ_ЦеныТолькоБазовые.Характеристика		
+		
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ОднаУпаковка КАК ВТ_ОднаУпаковка
+	ПО ВТ_Цены.Номенклатура = ВТ_ОднаУпаковка.Номенклатура
+		И ВТ_Цены.Характеристика = ВТ_ОднаУпаковка.Характеристика
+		И ВТ_Цены.Упаковка = ВТ_ОднаУпаковка.Упаковка		
+ГДЕ 
+	ВТ_ЦеныТолькоБазовые.Номенклатура ЕСТЬ NULL	
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура, 
+	Характеристика, 
+	Упаковка
+;
+
+// Остатки. Ключ уникальности - (номенклатура + характеристика)
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТоварыНаСкладахОстатки.Номенклатура КАК Номенклатура,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ТоварыНаСкладахОстатки.Характеристика
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	КОНЕЦ КАК Характеристика,
+	СУММА(ТоварыНаСкладахОстатки.ВНаличииОстаток) КАК Количество
+ПОМЕСТИТЬ ВТ_Остатки
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах.Остатки(
+			,
+			Номенклатура В 
+				(ВЫБРАТЬ
+					ВТ_Номенклатура.Номенклатура
+				ИЗ
+					ВТ_Номенклатура
+				ГДЕ ВЫБОР
+						КОГДА &amp;РежимЗапроса = "СписокНоменклатурыДляГрупп"
+							ТОГДА НЕ ВТ_Номенклатура.ЭтоГруппа
+						ИНАЧЕ ИСТИНА
+					КОНЕЦ)
+			И &amp;ВыгружатьОстатки {(Склад В (&amp;Склад))}) КАК ТоварыНаСкладахОстатки		
+
+СГРУППИРОВАТЬ ПО
+	ТоварыНаСкладахОстатки.Номенклатура,
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ТоварыНаСкладахОстатки.Характеристика
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Характеристика
+;
+
+// Ключ уникальности - (Код =&gt; Упаковка + Характеристика + Номенклатура)
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ  
+	
+	ВТ_Номенклатура.Номенклатура 					КАК Product_Id_GUID,
+	ВТ_Номенклатура.Наименование 					КАК Product_Name,
+	ВТ_Номенклатура.Код 		 					КАК Product_Barcode,
+	ВТ_Номенклатура.ЭтоГруппа	 					КАК Product_ЭтоГруппа,
+	ВТ_Номенклатура.Артикул		 					КАК Product_Marking,
+	ВТ_Номенклатура.Весовой		 	  				КАК Product_Весовой,
+	ВТ_Номенклатура.ЕдиницаИзмерения                КАК Product_BasePackingId_GUID,
+	ВТ_Номенклатура.Маркировка						КАК Product_Маркировка,
+	
+	// Поля штрихкодов
+	ВТ_ШК_Упаковки.Штрихкод 									КАК Packing_Barcode,
+	ВТ_ШК_Упаковки.Характеристика 								КАК Packing_ИдХарактеристики_GUID,
+	ЕСТЬNULL(ВТ_ШК_Упаковки.Характеристика.Наименование, "")	КАК Packing_ИмяХарактеристики,
+	//ВЫБОР
+	//	КОГДА ВТ_Номенклатура.ЭтоГруппа
+	//		ТОГДА ЛОЖЬ
+	//	ИНАЧЕ ВТ_ШК_Упаковки.Базовый
+	//КОНЕЦ КАК ФлагБазовойЕдиницы,
+	ВТ_ШК_Упаковки.Упаковка 							КАК Packing_Id_GUID,
+	ВТ_ШК_Упаковки.Упаковка 							КАК Packing_ИдЕдиницыИзмерения_GUID,
+	ЕСТЬNULL(ВТ_ШК_Упаковки.Упаковка.Наименование, "")	КАК Packing_Name,
+	ВТ_ШК_Упаковки.Коэффициент 							КАК Packing_UnitsQuantity,
+	
+	// Поля алкоголя
+	ЛОЖЬ 											КАК Product_Алко,
+	ЛОЖЬ 											КАК Packing_АлкоМарк,
+	"" 												КАК Packing_АлкоКод,
+	//ЕСТЬNULL(ВТ_Алкоголь.АлкоНаим, "") 				КАК Product_АлкоНаим,
+	0 												КАК Packing_АлкоОбъем,
+	0 												КАК Packing_АлкоКрепость,
+	//ЕСТЬNULL(ВТ_Алкоголь.АлкоКодВ, "") КАК АлкоКодВ,
+	//ЕСТЬNULL(ВТ_Алкоголь.АлкоНаимВ, "") КАК АлкоНаимВ,
+	"" 												КАК Packing_АлкоПроизводитель,
+	"" 												КАК Packing_АлкоПроизвИНН,
+	""									 			КАК Packing_АлкоПроизвКПП,	
+	                                      
+	// Остатки и цены
+	ВЫБОР 
+		КОГДА ЕСТЬNULL(ВТ_Цены.Цена, 0) &lt;&gt; 0 
+			ТОГДА ВТ_Цены.Цена
+		КОГДА ВТ_ЦеныБазовые.Цена ЕСТЬ NULL
+			ТОГДА 0
+		ИНАЧЕ ВТ_ЦеныБазовые.Цена * 
+				ВЫБОР
+					КОГДА ВТ_ШК_Упаковки.Упаковка.Числитель &lt;&gt; 0
+						ТОГДА ВТ_ШК_Упаковки.Упаковка.Числитель
+					ИНАЧЕ 1
+				КОНЕЦ / ВЫБОР
+					КОГДА ВТ_ШК_Упаковки.Упаковка.Знаменатель &lt;&gt; 0
+						ТОГДА ВТ_ШК_Упаковки.Упаковка.Знаменатель
+					ИНАЧЕ 1
+				КОНЕЦ
+	КОНЕЦ КАК Packing_price,
+	ЕСТЬNULL(ВТ_Остатки.Количество, 0)/ВТ_ШК_Упаковки.Коэффициент 		КАК Packing_qty,
+	
+	// Связь с характеристиками
+	ВЫБОР
+		КОГДА &amp;ИспользоватьХарактеристикиНоменклатуры
+			ТОГДА ВЫБОР
+					КОГДА ВТ_Номенклатура.ИспользованиеХарактеристик = ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.ОбщиеДляВидаНоменклатуры)
+						ТОГДА ВТ_Номенклатура.ВидНоменклатуры
+					КОГДА ВТ_Номенклатура.ИспользованиеХарактеристик = ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.ОбщиеСДругимВидомНоменклатуры)
+						ТОГДА ВТ_Номенклатура.ВладелецХарактеристик	
+					КОГДА ВТ_Номенклатура.ИспользованиеХарактеристик = ЗНАЧЕНИЕ(Перечисление.ВариантыИспользованияХарактеристикНоменклатуры.ИндивидуальныеДляНоменклатуры)
+						ТОГДА ВТ_Номенклатура.Номенклатура
+					ИНАЧЕ NULL
+				КОНЕЦ
+		ИНАЧЕ NULL
+	КОНЕЦ 											КАК Product_КлючХарактеристик_GUID,
+	ВТ_Номенклатура.ИспользоватьХарактеристики 		КАК Product_ПоХарактеристикам,
+	
+	// Связь с сериями
+	ВТ_Номенклатура.ИспользоватьСерии 				КАК Product_ПоСериям,
+	ВТ_Номенклатура.ИспользоватьСерийныеНомера		КАК Product_ПоСН,
+	ВЫБОР КОГДА 
+		ВТ_Номенклатура.ВидНоменклатуры.НастройкаИспользованияСерий В (Значение(Перечисление.НастройкиИспользованияСерийНоменклатуры.ПартияТоваровПоНомеру),Значение(Перечисление.НастройкиИспользованияСерийНоменклатуры.ПартияТоваровПоСрокуГодности),Значение(Перечисление.НастройкиИспользованияСерийНоменклатуры.ПартияТоваровПоНомеруИСрокуГодности))
+	ТОГДА
+		ВЫБОР КОГДА ВТ_ШК_Упаковки.Характеристика &lt;&gt; ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+		ТОГДА 
+			ВТ_ШК_Упаковки.Характеристика
+		ИНАЧЕ
+			ВТ_Номенклатура.Номенклатура
+		КОНЕЦ
+	ИНАЧЕ
+		ВТ_Номенклатура.ВидНоменклатуры
+	КОНЕЦ 										КАК Product_КлючСерий_GUID,
+	"" 												КАК Packing_ИдСерии_GUID	
+ИЗ
+	ВТ_ШК_Упаковки КАК ВТ_ШК_Упаковки
+	
+		// т.к. в каждой упаковке указана номенклатура, то можно использовать внутреннее соединение
+		// для получения полей номенклатуры
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Номенклатура КАК ВТ_Номенклатура
+		ПО ВТ_ШК_Упаковки.Номенклатура = ВТ_Номенклатура.Номенклатура		
+		
+		// для получения цен
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Цены КАК ВТ_Цены
+		ПО ВТ_ШК_Упаковки.Номенклатура = ВТ_Цены.Номенклатура
+			И ВТ_ШК_Упаковки.Характеристика = ВТ_Цены.Характеристика
+			И ВТ_ШК_Упаковки.Упаковка = ВТ_Цены.Упаковка
+			
+		// для расчета цен из других упаковок
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЦеныБазовые КАК ВТ_ЦеныБазовые
+		ПО ВТ_ШК_Упаковки.Номенклатура = ВТ_ЦеныБазовые.Номенклатура
+			И ВТ_ШК_Упаковки.Характеристика = ВТ_ЦеныБазовые.Характеристика
+			
+		// для получения остатков
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Остатки КАК ВТ_Остатки
+		ПО ВТ_ШК_Упаковки.Номенклатура = ВТ_Остатки.Номенклатура
+			И ВТ_ШК_Упаковки.Характеристика = ВТ_Остатки.Характеристика			
+			
+{ГДЕ
+	ВТ_Номенклатура.Номенклатура.* КАК Product_Id_GUID}
+
+УПОРЯДОЧИТЬ ПО
+	ВТ_Номенклатура.ЭтоГруппа УБЫВ,
+	ВТ_Номенклатура.Наименование,
+	ВТ_Номенклатура.Номенклатура,
+	ВТ_ШК_Упаковки.Штрихкод	
+	
+// ВНИМАНИЕ!!! НЕ ПОЛЬЗОВАТЬСЯ КОНСТРУКТОРОМ, ИНАЧЕ ВСЕ КОММЕНТАРИИ УДАЛЯТСЯ!!!</query>
+	</dataSet>
+	<parameter>
+		<name>ИспользоватьХарактеристикиНоменклатуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Использовать характеристики номенклатуры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>РежимЗапроса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Режим запроса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СтрокаПоиска</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Строка поиска</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>200</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ЧислоПоиска</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Число поиска</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>10</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+			<v8:StringQualifiers>
+				<v8:Length>50</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПараметрУпаковки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Параметр упаковки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>50</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Склад</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользоватьОграничениеПоСкладам</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Использовать ограничение по складам</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользоватьОграничениеПоТипамЦен</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Использовать ограничение по типам цен</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВидЦены</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цены</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаЦен</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата цен</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВыгружатьАртикул</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выгружать артикул</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВыгружатьКод</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выгружать код</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВыгружатьОстатки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выгружать остатки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВыгружатьЦены</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выгружать цены</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_Barcode</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_Id_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_Name</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_price</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_qty</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_UnitsQuantity</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_АлкоКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_АлкоКрепость</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_АлкоМарк</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_АлкоОбъем</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_АлкоПроизвИНН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_АлкоПроизвКПП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_АлкоПроизводитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_ИдЕдиницыИзмерения_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_ИдСерии_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_ИдХарактеристики_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Packing_ИмяХарактеристики</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_Barcode</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_BasePackingId_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_Id_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_Marking</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_Name</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_Алко</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_Весовой</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_КлючСерий_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_КлючХарактеристик_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_Маркировка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_ПоСериям</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_ПоСН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_ПоХарактеристикам</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Product_ЭтоГруппа</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Product_Id_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Packing_Id_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Packing_ИдХарактеристики_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Packing_ИдСерии_GUID</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Packing_Barcode</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Packing_price</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Packing_qty</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

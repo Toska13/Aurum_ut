@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2a8ebf8f-969d-4a9d-ba76-bb3b55bfac2e">
+  <name>КонтрольНеразделенныхОбъектовПриЗаписиИСМП</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль неразделенных объектов при записи ИС МП</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ВидыВозвратаВОборотИСМП</types>
+    <types>CatalogObject.ШаблоныРазбораКодовМаркировкиИСМП</types>
+    <types>CatalogObject.ШаблоныКодовМаркировкиСУЗ</types>
+    <types>CatalogObject.ПричиныВыводаИзОборотаИСМП</types>
+    <types>CatalogObject.ТоварныеГруппыГИСМТ</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.РаботаВМоделиСервисаБСП.КонтрольНеразделенныхОбъектовПриЗаписи</handler>
+</mdclass:EventSubscription>

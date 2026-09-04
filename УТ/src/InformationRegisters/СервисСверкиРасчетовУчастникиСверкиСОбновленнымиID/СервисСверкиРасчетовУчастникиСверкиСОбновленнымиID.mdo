@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a026f00b-27ab-4059-bd77-492d03fd97ba">
+  <producedTypes>
+    <selectionType typeId="09124afc-d4ee-4dc0-93ce-28052c921696" valueTypeId="d2f6d2b4-d7c6-4947-aaba-b1b0e443fe0e"/>
+    <listType typeId="5a4c9754-dbd1-4779-9d75-0554168f98ba" valueTypeId="b44839b0-1c1a-4114-8e72-c6042bbc8e14"/>
+    <managerType typeId="31c81907-0e6d-4e82-9860-b526c0ac2c6c" valueTypeId="9d1e765d-9e1e-4eab-8ae3-06e75cd2a7e8"/>
+    <recordSetType typeId="b3865d5f-a2e1-46d6-920c-940a930df99e" valueTypeId="349d6a31-4633-4080-b144-f0ea42bc7f17"/>
+    <recordKeyType typeId="c5b13550-beb6-4c82-9433-f6f33904b0c1" valueTypeId="a21706c8-cc68-4181-84d7-c8b5c9927fd1"/>
+    <recordType typeId="1b5e7c82-9d1f-4046-814b-d44712b53e3b" valueTypeId="dfbe545f-ae1b-4e82-b71f-a0a20d82de45"/>
+    <recordManagerType typeId="b6055c9e-9d78-4975-927d-9d15497070f8" valueTypeId="04754c01-bfff-4f1b-842d-a1bf9bde568b"/>
+  </producedTypes>
+  <name>СервисСверкиРасчетовУчастникиСверкиСОбновленнымиID</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервис сверки расчетов участники сверки с обновленными ID</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="f327e089-477d-40dc-993a-7d442df02368">
+    <name>ИдентификаторДоОбновления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор до обновления</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="cdf4af31-9bc0-4838-9c56-2a39e5c131dc">
+    <name>ИдентификаторПослеОбновления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор после обновления</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="d4a46f50-afa1-400e-970c-4dc617d2cb7e">
+    <name>УчастникСверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Участник сверки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

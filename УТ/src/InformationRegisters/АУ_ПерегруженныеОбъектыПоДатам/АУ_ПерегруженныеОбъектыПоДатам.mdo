@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c697a395-35ca-46b7-a93a-554440216f25">
+  <producedTypes>
+    <selectionType typeId="5e0e622c-f3ba-4cd7-b839-23a6823f1e7e" valueTypeId="3f4f281e-0c17-4262-9bd3-e77f3ce63ec2"/>
+    <listType typeId="ed9110ff-0dd9-4421-bc51-767b610904cf" valueTypeId="169ed244-5321-436f-9a23-933d8f9c2363"/>
+    <managerType typeId="882f9a87-c8e6-481c-ba44-d93e7f5a861e" valueTypeId="0a1563c5-e7a7-4c9a-9f8a-c12d2fc0c6a1"/>
+    <recordSetType typeId="51b52ab7-bdf1-4387-b0d8-fc77eb1e22e6" valueTypeId="8bdc1623-8b1f-4663-82f3-a9f6d657cf55"/>
+    <recordKeyType typeId="a735aed4-493a-4541-9179-62cd1d92c78d" valueTypeId="a0caae1a-a6cc-46c3-82e8-e26feebf25fe"/>
+    <recordType typeId="c18cfce7-1d66-4347-8f9f-f758842e217f" valueTypeId="137300a5-c692-4f3d-80f4-a4a582fc267b"/>
+    <recordManagerType typeId="914b9e91-afe8-49ad-b83c-0ba030fb7cd6" valueTypeId="76ce271a-9157-4eac-aba6-581acf3d64f6"/>
+  </producedTypes>
+  <name>АУ_ПерегруженныеОбъектыПоДатам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перегруженные объекты по датам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="16d15e26-7c5a-42b4-aaf4-26bfdea27933">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a46437ea-ba23-4817-9892-7c405407d48c">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>DocumentRef</types>
+      <types>CatalogRef</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cc857dd3-cb72-4cce-aac2-5ab1a514c03f">
+    <name>Узел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узел</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

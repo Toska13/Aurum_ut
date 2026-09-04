@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a9bdefe1-5fdd-4b89-94ea-f1bb8aa1e58a">
+  <name>АУ_ПередЗаписьюРНВыручкаИСебестоимостьПродаж</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перед записью РН 'Выручка и себестоимость продаж'</value>
+  </synonym>
+  <source>
+    <types>AccumulationRegisterRecordSet.ВыручкаИСебестоимостьПродаж</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.АУ_Привелигированный.АУ_ПередЗаписьюРНВыручкаИСебестоимостьПродажПередЗаписью</handler>
+</mdclass:EventSubscription>

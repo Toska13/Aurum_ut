@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>РасхожденияСверка20</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолучательОповещения</dataPath>
+			<field>ПолучательОповещения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получатель оповещения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсточникОповещения</dataPath>
+			<field>ИсточникОповещения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник оповещения</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокумента</dataPath>
+			<field>СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма документа</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ='2'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоКонтрагентов</dataPath>
+			<field>ВсегоКонтрагентов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего контрагентов</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСДокумента</dataPath>
+			<field>НДСДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДС документа</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ='2'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтекстОповещения</dataPath>
+			<field>КонтекстОповещения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекст оповещения</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:TypeSet xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef</v8:TypeSet>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВложенныйЗапрос.Ссылка КАК Ссылка,
+	ВложенныйЗапрос.Роль КАК Роль
+ПОМЕСТИТЬ втПрофилиСДоступомКСервисуСверки
+ИЗ
+	(ВЫБРАТЬ
+		РолиПрофиля.Ссылка КАК Ссылка,
+		РолиПрофиля.Роль КАК Роль
+	ИЗ
+		Справочник.ПрофилиГруппДоступа.Роли КАК РолиПрофиля
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыОбъектовМетаданных КАК Идентификаторы
+			ПО РолиПрофиля.Роль = Идентификаторы.Ссылка
+			И Идентификаторы.Имя = &amp;ИмяРолиДоступаКСервисуСверки
+			
+	ОБЪЕДИНИТЬ ВСЕ
+
+	ВЫБРАТЬ
+		РолиПрофиля.Ссылка КАК Ссылка,
+		РолиПрофиля.Роль КАК Роль
+	ИЗ
+		Справочник.ПрофилиГруппДоступа.Роли КАК РолиПрофиля
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыОбъектовМетаданных КАК Идентификаторы
+			ПО РолиПрофиля.Роль = Идентификаторы.Ссылка
+			И Идентификаторы.Имя = &amp;ИмяРолиПолныеПрава
+) КАК ВложенныйЗапрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ПользователиГруппДоступа.Пользователь КАК Пользователь,
+	ГруппыДоступа.Ссылка КАК ГруппаДоступа,
+	ГруппыДоступа.Профиль КАК Профиль
+ПОМЕСТИТЬ втПользователиСервисаСверки
+ИЗ
+	Справочник.ГруппыДоступа.Пользователи КАК ПользователиГруппДоступа
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ГруппыДоступа КАК ГруппыДоступа
+			ПО ПользователиГруппДоступа.Ссылка = ГруппыДоступа.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втПрофилиСДоступомКСервисуСверки КАК ПрофилиСДоступом
+			ПО (ГруппыДоступа.Профиль = ПрофилиСДоступом.Ссылка)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК ВсеПользователи
+		ПО ПользователиГруппДоступа.Пользователь = ВсеПользователи.Ссылка
+ГДЕ
+	НЕ ВсеПользователи.ПометкаУдаления
+	И НЕ ВсеПользователи.Недействителен
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УстраненныеРасхождения.Организация КАК Организация,
+	УстраненныеРасхождения.Контрагент КАК Контрагент,
+	СУММА(УстраненныеРасхождения.СуммаДокумента) КАК СуммаДокумента,
+	СУММА(УстраненныеРасхождения.НДСДокумента) КАК НДСДокумента
+ПОМЕСТИТЬ втУстраненыРасхожденияПредварительная
+ИЗ
+	РегистрСведений.СервисСверкиРасчетовУстраненныеРасхождения КАК УстраненныеРасхождения
+	ЛЕВОЕ СОЕДИНЕНИЕ ВТКэшРеквизитов КАК ВТКэшРеквизитов
+		ПО УстраненныеРасхождения.Организация = ВТКэшРеквизитов.Организация
+		И (УстраненныеРасхождения.Контрагент = ВТКэшРеквизитов.Контрагент
+			ИЛИ ВТКэшРеквизитов.Контрагент = НЕОПРЕДЕЛЕНО)
+ГДЕ
+	ВТКэшРеквизитов.Контрагент ЕСТЬ NULL
+	
+СГРУППИРОВАТЬ ПО
+	УстраненныеРасхождения.Организация,
+	УстраненныеРасхождения.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УстраненыРасхождения.Организация КАК Организация,
+	НЕОПРЕДЕЛЕНО КАК Контрагент,
+	КОЛИЧЕСТВО(УстраненыРасхождения.Контрагент) КАК ВсегоКонтрагентов,
+	СУММА(УстраненыРасхождения.СуммаДокумента) КАК СуммаДокумента,
+	СУММА(УстраненыРасхождения.НДСДокумента) КАК НДСДокумента
+ПОМЕСТИТЬ втМногоКонтрагентов
+ИЗ
+	втУстраненыРасхожденияПредварительная КАК УстраненыРасхождения
+
+СГРУППИРОВАТЬ ПО
+	УстраненыРасхождения.Организация
+ИМЕЮЩИЕ
+	КОЛИЧЕСТВО(УстраненыРасхождения.Контрагент) &gt; &amp;ПределГруппировки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МногоКонтрагентов.Организация КАК Организация,
+	МногоКонтрагентов.Контрагент КАК Контрагент,
+	МногоКонтрагентов.ВсегоКонтрагентов КАК ВсегоКонтрагентов,
+	МногоКонтрагентов.СуммаДокумента КАК СуммаДокумента,
+	МногоКонтрагентов.НДСДокумента КАК НДСДокумента
+ПОМЕСТИТЬ втУстраненыРасхождения
+ИЗ
+	втМногоКонтрагентов КАК МногоКонтрагентов
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УстраненыРасхождения.Организация КАК Организация,
+	УстраненыРасхождения.Контрагент КАК Контрагент,
+	1 КАК ВсегоКонтрагентов,
+	УстраненыРасхождения.СуммаДокумента КАК СуммаДокумента,
+	УстраненыРасхождения.НДСДокумента КАК НДСДокумента
+ИЗ
+	втУстраненыРасхожденияПредварительная КАК УстраненыРасхождения
+	ЛЕВОЕ СОЕДИНЕНИЕ втМногоКонтрагентов КАК МногоКонтрагентов
+	ПО УстраненыРасхождения.Организация = МногоКонтрагентов.Организация
+ГДЕ
+	МногоКонтрагентов.Организация ЕСТЬ NULL
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УстраненыРасхождения.Организация КАК ИсточникОповещения,
+	НЕОПРЕДЕЛЕНО КАК КонтекстОповещения,
+	ПользователиСервисаСверки.Пользователь КАК ПолучательОповещения,
+	УстраненыРасхождения.Организация КАК Организация,
+	УстраненыРасхождения.Контрагент КАК Контрагент,
+	УстраненыРасхождения.ВсегоКонтрагентов КАК ВсегоКонтрагентов,
+	ВЫРАЗИТЬ(УстраненыРасхождения.СуммаДокумента КАК ЧИСЛО(32,2)) КАК СуммаДокумента,
+	ВЫРАЗИТЬ(УстраненыРасхождения.НДСДокумента КАК ЧИСЛО(32,2)) КАК НДСДокумента
+ИЗ
+	втПользователиСервисаСверки КАК ПользователиСервисаСверки
+	ЛЕВОЕ СОЕДИНЕНИЕ втУстраненыРасхождения КАК УстраненыРасхождения
+	ПО ИСТИНА</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ТекстОповещения</dataPath>
+		<expression>ВЫБОР  
+	КОГДА Контрагент = НЕОПРЕДЕЛЕНО 
+		ТОГДА &amp;ПоДаннымСервиса+ " " + Представление(Организация) + &amp;УстраненыРасхожденияСКонтрагентами + " ("+ Строка(ВсегоКонтрагентов) + " " + &amp;ШтНаСумму + " " + Строка(СуммаДокумента) + " " + &amp;Руб
+	ИНАЧЕ
+		&amp;ПоДаннымСервиса + " " + Представление(Организация) + " 
+	" + &amp;УстраненыРасхожденияСКонтрагентом + " " + Представление(Контрагент) + " " + &amp;НаСумму + " " + Строка(СуммаДокумента) + " " + &amp;Руб
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текст оповещения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>250</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<parameter>
+		<name>ДатаАктуальности</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата актуальности</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ИмяРолиДоступаКСервисуСверки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Имя роли доступа к сервису сверки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>50</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">ИспользованиеСервисаСверкиРасчетов</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИмяРолиПолныеПрава</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Имя роли полные права</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">ПолныеПрава</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПустаяСтрока</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пустая строка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>1</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПределГруппировки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Предел группировки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">3</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоДаннымСервиса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По данным сервиса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>60</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">По данным сервиса Сверка 2.0 
+	По организации</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>УстраненыРасхожденияСКонтрагентами</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Устранены расхождения с контрагентами</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>60</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">устранены расхождения взаиморасчетов
+	по контрагентами</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>УстраненыРасхожденияСКонтрагентом</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>УстраненыРасхожденияСКонтрагентом</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>60</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">устранены расхождения взаиморасчетов по контрагенту</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ШтНаСумму</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ШтНаСумму</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>60</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">шт), на сумму</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НаСумму</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>НаСумму</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>60</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">на сумму</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Руб</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Руб</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>60</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">руб.</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>РасхожденияСумм</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождения сумм</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПолучательОповещения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИсточникОповещения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонтекстОповещения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НДСДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТекстОповещения</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПолучательОповещения</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПределГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовБежевый</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

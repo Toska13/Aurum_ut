@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fa2539e4-d078-46a1-8bd7-2fe5782a3fcd">
+  <producedTypes>
+    <selectionType typeId="d14d5a94-6b80-47ef-830a-991346072432" valueTypeId="6dbf73b4-7834-4d8a-851e-8a678a845d8b"/>
+    <listType typeId="aa792d9c-4622-4bfc-8836-396a77f98307" valueTypeId="416b606c-ee39-4ab3-b32b-2f9d53b6ecc4"/>
+    <managerType typeId="0169d307-42e6-42d2-9524-5f0a6788b899" valueTypeId="337457aa-4b8a-4c50-b422-fdfe2b34037f"/>
+    <recordSetType typeId="ec1bbfce-17c5-4026-94fe-bfeddeb79aaf" valueTypeId="c748ddb5-5e81-40be-8dbe-ce3c1239791c"/>
+    <recordKeyType typeId="47cc447d-ab93-4e8b-a4dd-78a22e4e53ca" valueTypeId="0c1bbe06-eabb-4469-bb89-fa5c107f0657"/>
+    <recordType typeId="55c7205d-c7db-4a70-ab58-ba434fb05b92" valueTypeId="dd728b61-98ca-4810-9ede-81d9d8cb04be"/>
+    <recordManagerType typeId="e4afa179-f67f-4194-86b2-9d21ac655a82" valueTypeId="4c28c367-e1d3-4a7b-bd70-21a445c2936e"/>
+  </producedTypes>
+  <name>КонтурЗакупки_ЗакупкиJSON</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закупки JSON (Контур.Закупки)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Закупка в формате JSON (Контур.Закупки)</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Закупки в формате JSON (Контур.Закупки)</value>
+  </listPresentation>
+  <resources uuid="58e05169-4947-4532-aaa6-72f7e66a2691">
+    <name>СтрокаJSON</name>
+    <synonym>
+      <key>ru</key>
+      <value>Строка JSON</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="13f7ea88-1951-465d-876c-ad1673374e8f">
+    <name>Закупка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закупка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтурЗакупки_Закупка</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

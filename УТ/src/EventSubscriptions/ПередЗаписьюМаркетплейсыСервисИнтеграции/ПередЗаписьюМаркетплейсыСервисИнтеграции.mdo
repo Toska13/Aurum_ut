@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ac9d9bc6-acf1-4cdb-ba5d-fe7bbc144999">
+  <name>ПередЗаписьюМаркетплейсыСервисИнтеграции</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перед записью типового объекта (Сервис интеграции)</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.Склады</types>
+    <types>CatalogObject.Номенклатура</types>
+    <types>CatalogObject.НоменклатураКонтрагентов</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ИнтеграцияСМаркетплейсамиСИ.ПередЗаписьюСервисИнтеграции</handler>
+</mdclass:EventSubscription>

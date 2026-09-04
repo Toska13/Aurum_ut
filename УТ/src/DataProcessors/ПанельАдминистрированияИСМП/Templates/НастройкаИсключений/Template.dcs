@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОсновнойНаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПродукции</dataPath>
+			<field>ВидПродукции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид продукции</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьЗначениеПоставляемое</dataPath>
+			<field>ЕстьЗначениеПоставляемое</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть значение поставляемое</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Значение</dataPath>
+			<field>Значение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операция</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьЗначениеПользователя</dataPath>
+			<field>ЕстьЗначениеПользователя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть значение пользователя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометка удаления</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИндексКартинки</dataPath>
+			<field>ИндексКартинки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс картинки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьСвязанныйЭлемент</dataPath>
+			<field>ЕстьСвязанныйЭлемент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть связанный элемент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеСвязанногоЭлемента</dataPath>
+			<field>ЗначениеСвязанногоЭлемента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение связанного элемента</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредставлениеСвязанногоЭлемента</dataPath>
+			<field>ПредставлениеСвязанногоЭлемента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление связанного элемента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеПоУмолчанию</dataPath>
+			<field>ЗначениеПоУмолчанию</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение по умолчанию</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ТаблицаСвязанныхЭлементов.ВидПродукции КАК ВидПродукции,
+	ТаблицаСвязанныхЭлементов.Значение КАК Значение,
+	ТаблицаСвязанныхЭлементов.СвязанныйЭлемент КАК СвязанныйЭлемент,
+	ТаблицаСвязанныхЭлементов.ЗначениеПоУмолчанию КАК ЗначениеПоУмолчанию
+ПОМЕСТИТЬ ТаблицаСвязанныхЭлементов
+ИЗ
+	&amp;ТаблицаСвязанныхЭлементов КАК ТаблицаСвязанныхЭлементов
+;
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияЭлементовКонструктора.ВидПродукции КАК ВидПродукции,
+	ЗначенияЭлементовКонструктора.Значение КАК Значение
+ПОМЕСТИТЬ ТекущиеЗначенияСвязанныхЭлементов
+ИЗ
+	ТаблицаСвязанныхЭлементов КАК ТаблицаСвязанныхЭлементов
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияЭлементовКонструктораВидовПродукцииИС КАК ЗначенияЭлементовКонструктора
+		ПО ТаблицаСвязанныхЭлементов.СвязанныйЭлемент = ЗначенияЭлементовКонструктора.ЭлементКонструктора
+		И ТаблицаСвязанныхЭлементов.ВидПродукции = ЗначенияЭлементовКонструктора.ВидПродукции
+	ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+		ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора
+		И ЗначенияЭлементовКонструктора.ВидПродукции = ЗначенияПользователяЭлементовКонструктора.ВидПродукции
+ГДЕ
+	ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора КАК ЭлементКонструктора,
+	ЗначенияПользователяЭлементовКонструктора.ВидПродукции КАК ВидПродукции,
+	ЗначенияПользователяЭлементовКонструктора.Значение КАК Значение
+ИЗ
+	ТаблицаСвязанныхЭлементов КАК ТаблицаСвязанныхЭлементов
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+		ПО ТаблицаСвязанныхЭлементов.СвязанныйЭлемент = ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора
+		И ТаблицаСвязанныхЭлементов.ВидПродукции = ЗначенияПользователяЭлементовКонструктора.ВидПродукции
+ГДЕ
+	НЕ ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления
+;
+ВЫБРАТЬ
+	ТаблицаСвязанныхЭлементов.ВидПродукции КАК ВидПродукции,
+	ТаблицаСвязанныхЭлементов.Значение КАК Значение,
+	МАКСИМУМ(ТекущиеЗначенияСвязанныхЭлементов.Значение) КАК СвязанныйЭлементЗначение,
+	ПРЕДСТАВЛЕНИЕ(МАКСИМУМ(ТаблицаСвязанныхЭлементов.СвязанныйЭлемент)) КАК СвязанныйЭлементПредставление
+ПОМЕСТИТЬ ЗначенияСвязанныхЭлементов
+ИЗ
+	ТаблицаСвязанныхЭлементов КАК ТаблицаСвязанныхЭлементов
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТекущиеЗначенияСвязанныхЭлементов КАК ТекущиеЗначенияСвязанныхЭлементов
+	ПО ТаблицаСвязанныхЭлементов.СвязанныйЭлемент = ТекущиеЗначенияСвязанныхЭлементов.ЭлементКонструктора
+	И ТаблицаСвязанныхЭлементов.ВидПродукции = ТекущиеЗначенияСвязанныхЭлементов.ВидПродукции
+	И ТекущиеЗначенияСвязанныхЭлементов.Значение &lt;&gt; ДАТАВРЕМЯ(1,1,1)
+СГРУППИРОВАТЬ ПО
+	ТаблицаСвязанныхЭлементов.ВидПродукции,
+	ТаблицаСвязанныхЭлементов.Значение
+;
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗначенияЭлементовКонструктора.ВидПродукции
+ПОМЕСТИТЬ ДоступныеВидыПродукции
+ИЗ
+	РегистрСведений.ЗначенияЭлементовКонструктораВидовПродукцииИС КАК ЗначенияЭлементовКонструктора
+	ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+		ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора
+		И ЗначенияЭлементовКонструктора.ВидПродукции = ЗначенияПользователяЭлементовКонструктора.ВидПродукции
+ГДЕ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора = ЗНАЧЕНИЕ(Справочник.ЭлементыКонструктораВидовПродукцииИС.ВидыПродукцииГИСМТ)
+	И ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияПользователяЭлементовКонструктора.ВидПродукции КАК ВидПродукции
+ИЗ
+	РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+ГДЕ
+	ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора = ЗНАЧЕНИЕ(Справочник.ЭлементыКонструктораВидовПродукцииИС.ВидыПродукцииГИСМТ)
+	И НЕ ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления
+;
+ВЫБРАТЬ
+	ДоступныеЗначения.Значение КАК Значение
+ПОМЕСТИТЬ ДоступныеЗначения
+ИЗ
+	РегистрСведений.ДоступныеЗначенияЭлементовКонструктораВидовПродукцииИС КАК ДоступныеЗначения
+ГДЕ
+	ДоступныеЗначения.ЭлементКонструктора = &amp;ЭлементКонструктора
+	И НЕ ДоступныеЗначения.ПометкаУдаления
+	
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияЭлементовКонструктора.Значение КАК Значение
+ИЗ
+	РегистрСведений.ЗначенияЭлементовКонструктораВидовПродукцииИС КАК ЗначенияЭлементовКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДоступныеВидыПродукции КАК ДоступныеВидыПродукции
+		ПО ЗначенияЭлементовКонструктора.ВидПродукции = ДоступныеВидыПродукции.ВидПродукции
+ГДЕ
+	ЗначенияЭлементовКонструктора.ЭлементКонструктора = &amp;ЭлементКонструктора
+	
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ЗначенияПользователяЭлементовКонструктора.Значение КАК Значение
+ИЗ
+	РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДоступныеВидыПродукции КАК ДоступныеВидыПродукции
+		ПО ЗначенияПользователяЭлементовКонструктора.ВидПродукции = ДоступныеВидыПродукции.ВидПродукции
+ГДЕ
+	ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора = &amp;ЭлементКонструктора
+	И НЕ ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления
+;
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ДоступныеВидыПродукции.ВидПродукции КАК ВидПродукции,
+	ДоступныеЗначения.Значение КАК Значение,
+	НЕ ЗначенияЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL КАК ЕстьЗначениеПоставляемое,
+	НЕ ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL КАК ЕстьЗначениеПользователя,
+	ЕСТЬNULL(ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления, ЛОЖЬ) КАК ПометкаУдаления,
+	НЕ ТаблицаСвязанныхЭлементов.СвязанныйЭлемент ЕСТЬ NULL КАК ЕстьСвязанныйЭлемент,
+	ЕСТЬNULL(ЗначенияСвязанныхЭлементов.СвязанныйЭлементЗначение, ДАТАВРЕМЯ(1,1,1)) КАК ЗначениеСвязанногоЭлемента,
+	ЕСТЬNULL(СвязанныйЭлементПредставление, "") КАК ПредставлениеСвязанногоЭлемента,
+	ТаблицаСвязанныхЭлементов.ЗначениеПоУмолчанию КАК ЗначениеПоУмолчанию,
+	ВЫБОР
+		КОГДА
+			ТаблицаСвязанныхЭлементов.СвязанныйЭлемент ЕСТЬ NULL
+			И (НЕ ЗначенияЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+				ИЛИ НЕ ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL)
+			И НЕ ЕСТЬNULL(ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления, ЛОЖЬ)
+			ИЛИ
+			НЕ ТаблицаСвязанныхЭлементов.СвязанныйЭлемент ЕСТЬ NULL
+			И НЕ ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+			И НЕ ЕСТЬNULL(ЗначенияПользователяЭлементовКонструктора.ПометкаУдаления, ЛОЖЬ)
+			ИЛИ
+			НЕ ТаблицаСвязанныхЭлементов.СвязанныйЭлемент ЕСТЬ NULL
+			И ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+			И (&amp;ТекущаяДата &gt;= ЕСТЬNULL(ЗначенияСвязанныхЭлементов.СвязанныйЭлементЗначение, ДОБАВИТЬКДАТЕ(&amp;ТекущаяДата, День, 1))
+				ИЛИ &amp;ТекущаяДата &lt; ЕСТЬNULL(ЗначенияСвязанныхЭлементов.СвязанныйЭлементЗначение, ДОБАВИТЬКДАТЕ(&amp;ТекущаяДата, День, 1))
+				И ТаблицаСвязанныхЭлементов.ЗначениеПоУмолчанию)
+		ТОГДА 1
+		КОГДА
+			НЕ ТаблицаСвязанныхЭлементов.СвязанныйЭлемент ЕСТЬ NULL
+			И ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора ЕСТЬ NULL
+			И ЕСТЬNULL(ЗначенияСвязанныхЭлементов.СвязанныйЭлементЗначение, ДАТАВРЕМЯ(1,1,1)) &lt;&gt; ДАТАВРЕМЯ(1,1,1)
+			И &amp;ТекущаяДата &lt; ЕСТЬNULL(ЗначенияСвязанныхЭлементов.СвязанныйЭлементЗначение, ДАТАВРЕМЯ(1,1,1))
+		ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИндексКартинки
+ИЗ
+	ДоступныеВидыПродукции КАК ДоступныеВидыПродукции
+	ПОЛНОЕ СОЕДИНЕНИЕ ДоступныеЗначения КАК ДоступныеЗначения
+		ПО ИСТИНА
+	ЛЕВОЕ СОЕДИНЕНИЕ ТаблицаСвязанныхЭлементов КАК ТаблицаСвязанныхЭлементов
+		ПО ТаблицаСвязанныхЭлементов.ВидПродукции = ДоступныеВидыПродукции.ВидПродукции
+		И ТаблицаСвязанныхЭлементов.Значение = ДоступныеЗначения.Значение
+	ЛЕВОЕ СОЕДИНЕНИЕ ЗначенияСвязанныхЭлементов КАК ЗначенияСвязанныхЭлементов
+		ПО ЗначенияСвязанныхЭлементов.ВидПродукции = ДоступныеВидыПродукции.ВидПродукции
+		И ЗначенияСвязанныхЭлементов.Значение = ДоступныеЗначения.Значение
+	ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияЭлементовКонструктораВидовПродукцииИС КАК ЗначенияЭлементовКонструктора
+		ПО ЗначенияЭлементовКонструктора.ЭлементКонструктора = &amp;ЭлементКонструктора
+		И ЗначенияЭлементовКонструктора.ВидПродукции = ДоступныеВидыПродукции.ВидПродукции
+		И ЗначенияЭлементовКонструктора.Значение = ДоступныеЗначения.Значение
+	ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПользователяЭлементовКонструктораВидовПродукцииИС КАК ЗначенияПользователяЭлементовКонструктора
+		ПО ЗначенияПользователяЭлементовКонструктора.ЭлементКонструктора = &amp;ЭлементКонструктора
+		И ЗначенияПользователяЭлементовКонструктора.ВидПродукции = ДоступныеВидыПродукции.ВидПродукции
+		И ЗначенияПользователяЭлементовКонструктора.Значение = ДоступныеЗначения.Значение</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ПредставлениеЗначения</dataPath>
+		<expression>Представление(Значение)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление значения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>100</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>ИндексКартинки</dataPath>
+		<expression>Максимум(ИндексКартинки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕстьЗначениеПользователя</dataPath>
+		<expression>Максимум(ЕстьЗначениеПользователя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕстьЗначениеПоставляемое</dataPath>
+		<expression>Максимум(ЕстьЗначениеПоставляемое)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕстьСвязанныйЭлемент</dataPath>
+		<expression>Максимум(ЕстьСвязанныйЭлемент)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПометкаУдаления</dataPath>
+		<expression>Максимум(ПометкаУдаления)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеСвязанногоЭлемента</dataPath>
+		<expression>Максимум(ЗначениеСвязанногоЭлемента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПредставлениеСвязанногоЭлемента</dataPath>
+		<expression>Максимум(ПредставлениеСвязанногоЭлемента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеПоУмолчанию</dataPath>
+		<expression>Максимум(ЗначениеПоУмолчанию)</expression>
+	</totalField>
+	<parameter>
+		<name>ТаблицаСвязанныхЭлементов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Таблица связанных элементов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:ValueTable</v8:Type>
+		</valueType>
+		<value xsi:type="v8:ValueTable"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЭлементКонструктора</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Элемент конструктора</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЭлементыКонструктораВидовПродукцииИС</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ВидПродукции</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:TextFont" kind="StyleItem" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ОриентацияТекста</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">90</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">100</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ВидПродукции</dcsat:name>
+			<dcsat:expression>Представление(ВидПродукции)</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ИндексКартинки</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">ИндексКартинкиРасшифровка</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ИндексКартинки</dcsat:name>
+			<dcsat:expression>ИндексКартинки</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>ИндексКартинкиРасшифровка</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>ВидПродукции</dcsat:field>
+				<dcsat:expression>ВидПродукции</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЕстьЗначениеПользователя</dcsat:field>
+				<dcsat:expression>ЕстьЗначениеПользователя</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЕстьЗначениеПоставляемое</dcsat:field>
+				<dcsat:expression>ЕстьЗначениеПоставляемое</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЕстьСвязанныйЭлемент</dcsat:field>
+				<dcsat:expression>ЕстьСвязанныйЭлемент</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>Значение</dcsat:field>
+				<dcsat:expression>Значение</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеСвязанногоЭлемента</dcsat:field>
+				<dcsat:expression>ЗначениеСвязанногоЭлемента</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ИндексКартинки</dcsat:field>
+				<dcsat:expression>ИндексКартинки</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ПометкаУдаления</dcsat:field>
+				<dcsat:expression>ПометкаУдаления</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ПредставлениеСвязанногоЭлемента</dcsat:field>
+				<dcsat:expression>ПредставлениеСвязанногоЭлемента</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеПоУмолчанию</dcsat:field>
+				<dcsat:expression>ЗначениеПоУмолчанию</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell/>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Картинка</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Picture" ref="v8ui:УспешнаяПроверкаНаличияГосИС"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Контроль включен.</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Картинка</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Picture" ref="v8ui:ПодтвердитьПолучениеГосИС"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Контроль пока отключен. Будет автоматически включен при наступлении контрольной даты. Можно включить контроль прямо сейчас.</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отсутствие флажка означает, что контроль отключен.</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/colors/windows" xsi:type="v8ui:Color">d8p1:ButtonFace</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Серым фоном выделяется ячейка, контроль в которой не может быть отключен, т.к. указана дата начала контроля.</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:ЦветФонаИзмененногоЗначенияПользователяГосИС</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Желтым фоном выделяется ячейка, контроль в которой был изменен пользователем ранее.</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:ЦветФонаИзмененногоЗначенияГосИС</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">3</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Зеленым фоном выделяется ячейка, контроль в которой изменен пользователем в текущей настройке и еще не сохранен.</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<fieldTemplate>
+		<field>ИндексКартинки</field>
+		<template>Макет2</template>
+	</fieldTemplate>
+	<groupTemplate>
+		<groupField>ВидПродукции</groupField>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Легенда</groupName>
+		<templateType>Header</templateType>
+		<template>Макет3</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТаблицаСвязанныхЭлементов</dcscor:parameter>
+					<dcscor:value xsi:type="v8:ValueTable"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТекущаяДата</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидПродукции</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВидПродукции</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ИндексКартинки</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВидПродукции</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>МаксимальнаяВысота</dcscor:parameter>
+									<dcscor:value xsi:type="xs:decimal">70</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+							<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+							<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+							<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+							<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+							<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+							<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+							<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+							<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ИндексКартинки</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string"/>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ВертикальноеПоложениеКартинки</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ГоризонтальноеПоложениеКартинки</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ИндексКартинки</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ИндексКартинки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">2</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Картинка</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Picture" ref="v8ui:ПодтвердитьПолучениеГосИС"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ИндексКартинки</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ИндексКартинки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Картинка</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Picture" ref="v8ui:УспешнаяПроверкаНаличияГосИС"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ИндексКартинки</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЕстьЗначениеПользователя</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаИзмененногоЗначенияПользователяГосИС</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ИндексКартинки</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЕстьЗначениеПользователя</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЕстьСвязанныйЭлемент</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеСвязанногоЭлемента</dcsset:left>
+									<dcsset:comparisonType>Filled</dcsset:comparisonType>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеСвязанногоЭлемента</dcsset:left>
+									<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.ТекущаяДата</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">win:ButtonFace</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Значение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ПредставлениеЗначения</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:row>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Легенда</dcsset:name>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

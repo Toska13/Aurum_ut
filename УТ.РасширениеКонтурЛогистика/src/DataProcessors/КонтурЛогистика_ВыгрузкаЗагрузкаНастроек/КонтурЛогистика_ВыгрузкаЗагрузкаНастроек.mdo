@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b4766d7b-cde7-40eb-9e8f-fe6a9d238ef2">
+  <producedTypes>
+    <objectType typeId="6676613d-115e-4e8f-b119-36e7bf8b9b25" valueTypeId="574a4e87-33ae-4fc4-9001-43f6c3ab7965"/>
+    <managerType typeId="9cfbefa6-1114-4d50-9e97-99bb7ea848c8" valueTypeId="e5475625-f4ba-4449-be0b-bc616a9208e9"/>
+  </producedTypes>
+  <name>КонтурЛогистика_ВыгрузкаЗагрузкаНастроек</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгрузка и загрузка настроек (формат XML) (Контур.Логистика)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КонтурЛогистика_ВыгрузкаЗагрузкаНастроек.Form.Форма</defaultForm>
+  <attributes uuid="4832de4c-8570-42e1-bfd8-f57285a88100">
+    <name>ИмяФайлаВыгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла выгрузки</value>
+    </synonym>
+    <synonym>
+      <key>ru_RU</key>
+      <value>Имя файла выгрузки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="43f80682-515c-4d59-ba8d-3f85e5b169b2">
+    <name>ДеревоМетаданных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дерево метаданных</value>
+    </synonym>
+    <type>
+      <types>ValueTree</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0dc66d4b-b2b5-441a-8fdc-dd946a5674de">
+    <name>ПродолжитьЗагрузкуВСлучаеВозникновенияОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продолжить загрузку в случае возникновения ошибки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="f94a1792-88d8-41aa-8d10-97cbed33d6b0">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f70e2a68-4fd7-43c1-af5f-7cbca51fd44a">
+    <name>ФормаВыборОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбор объекта</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="26dcace2-716c-45a8-8d05-aa4f95e6ab12">
+    <name>ВыгрузитьНастройки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выгрузить настройки</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>PictureAndText</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Выгружает настройку в файл</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.КонтурЛогистика_ВыгрузитьXML</picture>
+    </picture>
+  </commands>
+</mdclass:DataProcessor>

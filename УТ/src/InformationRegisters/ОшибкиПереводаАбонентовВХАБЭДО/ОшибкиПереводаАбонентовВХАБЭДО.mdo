@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9fd85b6c-9bf8-4978-b995-6a5f9dabb901">
+  <producedTypes>
+    <selectionType typeId="a0ddbf67-b86d-434b-87f3-4ec17580a9a0" valueTypeId="334e3645-9ce4-4782-8e73-e9710ab26545"/>
+    <listType typeId="fc06c9a5-33ae-401b-b4c6-4195a5572a9a" valueTypeId="d3289568-0ba4-459b-b618-7a8cea4509f7"/>
+    <managerType typeId="f7495a77-7c74-4edb-a222-ce8b55b908ca" valueTypeId="85795e2a-06e9-4863-bc59-2d0f0f52b8d0"/>
+    <recordSetType typeId="da7c1b69-5ce7-4e7f-ba4b-28c510c46449" valueTypeId="a832a8ea-0dfd-4884-943d-ae38b530b9e1"/>
+    <recordKeyType typeId="ecb807ea-6200-4de8-a1c9-9a28e2a637d9" valueTypeId="c0d76b0e-2097-4261-93a5-2095327b17b1"/>
+    <recordType typeId="2d2f94f6-d41a-45ed-8c6d-170dc5062c5a" valueTypeId="88babf17-1113-4ef2-9cb3-74668ca54095"/>
+    <recordManagerType typeId="e4f3ef93-d532-48cd-a18e-95771bfc4e97" valueTypeId="c692bcaa-08e9-455d-a5c9-22062ba38b8a"/>
+  </producedTypes>
+  <name>ОшибкиПереводаАбонентовВХАБЭДО</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ошибки перевода абонентов в ХАБ </value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e67a3c4f-50cc-4bd4-b3f2-95a55de72b7f">
+    <name>ТекстОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="97742a20-507e-4b3f-b936-23abd5225412">
+    <name>ИдентификаторЭДО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор ЭДО</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>70</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Уникальный идентификатор участника в обмене электронными документами</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bb60a734-1100-4183-a33f-1eee4b69c3a5">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="5cf25050-c368-44fc-94c9-07fba4c2ee52">
+    <name>ИдентификаторОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9b557a05-35e9-474e-9544-f4f888deba36">
+  <producedTypes>
+    <selectionType typeId="c207d60c-8464-4b5b-b3eb-b1e082a8f9fc" valueTypeId="94cc72cb-31ba-4cc7-a126-6ea7203509ca"/>
+    <listType typeId="ecc4a6cf-91f7-429b-ac39-d67719aae8f0" valueTypeId="e851ac19-08b9-4aef-98c1-a9155aeca558"/>
+    <managerType typeId="388f1caf-441a-4853-901a-eeb968300211" valueTypeId="8ea4f8c7-0551-4b17-9683-44dbdae2c852"/>
+    <recordSetType typeId="c98339ac-b92a-4f43-853d-940007a0db0e" valueTypeId="2c9d5ddc-4ea9-4c9e-be49-36c7db5764ef"/>
+    <recordKeyType typeId="eb65a8bd-8418-4b3b-ae6a-3351a04132af" valueTypeId="9c34acae-7f7f-42a8-bb56-ea9c1719ebcd"/>
+    <recordType typeId="6daa7430-be49-4828-aa52-dbe470d184b9" valueTypeId="ff74d3d3-b6c7-47ee-a0ac-f8abd272217f"/>
+    <recordManagerType typeId="ab224318-ddd1-4d03-8ab3-234db56bd507" valueTypeId="5bc3202c-350f-469b-a22d-6ea41326d540"/>
+  </producedTypes>
+  <name>КонтурЗакупки_ПривязкаОбработкиЗакупки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Привязка обработки закупки (Контур.Закупки)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Привязка обработки закупки (Контур.Закупки)</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Привязки обработки закупки  (Контур.Закупки)</value>
+  </listPresentation>
+  <resources uuid="1e4e2b60-9375-462e-81ab-32103c6b8c56">
+    <name>ИдентификаторОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="eb5f5a15-0afe-4301-b2a6-3a10f12e6b20">
+    <name>Представление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Представление</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="4dee6a29-54a5-4c87-9e26-d42938e94597">
+    <name>ОбработкаЗакупки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обработка закупки</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтурЗакупки_ОбработкаЗакупки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6ebb260c-e715-4c7a-bead-3121615aadfd">
+    <name>ТипОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="875f65ec-d0b9-448f-a3ea-18237ddddd14">
+    <name>Назначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначение</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="92fd44fd-5d17-4ed8-8cc9-7fe45c582da3">
+  <name>edo</name>
+  <synonym>
+    <key>ru</key>
+    <value>Edo</value>
+  </synonym>
+  <comment>Центр ЭДО</comment>
+  <rootURL>edo</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="99742e17-5941-46cf-9692-d7ecbb5f83de">
+    <name>rpc</name>
+    <synonym>
+      <key>ru</key>
+      <value>rpc</value>
+    </synonym>
+    <template>/rpc</template>
+    <methods uuid="44d9e140-c5a6-412b-8b1b-d0f3c6b50c33">
+      <name>post</name>
+      <synonym>
+        <key>ru</key>
+        <value>Post</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>УдаленныйВызовМетодаЧерезТелоЗапроса</handler>
+    </methods>
+    <methods uuid="58291049-19fd-4135-bf8b-d384f2101edd">
+      <name>get</name>
+      <synonym>
+        <key>ru</key>
+        <value>Get</value>
+      </synonym>
+      <handler>УдаленныйВызовМетодаЧерезПараметрыЗапроса</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

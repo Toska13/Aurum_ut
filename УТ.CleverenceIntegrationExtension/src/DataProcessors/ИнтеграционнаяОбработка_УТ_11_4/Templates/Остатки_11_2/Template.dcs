@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Остатки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Назначение</dataPath>
+			<field>Назначение</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Упаковка</dataPath>
+			<field>Упаковка</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдСклада_GUID</dataPath>
+			<field>ИдСклада_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Помещение</dataPath>
+			<field>Помещение</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ячейка</dataPath>
+			<field>Ячейка</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдЯчейки_GUID</dataPath>
+			<field>ИдЯчейки_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ячейка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдСерии_GUID</dataPath>
+			<field>ИдСерии_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдТовара_GUID</dataPath>
+			<field>ИдТовара_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдЕдиницыИзмерения_GUID</dataPath>
+			<field>ИдЕдиницыИзмерения_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдХарактеристики_GUID</dataPath>
+			<field>ИдХарактеристики_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерийныйНомер</dataPath>
+			<field>СерийныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серийный номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКРазмещению</dataPath>
+			<field>КоличествоКРазмещению</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество к размещению</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодТовара</dataPath>
+			<field>КодТовара</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код товара</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВНаличии</dataPath>
+			<field>КоличествоВНаличии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество в наличии</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдТранспортнойУпаковки_GUID</dataPath>
+			<field>ИдТранспортнойУпаковки_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид транспортной упаковки GUID</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Марка</dataPath>
+			<field>Марка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Марка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКОтбору</dataPath>
+			<field>КоличествоКОтбору</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество к отбору</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрихкодУпаковочногоЛиста</dataPath>
+			<field>ШтрихкодУпаковочногоЛиста</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод упаковочного листа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТоварыНаСкладахОстатки.Склад КАК Склад,
+	ТоварыНаСкладахОстатки.Помещение КАК Помещение,
+	ТоварыНаСкладахОстатки.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладахОстатки.Характеристика КАК Характеристика,
+	ТоварыНаСкладахОстатки.Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	ТоварыНаСкладахОстатки.Серия КАК Серия,
+	СУММА(ТоварыНаСкладахОстатки.ВНаличииОстаток) КАК КоличествоВНаличии
+ПОМЕСТИТЬ ВТ_ТоварыВНаличии
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах.Остатки(, {(Номенклатура).* КАК ИдТовара_GUID}) КАК ТоварыНаСкладахОстатки
+
+СГРУППИРОВАТЬ ПО
+	ТоварыНаСкладахОстатки.Склад,
+	ТоварыНаСкладахОстатки.Помещение,
+	ТоварыНаСкладахОстатки.Номенклатура,
+	ТоварыНаСкладахОстатки.Характеристика,
+	ТоварыНаСкладахОстатки.Серия
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТоварыВЯчейкахОстатки.Номенклатура КАК Номенклатура,
+	ТоварыВЯчейкахОстатки.Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	ТоварыВЯчейкахОстатки.Характеристика КАК Характеристика,
+	ТоварыВЯчейкахОстатки.Серия КАК Серия,
+	ТоварыВЯчейкахОстатки.Ячейка КАК Ячейка,
+	ТоварыВЯчейкахОстатки.Ячейка.Помещение КАК Помещение,
+	ТоварыВЯчейкахОстатки.Ячейка.Владелец КАК Склад,
+	СУММА(ТоварыВЯчейкахОстатки.ВНаличииОстаток) КАК КоличествоВНаличии,
+	СУММА(ТоварыВЯчейкахОстатки.КОтборуОстаток) КАК КоличествоКОтбору,
+	СУММА(ТоварыВЯчейкахОстатки.КРазмещениюОстаток) КАК КоличествоКРазмещению
+ПОМЕСТИТЬ ВТ_ТоварыВЯчейках
+ИЗ
+	РегистрНакопления.ТоварыВЯчейках.Остатки(, {(Номенклатура).* КАК ИдТовара_GUID}) КАК ТоварыВЯчейкахОстатки
+
+СГРУППИРОВАТЬ ПО
+	ТоварыВЯчейкахОстатки.Номенклатура,
+	ТоварыВЯчейкахОстатки.Характеристика,
+	ТоварыВЯчейкахОстатки.Серия,
+	ТоварыВЯчейкахОстатки.Ячейка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УпаковочныйЛистТовары.Ссылка.Код КАК ШтрихкодУпаковочногоЛиста,
+	УпаковочныйЛистТовары.Номенклатура КАК Номенклатура,
+	УпаковочныйЛистТовары.Характеристика КАК Характеристика,
+	УпаковочныйЛистТовары.Серия КАК Серия,
+	УпаковочныйЛистТовары.Упаковка КАК Упаковка,
+	УпаковочныйЛистТовары.КоличествоУпаковок КАК КоличествоУпаковок
+ПОМЕСТИТЬ ВТ_УпаковочныеЛисты
+ИЗ
+	Документ.УпаковочныйЛист.Товары КАК УпаковочныйЛистТовары
+ГДЕ
+	&amp;ВыгружатьУпаковочныеЛисты
+	И УпаковочныйЛистТовары.Ссылка.Проведен = Истина
+	И УпаковочныйЛистТовары.ЭтоУпаковочныйЛист = Ложь
+	И УпаковочныйЛистТовары.УпаковочныйЛистРодитель = ЗНАЧЕНИЕ(Документ.УпаковочныйЛист.ПустаяСсылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВЫБОР
+		КОГДА ВТ_ТоварыВНаличии.Помещение &lt;&gt; ЗНАЧЕНИЕ(Справочник.СкладскиеПомещения.ПустаяСсылка)
+			ТОГДА ВТ_ТоварыВНаличии.Помещение
+		ИНАЧЕ ВТ_ТоварыВНаличии.Склад
+	КОНЕЦ КАК ИдСклада_GUID,
+	"" КАК ИдЯчейки_GUID,
+	ВТ_ТоварыВНаличии.Номенклатура КАК ИдТовара_GUID,
+	ВТ_ТоварыВНаличии.ЕдиницаИзмерения КАК ИдЕдиницыИзмерения_GUID,
+	ВТ_ТоварыВНаличии.Характеристика КАК ИдХарактеристики_GUID,
+	ВТ_ТоварыВНаличии.Серия КАК ИдСерии_GUID,
+	"" КАК СерийныйНомер,
+	ВТ_ТоварыВНаличии.КоличествоВНаличии КАК КоличествоВНаличии,
+	0 КАК КоличествоКОтбору,
+	0 КАК КоличествоКРазмещению,
+	"" КАК КодТовара,
+	"" КАК ИдТранспортнойУпаковки_GUID,
+	"" КАК Марка,
+	"" КАК ШтрихкодУпаковочногоЛиста
+ИЗ
+	ВТ_ТоварыВНаличии КАК ВТ_ТоварыВНаличии
+{ГДЕ
+	ВТ_ТоварыВНаличии.Номенклатура.* КАК ИдТовара_GUID}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ВТ_ТоварыВЯчейках.Помещение &lt;&gt; ЗНАЧЕНИЕ(Справочник.СкладскиеПомещения.ПустаяСсылка)
+			ТОГДА ВТ_ТоварыВЯчейках.Помещение
+		ИНАЧЕ ВТ_ТоварыВЯчейках.Склад
+	КОНЕЦ,
+	ВТ_ТоварыВЯчейках.Ячейка,
+	ВТ_ТоварыВЯчейках.Номенклатура,
+	ВТ_ТоварыВЯчейках.ЕдиницаИзмерения,
+	ВТ_ТоварыВЯчейках.Характеристика,
+	ВТ_ТоварыВЯчейках.Серия,
+	"",
+	ВТ_ТоварыВЯчейках.КоличествоВНаличии,
+	ВТ_ТоварыВЯчейках.КоличествоКОтбору,
+	ВТ_ТоварыВЯчейках.КоличествоКРазмещению,
+	"",
+	"",
+	"",
+	""
+ИЗ
+	ВТ_ТоварыВЯчейках КАК ВТ_ТоварыВЯчейках
+{ГДЕ
+	ВТ_ТоварыВЯчейках.Номенклатура.* КАК ИдТовара_GUID}
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"",
+	ЗНАЧЕНИЕ(Справочник.СкладскиеЯчейки.ПустаяСсылка),
+	УпакЛисты.Номенклатура,
+	ВЫБОР
+		КОГДА УпакЛисты.Упаковка = ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА УпакЛисты.Номенклатура.ЕдиницаИзмерения
+		ИНАЧЕ УпакЛисты.Упаковка
+	КОНЕЦ,
+	УпакЛисты.Характеристика,
+	УпакЛисты.Серия,
+	"",
+	УпакЛисты.КоличествоУпаковок,
+	0,
+	0,
+	"",
+	"",
+	"",
+	УпакЛисты.ШтрихкодУпаковочногоЛиста
+ИЗ
+	ВТ_УпаковочныеЛисты КАК УпакЛисты
+{ГДЕ
+	УпакЛисты.Номенклатура.* КАК ИдТовара_GUID}</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВыгружатьУпаковочныеЛисты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выгружать упаковочные листы</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдСклада_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдЯчейки_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдТовара_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдЕдиницыИзмерения_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдХарактеристики_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдСерии_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СерийныйНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВНаличии</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоКОтбору</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоКРазмещению</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодТовара</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдТранспортнойУпаковки_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Марка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШтрихкодУпаковочногоЛиста</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдСклада_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдЯчейки_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдТранспортнойУпаковки_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдТовара_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдЕдиницыИзмерения_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдХарактеристики_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдСерии_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыгружатьУпаковочныеЛисты</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

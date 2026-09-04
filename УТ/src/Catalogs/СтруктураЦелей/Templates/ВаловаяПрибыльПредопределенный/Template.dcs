@@ -1,0 +1,2233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetObject">
+		<name>ТаблицаПериодов</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<objectName>ТаблицаПериодов</objectName>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ЦелевыеЗначения</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦелевоеЗначение</dataPath>
+			<field>ЦелевоеЗначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цель</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОтклоненияОтЦелевогоЗначения</dataPath>
+			<field>ВидОтклоненияОтЦелевогоЗначения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид отклонения от целевого значения</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦелевогоЗначения</dataPath>
+			<field>ВидЦелевогоЗначения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид целевого значения</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦелевойДиапазонМаксимум</dataPath>
+			<field>ЦелевойДиапазонМаксимум</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Целевой диапазон максимум</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦелевойДиапазонМинимум</dataPath>
+			<field>ЦелевойДиапазонМинимум</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Целевой диапазон минимум</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГраничноеНегативноеОтклонение</dataPath>
+			<field>ГраничноеНегативноеОтклонение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граничное негативное отклонение</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГраничноеПозитивноеОтклонение</dataPath>
+			<field>ГраничноеПозитивноеОтклонение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граничное позитивное отклонение</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПриведенноеГраничноеНегативноеОтклонение</dataPath>
+			<field>ПриведенноеГраничноеНегативноеОтклонение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница негативных отклонений</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПриведенноеГраничноеПозитивноеОтклонение</dataPath>
+			<field>ПриведенноеГраничноеПозитивноеОтклонение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница позитивных отклонений</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРасчета</dataPath>
+			<field>ДатаРасчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата расчета</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВариантАнализа</dataPath>
+			<field>ВариантАнализа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант анализа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БазоваяВалюта</dataPath>
+			<field>БазоваяВалюта</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	КурсВалюты.Валюта КАК Валюта,
+	КурсВалюты.КурсЧислитель * КурсВалютыОтчета.КурсЗнаменатель / (КурсВалюты.КурсЗнаменатель * КурсВалютыОтчета.КурсЧислитель) КАК КоэффициентПересчета
+ПОМЕСТИТЬ КурсыВалют
+ИЗ
+	РегистрСведений.ОтносительныеКурсыВалют.СрезПоследних(&amp;КонецПериода, БазоваяВалюта = &amp;БазоваяВалюта) КАК КурсВалюты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОтносительныеКурсыВалют.СрезПоследних(&amp;КонецПериода, Валюта = &amp;ВалютаРасчета И БазоваяВалюта = &amp;БазоваяВалюта) КАК КурсВалютыОтчета
+		ПО (ИСТИНА)
+ГДЕ
+	КурсВалюты.КурсЗнаменатель &lt;&gt; 0
+	И КурсВалютыОтчета.КурсЧислитель &lt;&gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	&amp;ДатаРасчета КАК ДатаРасчета,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ВидЦелевогоЗначения,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ЦелевоеЗначение * ЕСТЬNULL(КурсыВалют.КоэффициентПересчета, 1) КАК ЦелевоеЗначение,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ЦелевойДиапазонМинимум * ЕСТЬNULL(КурсыВалют.КоэффициентПересчета, 1) КАК ЦелевойДиапазонМинимум,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ЦелевойДиапазонМаксимум * ЕСТЬNULL(КурсыВалют.КоэффициентПересчета, 1) КАК ЦелевойДиапазонМаксимум,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ВидОтклоненияОтЦелевогоЗначения,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ГраничноеНегативноеОтклонение * ВЫБОР
+		КОГДА ЦелевыеЗначенияВариантовАнализаСрезПоследних.ВидОтклоненияОтЦелевогоЗначения = ЗНАЧЕНИЕ(Перечисление.ВидыОтклоненийОтЦелевыхЗначенийПоказателей.Абсолютное)
+			ТОГДА ЕСТЬNULL(КурсыВалют.КоэффициентПересчета, 1)
+		ИНАЧЕ 1
+	КОНЕЦ КАК ГраничноеНегативноеОтклонение,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ГраничноеПозитивноеОтклонение * ВЫБОР
+		КОГДА ЦелевыеЗначенияВариантовАнализаСрезПоследних.ВидОтклоненияОтЦелевогоЗначения = ЗНАЧЕНИЕ(Перечисление.ВидыОтклоненийОтЦелевыхЗначенийПоказателей.Абсолютное)
+			ТОГДА ЕСТЬNULL(КурсыВалют.КоэффициентПересчета, 1)
+		ИНАЧЕ 1
+	КОНЕЦ КАК ГраничноеПозитивноеОтклонение,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ПриведенноеГраничноеНегативноеОтклонение * ЕСТЬNULL(КурсыВалют.КоэффициентПересчета, 1) КАК ПриведенноеГраничноеНегативноеОтклонение,
+	ЦелевыеЗначенияВариантовАнализаСрезПоследних.ПриведенноеГраничноеПозитивноеОтклонение * ЕСТЬNULL(КурсыВалют.КоэффициентПересчета, 1) КАК ПриведенноеГраничноеПозитивноеОтклонение
+ИЗ
+	РегистрСведений.ЦелевыеЗначенияВариантовАнализа.СрезПоследних(&amp;ДатаРасчета, ВариантАнализа = &amp;ВариантАнализа) КАК ЦелевыеЗначенияВариантовАнализаСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ КурсыВалют КАК КурсыВалют
+		ПО (&amp;ВалютаУправленческогоУчета = КурсыВалют.Валюта)</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДанныеДляАнализа</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаАвтоматическойСкидки</dataPath>
+			<field>СуммаАвтоматическойСкидки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма авт. скидки</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Себестоимость</dataPath>
+			<field>Себестоимость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Себестоимость</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗапасов</dataPath>
+			<field>ТипЗапасов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип запасов или услуга</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ клиента</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДопРасходы</dataPath>
+			<field>ДопРасходы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп. расходы</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВаловаяПрибыль</dataPath>
+			<field>ВаловаяПрибыль</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валовая прибыль</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыручкаНДС</dataPath>
+			<field>ВыручкаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка НДС</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выручка</dataPath>
+			<field>Выручка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Соглашение</dataPath>
+			<field>Соглашение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соглашение</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДекада</dataPath>
+			<field>ПериодДекада</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, декада</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРучнойСкидки</dataPath>
+			<field>СуммаРучнойСкидки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма руч. скидки</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Рентабельность</dataPath>
+			<field>Рентабельность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рентабельность, %</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНаборов</dataPath>
+			<field>АналитикаУчетаНаборов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета наборов</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНоменклатуры</dataPath>
+			<field>АналитикаУчетаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДень</dataPath>
+			<field>ПериодДень</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, день</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПоПартнерам</dataPath>
+			<field>АналитикаУчетаПоПартнерам</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета по партнерам</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХозяйственнаяОперация</dataPath>
+			<field>ХозяйственнаяОперация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хозяйственная операция</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоСкидок</dataPath>
+			<field>ВсегоСкидок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего скидок</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажи (количество)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодГод</dataPath>
+			<field>ПериодГод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, год</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>7</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодНеделя</dataPath>
+			<field>ПериодНеделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, неделя</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМесяц</dataPath>
+			<field>ПериодМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, месяц</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>4</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодКвартал</dataPath>
+			<field>ПериодКвартал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, квартал</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>5</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодПолугодие</dataPath>
+			<field>ПериодПолугодие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период, полугодие</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>6</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТоварнаяГруппа</dataPath>
+			<field>ТоварнаяГруппа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарная группа</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>Номенклатура</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТоварнаяКатегория</dataPath>
+			<field>ТоварнаяКатегория</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарная категория</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаАналитическогоУчета</dataPath>
+			<field>ГруппаАналитическогоУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа аналитического учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельностиКонтрагента</dataPath>
+			<field>НаправлениеДеятельностиКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление деятельности контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельностиНоменклатуры</dataPath>
+			<field>НаправлениеДеятельностиНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление деятельности номенклатуры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаФинансовогоУчета</dataPath>
+			<field>АналитикаФинансовогоУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика финансового учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазделУчета</dataPath>
+			<field>РазделУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раздел учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПартий</dataPath>
+			<field>АналитикаУчетаПартий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета партий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДеятельностиНДС</dataPath>
+			<field>ВидДеятельностиНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид деятельности НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидСделки</dataPath>
+			<field>ВидСделки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид сделки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поставщик</dataPath>
+			<field>Поставщик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сделка</dataPath>
+			<field>Сделка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МенеджерСделки</dataPath>
+			<field>МенеджерСделки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер сделки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаФинансовогоУчета</dataPath>
+			<field>ГруппаФинансовогоУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа финансового учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыручкаРегл</dataPath>
+			<field>ВыручкаРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка регл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыручкаБезНДС</dataPath>
+			<field>ВыручкаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СебестоимостьБезНДС</dataPath>
+			<field>СебестоимостьБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Себестоимость без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СебестоимостьРегл</dataPath>
+			<field>СебестоимостьРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Себестоимость регл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДопРасходыБезНДС</dataPath>
+			<field>ДопРасходыБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп расходы без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРучнойСкидкиОборот</dataPath>
+			<field>СуммаРучнойСкидкиОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ручной скидки Оборот</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаАвтоматическойСкидкиОборот</dataPath>
+			<field>СуммаАвтоматическойСкидкиОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма автоматической скидки Оборот</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПостатейныеПостоянные</dataPath>
+			<field>ПостатейныеПостоянные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Постатейные постоянные</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПостатейныеПостоянныеБезНДС</dataPath>
+			<field>ПостатейныеПостоянныеБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Постатейные постоянные без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПостатейныеПостоянныеРегл</dataPath>
+			<field>ПостатейныеПостоянныеРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Постатейные постоянные регл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПостатейныеПеременные</dataPath>
+			<field>ПостатейныеПеременные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Постатейные переменные</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПостатейныеПеременныеБезНДС</dataPath>
+			<field>ПостатейныеПеременныеБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Постатейные переменные без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПостатейныеПеременныеРегл</dataPath>
+			<field>ПостатейныеПеременныеРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Постатейные переменные регл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Трудозатраты</dataPath>
+			<field>Трудозатраты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трудозатраты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасходыНаПродажу</dataPath>
+			<field>РасходыНаПродажу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы на продажу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДопРасходыРегл</dataPath>
+			<field>ДопРасходыРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп расходы регл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТрудозатратыРегл</dataPath>
+			<field>ТрудозатратыРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трудозатраты регл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасходыНаПродажуБезНДС</dataPath>
+			<field>РасходыНаПродажуБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы на продажу без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасходыНаПродажуРегл</dataPath>
+			<field>РасходыНаПродажуРегл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы на продажу регл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(Таблица.Количество) КАК Количество,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.Выручка)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.ВыручкаРегл)
+		ИНАЧЕ СУММА(Таблица.ВыручкаБезНДС)
+	КОНЕЦ КАК Выручка,
+	СУММА(Таблица.Выручка) - СУММА(Таблица.ВыручкаБезНДС) КАК ВыручкаНДС,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.СуммаРучнойСкидкиОборот)
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаРучнойСкидки,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.СуммаАвтоматическойСкидкиОборот)
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаАвтоматическойСкидки,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.СуммаРучнойСкидкиОборот)
+		ИНАЧЕ 0
+	КОНЕЦ + ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.СуммаАвтоматическойСкидкиОборот)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВсегоСкидок,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.Себестоимость)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.СебестоимостьРегл)
+		ИНАЧЕ СУММА(Таблица.СебестоимостьБезНДС)
+	КОНЕЦ КАК Себестоимость,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.ДопРасходы)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.ДопРасходыРегл)
+		ИНАЧЕ СУММА(Таблица.ДопРасходыБезНДС)
+	КОНЕЦ КАК ДопРасходы,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.ПостатейныеПостоянные)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.ПостатейныеПостоянныеРегл)
+		ИНАЧЕ СУММА(Таблица.ПостатейныеПостоянныеБезНДС)
+	КОНЕЦ КАК ПостатейныеПостоянные,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.ПостатейныеПеременные)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.ПостатейныеПеременныеРегл)
+		ИНАЧЕ СУММА(Таблица.ПостатейныеПеременныеБезНДС)
+	КОНЕЦ КАК ПостатейныеПеременные,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.Трудозатраты)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.ТрудозатратыРегл)
+		ИНАЧЕ СУММА(Таблица.Трудозатраты)
+	КОНЕЦ КАК Трудозатраты,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.РасходыНаПродажу)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.РасходыНаПродажуРегл)
+		ИНАЧЕ СУММА(Таблица.РасходыНаПродажуБезНДС)
+	КОНЕЦ КАК РасходыНаПродажу,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА СУММА(Таблица.Выручка) 
+				- СУММА(Таблица.Себестоимость)
+				- СУММА(Таблица.ДопРасходы)
+				- СУММА(Таблица.ПостатейныеПостоянные)
+				- СУММА(Таблица.ПостатейныеПеременные)
+				- СУММА(Таблица.Трудозатраты)
+				- СУММА(Таблица.РасходыНаПродажу)
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА СУММА(Таблица.ВыручкаРегл)
+				- СУММА(Таблица.СебестоимостьРегл)
+				- СУММА(Таблица.ДопРасходыРегл)
+				- СУММА(Таблица.ПостатейныеПостоянныеРегл)
+				- СУММА(Таблица.ПостатейныеПеременныеРегл)
+				- СУММА(Таблица.ТрудозатратыРегл)
+				- СУММА(Таблица.РасходыНаПродажуРегл)
+		ИНАЧЕ СУММА(Таблица.ВыручкаБезНДС) 
+				- СУММА(Таблица.СебестоимостьБезНДС)
+				- СУММА(Таблица.ДопРасходыБезНДС)
+				- СУММА(Таблица.ПостатейныеПостоянныеБезНДС)
+				- СУММА(Таблица.ПостатейныеПеременныеБезНДС)
+				- СУММА(Таблица.Трудозатраты)
+				- СУММА(Таблица.РасходыНаПродажуБезНДС)
+	КОНЕЦ КАК ВаловаяПрибыль,
+	ВЫБОР
+		КОГДА &amp;ДанныеРасчета = 1
+			ТОГДА ВЫРАЗИТЬ(ВЫБОР
+						КОГДА СУММА(Таблица.Выручка) &lt;&gt; 0
+							ТОГДА (СУММА(Таблица.Выручка)
+									- СУММА(Таблица.Себестоимость)
+									- СУММА(Таблица.ДопРасходы)
+									- СУММА(Таблица.ПостатейныеПостоянные)
+									- СУММА(Таблица.ПостатейныеПеременные)
+									- СУММА(Таблица.Трудозатраты)
+									- СУММА(Таблица.РасходыНаПродажу)) / СУММА(Таблица.Выручка)
+						ИНАЧЕ 0
+					КОНЕЦ * 100 КАК ЧИСЛО(31, 2))
+		КОГДА &amp;ДанныеРасчета = 3
+			ТОГДА ВЫРАЗИТЬ(ВЫБОР
+						КОГДА СУММА(Таблица.ВыручкаРегл) &lt;&gt; 0
+							ТОГДА (СУММА(Таблица.ВыручкаРегл)
+									- СУММА(Таблица.СебестоимостьРегл)
+									- СУММА(Таблица.ДопРасходыРегл)
+									- СУММА(Таблица.ПостатейныеПостоянныеРегл)
+									- СУММА(Таблица.ПостатейныеПеременныеРегл)
+									- СУММА(Таблица.ТрудозатратыРегл)
+									- СУММА(Таблица.РасходыНаПродажуРегл)) / СУММА(Таблица.ВыручкаРегл)
+						ИНАЧЕ 0
+					КОНЕЦ * 100 КАК ЧИСЛО(31, 2))
+		ИНАЧЕ ВЫРАЗИТЬ(ВЫБОР
+					КОГДА СУММА(Таблица.ВыручкаБезНДС) &lt;&gt; 0
+						ТОГДА (СУММА(Таблица.ВыручкаБезНДС)
+									- СУММА(Таблица.СебестоимостьБезНДС)
+									- СУММА(Таблица.ДопРасходыБезНДС)
+									- СУММА(Таблица.ПостатейныеПостоянныеБезНДС)
+									- СУММА(Таблица.ПостатейныеПеременныеБезНДС)
+									- СУММА(Таблица.Трудозатраты)
+									- СУММА(Таблица.РасходыНаПродажуБезНДС)) / СУММА(Таблица.ВыручкаБезНДС)
+					ИНАЧЕ 0
+				КОНЕЦ * 100 КАК ЧИСЛО(31, 2))
+	КОНЕЦ КАК Рентабельность,
+	Таблица.ТоварнаяГруппа КАК ТоварнаяГруппа,
+	Таблица.ТоварнаяКатегория КАК ТоварнаяКатегория,
+	Таблица.ГруппаАналитическогоУчета КАК ГруппаАналитическогоУчета,
+	Таблица.Номенклатура КАК Номенклатура,
+	Таблица.Характеристика КАК Характеристика,
+	Таблица.Организация КАК Организация,
+	Таблица.Партнер КАК Партнер,
+	Таблица.Подразделение КАК Подразделение,
+	Таблица.Склад КАК Склад,
+	Таблица.Менеджер КАК Менеджер,
+	Таблица.ХозяйственнаяОперация КАК ХозяйственнаяОперация,
+	Таблица.ПериодДень КАК ПериодДень,
+	Таблица.ПериодНеделя КАК ПериодНеделя,
+	Таблица.ПериодДекада КАК ПериодДекада,
+	Таблица.ПериодМесяц КАК ПериодМесяц,
+	Таблица.ПериодКвартал КАК ПериодКвартал,
+	Таблица.ПериодПолугодие КАК ПериодПолугодие,
+	Таблица.ПериодГод КАК ПериодГод
+{ВЫБРАТЬ
+	Количество,
+	Выручка,
+	ВыручкаНДС,
+	СуммаРучнойСкидки,
+	СуммаАвтоматическойСкидки,
+	ВсегоСкидок,
+	Себестоимость,
+	ДопРасходы,
+	ВаловаяПрибыль,
+	Рентабельность,
+	Номенклатура.*,
+	Характеристика.*,
+	Организация.*,
+	Партнер.*,
+	Подразделение.*,
+	Склад.*,
+	Менеджер.*,
+	ПериодДень,
+	ПериодНеделя,
+	ПериодДекада,
+	ПериодМесяц,
+	ПериодКвартал,
+	ПериодПолугодие,
+	ПериодГод,
+	ХозяйственнаяОперация.*,
+	ТоварнаяГруппа.*,
+	ТоварнаяКатегория.*,
+	ГруппаАналитическогоУчета.*}
+ИЗ
+	(ВЫБРАТЬ
+		ВЫБОР
+			КОГДА Продажи.Менеджер = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА ЕСТЬNULL(Продажи.ЗаказКлиента.Менеджер, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка))
+			ИНАЧЕ Продажи.Менеджер
+		КОНЕЦ КАК Менеджер,
+		Продажи.АналитикаУчетаНоменклатуры.Номенклатура.Родитель КАК ТоварнаяГруппа,
+		Продажи.АналитикаУчетаНоменклатуры.Номенклатура.ТоварнаяКатегория КАК ТоварнаяКатегория,
+		Продажи.АналитикаУчетаНоменклатуры.Номенклатура.ГруппаАналитическогоУчета КАК ГруппаАналитическогоУчета,
+		Продажи.АналитикаУчетаНоменклатуры.Номенклатура КАК Номенклатура,
+		Продажи.АналитикаУчетаНоменклатуры.Характеристика КАК Характеристика,
+		Продажи.АналитикаУчетаПоПартнерам.Организация КАК Организация,
+		Продажи.АналитикаУчетаПоПартнерам.Партнер КАК Партнер,
+		Продажи.Подразделение КАК Подразделение,
+		Продажи.АналитикаУчетаНоменклатуры.МестоХранения КАК Склад,
+		Продажи.КоличествоОборот КАК Количество,
+		Продажи.СуммаВыручкиОборот КАК Выручка,
+		Продажи.СуммаВыручкиРеглОборот КАК ВыручкаРегл,
+		Продажи.СуммаВыручкиБезНДСОборот КАК ВыручкаБезНДС,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА Продажи.СуммаВыручкиОборот
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.Стоимость, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.СтоимостьОборот
+		КОНЕЦ КАК Себестоимость,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА Продажи.СуммаВыручкиБезНДСОборот
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.СтоимостьБезНДС, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.СтоимостьБезНДСОборот
+		КОНЕЦ КАК СебестоимостьБезНДС,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА Продажи.СуммаВыручкиРеглОборот
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.СтоимостьРегл, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.СтоимостьРеглОборот
+		КОНЕЦ КАК СебестоимостьРегл,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.СтоимостьДопРасходы, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ДопРасходыОборот
+		КОНЕЦ КАК ДопРасходы,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.СтоимостьДопРасходыБезНДС, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ДопРасходыБезНДСОборот
+		КОНЕЦ КАК ДопРасходыБезНДС,
+		
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ДопРасходыРегл, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ДопРасходыРеглОборот
+		КОНЕЦ КАК ДопРасходыРегл,
+		
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ПостатейныеПостоянныеСНДС, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ПостатейныеПостоянныеСНДСОборот
+		КОНЕЦ КАК ПостатейныеПостоянные,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ПостатейныеПостоянныеБезНДС, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ПостатейныеПостоянныеБезНДСОборот
+		КОНЕЦ КАК ПостатейныеПостоянныеБезНДС,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ПостатейныеПостоянныеРегл, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ПостатейныеПостоянныеРеглОборот
+		КОНЕЦ КАК ПостатейныеПостоянныеРегл,
+		
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ПостатейныеПеременныеСНДС, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ПостатейныеПеременныеСНДСОборот
+		КОНЕЦ КАК ПостатейныеПеременные,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ПостатейныеПеременныеБезНДС, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ПостатейныеПеременныеБезНДСОборот
+		КОНЕЦ КАК ПостатейныеПеременныеБезНДС,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ПостатейныеПеременныеРегл, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ПостатейныеПеременныеРеглОборот
+		КОНЕЦ КАК ПостатейныеПеременныеРегл,
+		
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.Трудозатраты, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ТрудозатратыОборот
+		КОНЕЦ КАК Трудозатраты,
+		ВЫБОР
+			КОГДА Продажи.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				ТОГДА 0
+			КОГДА ЕСТЬNULL(РасчетСебестоимости.Ссылка.ПредварительныйРасчет, ЛОЖЬ)
+				ТОГДА ВЫРАЗИТЬ(Продажи.КоличествоОборот * ЕСТЬNULL(СтоимостьНоменклатуры.ТрудозатратыРегл, 0) КАК ЧИСЛО(31, 2))
+			ИНАЧЕ Продажи.ТрудозатратыОборот
+		КОНЕЦ КАК ТрудозатратыРегл,
+		
+		Продажи.РасходыНаПродажуСНДСОборот КАК РасходыНаПродажу,
+		Продажи.РасходыНаПродажуБезНДСОборот КАК РасходыНаПродажуБезНДС,
+		Продажи.РасходыНаПродажуРеглОборот КАК РасходыНаПродажуРегл,
+		
+		Продажи.ПериодДень КАК ПериодДень,
+		Продажи.ПериодНеделя КАК ПериодНеделя,
+		Продажи.ПериодДекада КАК ПериодДекада,
+		Продажи.ПериодМесяц КАК ПериодМесяц,
+		Продажи.ПериодКвартал КАК ПериодКвартал,
+		Продажи.ПериодПолугодие КАК ПериодПолугодие,
+		Продажи.ПериодГод КАК ПериодГод,
+		Продажи.СуммаРучнойСкидкиОборот КАК СуммаРучнойСкидкиОборот,
+		Продажи.СуммаАвтоматическойСкидкиОборот КАК СуммаАвтоматическойСкидкиОборот,
+		Продажи.ХозяйственнаяОперация КАК ХозяйственнаяОперация
+	ИЗ
+		РегистрНакопления.ВыручкаИСебестоимостьПродаж.Обороты(&amp;ПриведенноеНачалоПериода, &amp;КонецПериода, Авто, {(ЕСТЬNULL(ЗаказКлиента.Сделка, ЗНАЧЕНИЕ(Справочник.СделкиСКлиентами.ПустаяСсылка))).* КАК Сделка, (ЕСТЬNULL(ЗаказКлиента.Сделка.Ответственный, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка))).* КАК МенеджерСделки, (ВЫБОР
+				    КОГДА Менеджер = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				        ТОГДА ЕСТЬNULL(ЗаказКлиента.Менеджер, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка))
+				    ИНАЧЕ Менеджер
+				КОНЕЦ).* КАК Менеджер, (ВЫБОР
+				    КОГДА ВидЗапасов.РеализацияЗапасовДругойОрганизации
+				        ТОГДА ВЫБОР
+				                КОГДА ВидЗапасов.ВидЗапасовВладельца.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				                    ТОГДА ВидЗапасов.ВидЗапасовВладельца.ВладелецТовара
+				                ИНАЧЕ ВидЗапасов.ВидЗапасовВладельца.ВладелецТовара
+				            КОНЕЦ
+				    ИНАЧЕ ВЫБОР
+				            КОГДА ВидЗапасов.ТипЗапасов = ЗНАЧЕНИЕ(Перечисление.ТипыЗапасов.КомиссионныйТовар)
+				                ТОГДА ВидЗапасов.ВладелецТовара
+				            ИНАЧЕ ВидЗапасов.ВладелецТовара
+				        КОНЕЦ
+				КОНЕЦ).* КАК Поставщик, (ВидЗапасов.ГруппаФинансовогоУчета).* КАК ГруппаФинансовогоУчета, (ВЫБОР
+				    КОГДА НЕ ЗаказКлиента.Сделка.ВидСделки ЕСТЬ NULL 
+				        ТОГДА ЗаказКлиента.Сделка.ВидСделки.Наименование
+				    КОГДА ЗаказКлиента ССЫЛКА Документ.ЗаказКлиента
+				            ИЛИ ЗаказКлиента ССЫЛКА Документ.ЗаявкаНаВозвратТоваровОтКлиента
+				        ТОГДА &amp;СтрокаПродажиПоЗаказам
+				    ИНАЧЕ &amp;СтрокаПродажиБезЗаказов
+				КОНЕЦ) КАК ВидСделки}) КАК Продажи
+			{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтоимостьТоваров КАК СтоимостьНоменклатуры
+			ПО Продажи.АналитикаУчетаНоменклатуры = СтоимостьНоменклатуры.АналитикаУчетаНоменклатуры
+				И (Продажи.АналитикаУчетаПоПартнерам.Организация = СтоимостьНоменклатуры.Организация)
+				И Продажи.ВидЗапасов = СтоимостьНоменклатуры.ВидЗапасов
+				И (СтоимостьНоменклатуры.Период = НАЧАЛОПЕРИОДА(Продажи.ПериодМесяц, МЕСЯЦ))
+				И (СтоимостьНоменклатуры.РазделУчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.РазделыУчетаСебестоимостиТоваров.ТоварыПринятыеНаКомиссию))
+				И (СтоимостьНоменклатуры.РазделУчета &lt;&gt; ЗНАЧЕНИЕ(Перечисление.РазделыУчетаСебестоимостиТоваров.МатериалыПринятыеВПереработку))}
+			{ЛЕВОЕ СОЕДИНЕНИЕ Документ.РасчетСебестоимостиТоваров.Организации КАК РасчетСебестоимости
+			ПО (НАЧАЛОПЕРИОДА(Продажи.ПериодМесяц, МЕСЯЦ) = НАЧАЛОПЕРИОДА(РасчетСебестоимости.Ссылка.Дата, МЕСЯЦ))
+				И (Продажи.АналитикаУчетаПоПартнерам.Организация = РасчетСебестоимости.Организация)
+				И (РасчетСебестоимости.Ссылка.Проведен)}
+	ГДЕ
+		(&amp;ПоказыватьПродажи = 1
+					И Продажи.АналитикаУчетаПоПартнерам.Партнер &lt;&gt; ЗНАЧЕНИЕ(Справочник.Партнеры.НашеПредприятие)
+				ИЛИ &amp;ПоказыватьПродажи = 2
+					И Продажи.АналитикаУчетаПоПартнерам.Партнер = ЗНАЧЕНИЕ(Справочник.Партнеры.НашеПредприятие)
+				ИЛИ &amp;ПоказыватьПродажи = 0)) КАК Таблица
+{ГДЕ
+	Таблица.Количество,
+	Таблица.Номенклатура.*,
+	Таблица.Характеристика.*,
+	Таблица.Организация.*,
+	Таблица.Партнер.*,
+	Таблица.Подразделение.*,
+	Таблица.Склад.*,
+	Таблица.Менеджер.*,
+	Таблица.ПериодДень,
+	Таблица.ПериодНеделя,
+	Таблица.ПериодДекада,
+	Таблица.ПериодМесяц,
+	Таблица.ПериодКвартал,
+	Таблица.ПериодПолугодие,
+	Таблица.ПериодГод,
+	Таблица.ХозяйственнаяОперация.*,
+	Таблица.ТоварнаяГруппа.*,
+	Таблица.ТоварнаяКатегория.*,
+	Таблица.ГруппаАналитическогоУчета.*}
+
+СГРУППИРОВАТЬ ПО
+	Таблица.Номенклатура,
+	Таблица.Характеристика,
+	Таблица.Организация,
+	Таблица.Партнер,
+	Таблица.ПериодДень,
+	Таблица.ПериодНеделя,
+	Таблица.ПериодДекада,
+	Таблица.ПериодМесяц,
+	Таблица.ПериодКвартал,
+	Таблица.ПериодПолугодие,
+	Таблица.ПериодГод,
+	Таблица.Подразделение,
+	Таблица.Склад,
+	Таблица.Менеджер,
+	Таблица.СуммаРучнойСкидкиОборот,
+	Таблица.СуммаАвтоматическойСкидкиОборот,
+	Таблица.ХозяйственнаяОперация,
+	Таблица.ТоварнаяГруппа,
+	Таблица.ТоварнаяКатегория,
+	Таблица.ГруппаАналитическогоУчета
+
+ИМЕЮЩИЕ
+	(СУММА(Таблица.Количество) &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.Выручка)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.ВыручкаРегл)
+			ИНАЧЕ СУММА(Таблица.ВыручкаБезНДС)
+		КОНЕЦ &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.Себестоимость)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.СебестоимостьРегл)
+			ИНАЧЕ СУММА(Таблица.СебестоимостьБезНДС)
+		КОНЕЦ &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.ДопРасходы)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.ДопРасходыРегл)
+			ИНАЧЕ СУММА(Таблица.ДопРасходыБезНДС)
+		КОНЕЦ &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.ПостатейныеПостоянные)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.ПостатейныеПостоянныеРегл)
+			ИНАЧЕ СУММА(Таблица.ПостатейныеПостоянныеБезНДС)
+		КОНЕЦ &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.ПостатейныеПеременные)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.ПостатейныеПеременныеРегл)
+			ИНАЧЕ СУММА(Таблица.ПостатейныеПеременныеБезНДС)
+		КОНЕЦ &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.Трудозатраты)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.ТрудозатратыРегл)
+			ИНАЧЕ СУММА(Таблица.Трудозатраты)
+		КОНЕЦ &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.РасходыНаПродажу)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.РасходыНаПродажуРегл)
+			ИНАЧЕ СУММА(Таблица.РасходыНаПродажуБезНДС)
+		КОНЕЦ &lt;&gt; 0
+		ИЛИ ВЫБОР
+			КОГДА &amp;ДанныеРасчета = 1
+				ТОГДА СУММА(Таблица.Выручка) 
+					- СУММА(Таблица.Себестоимость) 
+					- СУММА(Таблица.ДопРасходы) 
+					- СУММА(Таблица.ПостатейныеПостоянные)
+					- СУММА(Таблица.ПостатейныеПеременные)
+					- СУММА(Таблица.Трудозатраты)
+					- СУММА(Таблица.РасходыНаПродажу)
+			КОГДА &amp;ДанныеРасчета = 3
+				ТОГДА СУММА(Таблица.ВыручкаРегл)
+					- СУММА(Таблица.СебестоимостьРегл)
+					- СУММА(Таблица.ДопРасходыРегл)
+					- СУММА(Таблица.ПостатейныеПостоянныеРегл)
+					- СУММА(Таблица.ПостатейныеПеременныеРегл)
+					- СУММА(Таблица.ТрудозатратыРегл)
+					- СУММА(Таблица.РасходыНаПродажуРегл)
+			ИНАЧЕ СУММА(Таблица.ВыручкаБезНДС) 
+					- СУММА(Таблица.СебестоимостьБезНДС)
+					- СУММА(Таблица.ДопРасходыБезНДС)
+					- СУММА(Таблица.ПостатейныеПостоянныеБезНДС)
+					- СУММА(Таблица.ПостатейныеПеременныеБезНДС)
+					- СУММА(Таблица.Трудозатраты)
+					- СУММА(Таблица.РасходыНаПродажуБезНДС)
+		КОНЕЦ &lt;&gt; 0)</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаПериодов</sourceDataSet>
+		<destinationDataSet>ЦелевыеЗначения</destinationDataSet>
+		<sourceExpression>Период</sourceExpression>
+		<destinationExpression>ДатаРасчета</destinationExpression>
+		<parameter>ДатаРасчета</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ТаблицаПериодов</sourceDataSet>
+		<destinationDataSet>ДанныеДляАнализа</destinationDataSet>
+		<sourceExpression>Период</sourceExpression>
+		<destinationExpression>ПериодДень</destinationExpression>
+	</dataSetLink>
+	<totalField>
+		<dataPath>ЦелевоеЗначение</dataPath>
+		<expression>ЕстьNull(Сумма(ЦелевоеЗначение),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЦелевойДиапазонМаксимум</dataPath>
+		<expression>ЕстьNull(Сумма(ЦелевойДиапазонМаксимум),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЦелевойДиапазонМинимум</dataPath>
+		<expression>ЕстьNull(Сумма(ЦелевойДиапазонМинимум),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ГраничноеПозитивноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ГраничноеПозитивноеОтклонение),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ГраничноеНегативноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ГраничноеНегативноеОтклонение),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПриведенноеГраничноеПозитивноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ПриведенноеГраничноеПозитивноеОтклонение),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПриведенноеГраничноеНегативноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ПриведенноеГраничноеНегативноеОтклонение),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЦелевоеЗначение</dataPath>
+		<expression>ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ЦелевоеЗначение ИНАЧЕ 0 КОНЕЦ),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦелевойДиапазонМаксимум</dataPath>
+		<expression>ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ЦелевойДиапазонМаксимум ИНАЧЕ 0 КОНЕЦ),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦелевойДиапазонМинимум</dataPath>
+		<expression>ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ЦелевойДиапазонМинимум ИНАЧЕ 0 КОНЕЦ),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ГраничноеПозитивноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ГраничноеПозитивноеОтклонение ИНАЧЕ 0 КОНЕЦ),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ГраничноеНегативноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ГраничноеНегативноеОтклонение ИНАЧЕ 0 КОНЕЦ),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПриведенноеГраничноеНегативноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ПриведенноеГраничноеПозитивноеОтклонение ИНАЧЕ 0 КОНЕЦ),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПриведенноеГраничноеПозитивноеОтклонение</dataPath>
+		<expression>ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ПриведенноеГраничноеНегативноеОтклонение ИНАЧЕ 0 КОНЕЦ),0)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВаловаяПрибыль</dataPath>
+		<expression>ЕстьNull(Сумма(ВаловаяПрибыль),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВаловаяПрибыль</dataPath>
+		<expression>ВЫБОР КОГДА &amp;НарастающимИтогом ТОГДА
+ЕстьNull(Сумма(ВаловаяПрибыль),0)
+ИНАЧЕ
+ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА ВаловаяПрибыль ИНАЧЕ 0 КОНЕЦ),0)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Выручка</dataPath>
+		<expression>ЕстьNull(Сумма(Выручка),0)</expression>
+		<group>Период</group>
+	</totalField>
+	<totalField>
+		<dataPath>Выручка</dataPath>
+		<expression>ВЫБОР КОГДА &amp;НарастающимИтогом ТОГДА
+ЕстьNull(Сумма(Выручка),0)
+ИНАЧЕ
+ЕстьNull(Сумма(ВЫБОР КОГДА Период = НАЧАЛОПЕРИОДА(&amp;КонецПериода, "ДЕНЬ") ТОГДА Выручка ИНАЧЕ 0 КОНЕЦ),0)
+КОНЕЦ</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодСравнения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период сравнения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериодаСравнения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода сравнения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодСравнения.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоПериодаСравнения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода сравнения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодСравнения.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ПриведенноеНачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приведенное начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаРасчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата расчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоказыватьПродажи</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показывать продажи</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">1</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:nil="true"/>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кроме продаж между организациями</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">2</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только продажи между организациями</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НарастающимИтогом</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Нарастающим итогом</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВариантАнализа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вариант анализа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВариантыАнализаЦелевыхПоказателей</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВариантыАнализаЦелевыхПоказателей.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВалютаУправленческогоУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта управленческого учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>ДоходыИРасходыСервер.ПолучитьВалютуУправленческогоУчета()</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДанныеРасчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Данные отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">1</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В валюте упр. учета с НДС</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">2</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В валюте упр. учета без НДС</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">3</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В валюте регл. учета без НДС</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВалютаРасчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта расчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<expression>ВЫБОР КОГДА &amp;ДанныеРасчета &lt;&gt; 3 ТОГДА ДоходыИРасходыСервер.ПолучитьВалютуУправленческогоУчета() ИНАЧЕ ЗначениеНастроекПовтИсп.БазоваяВалютаПоУмолчанию() КОНЕЦ</expression>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>СтрокаПродажиБезЗаказов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Строка продажи без заказов</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СтрокаПродажиПоЗаказам</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Строка продажи по заказам</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>БазоваяВалюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Базовая валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Константы.БазоваяВалютаПоУмолчанию.Получить()</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВаловаяПрибыль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦелевоеЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦелевойДиапазонМаксимум</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦелевойДиапазонМинимум</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГраничноеПозитивноеОтклонение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГраничноеНегативноеОтклонение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПриведенноеГраничноеПозитивноеОтклонение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПриведенноеГраничноеНегативноеОтклонение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>96c224b0-0846-4229-b4e1-945e607a84a7</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>a38ff7ee-084a-4721-973a-43bf137f0e94</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>309a44c6-10dc-45b7-bc82-ce777d987791</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Характеристика</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>e86f0cc2-6fb7-4bab-98bd-d982ef063a08</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СтруктураПредприятия.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>6954b616-41bb-4b6a-ac72-6875907bbdac</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Менеджер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>c057a829-8190-4b43-81e6-05ef9a9b153f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Партнер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Партнеры.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>ddd9c3ec-6981-43d4-9575-f92fb3d338f6</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>e4cfb33f-806d-473d-baa4-97ce8056d8c3</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДанныеРасчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВалютаРасчета</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>89dc2614-c776-4230-8779-4d2a1b789f56</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВаловаяПрибыль</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДЛФ=D</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="dcscor:Field">ПараметрыДанных.НачалоПериода</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="dcscor:Field">ПараметрыДанных.КонецПериода</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>Выручка</dcsset:field>
+						<dcsset:orderType>Desc</dcsset:orderType>
+					</dcsset:item>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>Day</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="dcscor:Field">ПараметрыДанных.НачалоПериода</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="dcscor:Field">ПараметрыДанных.КонецПериода</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

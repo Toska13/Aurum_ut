@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Цены</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование валюты</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦеныВнутр</dataPath>
+			<field>ВидЦеныВнутр</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид цены внутр</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦены</dataPath>
+			<field>ВидЦены</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид цены</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Упаковка_GUID</dataPath>
+			<field>Упаковка_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдХарактеристики_GUID</dataPath>
+			<field>ИдХарактеристики_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдТовара_GUID</dataPath>
+			<field>ИдТовара_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдВидаЦены_GUID</dataPath>
+			<field>ИдВидаЦены_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид цены</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Номенклатура.Ссылка КАК Номенклатура,
+	Номенклатура.ЕдиницаИзмерения КАК Упаковка,
+	Номенклатура.НаборУпаковок КАК НаборУпаковок
+ПОМЕСТИТЬ ВТ_Номенклатура
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	НЕ Номенклатура.ПометкаУдаления
+{ГДЕ
+	Номенклатура.Ссылка.* КАК ИдТовара_GUID}
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура КАК Номенклатура,
+	УпаковкиЕдиницыИзмерения.Ссылка КАК Упаковка
+ПОМЕСТИТЬ ВТ_Упаковки
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.УпаковкиЕдиницыИзмерения КАК УпаковкиЕдиницыИзмерения
+		ПО (УпаковкиЕдиницыИзмерения.Ссылка = ВТ_Номенклатура.Упаковка)
+			И (ВТ_Номенклатура.НаборУпаковок = ЗНАЧЕНИЕ(Справочник.НаборыУпаковок.ПустаяСсылка))
+			И (НЕ УпаковкиЕдиницыИзмерения.ПометкаУдаления)
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура,
+	УпаковкиЕдиницыИзмерения.Ссылка
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.УпаковкиЕдиницыИзмерения КАК УпаковкиЕдиницыИзмерения
+		ПО (УпаковкиЕдиницыИзмерения.Владелец = ВТ_Номенклатура.Номенклатура)
+			И (ВТ_Номенклатура.НаборУпаковок = ЗНАЧЕНИЕ(Справочник.НаборыУпаковок.ИндивидуальныйДляНоменклатуры))
+			И (НЕ УпаковкиЕдиницыИзмерения.ПометкаУдаления)
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура,
+	УпаковкиЕдиницыИзмерения.Ссылка
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.УпаковкиЕдиницыИзмерения КАК УпаковкиЕдиницыИзмерения
+		ПО (УпаковкиЕдиницыИзмерения.Владелец = ВТ_Номенклатура.НаборУпаковок)
+			И (НЕ ВТ_Номенклатура.НаборУпаковок = ЗНАЧЕНИЕ(Справочник.НаборыУпаковок.ПустаяСсылка))
+			И (НЕ ВТ_Номенклатура.НаборУпаковок = ЗНАЧЕНИЕ(Справочник.НаборыУпаковок.ИндивидуальныйДляНоменклатуры))
+			И (НЕ УпаковкиЕдиницыИзмерения.ПометкаУдаления)
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_Номенклатура.Номенклатура,
+	ВТ_Номенклатура.Упаковка
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЦеныНоменклатурыСрезПоследних.ВидЦены КАК ВидЦены,
+	ЦеныНоменклатурыСрезПоследних.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатурыСрезПоследних.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ЦеныНоменклатурыСрезПоследних.Упаковка &lt;&gt; ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ЦеныНоменклатурыСрезПоследних.Упаковка
+		ИНАЧЕ ЦеныНоменклатурыСрезПоследних.Номенклатура.ЕдиницаИзмерения
+	КОНЕЦ КАК Упаковка,
+	ЦеныНоменклатурыСрезПоследних.Валюта КАК Валюта,
+	МАКСИМУМ(ЦеныНоменклатурыСрезПоследних.Цена) КАК Цена
+ПОМЕСТИТЬ ВТ_Цены
+ИЗ
+	РегистрСведений.ЦеныНоменклатуры.СрезПоследних(
+			,
+			Номенклатура В
+				(ВЫБРАТЬ
+					ВТ_Номенклатура.Номенклатура
+				ИЗ
+					ВТ_Номенклатура) {(Характеристика).* КАК ИдХарактеристики_GUID, (ВидЦены).* КАК ВидЦены}) КАК ЦеныНоменклатурыСрезПоследних
+СГРУППИРОВАТЬ ПО
+	ЦеныНоменклатурыСрезПоследних.ВидЦены,
+	ЦеныНоменклатурыСрезПоследних.Номенклатура,
+	ЦеныНоменклатурыСрезПоследних.Характеристика,
+	ВЫБОР
+		КОГДА ЦеныНоменклатурыСрезПоследних.Упаковка &lt;&gt; ЗНАЧЕНИЕ(Справочник.УпаковкиЕдиницыИзмерения.ПустаяСсылка)
+			ТОГДА ЦеныНоменклатурыСрезПоследних.Упаковка
+		ИНАЧЕ ЦеныНоменклатурыСрезПоследних.Номенклатура.ЕдиницаИзмерения
+	КОНЕЦ,
+	ЦеныНоменклатурыСрезПоследних.Валюта
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Характеристика,
+	Упаковка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Цены.ВидЦены КАК ВидЦены,
+	ВТ_Цены.Номенклатура КАК Номенклатура,
+	ВТ_Цены.Характеристика КАК Характеристика,
+	ВТ_Цены.Упаковка КАК Упаковка,
+	ВТ_Цены.Цена КАК Цена,
+	ВТ_Цены.Валюта КАК Валюта
+ПОМЕСТИТЬ ВТ_ЦеныТолькоБазовые
+ИЗ
+	ВТ_Цены КАК ВТ_Цены
+ГДЕ
+	ВТ_Цены.Упаковка = ВТ_Цены.Номенклатура.ЕдиницаИзмерения
+
+ИНДЕКСИРОВАТЬ ПО
+	ВидЦены, Номенклатура, Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ВидЦены, Номенклатура, Характеристика, МИНИМУМ(Упаковка)
+ПОМЕСТИТЬ ВТ_ОднаУпаковка
+ИЗ ВТ_Цены 
+СГРУППИРОВАТЬ ПО 
+	ВидЦены, Номенклатура, Характеристика
+
+ИНДЕКСИРОВАТЬ ПО
+	ВидЦены, Номенклатура, Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ЦеныТолькоБазовые.ВидЦены КАК ВидЦены,
+	ВТ_ЦеныТолькоБазовые.Номенклатура КАК Номенклатура,
+	ВТ_ЦеныТолькоБазовые.Характеристика КАК Характеристика,
+	ВТ_ЦеныТолькоБазовые.Упаковка КАК Упаковка,
+	ВТ_ЦеныТолькоБазовые.Цена КАК Цена,
+	ВТ_ЦеныТолькоБазовые.Валюта КАК Валюта
+ПОМЕСТИТЬ ВТ_ЦеныБазовые
+ИЗ
+	ВТ_ЦеныТолькоБазовые КАК ВТ_ЦеныТолькоБазовые
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_Цены.ВидЦены,
+	ВТ_Цены.Номенклатура,
+	ВТ_Цены.Характеристика,
+	ВТ_Цены.Номенклатура.ЕдиницаИзмерения,
+	ВТ_Цены.Цена / (ВЫБОР
+		КОГДА ВТ_Цены.Упаковка.Числитель &lt;&gt; 0
+			ТОГДА ВТ_Цены.Упаковка.Числитель
+		ИНАЧЕ 1
+	КОНЕЦ / ВЫБОР
+		КОГДА ВТ_Цены.Упаковка.Знаменатель &lt;&gt; 0
+			ТОГДА ВТ_Цены.Упаковка.Знаменатель
+		ИНАЧЕ 1
+	КОНЕЦ),
+	ВТ_Цены.Валюта
+ИЗ
+	ВТ_Цены КАК ВТ_Цены
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЦеныТолькоБазовые КАК ВТ_ЦеныТолькоБазовые
+	ПО  ВТ_Цены.ВидЦены = ВТ_ЦеныТолькоБазовые.ВидЦены
+		И ВТ_Цены.Номенклатура = ВТ_ЦеныТолькоБазовые.Номенклатура
+		И ВТ_Цены.Характеристика = ВТ_ЦеныТолькоБазовые.Характеристика		
+		
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ОднаУпаковка КАК ВТ_ОднаУпаковка
+	ПО ВТ_Цены.ВидЦены = ВТ_ОднаУпаковка.ВидЦены
+		И ВТ_Цены.Номенклатура = ВТ_ОднаУпаковка.Номенклатура
+		И ВТ_Цены.Характеристика = ВТ_ОднаУпаковка.Характеристика
+		И ВТ_Цены.Упаковка = ВТ_ОднаУпаковка.Упаковка		
+ГДЕ 
+	ВТ_ЦеныТолькоБазовые.Номенклатура ЕСТЬ NULL
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Цены.ВидЦены КАК ВидЦены,
+	ВТ_Цены.Номенклатура КАК Номенклатура,
+	ВТ_Цены.Характеристика КАК Характеристика
+ПОМЕСТИТЬ ВТ_ВидыЦен
+ИЗ
+	ВТ_Цены КАК ВТ_Цены
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Цены.ВидЦены,
+	ВТ_Цены.Номенклатура,
+	ВТ_Цены.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ВидыЦен.ВидЦены.Наименование КАК ВидЦены,
+	ВТ_ВидыЦен.ВидЦены КАК ИдВидаЦены_GUID,
+	ВТ_Упаковки.Номенклатура КАК ИдТовара_GUID,
+	ЕСТЬNULL(ВТ_Цены.Характеристика, ВТ_ЦеныБазовые.Характеристика) КАК ИдХарактеристики_GUID,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ЕСТЬNULL(ВТ_Цены.Цена, 0) &lt;&gt; 0
+				ТОГДА ВТ_Цены.Цена
+			КОГДА ВТ_ЦеныБазовые.Цена ЕСТЬ NULL
+				ТОГДА 0
+			ИНАЧЕ ВТ_ЦеныБазовые.Цена * ВЫБОР
+					КОГДА ВТ_Упаковки.Упаковка.Числитель &lt;&gt; 0
+						ТОГДА ВТ_Упаковки.Упаковка.Числитель
+					ИНАЧЕ 1
+				КОНЕЦ / ВЫБОР
+					КОГДА ВТ_Упаковки.Упаковка.Знаменатель &lt;&gt; 0
+						ТОГДА ВТ_Упаковки.Упаковка.Знаменатель
+					ИНАЧЕ 1
+				КОНЕЦ
+		КОНЕЦ КАК ЧИСЛО(25, 2)) КАК Цена,
+	ВТ_Упаковки.Упаковка КАК Упаковка_GUID,
+	ЕСТЬNULL(ВТ_Цены.Валюта.Наименование, ВТ_ЦеныБазовые.Валюта.Наименование) КАК Валюта,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_Цены.ВидЦены, ВТ_ЦеныБазовые.ВидЦены) В (&amp;ОсновнаяЦена)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВидЦеныВнутр
+ИЗ
+	ВТ_ВидыЦен КАК ВТ_ВидыЦен
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Упаковки КАК ВТ_Упаковки
+		ПО ВТ_ВидыЦен.Номенклатура = ВТ_Упаковки.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Цены КАК ВТ_Цены
+		ПО ВТ_ВидыЦен.ВидЦены = ВТ_Цены.ВидЦены
+			И (ВТ_ВидыЦен.Номенклатура = ВТ_Цены.Номенклатура)
+			И (ВТ_ВидыЦен.Характеристика = ВТ_Цены.Характеристика)
+			И (ВТ_Упаковки.Упаковка = ВТ_Цены.Упаковка)
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЦеныБазовые КАК ВТ_ЦеныБазовые
+		ПО ВТ_ВидыЦен.ВидЦены = ВТ_ЦеныБазовые.ВидЦены
+			И (ВТ_ВидыЦен.Номенклатура = ВТ_ЦеныБазовые.Номенклатура)
+			И (ВТ_ВидыЦен.Характеристика = ВТ_ЦеныБазовые.Характеристика)
+ГДЕ
+	(НЕ ВТ_Цены.Номенклатура ЕСТЬ NULL
+			ИЛИ НЕ ВТ_ЦеныБазовые.Номенклатура ЕСТЬ NULL)</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОсновнаяЦена</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основная цена</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>ВыборГруппИЭлементов</dcscor:parameter>
+				<dcscor:value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d5p1:FoldersAndItemsUse">FoldersAndItems</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Валюта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидЦены</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидЦеныВнутр</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдТовара_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Упаковка_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдХарактеристики_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдВидаЦены_GUID</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдТовара_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Упаковка_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдХарактеристики_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдВидаЦены_GUID</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОсновнаяЦена</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>493ed075-abbb-4db8-8635-efa62e2a96f8</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная цена</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

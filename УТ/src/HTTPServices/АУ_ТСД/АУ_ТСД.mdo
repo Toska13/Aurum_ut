@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="136ce58f-c0a9-4a35-8d7a-9bd0f7debb42">
+  <name>АУ_ТСД</name>
+  <synonym>
+    <key>ru</key>
+    <value>ТСД</value>
+  </synonym>
+  <rootURL>tsd</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="dde0fba1-be47-41b9-9bb7-c390f116e170">
+    <name>ПолучитьДанныеДляТСД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить данные для ТСД</value>
+    </synonym>
+    <template>/GetData/{tsd}</template>
+    <methods uuid="a016da98-56e3-4bc7-8e2d-c6f9704722f5">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьДанныеДляТСДGET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="8eb7f8a0-2fc5-4185-8b51-c72f09d120a5">
+    <name>ПринятьДанныеОтТСД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принять данные от ТСД</value>
+    </synonym>
+    <template>/ReceiveData/{tsd}</template>
+    <methods uuid="962e5a24-ae19-4d19-bba1-509c7f96cd36">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ПринятьДанныеОтТСДPOST</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

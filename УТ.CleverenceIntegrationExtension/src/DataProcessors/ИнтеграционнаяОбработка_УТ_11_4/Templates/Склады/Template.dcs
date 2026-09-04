@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Склады</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код склада</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПапка</dataPath>
+			<field>ЭтоПапка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это группа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеДляПоиска</dataPath>
+			<field>НаименованиеДляПоиска</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование для поиска</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдРодителя_GUID</dataPath>
+			<field>ИдРодителя_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка - Группа склада</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ид_GUID</dataPath>
+			<field>Ид_GUID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка - Склад</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолноеОтображение</dataPath>
+			<field>ПолноеОтображение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полное отображение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РодительскаяПапка</dataPath>
+			<field>РодительскаяПапка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Родительская папка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШК</dataPath>
+			<field>ШК</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ШК</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтображениеОбъекта</dataPath>
+			<field>ОтображениеОбъекта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение объекта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтображениеСКартинкой</dataPath>
+			<field>ОтображениеСКартинкой</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение с картинкой</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Адресный</dataPath>
+			<field>Адресный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адресный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ид_GUID_ДляОтбора</dataPath>
+			<field>Ид_GUID_ДляОтбора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка - Склад</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдРодителя_GUID_ДляОтбора</dataPath>
+			<field>ИдРодителя_GUID_ДляОтбора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка - Группа склада</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерхнийУровеньДляОтбора</dataPath>
+			<field>ВерхнийУровеньДляОтбора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Верхний уровень для отбора</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Справочный</dataPath>
+			<field>Справочный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ //%ПЕРВЫЕ_N%
+	"" КАК Код,
+	СкладскиеПомещения.Ссылка КАК Ид,
+	СкладскиеПомещения.Наименование КАК Наименование,
+	ЛОЖЬ КАК ЭтоПапка,
+	СкладскиеПомещения.Владелец КАК ИдРодителя,
+	0 КАК ШК,
+	"" КАК ОтображениеОбъекта,
+	"" КАК РодительскаяПапка,
+	"" КАК ПолноеОтображение,
+	"" КАК ОтображениеСКартинкой,
+	СкладскиеПомещения.Наименование КАК НаименованиеДляПоиска,
+	СкладскиеПомещения.НастройкаАдресногоХранения = &amp;ЯчейкиОстатки КАК Адресный,
+	СкладскиеПомещения.НастройкаАдресногоХранения = &amp;СправочныеЯчейки КАК Справочный
+ПОМЕСТИТЬ Помещения
+ИЗ
+	Справочник.СкладскиеПомещения КАК СкладскиеПомещения
+ГДЕ
+	НЕ СкладскиеПомещения.ПометкаУдаления
+	И СкладскиеПомещения.Владелец.НастройкаАдресногоХранения = ЗНАЧЕНИЕ(Перечисление.НастройкиАдресногоХранения.ОпределяетсяНастройкамиПомещения)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ //%ПЕРВЫЕ_N%
+	"",
+	СкладскиеПомещения.Владелец,
+	СкладскиеПомещения.Владелец.Наименование,
+	ЛОЖЬ,
+	СкладскиеПомещения.Владелец,
+	0,
+	"",
+	"",
+	"",
+	"",
+	СкладскиеПомещения.Владелец.Наименование,
+	СкладскиеПомещения.Владелец.НастройкаАдресногоХранения = &amp;ЯчейкиОстатки,
+	СкладскиеПомещения.Владелец.НастройкаАдресногоХранения = &amp;СправочныеЯчейки КАК Справочный
+ИЗ
+	Справочник.СкладскиеПомещения КАК СкладскиеПомещения
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Помещения.ИдРодителя КАК ИдРодителя,
+	МАКСИМУМ(Помещения.Адресный) КАК Адресный
+ПОМЕСТИТЬ ПомещенияСЗаполненнымИдРодителя
+ИЗ
+	Помещения КАК Помещения
+ГДЕ
+	Помещения.ИдРодителя &lt;&gt; ""
+СГРУППИРОВАТЬ ПО
+	Помещения.ИдРодителя
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ //%ПЕРВЫЕ_N%
+	"" КАК Код,
+	Склады.Ссылка КАК Ид_GUID,
+	Склады.Наименование КАК Наименование,
+	Склады.Наименование КАК НаименованиеДляПоиска,
+	НЕ ПомещенияСЗаполненнымИдРодителя.ИдРодителя ЕСТЬ NULL
+		ИЛИ Склады.ЭтоГруппа КАК ЭтоПапка,
+	Склады.Родитель КАК ИдРодителя_GUID,
+	0 КАК ШК,
+	"" КАК ОтображениеОбъекта,
+	"" КАК РодительскаяПапка,
+	"" КАК ПолноеОтображение,
+	"" КАК ОтображениеСКартинкой,
+	НЕ Склады.ЭтоГруппа
+		И (Склады.НастройкаАдресногоХранения = &amp;ЯчейкиОстатки
+			ИЛИ ЕСТЬNULL(ПомещенияСЗаполненнымИдРодителя.Адресный, ЛОЖЬ))
+		И НЕ Склады.НастройкаАдресногоХранения = &amp;СправочныеЯчейки КАК Адресный,
+	ВЫБОР
+		КОГДА &amp;ОпределятьВерхнийУровень
+			ТОГДА "ВерхнийУровень"
+		ИНАЧЕ ""
+	КОНЕЦ КАК ВерхнийУровеньДляОтбора,
+	Склады.Ссылка КАК Ид_GUID_ДляОтбора,
+	Склады.Родитель КАК ИдРодителя_GUID_ДляОтбора,
+	НЕ Склады.ЭтоГруппа
+		И (Склады.НастройкаАдресногоХранения = &amp;СправочныеЯчейки) КАК Справочный
+ИЗ
+	Справочник.Склады КАК Склады
+		ЛЕВОЕ СОЕДИНЕНИЕ ПомещенияСЗаполненнымИдРодителя КАК ПомещенияСЗаполненнымИдРодителя
+		ПО (ПомещенияСЗаполненнымИдРодителя.ИдРодителя = Склады.Ссылка)
+ГДЕ
+	НЕ Склады.ПометкаУдаления
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Помещения.Код,
+	Помещения.Ид,
+	Помещения.НаименованиеДляПоиска,
+	Помещения.НаименованиеДляПоиска,
+	Помещения.ЭтоПапка,
+	Помещения.ИдРодителя,
+	Помещения.ШК,
+	Помещения.ОтображениеОбъекта,
+	Помещения.РодительскаяПапка,
+	Помещения.ПолноеОтображение,
+	Помещения.ОтображениеСКартинкой,
+	Помещения.Адресный,
+	ВЫБОР
+		КОГДА &amp;ОпределятьВерхнийУровень
+			ТОГДА "ВерхнийУровень"
+		ИНАЧЕ ""
+	КОНЕЦ,
+	Помещения.Ид,
+	Помещения.ИдРодителя,
+	Помещения.Справочный
+ИЗ
+	Помещения КАК Помещения</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ИдРодителя_GUID</dataPath>
+		<expression>Выбор Когда XMLСтрока(ИдРодителя_GUID) = "00000000-0000-0000-0000-000000000000" Тогда "" Иначе XMLСтрока(ИдРодителя_GUID)+"_Parent" Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ид родителя GUID</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Ид_GUID</dataPath>
+		<expression>ВЫБОР КОГДА ЭтоПапка Тогда XMLСтрока(Ид_GUID)+"_Parent" Иначе XMLСтрока(Ид_GUID) Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ид GUID</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>СправочныеЯчейки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Справочные ячейки</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.НастройкиАдресногоХранения.ЯчейкиСправочно</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЯчейкиОстатки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ячейки остатки</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.НастройкиАдресногоХранения.ЯчейкиОстатки</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОпределятьВерхнийУровень</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Определять верхний уровень</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Адресный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ид_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдРодителя_GUID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаименованиеДляПоиска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтображениеОбъекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтображениеСКартинкой</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПолноеОтображение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РодительскаяПапка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШК</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭтоПапка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВерхнийУровеньДляОтбора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Справочный</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Ид_GUID_ДляОтбора</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Склады.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИдРодителя_GUID_ДляОтбора</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Склады.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Код</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЭтоПапка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СправочныеЯчейки</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЯчейкиОстатки</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="866dddb0-4b52-4a2d-9108-5ff2bea55a21">
+  <producedTypes>
+    <objectType typeId="177dae9a-6df0-41b9-b42c-057224b1be85" valueTypeId="f5d53fdd-5e87-4cd6-a5f5-5c6bd24b8920"/>
+    <managerType typeId="30a9c4fb-089b-4dc2-99a6-513208268487" valueTypeId="5f32e50a-9cfb-4942-8cd4-554a9714f185"/>
+  </producedTypes>
+  <name>КонтурДиадокПеревозочныеДокументы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контур Диадок: Перевозочные документы</value>
+  </synonym>
+  <defaultForm>DataProcessor.КонтурДиадокПеревозочныеДокументы.Form.ФормаТрН</defaultForm>
+  <attributes uuid="abb53f7a-2b6a-4fa7-8693-d9e5f42865e2">
+    <name>РеквизитОбработки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реквизит обработки</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="983b514f-58fc-4fc6-89d0-63f929e38d64">
+    <producedTypes>
+      <objectType typeId="f7509c28-156d-4eb4-af00-2eba9e47c706" valueTypeId="1e933d7b-5bb9-4e78-a8d0-056ad6a35f00"/>
+      <rowType typeId="ffb575d7-b8ea-4a2a-8f65-1cb13cbe5772" valueTypeId="f7821e00-84e3-4ea4-9e77-05e27484fd5e"/>
+    </producedTypes>
+    <name>АктыОтметок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акты отметок</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="32945a22-ec19-4fb3-836d-74b99f62505e">
+      <name>АктВзвешивания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Взвеш.</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="938a989b-3de9-4824-bcfd-18846e270375">
+      <name>Номер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер акта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="ab4f49af-5f4d-4053-b22b-be0ac0f05531">
+      <name>Дата</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата акта</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3d46a31b-83ec-4524-aff6-7008492c0cd5">
+      <name>Наименование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование акта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="98d6e338-7ac9-4676-874b-313a6645aca0">
+      <name>ИдентификаторФайла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор файла акта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="575310df-1ad2-40a9-ab50-cde2b4a3ffb6">
+      <name>ДопСведения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дополнительные сведения акта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="f7f096c7-baac-448d-bae2-f8215f7adca1">
+      <name>ИдентификаторОтметки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор отметки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+          <fixed>true</fixed>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value>                                    </value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="2568683b-dc89-441a-a833-88060f0536fa">
+      <name>ИдентификаторСтроки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор строки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+          <fixed>true</fixed>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value>                                    </value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="c107c651-85c6-4ab2-af8c-639a16801c19">
+    <producedTypes>
+      <objectType typeId="ae5d17af-68da-4c93-b021-3ce7cc45cd06" valueTypeId="28ce5671-adb8-487c-905d-8c3385afd0f2"/>
+      <rowType typeId="bd555927-37bc-4fcb-ac85-7f8bd83a1eb4" valueTypeId="cf342c1c-75d6-4e74-b02a-9ee1b6793f04"/>
+    </producedTypes>
+    <name>СтороныСоставителиАктов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стороны составители актов</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a9d88194-af2f-4869-a490-cba172e55fa4">
+      <name>СторонаСоставитель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сторона-составитель акта</value>
+      </synonym>
+      <type>
+        <types>CatalogRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="2bed6a86-6e8a-43c0-8b92-556ef2b69721">
+      <name>ИдентификаторАкта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор акта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+          <fixed>true</fixed>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value>                                    </value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="55a811ed-3a8c-40e3-8fe5-5e61c8904017">
+      <name>ИНН</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИНН (для юр. или физ.лица)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>12</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="34979a4b-913f-40ca-a7e4-6e629be46b55">
+      <name>ОрганИсполнительнойВласти</name>
+      <synonym>
+        <key>ru</key>
+        <value>Орган исполнительной власти</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="f3ae71f6-11b4-4070-920f-c7e04e903f43">
+    <producedTypes>
+      <objectType typeId="8f03f2e8-5fbc-4329-9ded-558422d65e86" valueTypeId="a1720143-9a2a-4a66-a335-7e0d6d201427"/>
+      <rowType typeId="86055435-6a1a-4a99-8007-236be3134e6e" valueTypeId="705da7ff-d5aa-4f48-8970-67d82ff86541"/>
+    </producedTypes>
+    <name>ШтрафыОтметок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрафы отметок</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="bfc5df36-a10a-4b69-ab82-001786a2257e">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма (руб.)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>19</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="516f879a-b4dc-492c-b1b8-98f17e0a67c3">
+      <name>База</name>
+      <synonym>
+        <key>ru</key>
+        <value>Фактическая база для расчета штрафа</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="0aafe014-94eb-4b8a-a1ea-229296821b8c">
+      <name>Расчет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расчет штрафа</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>1000</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="8faded5e-5458-4970-8e12-bdf0cfc5ad91">
+      <name>ИдентификаторОтметки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор отметки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+          <fixed>true</fixed>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value>                                    </value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="aebaf4c2-4fa7-46c0-ac12-ac135f31c23f">
+    <producedTypes>
+      <objectType typeId="cb5fefdd-1b2f-4173-b46a-7cbdcffd37df" valueTypeId="e73e149a-a58f-4162-a9cf-25d63b47c397"/>
+      <rowType typeId="16514c73-a0c4-4983-a2d4-b4c0ac78d7fa" valueTypeId="438073df-73a1-475b-90cf-8780e2143485"/>
+    </producedTypes>
+    <name>ДопИнформацияОтметок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп информация отметок</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="d1902123-35f3-4b20-b903-d6b8e0e169b7">
+      <name>Идентификатор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор доп. информации отметки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="5bc7caad-0cc1-42b1-86e8-498863a5a942">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение доп. информации отметки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="f78d6e52-5c99-4b1b-aa1a-1d8c8fd10f21">
+      <name>ИдентификаторОтметки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор отметки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+          <fixed>true</fixed>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value>                                    </value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <forms uuid="e88dcec9-234a-47e2-8e0c-fb4da94a53d8">
+    <name>ФормаОтладки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отладки</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="685279ab-2ba5-40f7-b2a6-5c3b48a5e552">
+    <name>ФормаНастроекУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настроек управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a2704dcd-37a1-4651-b188-2901ac2efa54">
+    <name>ФормаНастроекОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настроек обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="222db8e8-fa35-498b-899a-14da0d16818e">
+    <name>ФормаТрН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма тр Н</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="9b78abd8-a759-4b37-bae8-928ebdd390f6">
+    <name>ФормаТрНОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма тр н обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="961975d0-9007-4a25-9c52-2ad0d010dd26">
+    <name>ФормаЗЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ЗЗ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1b892973-96b2-4256-9a48-581a6d498d3e">
+    <name>ФормаЗЗОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ЗЗОбычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="859453e2-0185-4b63-8b2f-0131d9b52485">
+    <name>ФормаПЭ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ПЭ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2e502d89-9380-4f83-bc32-2361eede6e00">
+    <name>ФормаПЭОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ПЭОбычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="54929bab-6db8-4825-a8a4-70efe709c589">
+    <name>ФормаТранспортногоСредства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма транспортного средства</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="26eefcdb-ca44-4c23-8b2b-23063ef2a030">
+    <name>ФормаТранспортногоСредстваОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма транспортного средства обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="603b4d24-f0d9-4c20-ae16-e85b8f7a6094">
+    <name>ФормаВодителя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма водителя</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f255d265-bd12-4014-8435-7da5e228f1bb">
+    <name>ФормаВодителяОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма водителя обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a8d28022-a313-414d-b430-0333152eece2">
+    <name>ФормаУчастника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма участника</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c1fbfd59-896e-40a0-8240-66d273eaa4ae">
+    <name>ФормаУчастникаОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма участника обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6e61b4ae-d1d2-4ee2-ab38-619286a36e5e">
+    <name>ФормаПогрузкаСотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма погрузка сотрудник</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bcaa7b01-6bda-4539-8792-bec7c3c85b22">
+    <name>ФормаПогрузкаСотрудникОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма погрузка сотрудник обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="596fd218-419c-42e3-8300-204b135a5b43">
+    <name>ФормаПодбораДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма подбора документов</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c5aa0e9b-6f1e-4783-a2c9-ea6805de274b">
+    <name>ФормаПодбораДокументовОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма подбора документов обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ed246908-0f33-405a-b71f-246558eb4463">
+    <name>ФормаДоговора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма договора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d2e4e43d-90df-4c52-b1ee-3a874a834326">
+    <name>ФормаДоговораОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма договора обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="27f6db75-9e39-4f84-90c6-568e949338da">
+    <name>ФормаНастройкиПодбораДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки подбора документов</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="325a9421-fe66-40fd-8cc5-aa336c83c87f">
+    <name>ФормаНастройкиПодбораДокументовОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки подбора документов обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="77ea7861-d305-4028-9a48-4d1d69b10b84">
+    <name>ФормаВыбораЗначений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор значений</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ab1892ad-df53-415a-988f-a61e9e230636">
+    <name>ФормаВыбораЗначенийОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора значений обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2c6f66cc-afe6-4596-afa3-343e523841b0">
+    <name>КлиентскиеВызовы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиентские вызовы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d7b9dcc8-a76c-4b07-9592-528d893411f4">
+    <name>КлиентскиеВызовыОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиентские вызовы обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6a17d936-5abb-4db0-8b6a-c9ea03a75d15">
+    <name>ПодключаемыйМодуль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подключаемый модуль</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8af86bc3-c18c-4d02-8c91-0779aeb018cc">
+    <name>ФормаЗначенийПоУмолчанию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма значений по умолчанию</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3377967a-7e34-453f-b1ad-b53abed8fd79">
+    <name>ФормаЗначенийПоУмолчаниюОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма значений по умолчанию обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c3bc99d0-8318-40f4-8487-4469f66a45f1">
+    <name>ФормаНастройкиСКД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки СКД</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bd37f7b5-c0df-4e46-8a23-3adf4d6220c4">
+    <name>ФормаНастройкиСКДОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки СКДОбычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4284b61a-c1be-4554-b4fe-6baae6a0ea3d">
+    <name>ФормаРедактированияКонтейнеров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирования контейнеров</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="398d6e6f-42e1-4176-bf66-fdcec5cbe4f8">
+    <name>ФормаРедактированияКонтейнеровОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирования контейнеров обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8f986eb9-ea24-43c6-88fc-004f46f018d4">
+    <name>ФормаРедактированияОпасныхГрузов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирования опасных грузов</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="241837ea-fbdc-499d-b26b-ee5c03a1e29b">
+    <name>ФормаРедактированияОпасныхГрузовОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирования опасных грузов обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ded192a6-945e-415a-a61c-412171a62372">
+    <name>ФормаВыбораСценария</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора сценария</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a401a43d-dc64-4aca-a53e-22045c45711b">
+    <name>ФормаВыбораСценарияОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора сценария обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cbb101ff-2530-4934-9cce-86e70dbaf9fc">
+    <name>ФормаЭТрН_Титул3</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭТрН-3 (титул Грузополучателя)</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7ce027ff-b7e7-47e2-b037-7ccd3c416501">
+    <name>ФормаЭТрН_Титул3_Обычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭТрН-3 (титул Грузополучателя)</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="8d092fb0-61f9-4d93-9b83-78ef1bf45454">
+    <name>ШаблонТН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон ТН</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="c6319719-9397-4d79-ae08-ebdf2f91f402">
+    <name>MXL_ТН</name>
+    <synonym>
+      <key>ru</key>
+      <value>MXL ТН</value>
+    </synonym>
+  </templates>
+  <templates uuid="3dfbe482-d16f-4174-a6ae-8affb4f0a4de">
+    <name>ПримерПечатнойФормы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пример печатной формы</value>
+    </synonym>
+  </templates>
+  <templates uuid="284e55ee-e490-4cc7-8a05-2055a7bcbc13">
+    <name>__etrnTitle1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Титул 1 ГО</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="6eeac369-deac-4229-9d64-eef76cc5d2d3">
+    <name>__etrnTitle2_Transporter</name>
+    <synonym>
+      <key>ru</key>
+      <value>Титул 2 ПВ</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="23009cae-b6e0-4674-9452-a9301dd0e029">
+    <name>__zzTitle1</name>
+    <synonym>
+      <key>ru</key>
+      <value>zzTitle1</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="79b7338f-fa52-4347-8dd6-1b1a0552e313">
+    <name>__zzTitle2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Zz title2</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="4316edf0-9eee-4024-abad-c3d2a3c8e3bf">
+    <name>__kl_porek_wt3_05_02_01</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поручение экспедитору информация клиента</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="98f035d7-e45b-4ee4-8620-4b83c4f62f0a">
+    <name>__kl_porek_05_02_01</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поручение экспедитору информация клиента</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="8a6534bb-0e67-4e55-8b5c-788b4995521d">
+    <name>ЗначенияВидТары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения вид тары</value>
+    </synonym>
+  </templates>
+  <templates uuid="87853e49-b1f4-4c8f-a2d3-2cb8b4d7cd08">
+    <name>ЗначенияСостояниеГруза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения состояние груза</value>
+    </synonym>
+  </templates>
+  <templates uuid="27abc5d5-db4b-49c5-9833-7c15c9d02626">
+    <name>ЗначенияСпособУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения способ упаковки</value>
+    </synonym>
+  </templates>
+  <templates uuid="c908d12a-7891-4c70-b202-19dd8062dfb3">
+    <name>ЗначенияСостояниеТары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения состояние тары</value>
+    </synonym>
+  </templates>
+  <templates uuid="c68de2dc-8492-4ec8-8638-5d56bf2ee6bf">
+    <name>ЗначенияСостояниеУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения состояние упаковки</value>
+    </synonym>
+  </templates>
+  <templates uuid="fc2d7e0f-cfd1-4dfc-857d-5d3e82d88bd7">
+    <name>ЗначенияСостояниеКузова</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения состояние кузова</value>
+    </synonym>
+  </templates>
+  <templates uuid="42a6444d-e6e6-4027-a08a-ad65eb457b50">
+    <name>ЗначенияТипПогрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения тип погрузки</value>
+    </synonym>
+  </templates>
+  <templates uuid="beb018b0-44f0-468f-8db3-3fe24078b891">
+    <name>ЗначенияТипКузова</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения тип кузова</value>
+    </synonym>
+  </templates>
+  <templates uuid="fca2a3f6-79d1-43d2-ad29-49fb6f4ef141">
+    <name>ЗначенияТипТС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения тип ТС</value>
+    </synonym>
+  </templates>
+  <templates uuid="91e616f4-14da-480c-8304-f88c1edebd63">
+    <name>ЗначенияВидТС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения вид ТС</value>
+    </synonym>
+  </templates>
+  <templates uuid="b3986176-7f6c-4910-b8b6-aceb313bfeee">
+    <name>ЗначенияТекстИнфИдентиф</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения текст инф идентиф</value>
+    </synonym>
+  </templates>
+  <templates uuid="ea9a4a3f-0e47-4a15-83a0-164ab03e798f">
+    <name>__etrnTitle3_Receiver</name>
+    <synonym>
+      <key>ru</key>
+      <value>Etrn title3 receiver</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

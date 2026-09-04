@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0db431f8-35aa-4447-97d5-39b59e6ccac3">
+  <producedTypes>
+    <selectionType typeId="8ca95cb5-1f6e-4a92-9ff6-a802e7d5ffbc" valueTypeId="c9a336d2-a29c-4941-b6b7-7a6f83b521e5"/>
+    <listType typeId="25c3cc54-13b5-43e0-a213-8bf71d4f5dcb" valueTypeId="eef8dabf-136e-4146-a384-f03cd1758e85"/>
+    <managerType typeId="9f683114-3f74-41bb-b53b-752e74a9bcb8" valueTypeId="2a9e1a59-b848-42f8-80d9-7693206b105e"/>
+    <recordSetType typeId="e1cf5c41-24a5-428e-8174-ac1916c8d7b6" valueTypeId="a84ddcfe-3d14-492b-87d2-0ee0a57e2d9d"/>
+    <recordKeyType typeId="adedc748-17bf-43b2-9bcb-6171d95b44e2" valueTypeId="40d4e9b9-0f6f-46c7-858f-4d6dc2444e02"/>
+    <recordType typeId="27cf9c17-4833-4725-ae27-07268f9b0522" valueTypeId="393081ce-c22b-400a-bfeb-42c6bdc91155"/>
+    <recordManagerType typeId="0d68de85-7ff3-4699-82ff-d090f5c829cc" valueTypeId="fd7cc83a-683e-4219-8226-e0a734ef6b54"/>
+  </producedTypes>
+  <name>СоответствиеНоменклатурыСырьяГИСМТ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Соответствие номенклатуры и сырья ГИС МТ</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СоответствиеНоменклатурыСырьяГИСМТ.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СоответствиеНоменклатурыСырьяГИСМТ.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="0e89c5e7-fb77-401e-99cc-df85b1492c10">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>DefinedType.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0eda68ea-d47e-41a0-b96e-cde42f9d36b1">
+    <name>Характеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ХарактеристикаНоменклатуры</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Характеристика номенклатуры, которой соответствует номенклатура классификатора сырья ГИС МТ</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ca269f8d-3ba0-46fc-87d5-2d22eabcf59c">
+    <name>Сырье</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сырье</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторСырьяГИСМТ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="020e4ed3-4890-4d9f-9c60-1f4f92bf70cc">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="90733aa3-6a48-4991-a7ac-22e1db7e467a">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

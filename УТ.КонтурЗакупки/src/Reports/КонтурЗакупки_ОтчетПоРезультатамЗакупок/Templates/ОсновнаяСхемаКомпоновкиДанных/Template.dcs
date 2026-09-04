@@ -1,0 +1,2161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Ссылки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗагрузки</dataPath>
+			<field>ДатаЗагрузки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Закупка</dataPath>
+			<field>Закупка</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.КонтурЗакупки_Закупка</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВебСсылка</dataPath>
+			<field>ВебСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб-ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдентификаторЗакупки</dataPath>
+			<field>ИдентификаторЗакупки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID закупки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗакупкаНомер</dataPath>
+			<field>ЗакупкаНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗакупкаДата</dataPath>
+			<field>ЗакупкаДата</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	МАКСИМУМ(РезультатыЗакупок.Ссылка) КАК Ссылка,
+	МАКСИМУМ(РезультатыЗакупок.ДатаЗагрузки) КАК ДатаЗагрузки,
+	РезультатыЗакупок.Закупка КАК Закупка,
+	РезультатыЗакупок.Закупка.Номер КАК ЗакупкаНомер,
+	РезультатыЗакупок.Закупка.Дата КАК ЗакупкаДата,
+	РезультатыЗакупок.ВебСсылка КАК ВебСсылка,
+	РезультатыЗакупок.Наименование КАК ИдентификаторЗакупки
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок КАК РезультатыЗакупок
+ГДЕ
+	РезультатыЗакупок.Закупка В(&amp;Закупка)
+	И НЕ РезультатыЗакупок.ПометкаУдаления
+
+СГРУППИРОВАТЬ ПО
+	РезультатыЗакупок.ВебСсылка,
+	РезультатыЗакупок.Закупка,
+	РезультатыЗакупок.Наименование</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Контракты</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактЭтап</dataPath>
+			<field>КонтрактЭтап</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактСсылка</dataPath>
+			<field>КонтрактСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактНомерСтроки</dataPath>
+			<field>КонтрактНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактЗаказчикКПП</dataPath>
+			<field>КонтрактЗаказчикКПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактТип</dataPath>
+			<field>КонтрактТип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактВебСсылкаЕИС</dataPath>
+			<field>КонтрактВебСсылкаЕИС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб-ссылка ЕИС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактНомер</dataPath>
+			<field>КонтрактНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактДата</dataPath>
+			<field>КонтрактДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактВалюта</dataPath>
+			<field>КонтрактВалюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактЗаказчик</dataPath>
+			<field>КонтрактЗаказчик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказчик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактЗаказчикИНН</dataPath>
+			<field>КонтрактЗаказчикИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоКонтракт</dataPath>
+			<field>ЭтоКонтракт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это контракт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрактЦена</dataPath>
+			<field>КонтрактЦена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контракт цена</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСвязиКонтракт</dataPath>
+			<field>КлючСвязиКонтракт</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Контракты.Ссылка КАК КонтрактСсылка,
+	Контракты.НомерСтроки КАК КонтрактНомерСтроки,
+	Контракты.Тип КАК КонтрактТип,
+	Контракты.Номер КАК КонтрактНомер,
+	Контракты.Дата КАК КонтрактДата,
+	Контракты.Этап КАК КонтрактЭтап,
+	Контракты.ФинальнаяЦена КАК КонтрактЦена,
+	Контракты.Валюта КАК КонтрактВалюта,
+	Контракты.Заказчик КАК КонтрактЗаказчик,
+	Контракты.ЗаказчикИНН КАК КонтрактЗаказчикИНН,
+	Контракты.ЗаказчикКПП КАК КонтрактЗаказчикКПП,
+	Контракты.ВебСсылкаЕИС КАК КонтрактВебСсылкаЕИС, 
+	Контракты.КлючСвязиКонтракт КАК КлючСвязиКонтракт,
+	ИСТИНА КАК ЭтоКонтракт
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Контракты КАК Контракты</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОбъектыЗакупки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗакупкиСсылка</dataPath>
+			<field>ОбъектЗакупкиСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗакупкиЕдиницаИзмерения</dataPath>
+			<field>ОбъектЗакупкиЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ед. изм.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗакупкиНаименование</dataPath>
+			<field>ОбъектЗакупкиНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект закупки</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Отступ</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">5</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗакупкиКоличество</dataPath>
+			<field>ОбъектЗакупкиКоличество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСвязиОбъектЗакупки</dataPath>
+			<field>КлючСвязиОбъектЗакупки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоОбъектЗакупки</dataPath>
+			<field>ЭтоОбъектЗакупки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это объект закупки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗакупкиЦена</dataPath>
+			<field>ОбъектЗакупкиЦена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект закупки цена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗакупкиСумма</dataPath>
+			<field>ОбъектЗакупкиСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект закупки сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗакупкиНомерСтроки</dataPath>
+			<field>ОбъектЗакупкиНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект закупки номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСвязиКонтракт</dataPath>
+			<field>КлючСвязиКонтракт</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОбъектыЗакупки.Ссылка КАК ОбъектЗакупкиСсылка,
+	ОбъектыЗакупки.НомерСтроки КАК ОбъектЗакупкиНомерСтроки,
+	ОбъектыЗакупки.Наименование КАК ОбъектЗакупкиНаименование,
+	ОбъектыЗакупки.Количество КАК ОбъектЗакупкиКоличество,
+	ОбъектыЗакупки.ЕдиницаИзмерения КАК ОбъектЗакупкиЕдиницаИзмерения,
+	ОбъектыЗакупки.ОбщаяСтоимость КАК ОбъектЗакупкиСумма,
+	ОбъектыЗакупки.ЦенаЗаЕдиницу КАК ОбъектЗакупкиЦена,
+	ОбъектыЗакупки.КлючСвязиКонтракт КАК КлючСвязиКонтракт,
+	ОбъектыЗакупки.КлючСвязиОбъектЗакупки КАК КлючСвязиОбъектЗакупки,
+	ИСТИНА КАК ЭтоОбъектЗакупки
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.ОбъектыЗакупки КАК ОбъектыЗакупки</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Поставщики</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикКлючСвязиКонтракт</dataPath>
+			<field>ПоставщикКлючСвязиКонтракт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик ключ связи контракт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикТелефон</dataPath>
+			<field>ПоставщикТелефон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикАдрес</dataPath>
+			<field>ПоставщикАдрес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикСсылка</dataPath>
+			<field>ПоставщикСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикНаименование</dataPath>
+			<field>ПоставщикНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикКПП</dataPath>
+			<field>ПоставщикКПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикЭлектроннаяПочта</dataPath>
+			<field>ПоставщикЭлектроннаяПочта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эл. почта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикИНН</dataPath>
+			<field>ПоставщикИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПоставщик</dataPath>
+			<field>ЭтоПоставщик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это поставщик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикНомерСтроки</dataPath>
+			<field>ПоставщикНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Поставщики.Ссылка КАК ПоставщикСсылка,
+	Поставщики.НомерСтроки КАК ПоставщикНомерСтроки,
+	Поставщики.Поставщик КАК ПоставщикНаименование,
+	Поставщики.ИНН КАК ПоставщикИНН,
+	Поставщики.КПП КАК ПоставщикКПП,
+	Поставщики.Адрес КАК ПоставщикАдрес,
+	Поставщики.Телефон КАК ПоставщикТелефон,
+	Поставщики.ЭлектроннаяПочта КАК ПоставщикЭлектроннаяПочта,
+	Поставщики.КлючСвязиКонтракт КАК ПоставщикКлючСвязиКонтракт,
+	ИСТИНА КАК ЭтоПоставщик
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Поставщики КАК Поставщики</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Проекты</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектСсылка</dataPath>
+			<field>ПроектСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссыока</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектНомерСтроки</dataPath>
+			<field>ПроектНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектЗаказчик</dataPath>
+			<field>ПроектЗаказчик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказчик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектЗаказчикКПП</dataPath>
+			<field>ПроектЗаказчикКПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЗаказчикКПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектВалюта</dataPath>
+			<field>ПроектВалюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектТип</dataPath>
+			<field>ПроектТип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектНомер</dataPath>
+			<field>ПроектНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектДата</dataPath>
+			<field>ПроектДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектЗаказчикИНН</dataPath>
+			<field>ПроектЗаказчикИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказчик ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектПоставщик</dataPath>
+			<field>ПроектПоставщик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектПоставщикИНН</dataPath>
+			<field>ПроектПоставщикИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектПоставщикКПП</dataPath>
+			<field>ПроектПоставщикКПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик КПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектВебСсылкаЭТП</dataPath>
+			<field>ПроектВебСсылкаЭТП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб ссылка ЭТП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПроект</dataPath>
+			<field>ЭтоПроект</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это проект</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектЦена</dataPath>
+			<field>ПроектЦена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект цена</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КлючСвязиПроект</dataPath>
+			<field>КлючСвязиПроект</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Проекты.Ссылка КАК ПроектСсылка,
+	Проекты.НомерСтроки КАК ПроектНомерСтроки,
+	Проекты.Тип КАК ПроектТип,
+	Проекты.Номер КАК ПроектНомер,
+	Проекты.Дата КАК ПроектДата,
+	Проекты.ЦенаПоПроекту КАК ПроектЦена,
+	Проекты.Валюта КАК ПроектВалюта,
+	Проекты.Заказчик КАК ПроектЗаказчик,
+	Проекты.ЗаказчикИНН КАК ПроектЗаказчикИНН,
+	Проекты.ЗаказчикКПП КАК ПроектЗаказчикКПП,
+	Проекты.Поставщик КАК ПроектПоставщик,
+	Проекты.ПоставщикИНН КАК ПроектПоставщикИНН,
+	Проекты.ПоставщикКПП КАК ПроектПоставщикКПП,
+	Проекты.ВебСсылкаЭТП КАК ПроектВебСсылкаЭТП,
+	Проекты.КлючСвязиПроект КАК КлючСвязиПроект,
+	ИСТИНА КАК ЭтоПроект
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Проекты КАК Проекты</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Протоколы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколСсылка</dataPath>
+			<field>ПротоколСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколНомерСтроки</dataPath>
+			<field>ПротоколНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколНомер</dataPath>
+			<field>ПротоколНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколПричинаОтклонения</dataPath>
+			<field>ПротоколПричинаОтклонения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина отклонения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколДата</dataPath>
+			<field>ПротоколДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколТип</dataPath>
+			<field>ПротоколТип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколВебСсылкаЕИС</dataPath>
+			<field>ПротоколВебСсылкаЕИС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб-ссылка ЕИС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколВебСсылкаЭТП</dataPath>
+			<field>ПротоколВебСсылкаЭТП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб-ссылка ЭТП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколРасшифровкаТипа</dataPath>
+			<field>ПротоколРасшифровкаТипа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расшифровка типа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПротоколКлючСвязиПротокол</dataPath>
+			<field>ПротоколКлючСвязиПротокол</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ связи протокол</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПротокол</dataPath>
+			<field>ЭтоПротокол</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это протокол</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Протоколы.Ссылка КАК ПротоколСсылка,
+	Протоколы.НомерСтроки КАК ПротоколНомерСтроки,
+	Протоколы.Номер КАК ПротоколНомер,
+	Протоколы.Дата КАК ПротоколДата,
+	Протоколы.Тип КАК ПротоколТип,
+	Протоколы.РасшифровкаТипа КАК ПротоколРасшифровкаТипа,
+	Протоколы.ПричинаОтклонения КАК ПротоколПричинаОтклонения,
+	Протоколы.ВебСсылкаЭТП КАК ПротоколВебСсылкаЭТП,
+	Протоколы.ВебСсылкаЕИС КАК ПротоколВебСсылкаЕИС,
+	Протоколы.КлючСвязиПротокол КАК ПротоколКлючСвязиПротокол,	
+	ИСТИНА КАК ЭтоПротокол
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Протоколы КАК Протоколы</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Участники</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникНомерЗаявки</dataPath>
+			<field>УчастникНомерЗаявки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер заявки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникСсылка</dataPath>
+			<field>УчастникСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникНаименование</dataPath>
+			<field>УчастникНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникИНН</dataPath>
+			<field>УчастникИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникКПП</dataPath>
+			<field>УчастникКПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникДатаЗаявки</dataPath>
+			<field>УчастникДатаЗаявки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата заявки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникЯвляетсяПоставщиком</dataPath>
+			<field>УчастникЯвляетсяПоставщиком</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Является поставщиком</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникЯвляетсяПобедителем</dataPath>
+			<field>УчастникЯвляетсяПобедителем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Является победителем</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникРезультатРассмотрения</dataPath>
+			<field>УчастникРезультатРассмотрения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат рассмотрения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникПричинаНесоответствия</dataPath>
+			<field>УчастникПричинаНесоответствия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина несоответствия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникКлючСвязиПротокол</dataPath>
+			<field>УчастникКлючСвязиПротокол</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ связи протокол</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникНайденВДокументации</dataPath>
+			<field>УчастникНайденВДокументации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участник найден в документации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоУчастник</dataPath>
+			<field>ЭтоУчастник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это участник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникЦена</dataPath>
+			<field>УчастникЦена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участник цена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчастникНомерСтроки</dataPath>
+			<field>УчастникНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участник номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Участники.Ссылка КАК УчастникСсылка,
+	Участники.НомерСтроки КАК УчастникНомерСтроки,
+	Участники.Участник КАК УчастникНаименование,
+	Участники.ИНН КАК УчастникИНН,
+	Участники.КПП КАК УчастникКПП,
+	Участники.НомерЗаявки КАК УчастникНомерЗаявки,
+	Участники.ДатаЗаявки КАК УчастникДатаЗаявки,
+	Участники.ПредложеннаяЦена КАК УчастникЦена,
+	Участники.ВозможныйУчастник КАК УчастникНайденВДокументации,
+	Участники.ЯвляетсяПоставщиком КАК УчастникЯвляетсяПоставщиком,
+	Участники.ЯвляетсяПобедителем КАК УчастникЯвляетсяПобедителем,
+	Участники.РезультатРассмотрения КАК УчастникРезультатРассмотрения,
+	Участники.ПричинаНесоответствия КАК УчастникПричинаНесоответствия,
+	Участники.КлючСвязиПротокол КАК УчастникКлючСвязиПротокол,
+	ИСТИНА КАК ЭтоУчастник
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Участники КАК Участники</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДокументыКонтракты</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКонтрактаИмяФайла</dataPath>
+			<field>ДокументКонтрактаИмяФайла</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКонтрактаСсылкаНаФайл</dataPath>
+			<field>ДокументКонтрактаСсылкаНаФайл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на файл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоДокументКонтракта</dataPath>
+			<field>ЭтоДокументКонтракта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это документ контракта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКонтрактаНомерСтроки</dataPath>
+			<field>ДокументКонтрактаНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ контракта номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКонтрактаКлючСвязи</dataPath>
+			<field>ДокументКонтрактаКлючСвязи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ контракта ключ связи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКонтрактаСсылка</dataPath>
+			<field>ДокументКонтрактаСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ контракта ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ДокументыКонтракты.Ссылка КАК ДокументКонтрактаСсылка,  
+	ДокументыКонтракты.НомерСтроки КАК ДокументКонтрактаНомерСтроки,
+	ДокументыКонтракты.ИмяФайла КАК ДокументКонтрактаИмяФайла,
+	ДокументыКонтракты.СсылкаНаФайл КАК ДокументКонтрактаСсылкаНаФайл,
+	ДокументыКонтракты.КлючСвязи КАК ДокументКонтрактаКлючСвязи,
+	ИСТИНА КАК ЭтоДокументКонтракта
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Документы КАК ДокументыКонтракты
+ГДЕ
+	ДокументыКонтракты.Владелец = "Контракт"</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДокументыПроекты</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПроектаИмяФайла</dataPath>
+			<field>ДокументПроектаИмяФайла</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПроектаСсылкаНаФайл</dataPath>
+			<field>ДокументПроектаСсылкаНаФайл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ проекта ссылка на файл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоДокументПроекта</dataPath>
+			<field>ЭтоДокументПроекта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это документ проекта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПроектаНомерСтроки</dataPath>
+			<field>ДокументПроектаНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ проекта номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПроектаКлючСвязи</dataPath>
+			<field>ДокументПроектаКлючСвязи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ проекта ключ связи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПроектаСсылка</dataPath>
+			<field>ДокументПроектаСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ проекта ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ДокументыПроекты.Ссылка КАК ДокументПроектаСсылка,
+	ДокументыПроекты.НомерСтроки КАК ДокументПроектаНомерСтроки,
+	ДокументыПроекты.ИмяФайла КАК ДокументПроектаИмяФайла,
+	ДокументыПроекты.СсылкаНаФайл КАК ДокументПроектаСсылкаНаФайл, 
+	ДокументыПроекты.КлючСвязи КАК ДокументПроектаКлючСвязи,
+	ИСТИНА КАК ЭтоДокументПроекта
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Документы КАК ДокументыПроекты
+ГДЕ
+	ДокументыПроекты.Владелец = "Проект"</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДокументыПротоколы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПротоколаИмяФайла</dataPath>
+			<field>ДокументПротоколаИмяФайла</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПротоколаСсылкаНаФайл</dataPath>
+			<field>ДокументПротоколаСсылкаНаФайл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на файл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоДокументПротокола</dataPath>
+			<field>ЭтоДокументПротокола</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это документ протокола</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПротоколаНомерСтроки</dataPath>
+			<field>ДокументПротоколаНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ протокола номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПротоколаКлючСвязи</dataPath>
+			<field>ДокументПротоколаКлючСвязи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ протокола ключ связи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПротоколаСсылка</dataPath>
+			<field>ДокументПротоколаСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ протокола ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ДокументыПротоколы.Ссылка КАК ДокументПротоколаСсылка,  
+	ДокументыПротоколы.НомерСтроки КАК ДокументПротоколаНомерСтроки,
+	ДокументыПротоколы.ИмяФайла КАК ДокументПротоколаИмяФайла,
+	ДокументыПротоколы.СсылкаНаФайл КАК ДокументПротоколаСсылкаНаФайл,
+	ДокументыПротоколы.КлючСвязи КАК ДокументПротоколаКлючСвязи,
+	ИСТИНА КАК ЭтоДокументПротокола
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.Документы КАК ДокументыПротоколы
+ГДЕ
+	ДокументыПротоколы.Владелец = "Протокол"</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>КодыОКВЭД2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКВЭД2Ссылка</dataPath>
+			<field>ОКВЭД2Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКВЭД2 ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКВЭД2КодРасшифровка</dataPath>
+			<field>ОКВЭД2КодРасшифровка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКВЭД2 код расшифровка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКВЭД2Код</dataPath>
+			<field>ОКВЭД2Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоКодОКВЭД2</dataPath>
+			<field>ЭтоКодОКВЭД2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это код ОКВЭД2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКВЭД2Ключ</dataPath>
+			<field>ОКВЭД2Ключ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКВЭД2 ключ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКВЭД2НомерСтроки</dataPath>
+			<field>ОКВЭД2НомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКВЭД2 номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КодыОКВЭД2.Ссылка КАК ОКВЭД2Ссылка,
+	КодыОКВЭД2.НомерСтроки КАК ОКВЭД2НомерСтроки,
+	КодыОКВЭД2.Ключ КАК ОКВЭД2Ключ,
+	КодыОКВЭД2.ОКВЭД2Код КАК ОКВЭД2Код,
+	КодыОКВЭД2.ОКВЭД2Код + "; " + КодыОКВЭД2.ОКВЭД2Расшифровка КАК ОКВЭД2КодРасшифровка,
+	ИСТИНА КАК ЭтоКодОКВЭД2
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.КодыОКВЭД2 КАК КодыОКВЭД2</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>КодыОПКД2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКПД2КодРасшифровка</dataPath>
+			<field>ОКПД2КодРасшифровка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКПД2 код расшифровка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКПД2Ссылка</dataPath>
+			<field>ОКПД2Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКПД2 ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКПД2Код</dataPath>
+			<field>ОКПД2Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоКодОКПД2</dataPath>
+			<field>ЭтоКодОКПД2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это код ОКПД2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКПД2Ключ</dataPath>
+			<field>ОКПД2Ключ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКПД2 ключ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКПД2НомерСтроки</dataPath>
+			<field>ОКПД2НомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКПД2 номер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КодыОКПД2.Ссылка КАК ОКПД2Ссылка,
+	КодыОКПД2.НомерСтроки КАК ОКПД2НомерСтроки,
+	КодыОКПД2.Ключ КАК ОКПД2Ключ,
+	КодыОКПД2.ОКПД2Код КАК ОКПД2Код,	
+	КодыОКПД2.ОКПД2Код + "; " + КодыОКПД2.ОКПД2Расшифровка КАК ОКПД2КодРасшифровка,
+	ИСТИНА КАК ЭтоКодОКПД2
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.КодыОКПД2 КАК КодыОКПД2</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>КодыКТРУ</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КТРУКодРасшифровка</dataPath>
+			<field>КТРУКодРасшифровка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КТРУКод расшифровка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КТРУСсылка</dataPath>
+			<field>КТРУСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КТРУСсылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КТРУКод</dataPath>
+			<field>КТРУКод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоКодКТРУ</dataPath>
+			<field>ЭтоКодКТРУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это код КТРУ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КТРУКлюч</dataPath>
+			<field>КТРУКлюч</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КТРУКлюч</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КТРУНомерСтроки</dataPath>
+			<field>КТРУНомерСтроки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КТРУНомер строки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КодыКТРУ.Ссылка КАК КТРУСсылка,
+	КодыКТРУ.НомерСтроки КАК КТРУНомерСтроки,
+	КодыКТРУ.Ключ КАК КТРУКлюч, 
+	КодыКТРУ.КТРУКод КАК КТРУКод,
+	КодыКТРУ.КТРУКод + "; " + КодыКТРУ.КТРУРасшифровка КАК КТРУКодРасшифровка,
+	ИСТИНА КАК ЭтоКодКТРУ
+ИЗ
+	Справочник.КонтурЗакупки_РезультатыЗакупок.КодыКТРУ КАК КодыКТРУ</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>Ссылки</sourceDataSet>
+		<destinationDataSet>Контракты</destinationDataSet>
+		<sourceExpression>Ссылка</sourceExpression>
+		<destinationExpression>КонтрактСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контракты</sourceDataSet>
+		<destinationDataSet>ОбъектыЗакупки</destinationDataSet>
+		<sourceExpression>КонтрактСсылка</sourceExpression>
+		<destinationExpression>ОбъектЗакупкиСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контракты</sourceDataSet>
+		<destinationDataSet>ОбъектыЗакупки</destinationDataSet>
+		<sourceExpression>КлючСвязиКонтракт</sourceExpression>
+		<destinationExpression>КлючСвязиКонтракт</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контракты</sourceDataSet>
+		<destinationDataSet>Поставщики</destinationDataSet>
+		<sourceExpression>КонтрактСсылка</sourceExpression>
+		<destinationExpression>ПоставщикСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контракты</sourceDataSet>
+		<destinationDataSet>Поставщики</destinationDataSet>
+		<sourceExpression>КлючСвязиКонтракт</sourceExpression>
+		<destinationExpression>ПоставщикКлючСвязиКонтракт</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контракты</sourceDataSet>
+		<destinationDataSet>ДокументыКонтракты</destinationDataSet>
+		<sourceExpression>КонтрактСсылка</sourceExpression>
+		<destinationExpression>ДокументКонтрактаСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контракты</sourceDataSet>
+		<destinationDataSet>ДокументыКонтракты</destinationDataSet>
+		<sourceExpression>КлючСвязиКонтракт</sourceExpression>
+		<destinationExpression>ДокументКонтрактаКлючСвязи</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОбъектыЗакупки</sourceDataSet>
+		<destinationDataSet>КодыОКВЭД2</destinationDataSet>
+		<sourceExpression>ОбъектЗакупкиСсылка</sourceExpression>
+		<destinationExpression>ОКВЭД2Ссылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОбъектыЗакупки</sourceDataSet>
+		<destinationDataSet>КодыОКВЭД2</destinationDataSet>
+		<sourceExpression>КлючСвязиОбъектЗакупки</sourceExpression>
+		<destinationExpression>ОКВЭД2Ключ</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОбъектыЗакупки</sourceDataSet>
+		<destinationDataSet>КодыОПКД2</destinationDataSet>
+		<sourceExpression>ОбъектЗакупкиСсылка</sourceExpression>
+		<destinationExpression>ОКПД2Ссылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОбъектыЗакупки</sourceDataSet>
+		<destinationDataSet>КодыОПКД2</destinationDataSet>
+		<sourceExpression>КлючСвязиОбъектЗакупки</sourceExpression>
+		<destinationExpression>ОКПД2Ключ</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОбъектыЗакупки</sourceDataSet>
+		<destinationDataSet>КодыКТРУ</destinationDataSet>
+		<sourceExpression>ОбъектЗакупкиСсылка</sourceExpression>
+		<destinationExpression>КТРУСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОбъектыЗакупки</sourceDataSet>
+		<destinationDataSet>КодыКТРУ</destinationDataSet>
+		<sourceExpression>КлючСвязиОбъектЗакупки</sourceExpression>
+		<destinationExpression>КТРУКлюч</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Ссылки</sourceDataSet>
+		<destinationDataSet>Проекты</destinationDataSet>
+		<sourceExpression>Ссылка</sourceExpression>
+		<destinationExpression>ПроектСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Проекты</sourceDataSet>
+		<destinationDataSet>ДокументыПроекты</destinationDataSet>
+		<sourceExpression>ПроектСсылка</sourceExpression>
+		<destinationExpression>ДокументПроектаСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Проекты</sourceDataSet>
+		<destinationDataSet>ДокументыПроекты</destinationDataSet>
+		<sourceExpression>ПроектСсылка</sourceExpression>
+		<destinationExpression>ДокументПроектаКлючСвязи</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Ссылки</sourceDataSet>
+		<destinationDataSet>Протоколы</destinationDataSet>
+		<sourceExpression>Ссылка</sourceExpression>
+		<destinationExpression>ПротоколСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Протоколы</sourceDataSet>
+		<destinationDataSet>Участники</destinationDataSet>
+		<sourceExpression>ПротоколСсылка</sourceExpression>
+		<destinationExpression>УчастникСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Протоколы</sourceDataSet>
+		<destinationDataSet>Участники</destinationDataSet>
+		<sourceExpression>ПротоколКлючСвязиПротокол</sourceExpression>
+		<destinationExpression>УчастникКлючСвязиПротокол</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Протоколы</sourceDataSet>
+		<destinationDataSet>ДокументыПротоколы</destinationDataSet>
+		<sourceExpression>ПротоколСсылка</sourceExpression>
+		<destinationExpression>ДокументПротоколаСсылка</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Протоколы</sourceDataSet>
+		<destinationDataSet>ДокументыПротоколы</destinationDataSet>
+		<sourceExpression>ПротоколКлючСвязиПротокол</sourceExpression>
+		<destinationExpression>ДокументПротоколаКлючСвязи</destinationExpression>
+		<parameter>Закупка</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>КонтрактЭтап</dataPath>
+		<expression>ВЫБОР КОГДА КонтрактЭтап = 0 ТОГДА "Исполняется" КОГДА КонтрактЭтап = 1 ТОГДА "Исполнен" КОГДА КонтрактЭтап = 2 ТОГДА "Прекращен" КОГДА КонтрактЭтап = 3 ТОГДА "Истек срок исполнения" ИНАЧЕ "Аннулирован" КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Этап</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>УчастникРезультатРассмотрения</dataPath>
+		<expression>ВЫБОР КОГДА УчастникРезультатРассмотрения = ИСТИНА ТОГДА "Соответствует" ИНАЧЕ "Не соответствует" КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Участник результат рассмотрения</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>УчастникЯвляетсяПобедителем</dataPath>
+		<expression>ВЫБОР КОГДА УчастникЯвляетсяПобедителем = ИСТИНА ТОГДА "Победитель" ИНАЧЕ "Проигравший" КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Участник является победителем</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодыОКВЭД2</dataPath>
+		<expression>СоединитьСтроки(Массив(ОКВЭД2КодРасшифровка), ";", "")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коды ОКВЭД2</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодыОКПД2</dataPath>
+		<expression>СоединитьСтроки(Массив(ОКПД2КодРасшифровка), ";", "")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коды ОКПД2</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодыКТРУ</dataPath>
+		<expression>СоединитьСтроки(Массив(КТРУКодРасшифровка), ";", "")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Коды КТРУ</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КонтрактЦена</dataPath>
+		<expression>Формат(КонтрактЦена, "ЧДЦ=2")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контракт цена</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроектЦена</dataPath>
+		<expression>Формат(ПроектЦена, "ЧДЦ=2")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проект цена</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>УчастникНаименование</dataPath>
+		<expression>ВЫБОР КОГДА ЗначениеЗаполнено(УчастникНаименование) ТОГДА УчастникНаименование ИНАЧЕ "Нет данных об участнике" КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Участник наименование</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПротоколНомер</dataPath>
+		<expression>ВЫБОР КОГДА ЗначениеЗаполнено(ПротоколНомер) ТОГДА ПротоколНомер ИНАЧЕ "Номер не указан" КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Протокол номер</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>УчастникПричинаНесоответствияЗаполнена</dataPath>
+		<expression>ЗначениеЗаполнено(УчастникПричинаНесоответствия)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Участник причина несоответствия заполнена</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Закупка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Закупка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.КонтурЗакупки_Закупка</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>РезультатыЗакупки</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Результаты закупки</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодыОКПД2</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Закупка</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>2fb1382b-9fc1-4d93-9f8f-978d96100cd3</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КонтрактВебСсылкаЕИС</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроектВебСсылкаЭТП</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>https://zakupki.gov.ru</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Шапка</dcsset:name>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Закупка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗакупкаДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗакупкаНомер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаЗагрузки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИдентификаторЗакупки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВебСсылка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипМакета</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupTemplateType">Vertical</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>Контракт</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КонтрактНомер</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КонтрактДата</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КонтрактЭтап</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КонтрактЦена</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КонтрактВалюта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КонтрактЗаказчик</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КонтрактЗаказчикИНН</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КонтрактЗаказчикКПП</dcsset:field>
+								</dcsset:item>
+								<dcsset:placement>Horizontally</dcsset:placement>
+							</dcsset:item>
+							<dcsset:placement>Vertically</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КонтрактВебСсылкаЕИС</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЭтоКонтракт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипМакета</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionGroupTemplateType">Horizontal</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Заголовок</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контракты</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>ОбъектЗакупки</dcsset:name>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОбъектЗакупкиНаименование</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОбъектЗакупкиКоличество</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОбъектЗакупкиЕдиницаИзмерения</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОбъектЗакупкиЦена</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОбъектЗакупкиСумма</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭтоОбъектЗакупки</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:name>КодыОКВЭД2</dcsset:name>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КодыОКВЭД2</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ЭтоКодОКВЭД2</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:name>КодыОКПД2</dcsset:name>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КодыОКПД2</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ЭтоКодОКПД2</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:name>КодыКТРУ</dcsset:name>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КодыКТРУ</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ЭтоКодКТРУ</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>Поставщик</dcsset:name>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ПоставщикНаименование</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>ПоставщикИНН</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>ПоставщикКПП</dcsset:field>
+									</dcsset:item>
+									<dcsset:placement>Horizontally</dcsset:placement>
+								</dcsset:item>
+								<dcsset:placement>Vertically</dcsset:placement>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПоставщикТелефон</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПоставщикЭлектроннаяПочта</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПоставщикАдрес</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭтоПоставщик</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>ДокументыКонтракта</dcsset:name>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДокументКонтрактаИмяФайла</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДокументКонтрактаСсылкаНаФайл</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭтоДокументКонтракта</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>Проект</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроектНомер</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроектДата</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроектЦена</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроектВалюта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПроектЗаказчик</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ПроектЗаказчикИНН</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ПроектЗаказчикКПП</dcsset:field>
+								</dcsset:item>
+								<dcsset:placement>Horizontally</dcsset:placement>
+							</dcsset:item>
+							<dcsset:placement>Vertically</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПроектПоставщик</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ПроектПоставщикИНН</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ПроектПоставщикКПП</dcsset:field>
+								</dcsset:item>
+								<dcsset:placement>Horizontally</dcsset:placement>
+							</dcsset:item>
+							<dcsset:placement>Vertically</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроектВебСсылкаЭТП</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЭтоПроект</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипМакета</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionGroupTemplateType">Horizontal</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>ДокументыПроекта</dcsset:name>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДокументПроектаИмяФайла</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДокументПроектаСсылкаНаФайл</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭтоДокументПроекта</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>Протокол</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПротоколНомер</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПротоколДата</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПротоколРасшифровкаТипа</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПротоколПричинаОтклонения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПротоколВебСсылкаЭТП</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПротоколВебСсылкаЕИС</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЭтоПротокол</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>Участник</dcsset:name>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникНомерЗаявки</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникДатаЗаявки</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникНаименование</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникИНН</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникКПП</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникЦена</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникНайденВДокументации</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникЯвляетсяПобедителем</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникЯвляетсяПоставщиком</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникРезультатРассмотрения</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникПричинаНесоответствия</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УчастникПричинаНесоответствияЗаполнена</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭтоУчастник</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>ДокументыПротокола</dcsset:name>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДокументПротоколаИмяФайла</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДокументПротоколаСсылкаНаФайл</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭтоДокументПротокола</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bec7de88-3a7d-4d04-a994-91d06fcb56de">
+  <name>КонтурЛогистика_Создать1ПлПоВыделенным</name>
+  <synonym>
+    <key>ru</key>
+    <value>Создать 1 ПЛ по выделенным</value>
+  </synonym>
+  <group>CommandGroup.КонтурЛогистика_КомандыВводаДокументов</group>
+  <commandParameterType>
+    <types>DocumentRef.РеализацияТоваровУслуг</types>
+    <types>DocumentRef.ТранспортнаяНакладная</types>
+    <types>DocumentRef.ВозвратТоваровПоставщику</types>
+    <types>DocumentRef.ПоступлениеТоваровНаСклад</types>
+    <types>DocumentRef.КонтурЛогистика_Вспомогательный</types>
+    <types>DocumentRef.ПриобретениеТоваровУслуг</types>
+    <types>DocumentRef.ЗаданиеНаПеревозку</types>
+    <types>DocumentRef.ПеремещениеТоваров</types>
+  </commandParameterType>
+  <parameterUseMode>Multiple</parameterUseMode>
+  <representation>PictureAndText</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Формирует черновик титула по выделенным документам (по выделенным документам - открывает 1 карточку ввода ПЛ)</value>
+  </toolTip>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.КонтурЛогистика_Молния</picture>
+  </picture>
+</mdclass:CommonCommand>

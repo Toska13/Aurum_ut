@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6be3247-083e-4f85-a3b7-6c59910e7ef7">
+  <producedTypes>
+    <objectType typeId="0601650c-b6b4-401b-a4dc-a47cab5317ed" valueTypeId="9490affc-25b5-4f3a-b627-8920f9b611ba"/>
+    <managerType typeId="5d20ca13-52f4-4e1f-8935-522fea92333f" valueTypeId="52377b4e-a1bf-4fa6-905f-b9e2a4269460"/>
+  </producedTypes>
+  <name>МониторСверкиВзаиморасчетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Монитор сверки взаиморасчетов</value>
+  </synonym>
+  <defaultForm>DataProcessor.МониторСверкиВзаиморасчетов.Form.Форма</defaultForm>
+  <attributes uuid="c980d378-3828-4177-a3fd-8d27b24fba28">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="ee00933d-fe44-4d2f-b06a-ea04aadc42c3">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период с</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="5a5f4c81-4bcf-4c4d-b1f6-8f2d7930005d">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <forms uuid="45e3e4c5-c89d-4ef0-9274-f2fb61b94fa4">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fa7992d0-f3dd-4e7d-9960-b9ca17eefa28">
+    <name>КомментарийСверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий сверки</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="076e893d-15e1-42d0-8821-c45230439383">
+    <name>ДокументыНеПолученныеПоЭДО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы не полученные по ЭДО</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bce2ef9b-f629-4406-8b33-e9437b01a002">
+    <name>СостояниеСверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние сверки</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="331c44c6-8f34-46ec-a5b5-08c3566f58d2">
+    <name>СостояниеСверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние сверки</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="4155d317-75ba-430d-b3f2-c1977dc93e05">
+    <name>Оповещения_СервисСверкиРасхожденияСуммДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оповещения. Сервис сверки 2.0. Расхождения сумм документов.</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="20502ed5-213b-4f13-9ae7-d19068084c9b">
+    <name>Оповещения_СервисСверкиРасхожденияРеквизитовДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оповещения. Сервис сверки 2.0. Расхождения реквизитов документов.</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="8eb3ef5b-1855-4028-be13-c5fd14200728">
+    <name>Оповещения_СервисСверкиРасхожденияРеквизитовСчетовФактур</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оповещения. Сервис сверки 2.0. Расхождения реквизитов счетов фактур.</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="422a3ddd-f62c-4101-bbc3-d3702f6b42fe">
+    <name>Оповещения_СервисСверкиОтсутствиеДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оповещения.  Сервис сверки 2.0. Отсутствие документов у контрагента более 30 дней.</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="1a47c38d-755a-483c-a48c-f8986142f7b3">
+    <name>Оповещения_СервисСверкиОтсутствиеДокументовУКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оповещения.  Сервис сверки 2.0. Отсутствие документов у контрагента более 30 дней.</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="6d7ebdb5-ba25-4c45-9f63-fcd3904a7d2d">
+    <name>Оповещения_СервисСверкиУстранениеРасхождений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оповещения. Сервис сверки 2.0. Устранение расхождений.</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="0b60d0e8-6249-409a-bae4-fbf25fa954a6">
+    <name>МониторСверкиВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Монитор сверки взаиморасчетов</value>
+    </synonym>
+    <group>NavigationPanelImportant</group>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

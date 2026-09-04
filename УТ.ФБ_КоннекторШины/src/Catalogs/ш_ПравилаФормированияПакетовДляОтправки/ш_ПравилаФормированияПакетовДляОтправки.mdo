@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a758bb0f-b510-4324-bd0f-523058d642c3">
+  <producedTypes>
+    <objectType typeId="22ffb1dc-623c-4581-93d6-0a230c6cd0f9" valueTypeId="4577dc55-c006-4b3f-9061-9ae745d7442f"/>
+    <refType typeId="c7dcaaed-ee35-4b31-a386-fc2c067674f1" valueTypeId="9264a470-60bd-4ef8-a9da-b9814251cb70"/>
+    <selectionType typeId="cf7b6479-4985-4ae9-99ca-a3b0434993d0" valueTypeId="9c6c2b3e-d0e4-4b40-a334-c1f4236d4fda"/>
+    <listType typeId="1bf50f04-9a06-47d6-bceb-46fc3267e1ce" valueTypeId="a7a34ee1-acfa-44c5-9738-6389c945076a"/>
+    <managerType typeId="a016a910-df8d-482c-a688-ff94ed9e31de" valueTypeId="62883f17-ad0d-4da5-bb97-e9487927ec35"/>
+  </producedTypes>
+  <name>ш_ПравилаФормированияПакетовДляОтправки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Шина.Правила формирования пакетов для отправки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ш_ПравилаФормированияПакетовДляОтправки.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ш_ПравилаФормированияПакетовДляОтправки.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="e25924ba-459b-4917-b09c-09bce43b69ca">
+    <name>ИмяМетаданных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя метаданных</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6c437c2b-a82e-49ee-a6a0-79d5952b6e13">
+    <name>ВидПакета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид пакета</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ш_ВидыПакетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="30acad52-9ea6-44df-94c8-333a1f4c94b2">
+    <name>ТипСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип сообщения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ш_ТипыСообщений</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5a5b682b-de32-497f-b56a-5ebe5ee1df70">
+    <name>СистемаНазначения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Система назначения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ш_Системы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="df95878c-a0ad-438d-8908-12ae06568589">
+    <name>Алгоритм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Алгоритм</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="327f6d60-16a9-4c1a-a57a-d0e6a477074f">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

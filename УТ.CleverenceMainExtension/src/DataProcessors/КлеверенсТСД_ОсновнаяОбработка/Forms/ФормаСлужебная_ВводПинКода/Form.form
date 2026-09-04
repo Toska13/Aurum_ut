@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Выбор устройства для загрузки документов 1С</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Select a device for uploading 1C documents</value>
+  </title>
+  <title>
+    <key>kk</key>
+    <value>1С документтерін жүктеу үшін құрылғыны таңдау</value>
+  </title>
+  <title>
+    <key>uz</key>
+    <value>Hujjatlarni yuklash uchun qurilma tanlash 1S</value>
+  </title>
+  <title>
+    <key>be</key>
+    <value>Выбар прылады для загрузкі дакументаў 1С</value>
+  </title>
+  <title>
+    <key>uk</key>
+    <value>Вибір пристрою для завантаження документів 1С</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>დოკუმენტების 1C-ის ჩატვირთვის მოწყობას არჩევა</value>
+  </title>
+  <title>
+    <key>tr</key>
+    <value>Belgeleri yüklemek için cihaz seçin 1C</value>
+  </title>
+  <title>
+    <key>es</key>
+    <value>Seleccionar dispositivo para cargar documentos de 1C</value>
+  </title>
+  <title>
+    <key>ro</key>
+    <value>Alegeți dispozitivul pentru descărcarea documentelor 1C</value>
+  </title>
+  <items xsi:type="form:FormField">
+    <name>ПинКод</name>
+    <id>34</id>
+    <titleFont xsi:type="core:FontRef">
+      <font>Style.NormalTextFont</font>
+      <height>12.0</height>
+    </titleFont>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ПинКод</segments>
+    </dataPath>
+    <defaultItem>true</defaultItem>
+    <extendedTooltip>
+      <name>ПинКодРасширеннаяПодсказка</name>
+      <id>36</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ПинКодКонтекстноеМеню</name>
+      <id>35</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <handlers>
+        <event>EditTextChange</event>
+        <name>ПинКодИзменениеТекстаРедактирования</name>
+      </handlers>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+      <editTextUpdate>DontUse</editTextUpdate>
+      <font xsi:type="core:FontRef">
+        <font>Style.NormalTextFont</font>
+        <height>36.0</height>
+        <bold>true</bold>
+        <italic>false</italic>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+      </font>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>УстройствоMS</name>
+    <id>14</id>
+    <titleFont xsi:type="core:FontRef">
+      <font>Style.NormalTextFont</font>
+      <height>12.0</height>
+    </titleFont>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>УстройствоMS</segments>
+    </dataPath>
+    <titleLocation>Top</titleLocation>
+    <handlers>
+      <event>OnChange</event>
+      <name>УстройствоMSПриИзменении</name>
+    </handlers>
+    <extendedTooltip>
+      <name>УстройствоMSРасширеннаяПодсказка</name>
+      <id>16</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>УстройствоMSКонтекстноеМеню</name>
+      <id>15</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <handlers>
+        <event>EditTextChange</event>
+        <name>УстройствоMSИзменениеТекстаРедактирования</name>
+      </handlers>
+      <handlers>
+        <event>StartChoice</event>
+        <name>УстройствоMSНачалоВыбора</name>
+      </handlers>
+      <handlers>
+        <event>Clearing</event>
+        <name>УстройствоMSОчистка</name>
+      </handlers>
+      <handlers>
+        <event>TextEditEnd</event>
+        <name>УстройствоMSОкончаниеВводаТекста</name>
+      </handlers>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <choiceButton>true</choiceButton>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+      <font xsi:type="core:FontRef">
+        <font>Style.NormalTextFont</font>
+        <height>20.0</height>
+        <bold>true</bold>
+        <italic>false</italic>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+      </font>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаКоманд</name>
+    <id>10</id>
+    <items xsi:type="form:Button">
+      <name>ПринятьПинКод</name>
+      <id>12</id>
+      <title>
+        <key>ru</key>
+        <value>ОК</value>
+      </title>
+      <title>
+        <key>en</key>
+        <value>OK</value>
+      </title>
+      <title>
+        <key>kk</key>
+        <value>ОК</value>
+      </title>
+      <title>
+        <key>uz</key>
+        <value>Yaxshi  </value>
+      </title>
+      <title>
+        <key>be</key>
+        <value>Добра</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>ОК</value>
+      </title>
+      <title>
+        <key>ka</key>
+        <value>OK</value>
+      </title>
+      <title>
+        <key>tr</key>
+        <value>Tamam</value>
+      </title>
+      <title>
+        <key>es</key>
+        <value>Aceptar</value>
+      </title>
+      <title>
+        <key>ro</key>
+        <value>OK</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ПринятьПинКодРасширеннаяПодсказка</name>
+        <id>13</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.ПринятьПинКод</commandName>
+      <representation>PictureAndText</representation>
+      <defaultButton>true</defaultButton>
+      <width>15</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <height>2</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <placementArea>UserCmds</placementArea>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.AppearanceCheckBox</picture>
+      </picture>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаОтмена</name>
+      <id>6</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаОтменаРасширеннаяПодсказка</name>
+        <id>7</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.StandardCommand.Cancel</commandName>
+      <representation>PictureAndText</representation>
+      <width>15</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <maxWidth>20</maxWidth>
+      <height>2</height>
+      <autoMaxHeight>true</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <placementArea>UserCmds</placementArea>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.AppearanceCross</picture>
+      </picture>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Группа команд</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Command group</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Командалар тобы</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Buyruqlar guruh</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Група каманд</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Група команд</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ბრძანებების ჯგუფი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>1C komut grubu</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Grupo de comandos</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Grup de comenzi</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа команд</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Command group</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Командалар тобы</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Buyruqlar guruh</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Група каманд</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Група команд</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ბრძანებების ჯგუფი</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>1C komut grubu</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Grupo de comandos</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Grup de comenzi</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ГруппаКомандРасширеннаяПодсказка</name>
+      <id>11</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
+      <behavior>Auto</behavior>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
+  <handlers>
+    <event>BeforeClose</event>
+    <name>ПередЗакрытием</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <width>51</width>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.КлеверенсТСД_ОсновнаяОбработка</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ПинКод</name>
+    <title>
+      <key>ru</key>
+      <value>Введите пин-код нужного устройства</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Enter the PIN code of the required device</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Қажетті құрылғының ПИН-кодын енгізіңіз</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Керакли қурилма пин-кодини киритинг</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Увядзіце пін-код неабходнага прылады</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Введіть пін-код потрібного пристрою</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>შეიყვანეთ საჭირო მოწყობილობის PIN-კოდი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>İlgili cihazın PIN kodunu girin</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Introduzca el código PIN del dispositivo necesario</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Introduceți codul PIN al dispozitivului necesar</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>4</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>УстройствоMS</name>
+    <title>
+      <key>ru</key>
+      <value>или выберите устройство из списка</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>or select a device from the list</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Немесе тізімнен құрылғыны таңдаңыз</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>yoki ro'yxatdan qurilmangizni tanlang</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>або выберыце прыладу з спісу</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>або виберіть пристрій зі списку</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ან აირჩიეთ მოწყობლის სიაშიდან მოწყობლის მოწყობა</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>veya listeden bir cihaz seçin</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>o seleccionar un dispositivo de la lista</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>sau selectați un dispozitiv din listă</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>МассивУстройствMSАдрес</name>
+    <title>
+      <key>ru</key>
+      <value>Массив устройств MSАдрес</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Array of MSAddress devices</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>MSАдрес құрылғылар тізімі</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>MSАдрес қурилмалар таркиби</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Массив устройств MSАдрес: Масіў прылад MSАдрас</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Масив пристроїв MSАдрес</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>MSAdress მოწყობილების მასივი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>MSAdres cihaz dizisi</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Matriz de dispositivos MSAddress</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Matricea dispozitivelor MSAdres</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>ПринятьПинКод</name>
+    <title>
+      <key>ru</key>
+      <value>Принять пин код</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Accept PIN code</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Пин кодты қабылдау</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>PIN kodi qabul qilish</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Прыйміць пін код</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Прийняти пін-код</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>პინ კოდის მიღება</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Pin kodunu kabul et</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Ingresar el código PIN</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Acceptați codul PIN</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Принять пин код</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Accept PIN code</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Пин кодты қабылдау</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>PIN kodi qabul qilish</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Прыйміць пін код</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Прийняти пін-код</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>პინ კოდის მიღება</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Pin kodunu kabul et</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Ingresar el código PIN</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Acceptați codul PIN</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПринятьПинКод</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

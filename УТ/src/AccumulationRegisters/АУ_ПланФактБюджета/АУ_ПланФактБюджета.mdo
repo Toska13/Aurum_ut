@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b9a89c98-b75f-4fc0-aff1-61c43f3e79a0">
+  <producedTypes>
+    <selectionType typeId="c4b02dc6-8d59-4b0d-b72d-b50d85612a72" valueTypeId="073db315-9cfa-4c2b-9eb9-53f35ef41a69"/>
+    <listType typeId="9e9544ab-0a66-44e0-8162-8229b445d002" valueTypeId="695df381-1a65-4890-9afb-66696f3b93b4"/>
+    <managerType typeId="b4f3f84d-32e2-473f-8a19-0a38f3478205" valueTypeId="7de24d8e-fc3e-46a9-bebc-f7378709762a"/>
+    <recordSetType typeId="0423fab5-cc0b-492f-8a35-486582bd1059" valueTypeId="2afc410e-e2ee-4b7e-a3af-aa7b683a55d3"/>
+    <recordKeyType typeId="d98831c1-159c-438d-bf45-fd9ec2dd959d" valueTypeId="d4b957b2-b7e5-4d2b-be75-8293190f4416"/>
+    <recordType typeId="1d9d542c-e60d-47da-9330-89daa4bb7981" valueTypeId="28addfd8-526f-4aa8-a6b8-072250e4e945"/>
+  </producedTypes>
+  <name>АУ_ПланФактБюджета</name>
+  <synonym>
+    <key>ru</key>
+    <value>План-факт бюджета</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="34e52392-4013-4bb4-84ee-56eeb20f3c73">
+    <name>СуммаПлан</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма план</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="5debcc13-ec8d-4422-8a82-4b66110bc65c">
+    <name>СуммаФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма факт</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="2c99caaa-2ae5-4845-96a9-f963537d1b85">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="19b132cd-ef10-4991-aacc-a3ce6133bd17">
+    <name>СтатьяБюджета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья бюджета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АУ_СтатьиБюджета</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1e4caff8-debd-478c-95fb-be0f5d1284f3">
+  <producedTypes>
+    <objectType typeId="8cc213ff-787c-4546-90a6-1a12b4ca7114" valueTypeId="28691a9f-fbad-4a5f-9f76-3e4ce08805c1"/>
+    <refType typeId="cdb0382c-7a76-403d-aeed-e1e549f9a988" valueTypeId="6f9427bf-a0ee-4bc0-9a55-10a9d09721a1"/>
+    <selectionType typeId="95e74cc4-0e75-4da1-aa15-ebf92a7a14e3" valueTypeId="f0733a4b-8248-4747-ab2f-03adfe97c372"/>
+    <listType typeId="6a3a5142-4b2e-4531-a976-e8c34865a438" valueTypeId="e2584b9f-fc6c-455f-b812-685fe18b1fc3"/>
+    <managerType typeId="d1e2f29d-a52a-41f6-875b-513b6b8beb88" valueTypeId="23754b5a-d3be-4085-a836-3d202bf51db6"/>
+  </producedTypes>
+  <name>АУ_Водители</name>
+  <synonym>
+    <key>ru</key>
+    <value>Водители</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.АУ_Водители.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.АУ_Водители.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="347ff1d2-cf27-4028-a39c-37d6666063bd">
+    <name>УдостоверениеНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер удостоверения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>14</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Номер документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6009773b-84f5-4e61-bbb2-4ca725bee30a">
+    <name>УдостоверениеСерия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия удостоверения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>14</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Серия документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0658c4d8-9a1f-4a84-9d58-3fab5156721e">
+    <name>Автомобиль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автомобиль</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АУ_Автомобили</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="c4d46dd7-c620-4e80-8a00-3054b94f0a7a">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="778b67d4-4c2c-4889-999f-695c152b4a61">
+  <producedTypes>
+    <selectionType typeId="c838f1a8-39df-4afd-9b71-80f6083265c1" valueTypeId="7c7cd173-3dbd-41cc-9a87-2c59718a0c7b"/>
+    <listType typeId="0e405add-7f6b-4c61-aa07-d57d2ff4e881" valueTypeId="4dcb7a74-d1b7-4b82-aa80-ab3601a02ff2"/>
+    <managerType typeId="5fd82b45-b158-4065-92b8-b919e2f55147" valueTypeId="9efc3835-7697-4bdb-a42b-edffd42ee4ac"/>
+    <recordSetType typeId="3ab5e543-7f84-4994-ae8d-28b782c7ea52" valueTypeId="33cfc40e-2ba0-4687-b8e8-a36469dc4414"/>
+    <recordKeyType typeId="505e9e2d-23bd-4789-9dcc-df9788c972ee" valueTypeId="a33994af-84e7-4c01-b78d-4a1883f9cb06"/>
+    <recordType typeId="77964fb7-fa72-4f0d-a2f9-a0682ba7dd32" valueTypeId="5d99b9a3-1a4f-4b9c-80f2-e524e7ade571"/>
+    <recordManagerType typeId="1a2cbb84-d3ed-4fe5-935e-7bfa1c98b8f5" valueTypeId="f2e1a626-033f-4c6e-8507-b0488fcf1309"/>
+  </producedTypes>
+  <name>СертификатыЗаявокНаРегистрациюВЭДО</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сертификаты заявок на регистрацию ВЭДО</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="dd1c6d2a-6216-4571-adda-b6d2a1dca3f3">
+    <name>Доверенность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доверенность</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.МЧД003</types>
+      <types>CatalogRef.МашиночитаемыеДоверенностиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d4a406fc-4bb2-4d25-9a51-7555c5197dd7">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1f98e272-cd26-4569-b280-8183d473e3d1">
+    <name>ИдентификаторЗаявки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор заявки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Уникальный идентификатор участника в обмене электронными документами</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d1b600e1-26d7-4fe4-b118-8e7d66a81ce4">
+    <name>Сертификат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сертификат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СертификатыКлючейЭлектроннойПодписиИШифрования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

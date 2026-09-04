@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec7be86e-698a-42af-81f7-95964f96e672">
+  <producedTypes>
+    <objectType typeId="b4debe0a-6a0d-4166-9d15-96211782109d" valueTypeId="37d60ed7-d611-4b35-897c-414f9a6bf485"/>
+    <refType typeId="5801faf0-62ef-4b29-8bae-90fc7d87ddb5" valueTypeId="d2e2347f-596a-4bf5-a9b4-706572c57c1b"/>
+    <selectionType typeId="9e29b888-dce5-4be0-8e14-a4e6c3b7a616" valueTypeId="ac709ca9-6581-4518-842c-e185e95f6bf1"/>
+    <listType typeId="c42b9807-605f-4919-87b5-0751c914bc86" valueTypeId="418153c9-ab86-46df-9014-1cee7c735049"/>
+    <managerType typeId="954842ec-4ddf-48da-9ef1-6f643bc40f0a" valueTypeId="6196186d-5e0f-480a-9205-4825c3bc9c13"/>
+  </producedTypes>
+  <name>КонтурЛогистика_Вспомогательный</name>
+  <synonym>
+    <key>ru</key>
+    <value>Вспомогательный, не используйте (Контур.Логистика)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.КонтурЛогистика_Вспомогательный.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <explanation>
+    <key>ru</key>
+    <value>Необходим технологически для размещения команд документов 1С в формах, где типизация Документа 1С Основной конфигурации заранее неизвестна. А также для использования в динамических списках с заменой типа документа.</value>
+  </explanation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.КонтурЛогистика_Вспомогательный.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.КонтурЛогистика_Вспомогательный.Form.ФормаСписка</defaultListForm>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="e555a18b-7326-42ab-b7aa-06ff7f9c1b4d">
+    <name>ИмяРеквизитаПеревозчик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита перевозчик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.Партнеры</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="364e3f0a-bb79-4c3b-9764-08285d9e64d9">
+    <name>ИмяРеквизитаОрганизация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b11a4f55-6435-4c68-ba99-1c63c2ef22e8">
+    <name>ИмяРеквизитаКонтрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="11e7712b-edd7-443a-a74c-77fc0ffd4096">
+    <name>ИмяРеквизитаГрузоотправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита грузоотправитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1616bb5e-0c90-433c-8cf7-9e879c4fdfd0">
+    <name>ИмяРеквизитаГрузополучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита грузополучатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fb1cb814-d409-4dd1-9b0d-e8a77851fa10">
+    <name>ИмяРеквизитаДоп1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита доп1</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="48534644-c59f-4604-803b-cb58fdb0df45">
+    <name>ИмяРеквизитаДоп2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита доп2</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b020e5a0-9a6b-4115-a58e-8a3c7155f326">
+    <name>ИмяРеквизитаПунктПогрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита пункт погрузки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>CatalogRef.Склады</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e0884349-bf3c-44d7-8f69-9d8f17bf4ef8">
+    <name>ИмяРеквизитаПоискаНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита поиска номер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="168460e1-eda2-48b0-8a73-c1ae18929b8b">
+    <name>ИмяРеквизитаПоискаДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита поиска дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c5166379-e833-4571-98ee-6125c086220a">
+    <name>ИмяРеквизитаМестоПогрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита место погрузки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+      <types>String</types>
+      <types>CatalogRef.Партнеры</types>
+      <types>CatalogRef.Склады</types>
+      <types>CatalogRef.ЗоныДоставки</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3aaedd4b-d958-4b53-8753-1b692e1e118c">
+    <name>ИмяРеквизитаМестоДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита место доставки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+      <types>String</types>
+      <types>CatalogRef.Партнеры</types>
+      <types>CatalogRef.Склады</types>
+      <types>CatalogRef.ЗоныДоставки</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bb92bcfc-e763-46a9-9132-5e6c34ca0c72">
+    <name>ИмяРеквизитаНомерТРН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита номер ТРН</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ab620693-dabe-4807-b277-2ee8321598d1">
+    <name>ИмяРеквизитаДатаТРН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита дата ТРН</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7f426533-f89b-447a-9a31-688d3ddf55ba">
+    <name>ИмяРеквизитаНомерПЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита номер ПЛ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b45cca07-157a-4bc5-aa53-9ac16de20bbd">
+    <name>ИмяРеквизитаДатаПЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита дата ПЛ</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fabca4e5-2565-4a5a-932a-7a6eed0993c9">
+    <name>ИмяРеквизитаНомерЗЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита номер ЗЗ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="60238e73-1fe1-43f9-9e10-846da8929c0a">
+    <name>ИмяРеквизитаДатаЗЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита дата ЗЗ</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="91d98d10-3b50-4de3-8158-139a89deba67">
+    <name>ИмяРеквизитаВодитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита водитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7c1989cf-927f-4997-a227-51dc09cd9013">
+    <name>ИмяРеквизитаТранспортноеСредство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита транспортное средство</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>CatalogRef.ТранспортныеСредства</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Будет заменен при построении динамического списка на конкретный реквизит исходного документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="b60c7444-4fa4-4ebe-b0ff-23547b01222e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ecb7d39f-071c-4b74-b097-bc673b573ec6">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>

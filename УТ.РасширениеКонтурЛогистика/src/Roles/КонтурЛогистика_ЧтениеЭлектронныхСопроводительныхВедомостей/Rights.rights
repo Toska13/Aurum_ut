@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://v8.1c.ru/8.2/roles" xsi:type="Rights">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Document.КонтурЛогистика_ЭлектроннаяСопроводительнаяВедомость</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>КонтурЛогистика_ЭлектроннаяСопроводительнаяВедомость ГДЕ ВЫБОР
+        КОГДА &amp;КонтурЛогистика_ОграничениеДоступаНаУровнеЗаписейВключено
+            ТОГДА КонтурЛогистика_ЭлектроннаяСопроводительнаяВедомость.Грузоотправитель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_ЭлектроннаяСопроводительнаяВедомость.Перевозчик В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_ЭлектроннаяСопроводительнаяВедомость.Грузополучатель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+        ИНАЧЕ ИСТИНА
+    КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.КонтурЛогистика_СВ_ТитулПВ</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>КонтурЛогистика_СВ_ТитулПВ ГДЕ ВЫБОР
+        КОГДА &amp;КонтурЛогистика_ОграничениеДоступаНаУровнеЗаписейВключено
+            ТОГДА КонтурЛогистика_СВ_ТитулПВ.ДокументСВ.Грузоотправитель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_СВ_ТитулПВ.ДокументСВ.Перевозчик В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_СВ_ТитулПВ.ДокументСВ.Грузополучатель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+        ИНАЧЕ ИСТИНА
+    КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.КонтурЛогистика_СВ_ТитулГП</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>КонтурЛогистика_СВ_ТитулГП ГДЕ ВЫБОР
+        КОГДА &amp;КонтурЛогистика_ОграничениеДоступаНаУровнеЗаписейВключено
+            ТОГДА КонтурЛогистика_СВ_ТитулГП.ДокументСВ.Грузоотправитель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_СВ_ТитулГП.ДокументСВ.Перевозчик В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_СВ_ТитулГП.ДокументСВ.Грузополучатель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+        ИНАЧЕ ИСТИНА
+    КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.КонтурЛогистика_СВ_ТитулГО</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>КонтурЛогистика_СВ_ТитулГО ГДЕ ВЫБОР
+        КОГДА &amp;КонтурЛогистика_ОграничениеДоступаНаУровнеЗаписейВключено
+            ТОГДА КонтурЛогистика_СВ_ТитулГО.ДокументСВ.Грузоотправитель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_СВ_ТитулГО.ДокументСВ.Перевозчик В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+                ИЛИ КонтурЛогистика_СВ_ТитулГО.ДокументСВ.Грузополучатель В (&amp;КонтурЛогистика_ДоступныеОрганизации)
+        ИНАЧЕ ИСТИНА
+    КОНЕЦ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.КонтурЛогистика.Subsystem.КонтурЛогистика_Документы.Subsystem.КонтурЛогистика_СопроводительнаяВедомость</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+</Rights>

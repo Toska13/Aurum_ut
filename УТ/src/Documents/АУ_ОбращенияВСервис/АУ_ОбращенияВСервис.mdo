@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bfed5813-5043-4e15-b23d-909e5ce90ed7">
+  <producedTypes>
+    <objectType typeId="143c0a58-4ec6-4f7f-ae60-62f6fb3d0104" valueTypeId="721cd5cf-0589-45ec-b328-8ad677ff594d"/>
+    <refType typeId="65b9396f-06d7-40a7-8bbd-d78838820ffb" valueTypeId="69b5b389-fa38-4d5b-ba2d-611a15867d53"/>
+    <selectionType typeId="4ba34d68-ebc6-43ef-8ca3-23cd55af08e9" valueTypeId="c9f0f3bb-d99a-4b1f-aa6c-623bd42b93bd"/>
+    <listType typeId="4873bac8-8a3d-4ec3-aa63-4579ae439a79" valueTypeId="94eba1f8-1e18-4a92-bc3d-ac2d7a9c1e8f"/>
+    <managerType typeId="badadada-360c-408b-bae4-c85cabd53355" valueTypeId="9ad04573-4d76-492f-962b-6a4ee810bfa5"/>
+  </producedTypes>
+  <name>АУ_ОбращенияВСервис</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обращения в сервис</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.АУ_ОбращенияВСервис.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.АУ_ОбращенияВСервис.Form.ФормаДокумента</defaultObjectForm>
+  <posting>Deny</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="c4aef7bc-e758-48ab-9e0c-b88386054248">
+    <name>СервиснаяБазаДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервисная база данных</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АУ_СервиснаяБазаДанных</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d45c18c7-8736-40d4-9acc-5d5d0e825c24">
+    <name>Событие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="67fc7204-1eb5-4abf-841c-61ab23c90d44">
+    <name>ФИОИнженера</name>
+    <synonym>
+      <key>ru</key>
+      <value>ФИО инженера</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8d4fa33e-3f8f-4807-9e93-333a5b5fb29e">
+    <name>ЗатраченноеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Затраченное время</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="676c172d-7896-4dba-a1e4-13416df8893e">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e6865b7e-68a2-42a7-8b10-fb525873e5ed">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d5579835-32dd-46de-8cb2-114219b3036a">
+    <name>ИспользованныеМатериалыКратко</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использованные материалы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="2473cab6-75af-4575-bb99-0101f9d2bf72">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="8f168c6a-21ce-4b71-9691-8134a2b5c6ae">
+    <producedTypes>
+      <objectType typeId="4121cd44-7f03-4852-b182-b9fcef3778d4" valueTypeId="0f4efd0a-53f0-45d2-90f7-2e04c711e830"/>
+      <rowType typeId="a489bfd8-bed9-4596-bc7e-b7ebad15569d" valueTypeId="bff2d354-c6e7-4587-8a15-e1987e5346c7"/>
+    </producedTypes>
+    <name>ИспользованныеМатериалы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использованные материалы</value>
+    </synonym>
+    <attributes uuid="b1a2ad65-f146-4743-b8c5-5d6b521163b5">
+      <name>Материал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Материал (запчасть)</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f352fd61-9a9c-4c10-a5a3-51d41f72a1cc">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="007131cc-a099-4717-b937-e38f465cf134">
+      <name>Комментарий</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

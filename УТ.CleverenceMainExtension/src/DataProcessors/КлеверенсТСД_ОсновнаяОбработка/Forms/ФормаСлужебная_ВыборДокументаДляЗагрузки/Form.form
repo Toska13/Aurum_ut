@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Клеверенс: Выбор документа для загрузки</value>
+  </title>
+  <title>
+    <key>en</key>
+    <value>Cleverence: Selecting a document for upload</value>
+  </title>
+  <title>
+    <key>kk</key>
+    <value>Cleverence: Жүктеу үшін құжатты таңдау</value>
+  </title>
+  <title>
+    <key>uz</key>
+    <value>Cleverence: Yuklash uchun hujjatni tanlash</value>
+  </title>
+  <title>
+    <key>be</key>
+    <value>Cleverence: Выбар дакумента для загрузкі</value>
+  </title>
+  <title>
+    <key>uk</key>
+    <value>Cleverence: Вибір документа для завантаження</value>
+  </title>
+  <title>
+    <key>ka</key>
+    <value>Cleverence: დოკუმენტის არჩევა ჩატვირთვისთვის</value>
+  </title>
+  <title>
+    <key>tr</key>
+    <value>Cleverence: Yükleme için belge seçimi</value>
+  </title>
+  <title>
+    <key>es</key>
+    <value>Cleverence: Selección de documento para carga</value>
+  </title>
+  <title>
+    <key>ro</key>
+    <value>Cleverence: Selectarea documentului pentru descărcare</value>
+  </title>
+  <items xsi:type="form:FormField">
+    <name>ВНовыйДокумент</name>
+    <id>1</id>
+    <title>
+      <key>ru</key>
+      <value>Загружать в</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Load into</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Жүктеу</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Ga yuklash</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Загружаць у</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Завантажувати в</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ჩატვირთვა</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>İçe aktar</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Cargar en</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Descărcare în</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ВНовыйДокумент</segments>
+    </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>ВНовыйДокументПриИзменении</name>
+    </handlers>
+    <extendedTooltip>
+      <name>ВНовыйДокументРасширеннаяПодсказка</name>
+      <id>3</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ВНовыйДокументКонтекстноеМеню</name>
+      <id>2</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>CheckBoxField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:CheckBoxFieldExtInfo">
+      <checkBoxType>Tumbler</checkBoxType>
+      <itemHeight>1</itemHeight>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаЗагрузить</name>
+      <id>4</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗагрузитьРасширеннаяПодсказка</name>
+        <id>5</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Загрузить</commandName>
+      <representation>Auto</representation>
+      <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаЗакрыть</name>
+      <id>6</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗакрытьРасширеннаяПодсказка</name>
+        <id>7</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.StandardCommand.Close</commandName>
+      <representation>PictureAndText</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <handlers>
+    <event>OnClose</event>
+    <name>ПриЗакрытии</name>
+  </handlers>
+  <width>92</width>
+  <height>33</height>
+  <saveWindowSettings>true</saveWindowSettings>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.КлеверенсТСД_ОсновнаяОбработка</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ВНовыйДокумент</name>
+    <title>
+      <key>ru</key>
+      <value>В новый документ</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>In a new document</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Жаңа құжатқа</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Yangi hujjatda</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>У новы дакумент</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>У новий документ</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ახალ დოკუმენტში</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Yeni belgeye</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>En un nuevo documento</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Într-un document nou</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТипДокумента1С</name>
+    <title>
+      <key>ru</key>
+      <value>Тип документа 1С</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>1C document type</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>1С документінің түрі</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>1C hujjati turi</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Тып дакумента 1С</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Тип документа 1С</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>1C დოკუმენტის ტიპი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>1C belge türü</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Tipo de documento 1C</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Tip de document 1C</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ИмяТабличнойЧасти1С</name>
+    <title>
+      <key>ru</key>
+      <value>Имя табличной части 1С</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>1C table part name</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>1С кесте бөлігінің аты</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Jadvallar qismi 1C nomi</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Імя таблічнай часткі 1С</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Ім'я табличної частини 1С</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>1C-ის ცხრილის ნაწილის სახელი</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>1C Tablo Bölümü Adı</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Nombre de la parte de tabla de 1C</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Nume parte tabelară 1C</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ЕстьРеквизитНомер</name>
+    <title>
+      <key>ru</key>
+      <value>Есть реквизит номер</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>There is a requisition number</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Номерлік анықтама бар</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Rekvizit raqami mavjud</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Ёсць рэквізіт нумар</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Є реквізит номер</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>საკონტრო ნომერი არის</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Referans numarası var</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Hay un número de requisito</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Există număr de referință</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>Загрузить</name>
+    <title>
+      <key>ru</key>
+      <value>Загрузить</value>
+    </title>
+    <title>
+      <key>en</key>
+      <value>Upload</value>
+    </title>
+    <title>
+      <key>kk</key>
+      <value>Жүктеу</value>
+    </title>
+    <title>
+      <key>uz</key>
+      <value>Yuklash</value>
+    </title>
+    <title>
+      <key>be</key>
+      <value>Загрузіць</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Завантажити</value>
+    </title>
+    <title>
+      <key>ka</key>
+      <value>ჩატვირთვა</value>
+    </title>
+    <title>
+      <key>tr</key>
+      <value>Yükle</value>
+    </title>
+    <title>
+      <key>es</key>
+      <value>Cargar</value>
+    </title>
+    <title>
+      <key>ro</key>
+      <value>Descărcare</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Загрузить</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Upload</value>
+    </toolTip>
+    <toolTip>
+      <key>kk</key>
+      <value>Жүктеу</value>
+    </toolTip>
+    <toolTip>
+      <key>uz</key>
+      <value>Yuklash</value>
+    </toolTip>
+    <toolTip>
+      <key>be</key>
+      <value>Загрузіць</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Завантажити</value>
+    </toolTip>
+    <toolTip>
+      <key>ka</key>
+      <value>ჩატვირთვა</value>
+    </toolTip>
+    <toolTip>
+      <key>tr</key>
+      <value>Yükle</value>
+    </toolTip>
+    <toolTip>
+      <key>es</key>
+      <value>Cargar</value>
+    </toolTip>
+    <toolTip>
+      <key>ro</key>
+      <value>Descărcare</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ChooseValue</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Загрузить</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

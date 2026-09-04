@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ed3f255-110a-4086-8a87-e80f5c93d5f5">
+  <producedTypes>
+    <objectType typeId="87f45a69-049e-4968-9baa-6624632f260d" valueTypeId="b4ba8271-530e-44f1-906d-e531cb48a1c7"/>
+    <refType typeId="caec3da4-b627-4e03-adf4-2368ccb474ea" valueTypeId="e221c944-1565-4735-89cb-d1e1e657b5ae"/>
+    <selectionType typeId="677763ac-f61f-46c5-9d13-314201486e32" valueTypeId="e8a6d108-1961-44a9-b9de-785a80626568"/>
+    <listType typeId="ec8d578a-7fc8-468a-becd-53a48d963bd8" valueTypeId="742fabaa-8dcb-4cd2-bd2a-bf5e8209d818"/>
+    <managerType typeId="1eb31e17-78b2-480a-9050-d61adbac5045" valueTypeId="4fa4e1bd-ba59-41b6-9c6e-0279da14d888"/>
+  </producedTypes>
+  <name>КонтурЗакупки_ШаблоныЗагрузкиИзбранного</name>
+  <synonym>
+    <key>ru</key>
+    <value>Шаблоны загрузки избранного (Контур.Закупки)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.КонтурЗакупки_ШаблоныЗагрузкиИзбранного.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.КонтурЗакупки_ШаблоныЗагрузкиИзбранного.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Шаблон загрузки избранного (Контур.Закупки)</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.КонтурЗакупки_ШаблоныЗагрузкиИзбранного.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.КонтурЗакупки_ШаблоныЗагрузкиИзбранного.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="59711826-025e-4812-9372-fb73bb0d568d">
+    <name>ИспользуетсяВРегламентномЗадании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используется в регламентном задании</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="570799b0-ba22-4b25-a481-0a764df1be5e">
+    <name>КоличествоДнейДоТекущейДаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество дней до текущей даты</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="4b0e7821-f274-466a-8286-308c24c70585">
+    <producedTypes>
+      <objectType typeId="56775f70-7dfb-439b-bb1e-4a6f406c9d4f" valueTypeId="85519257-ac05-4d29-84a9-9c7d2cdfb007"/>
+      <rowType typeId="4f300ef5-f5f9-427c-ac0d-4268927e6517" valueTypeId="94894407-2f91-430c-bd3b-5377281c8fdb"/>
+    </producedTypes>
+    <name>Метки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метки</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="288c0925-944e-4973-a0ca-a050d89cda9f">
+      <name>Метка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Метка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КонтурЗакупки_Метки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="25d53711-d659-44c5-8b4f-b8d0d4a057a1">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e211e8fa-1d74-42c4-9900-c7549f64c03b">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

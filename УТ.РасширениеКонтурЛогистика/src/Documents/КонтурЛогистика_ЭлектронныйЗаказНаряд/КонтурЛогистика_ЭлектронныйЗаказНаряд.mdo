@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="19b0c215-844a-4a24-a747-eb6e2e545fa3">
+  <producedTypes>
+    <objectType typeId="58b047b6-0046-4f91-b0fb-715ebfb383c7" valueTypeId="b3b0a1f2-0d26-4bb1-9614-b1fc1e54f791"/>
+    <refType typeId="d5911bd3-6026-425e-8beb-3abc2d93e08e" valueTypeId="54412e73-200c-4f91-8554-20b5f3d8805a"/>
+    <selectionType typeId="8de666dc-fd49-477b-90c2-0eb493c04102" valueTypeId="830e8d34-d0b7-4d6f-b5bb-1065a583b8d7"/>
+    <listType typeId="ec754fbf-75c2-4481-9fa8-1cdc4f1e5a1d" valueTypeId="860ae5fc-7934-4b3d-882c-103742667306"/>
+    <managerType typeId="764b0653-23b3-49b5-9112-9296b7a8a3c1" valueTypeId="6742a2a5-3388-46f2-8247-b5d20cac88d9"/>
+  </producedTypes>
+  <name>КонтурЛогистика_ЭлектронныйЗаказНаряд</name>
+  <synonym>
+    <key>ru</key>
+    <value>Электронный Заказ-Наряд (Контур.Логистика)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.КонтурЛогистика_ЭлектронныйЗаказНаряд.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Заказ-Наряд</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.КонтурЛогистика_ЭлектронныйЗаказНаряд.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.КонтурЛогистика_ЭлектронныйЗаказНаряд.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.КонтурЛогистика_ЭлектронныйЗаказНаряд.Form.ФормаВыбора</defaultChoiceForm>
+  <posting>Deny</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="51686729-aeb2-4776-a10b-0015d24ac147">
+    <name>УИД</name>
+    <synonym>
+      <key>ru</key>
+      <value>УИД</value>
+    </synonym>
+    <comment>Уникальный идентификатор, выданный ГИС Минтранса</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6165b62b-1980-456e-a448-4a739b421fc5">
+    <name>НомерЗН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер ЗН</value>
+    </synonym>
+    <comment>Должен быть уникальным в пределах Года и Организации</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9361a45e-7de0-4fe6-9c09-966ef4d87a00">
+    <name>ДатаЗН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата ЗН</value>
+    </synonym>
+    <comment>Дата оформления документа.</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e947afc2-fe0d-403d-a279-c1b9180f36df">
+    <name>Фрахтователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фрахтователь (наниматель)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ОрганизацииДиадок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="133444fc-98ee-4e9e-8ec2-163a42adc157">
+    <name>Фрахтовщик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фрахтовщик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ОрганизацииДиадок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d89f8459-bec5-45e5-b8f8-320188ff0e89">
+    <name>ФрахтовательПодразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фрахтователь подразделение</value>
+    </synonym>
+    <comment>Если требуется особая маршрутизация в Диадоке</comment>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ПодразделенияДиадок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ad25cc9c-b1ef-4e0e-a05a-4a67fdcb3a1c">
+    <name>ФрахтовщикПодразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фрахтовщик подразделение</value>
+    </synonym>
+    <comment>Если требуется особая маршрутизация в Диадоке</comment>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ПодразделенияДиадок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="217ee8da-d45a-43c8-ab91-7250125db739">
+    <name>МаршрутДатВрПодТС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата и время подачи ТС</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="687d2c7c-74e1-4ab5-99fb-4f08b4ec2dc7">
+    <name>МестоПодачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Место подачи</value>
+    </synonym>
+    <comment>Место подачи ТС</comment>
+    <type>
+      <types>CatalogRef.КонтурЛогистика_ПунктыМаршрута</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="530d3dc9-f1d2-401c-a1e9-25cbd47d12d5">
+    <name>Маршрут</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маршрут</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="05a04945-7ec5-4dc8-b2e7-de8519a8a87d">
+    <name>МаршрутМашиночитаемый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маршрут машиночитаемый</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="21f25d6d-b15b-411e-ac20-9f9fe9cd3297">
+    <name>СрокВыполненияПеревозки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок выполнения перевозки</value>
+    </synonym>
+    <comment>СвСрокВыпПрвз</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Сведения о сроках выполнения перевозки пользования транспортным средством фрахтователем, в целых часах</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="42b34312-1f7f-4e3b-98c4-827bb594a158">
+    <name>КомментарииВодителяПриПогрузке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарии водителя при погрузке</value>
+    </synonym>
+    <comment>для ЗН сейчас не используется из-за отсутствия логики ПЭП водителя в сервисе</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bd82919c-3703-4776-9b6a-5ab11d77136b">
+    <name>КомментарииВодителяПриВыгрузке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарии водителя при выгрузке</value>
+    </synonym>
+    <comment>для ЗН сейчас не используется из-за отсутствия логики ПЭП водителя в сервисе</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f762433d-2d83-4972-9a10-f53f373ae5e9">
+    <name>КоличествоПереадресовок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество переадресовок</value>
+    </synonym>
+    <comment>! ТОЛЬКО ДЛЯ СОВМЕСТИМОСТИ СПИСКА ЗАДАЧ! не использовать!</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9ea4b31c-70d4-463e-bb58-917e4aab62ef">
+    <name>КоличествоСменВодителей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество смен водителей</value>
+    </synonym>
+    <comment>! ТОЛЬКО ДЛЯ СОВМЕСТИМОСТИ СПИСКА ЗАДАЧ! не использовать!</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="365088e6-aae0-4c02-b6ad-55fa45fd6c50">
+    <name>КоличествоСменТС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество смен ТС</value>
+    </synonym>
+    <comment>! ТОЛЬКО ДЛЯ СОВМЕСТИМОСТИ СПИСКА ЗАДАЧ! не использовать!</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="222bb712-8a58-4c46-a08a-5d345d63c2a6">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fac49146-6635-4dca-bc51-22383c3e82cd">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6079262c-48ea-4778-a7a2-01e7eab2ecb9">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>

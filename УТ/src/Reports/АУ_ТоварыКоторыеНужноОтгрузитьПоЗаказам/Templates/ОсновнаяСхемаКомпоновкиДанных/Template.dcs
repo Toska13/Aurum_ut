@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Назначение</dataPath>
+			<field>Назначение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодСтроки</dataPath>
+			<field>КодСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Помещение</dataPath>
+			<field>Помещение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаЗакупки</dataPath>
+			<field>ЦенаЗакупки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена закупки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьОтгрузитьКоличество</dataPath>
+			<field>ОсталосьОтгрузитьКоличество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось отгрузить количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьОтгрузитьСумма</dataPath>
+			<field>ОсталосьОтгрузитьСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось отгрузить сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокНаСкладе</dataPath>
+			<field>ОстатокНаСкладе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток на складе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НужноДокупитьКоличество</dataPath>
+			<field>НужноДокупитьКоличество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно докупить количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НужноДокупитьСумма</dataPath>
+			<field>НужноДокупитьСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно докупить сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьОтгрузитьПоЗаказуСумма</dataPath>
+			<field>ОсталосьОтгрузитьПоЗаказуСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось отгрузить по заказу сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсталосьОтгрузитьПоЗаказуКоличество</dataPath>
+			<field>ОсталосьОтгрузитьПоЗаказуКоличество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось отгрузить по заказу количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтгруженоПоАктам</dataPath>
+			<field>ОтгруженоПоАктам</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгружено по актам</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьВозможнойРеализацииОстатковНаСкладе</dataPath>
+			<field>СтоимостьВозможнойРеализацииОстатковНаСкладе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость возможной реализации остатков на складе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Распоряжение</dataPath>
+			<field>Распоряжение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДвиженияРегистра</dataPath>
+			<field>ВидДвиженияРегистра</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВложенныйЗапрос.Номенклатура КАК Номенклатура,
+	ВложенныйЗапрос.Характеристика КАК Характеристика,
+	ВложенныйЗапрос.Серия КАК Серия,
+	МАКСИМУМ(ВЫБОР
+			КОГДА ПриобретениеТоваровУслугТовары.Ссылка ЕСТЬ NULL
+				ТОГДА ОприходованиеИзлишковТоваровТовары.Цена
+			ИНАЧЕ ПриобретениеТоваровУслугТовары.СуммаСНДС / ПриобретениеТоваровУслугТовары.КоличествоУпаковок
+		КОНЕЦ) КАК Цена,
+	ВЫБОР
+		КОГДА ПриобретениеТоваровУслугТовары.Ссылка ЕСТЬ NULL
+			ТОГДА ОприходованиеИзлишковТоваровТовары.Ссылка.Дата
+		ИНАЧЕ ПриобретениеТоваровУслугТовары.Ссылка.Дата
+	КОНЕЦ КАК Дата,
+	ВЫБОР
+		КОГДА ПриобретениеТоваровУслугТовары.Ссылка ЕСТЬ NULL
+			ТОГДА ОприходованиеИзлишковТоваровТовары.Ссылка.Валюта
+		ИНАЧЕ ПриобретениеТоваровУслугТовары.Ссылка.Валюта
+	КОНЕЦ КАК Валюта
+ПОМЕСТИТЬ ВТЦеныПредварительно
+ИЗ
+	(ВЫБРАТЬ
+		ПриобретениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+		ПриобретениеТоваровУслугТовары.Характеристика КАК Характеристика,
+		ПриобретениеТоваровУслугТовары.Серия КАК Серия,
+		МАКСИМУМ(ПриобретениеТоваровУслугТовары.Ссылка.Дата) КАК Дата
+	ИЗ
+		Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
+	ГДЕ
+		ПриобретениеТоваровУслугТовары.Ссылка.Проведен
+		И ПриобретениеТоваровУслугТовары.Ссылка.Дата &lt;= КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ)
+	
+	СГРУППИРОВАТЬ ПО
+		ПриобретениеТоваровУслугТовары.Номенклатура,
+		ПриобретениеТоваровУслугТовары.Серия,
+		ПриобретениеТоваровУслугТовары.Характеристика
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ОприходованиеИзлишковТоваровТовары.Номенклатура,
+		ОприходованиеИзлишковТоваровТовары.Характеристика,
+		ОприходованиеИзлишковТоваровТовары.Серия,
+		МАКСИМУМ(ОприходованиеИзлишковТоваровТовары.Ссылка.Дата)
+	ИЗ
+		Документ.ОприходованиеИзлишковТоваров.Товары КАК ОприходованиеИзлишковТоваровТовары
+	ГДЕ
+		ОприходованиеИзлишковТоваровТовары.Ссылка.Проведен
+		И ОприходованиеИзлишковТоваровТовары.Ссылка.Дата &lt;= КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ)
+	
+	СГРУППИРОВАТЬ ПО
+		ОприходованиеИзлишковТоваровТовары.Номенклатура,
+		ОприходованиеИзлишковТоваровТовары.Серия,
+		ОприходованиеИзлишковТоваровТовары.Характеристика) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
+		ПО ВложенныйЗапрос.Номенклатура = ПриобретениеТоваровУслугТовары.Номенклатура
+			И ВложенныйЗапрос.Характеристика = ПриобретениеТоваровУслугТовары.Характеристика
+			И ВложенныйЗапрос.Серия = ПриобретениеТоваровУслугТовары.Серия
+			И ВложенныйЗапрос.Дата = ПриобретениеТоваровУслугТовары.Ссылка.Дата
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ОприходованиеИзлишковТоваров.Товары КАК ОприходованиеИзлишковТоваровТовары
+		ПО ВложенныйЗапрос.Номенклатура = ОприходованиеИзлишковТоваровТовары.Номенклатура
+			И ВложенныйЗапрос.Характеристика = ОприходованиеИзлишковТоваровТовары.Характеристика
+			И ВложенныйЗапрос.Серия = ОприходованиеИзлишковТоваровТовары.Серия
+			И ВложенныйЗапрос.Дата = ОприходованиеИзлишковТоваровТовары.Ссылка.Дата
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Серия,
+	ВложенныйЗапрос.Характеристика,
+	ВЫБОР
+		КОГДА ПриобретениеТоваровУслугТовары.Ссылка ЕСТЬ NULL
+			ТОГДА ОприходованиеИзлишковТоваровТовары.Ссылка.Дата
+		ИНАЧЕ ПриобретениеТоваровУслугТовары.Ссылка.Дата
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ПриобретениеТоваровУслугТовары.Ссылка ЕСТЬ NULL
+			ТОГДА ОприходованиеИзлишковТоваровТовары.Ссылка.Валюта
+		ИНАЧЕ ПриобретениеТоваровУслугТовары.Ссылка.Валюта
+	КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВложенныйЗапрос.Номенклатура КАК Номенклатура,
+	ВложенныйЗапрос.Характеристика КАК Характеристика,
+	ВложенныйЗапрос.Серия КАК Серия,
+	ВложенныйЗапрос.Цена * КурсыВалют.Курс / КурсыВалют.Кратность КАК Цена
+ПОМЕСТИТЬ ВТЦены
+ИЗ
+	(ВЫБРАТЬ
+		ВТЦеныПредварительно.Номенклатура КАК Номенклатура,
+		ВТЦеныПредварительно.Характеристика КАК Характеристика,
+		ВТЦеныПредварительно.Серия КАК Серия,
+		ВТЦеныПредварительно.Цена КАК Цена,
+		ВТЦеныПредварительно.Дата КАК Дата,
+		ВТЦеныПредварительно.Валюта КАК Валюта,
+		МАКСИМУМ(КурсыВалют.Период) КАК Период
+	ИЗ
+		ВТЦеныПредварительно КАК ВТЦеныПредварительно
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалют
+			ПО ВТЦеныПредварительно.Дата &gt;= КурсыВалют.Период
+				И ВТЦеныПредварительно.Валюта = КурсыВалют.Валюта
+	
+	СГРУППИРОВАТЬ ПО
+		ВТЦеныПредварительно.Серия,
+		ВТЦеныПредварительно.Номенклатура,
+		ВТЦеныПредварительно.Дата,
+		ВТЦеныПредварительно.Валюта,
+		ВТЦеныПредварительно.Цена,
+		ВТЦеныПредварительно.Характеристика) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалют
+		ПО ВложенныйЗапрос.Валюта = КурсыВалют.Валюта
+			И ВложенныйЗапрос.Период = КурсыВалют.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПеремещениеТоваровТовары.Номенклатура КАК Номенклатура,
+	ПеремещениеТоваровТовары.Характеристика КАК Характеристика,
+	ПеремещениеТоваровТовары.Серия КАК Серия,
+	СУММА(ПеремещениеТоваровТовары.КоличествоУпаковок) КАК Количество,
+	ПеремещениеТоваровТовары.Ссылка.АУ_Заказ КАК ЗаказКлиента
+ПОМЕСТИТЬ ВТОтгруженоПоАктам
+ИЗ
+	Документ.ПеремещениеТоваров.Товары КАК ПеремещениеТоваровТовары
+ГДЕ
+	НЕ ПеремещениеТоваровТовары.Ссылка.АУ_Заказ = ЗНАЧЕНИЕ(Документ.ЗаказКлиента.ПустаяСсылка)
+	И ПеремещениеТоваровТовары.Ссылка.Проведен
+	И ПеремещениеТоваровТовары.Ссылка.Дата &lt;= &amp;ДатаОтчета
+
+СГРУППИРОВАТЬ ПО
+	ПеремещениеТоваровТовары.Ссылка.АУ_Заказ,
+	ПеремещениеТоваровТовары.Характеристика,
+	ПеремещениеТоваровТовары.Номенклатура,
+	ПеремещениеТоваровТовары.Серия
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказыКлиентовОстатки.Распоряжение КАК ЗаказКлиента,
+	ЗаказыКлиентовОстатки.Номенклатура КАК Номенклатура,
+	ЗаказыКлиентовОстатки.Характеристика КАК Характеристика,
+	СУММА(ЗаказыКлиентовОстатки.ЗаказаноОборот) КАК ЗаказаноОстаток,
+	СУММА(ЗаказыКлиентовОстатки.СуммаОборот) КАК СуммаОстаток,
+	ЗаказыКлиентовОстатки.Серия КАК Серия
+ПОМЕСТИТЬ ВТЗаказыОстаток
+ИЗ
+	РегистрНакопления.РаспоряженияНаОтгрузку.Обороты(, {(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ))}, , ) КАК ЗаказыКлиентовОстатки
+ГДЕ
+	ЗаказыКлиентовОстатки.Номенклатура.ВидНоменклатуры.ТипНоменклатуры = ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Товар)
+
+СГРУППИРОВАТЬ ПО
+	ЗаказыКлиентовОстатки.Номенклатура,
+	ЗаказыКлиентовОстатки.Распоряжение,
+	ЗаказыКлиентовОстатки.Характеристика,
+	ЗаказыКлиентовОстатки.Серия
+
+ИМЕЮЩИЕ
+	СУММА(ЗаказыКлиентовОстатки.ЗаказаноОборот) &gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТоварыНаСкладахОстатки.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладахОстатки.Характеристика КАК Характеристика,
+	СУММА(ТоварыНаСкладахОстатки.ВНаличииОстаток) КАК ВНаличииОстаток,
+	ТоварыНаСкладахОстатки.Серия КАК Серия
+ПОМЕСТИТЬ ВТОстаткиТоваров
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах.Остатки({(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ))}, ) КАК ТоварыНаСкладахОстатки
+
+СГРУППИРОВАТЬ ПО
+	ТоварыНаСкладахОстатки.Номенклатура,
+	ТоварыНаСкладахОстатки.Характеристика,
+	ТоварыНаСкладахОстатки.Серия
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОсталосьОтгрузитьБезЗаказа.Номенклатура КАК Номенклатура,
+	ОсталосьОтгрузитьБезЗаказа.Характеристика КАК Характеристика,
+	СУММА(ОсталосьОтгрузитьБезЗаказа.ЗаказаноОстаток) КАК ЗаказаноОстаток,
+	СУММА(ОсталосьОтгрузитьБезЗаказа.СуммаОстаток) КАК СуммаОстаток,
+	СУММА(ЕСТЬNULL(ВТОстаткиТоваров.ВНаличииОстаток, 0)) КАК ВНаличииОстаток,
+	ОсталосьОтгрузитьБезЗаказа.Серия КАК Серия
+ПОМЕСТИТЬ ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров
+ИЗ
+	(ВЫБРАТЬ
+		ВТЗаказыОстаток.Номенклатура КАК Номенклатура,
+		ВТЗаказыОстаток.Характеристика КАК Характеристика,
+		СУММА(ВТЗаказыОстаток.ЗаказаноОстаток) КАК ЗаказаноОстаток,
+		СУММА(ВТЗаказыОстаток.СуммаОстаток) КАК СуммаОстаток,
+		ВТЗаказыОстаток.Серия КАК Серия
+	ИЗ
+		ВТЗаказыОстаток КАК ВТЗаказыОстаток
+	
+	СГРУППИРОВАТЬ ПО
+		ВТЗаказыОстаток.Номенклатура,
+		ВТЗаказыОстаток.Характеристика,
+		ВТЗаказыОстаток.Серия) КАК ОсталосьОтгрузитьБезЗаказа
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТОстаткиТоваров КАК ВТОстаткиТоваров
+		ПО ОсталосьОтгрузитьБезЗаказа.Номенклатура = ВТОстаткиТоваров.Номенклатура
+			И ОсталосьОтгрузитьБезЗаказа.Характеристика = ВТОстаткиТоваров.Характеристика
+			И ОсталосьОтгрузитьБезЗаказа.Серия = ВТОстаткиТоваров.Серия
+
+СГРУППИРОВАТЬ ПО
+	ОсталосьОтгрузитьБезЗаказа.Характеристика,
+	ОсталосьОтгрузитьБезЗаказа.Номенклатура,
+	ОсталосьОтгрузитьБезЗаказа.Серия
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.Номенклатура.Артикул КАК Артикул,
+	ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.Номенклатура КАК Номенклатура,
+	ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0) &lt; 0
+			ТОГДА 0
+		ИНАЧЕ ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0)
+	КОНЕЦ КАК ОсталосьОтгрузитьКоличество,
+	ВЫБОР
+		КОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0) &lt; 0
+			ТОГДА 0
+		ИНАЧЕ (ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0)) * ВЫБОР
+				КОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток = 0
+					ТОГДА 0
+				ИНАЧЕ ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.СуммаОстаток / ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток
+			КОНЕЦ
+	КОНЕЦ КАК ОсталосьОтгрузитьСумма,
+	ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ВНаличииОстаток КАК ОстатокНаСкладе,
+	ВЫБОР
+		КОГДА ВТЗаказыОстаток.ЗаказаноОстаток &lt;&gt; 0
+			ТОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ВНаличииОстаток * ВТЗаказыОстаток.СуммаОстаток / ВТЗаказыОстаток.ЗаказаноОстаток
+		ИНАЧЕ 0
+	КОНЕЦ КАК СтоимостьВозможнойРеализацииОстатковНаСкладе,
+	ВТЦены.Цена КАК ЦенаЗакупки,
+	ВЫБОР
+		КОГДА ВЫБОР
+				КОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0) &lt; 0
+					ТОГДА 0
+				ИНАЧЕ ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0)
+			КОНЕЦ - ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ВНаличииОстаток &lt; 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0) &lt; 0
+					ТОГДА 0
+				ИНАЧЕ ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0)
+			КОНЕЦ - ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ВНаличииОстаток
+	КОНЕЦ КАК НужноДокупитьКоличество,
+	ВЫБОР
+		КОГДА ВЫБОР
+				КОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0) &lt; 0
+					ТОГДА 0
+				ИНАЧЕ ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0)
+			КОНЕЦ - ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ВНаличииОстаток &lt; 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0) &lt; 0
+					ТОГДА 0
+				ИНАЧЕ ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ЗаказаноОстаток - ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0)
+			КОНЕЦ - ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.ВНаличииОстаток
+	КОНЕЦ * ВТЦены.Цена КАК НужноДокупитьСумма,
+	ВТЗаказыОстаток.ЗаказКлиента КАК ЗаказКлиента,
+	ВТЗаказыОстаток.ЗаказаноОстаток КАК ОсталосьОтгрузитьПоЗаказуКоличество,
+	ВТЗаказыОстаток.СуммаОстаток КАК ОсталосьОтгрузитьПоЗаказуСумма,
+	ЕСТЬNULL(ВТОтгруженоПоАктам.Количество, 0) КАК ОтгруженоПоАктам
+ИЗ
+	ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров КАК ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТЦены КАК ВТЦены
+		ПО ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.Номенклатура = ВТЦены.Номенклатура
+			И ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.Характеристика = ВТЦены.Характеристика
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТЗаказыОстаток КАК ВТЗаказыОстаток
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТОтгруженоПоАктам КАК ВТОтгруженоПоАктам
+			ПО ВТЗаказыОстаток.ЗаказКлиента = ВТОтгруженоПоАктам.ЗаказКлиента
+				И ВТЗаказыОстаток.Номенклатура = ВТОтгруженоПоАктам.Номенклатура
+				И ВТЗаказыОстаток.Характеристика = ВТОтгруженоПоАктам.Характеристика
+				И ВТЗаказыОстаток.Серия = ВТОтгруженоПоАктам.Серия
+		ПО ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.Номенклатура = ВТЗаказыОстаток.Номенклатура
+			И ВТОсталосьОтгрузитьБезЗаказовСОстаткамиТоваров.Характеристика = ВТЗаказыОстаток.Характеристика</query>
+	</dataSet>
+	<totalField>
+		<dataPath>НужноДокупитьКоличество</dataPath>
+		<expression>Максимум(НужноДокупитьКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НужноДокупитьСумма</dataPath>
+		<expression>Максимум(НужноДокупитьСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОсталосьОтгрузитьКоличество</dataPath>
+		<expression>Максимум(ОсталосьОтгрузитьКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОсталосьОтгрузитьПоЗаказуКоличество</dataPath>
+		<expression>Сумма(ОсталосьОтгрузитьПоЗаказуКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОсталосьОтгрузитьПоЗаказуСумма</dataPath>
+		<expression>Сумма(ОсталосьОтгрузитьПоЗаказуСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОсталосьОтгрузитьСумма</dataPath>
+		<expression>Максимум(ОсталосьОтгрузитьСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОстатокНаСкладе</dataPath>
+		<expression>Сумма(ОстатокНаСкладе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаЗакупки</dataPath>
+		<expression>Максимум(ЦенаЗакупки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтгруженоПоАктам</dataPath>
+		<expression>Сумма(ОтгруженоПоАктам)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьВозможнойРеализацииОстатковНаСкладе</dataPath>
+		<expression>Сумма(СтоимостьВозможнойРеализацииОстатковНаСкладе)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>АУ_ТоварыКоторыеНужноОтгрузитьПоЗаказам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Товары которые нужно отгрузить по заказам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокНаСкладе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьВозможнойРеализацииОстатковНаСкладе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаЗакупки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НужноДокупитьКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НужноДокупитьСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьПоЗаказуКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьПоЗаказуСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтгруженоПоАктам</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+					<dcsset:userSettingID>27b357e0-6a63-44b6-8783-c8a87662f094</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>a99b69b4-e21c-4fea-9aac-99c17d26f4bd</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>НужноДокупитьСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОсталосьОтгрузитьПоЗаказуСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОсталосьОтгрузитьСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЦенаЗакупки</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары которые нужно отгрузить по заказам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Артикул</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ЗаказКлиента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>АУ_ТоварыПоЗаказам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Товары по заказам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокНаСкладе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьВозможнойРеализацииОстатковНаСкладе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаЗакупки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НужноДокупитьКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НужноДокупитьСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьПоЗаказуКоличество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсталосьОтгрузитьПоЗаказуСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтгруженоПоАктам</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>477108b0-63a5-469c-b6ee-51d58f543fb1</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЗаказКлиента</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Артикул</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

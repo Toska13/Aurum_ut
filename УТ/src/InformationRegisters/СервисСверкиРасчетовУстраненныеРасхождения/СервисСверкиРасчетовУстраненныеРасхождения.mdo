@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c11c0b68-190c-41a3-8b5a-04f261f66c7a">
+  <producedTypes>
+    <selectionType typeId="55af85f7-305c-46dc-9f7b-4b6730c38fa7" valueTypeId="5b54b8d1-4316-4676-9200-f736b56630bb"/>
+    <listType typeId="b925e74f-e827-4fe2-9198-9973096bc013" valueTypeId="828bb8a4-4230-4e34-8dc5-3b8d68c14770"/>
+    <managerType typeId="4ad6cb17-f4eb-4b58-8814-bdc3cd7f1745" valueTypeId="a664bceb-81f0-4961-8b5b-ada065037a2f"/>
+    <recordSetType typeId="994b82c3-06a9-45e7-9513-0e6e439d9f56" valueTypeId="89b4aea0-353a-43cf-959a-44e2582b8cbe"/>
+    <recordKeyType typeId="6a9496ef-f38c-47ce-bb1d-3909b1a4e8e9" valueTypeId="cffa6826-3823-432a-8533-6d090e3c9392"/>
+    <recordType typeId="89774fcb-9ad4-45db-b81a-d0ddb9655dc8" valueTypeId="3b587224-71e9-4abc-a443-51c9a987df80"/>
+    <recordManagerType typeId="c0511c4d-bda0-47a7-b805-96cacee82c40" valueTypeId="b7ab2644-433d-4a79-81e8-7b022712a2d0"/>
+  </producedTypes>
+  <name>СервисСверкиРасчетовУстраненныеРасхождения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервис сверки расчетов устраненные расхождения</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="38b0b25f-3426-4d8e-afcd-364f491674a8">
+    <name>СуммаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма документа</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ДенежнаяСуммаЛюбогоЗнака</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7a5f89db-8308-481d-bce9-ec47fc3c79a7">
+    <name>НДСДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДСДокумента</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ДенежнаяСуммаЛюбогоЗнака</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="2a6b485f-3014-4292-81ca-c01ebba52bae">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fd735a53-3c98-4c04-ab2a-acfa950232ff">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ОрганизацияКонтрагентEDI</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="77f849a2-2881-442f-97fe-bcd07bbded4a">
+    <name>ИдентификаторРасхождения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор расхождения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>38</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

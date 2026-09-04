@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b083ae7-2de2-4ccd-9ce7-f4e745135372">
+  <name>АУ_ПолучениеДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Получение данных (АУРУМ)</value>
+  </synonym>
+  <rootURL>data</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="de8ef46d-0d2c-40bd-b4fe-5498fc322301">
+    <name>ПолучениеОстатковНаСкладах</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получение остатков на складах</value>
+    </synonym>
+    <template>/GetStockGoods</template>
+    <methods uuid="a169e01c-dc21-41c4-aa6f-c429f459098a">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ПолучениеОстатковНаСкладахPOST</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

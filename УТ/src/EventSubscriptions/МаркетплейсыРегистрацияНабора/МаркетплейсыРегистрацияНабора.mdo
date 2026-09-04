@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a883f3ee-6a7d-4c63-a637-6033ed5b3bb0">
+  <name>МаркетплейсыРегистрацияНабора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Маркетплейсы регистрация набора</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ЦеныНоменклатуры</types>
+    <types>InformationRegisterRecordSet.ЦеныНоменклатуры25</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ИнтеграцияСМаркетплейсамиСИ.ПередЗаписьюРегистровМаркетплейсыСервисИнтеграцииПередЗаписью</handler>
+</mdclass:EventSubscription>

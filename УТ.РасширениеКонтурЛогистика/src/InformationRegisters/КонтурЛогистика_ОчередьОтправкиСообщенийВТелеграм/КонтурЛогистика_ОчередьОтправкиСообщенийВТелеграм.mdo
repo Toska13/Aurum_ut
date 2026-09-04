@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a1fead50-6e5b-4b7e-a1db-3b6a4bb80b79">
+  <producedTypes>
+    <selectionType typeId="96e32d9a-3835-4776-8fe1-ed49cff316a6" valueTypeId="d4cc6046-8537-4353-9a49-72dfa7d44d2f"/>
+    <listType typeId="94df7749-50d0-4110-8081-77be181c4e65" valueTypeId="fa852fe8-3ef3-4af7-b7e7-da683d18af68"/>
+    <managerType typeId="edec9256-2d46-4ad2-8b2e-49cf8357d579" valueTypeId="776dc7c0-21f2-45f9-931b-aceda19274f5"/>
+    <recordSetType typeId="e12e2e4d-0326-46df-b084-a6154de2fcc3" valueTypeId="a58c9ff6-6145-4b4e-ab14-dac1434a94a2"/>
+    <recordKeyType typeId="4d4f639b-7319-42ea-acd8-429f560ba774" valueTypeId="688c4577-15e4-4a59-b8c7-adaea56101b8"/>
+    <recordType typeId="128f7281-7231-43f3-9a27-3529d2f9897e" valueTypeId="4e2ef4a9-1ad5-48a9-a197-d473d95ee8f8"/>
+    <recordManagerType typeId="4b843871-bbba-494d-8637-b151a28ce260" valueTypeId="0be325b0-891b-4935-9aa3-d915eecdae00"/>
+  </producedTypes>
+  <name>КонтурЛогистика_ОчередьОтправкиСообщенийВТелеграм</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь отправки сообщений в Телеграм (Контур.Логистика)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КонтурЛогистика_ОчередьОтправкиСообщенийВТелеграм.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КонтурЛогистика_ОчередьОтправкиСообщенийВТелеграм.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>Очередь отправки сообщений в Телеграм</value>
+  </listPresentation>
+  <resources uuid="dce2e6e8-9a6e-4384-865d-551ba0bca7a3">
+    <name>ДанныеСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные сообщения</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0dd35f16-0570-4a67-bfd9-124e8e4d53cf">
+    <name>ТелефонНеЗарегестрирован</name>
+    <synonym>
+      <key>ru</key>
+      <value>Телефон не зарегистрирован</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="edf1f379-8e8f-447d-86fa-b085d36b390b">
+    <name>Телефон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Телефон</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="657d3491-ab7c-4cd5-962a-b09932a3eb79">
+    <name>ДатаАктуальности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата актуальности</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата с которой сообщение уже не отправляется, а удаляется. Если дата пустая, то сообщение не удалиться пока не отправится.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="c9611a5d-81b4-46f3-b67b-ada788e21dad">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="26243ad5-6b83-483d-afc5-1c8b46f3041a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

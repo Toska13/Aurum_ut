@@ -1,0 +1,2296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>Номенклатура</dcscor:choiceParameter>
+							<dcscor:value>Номенклатура</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СегментНоменклатуры</dataPath>
+			<field>СегментНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.СегментыНоменклатуры</v8:Type>
+			</valueType>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameters">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.СпособФормирования</dcscor:choiceParameter>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыФормированияСегментов.ПериодическиОбновлять</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыФормированияСегментов.ФормироватьВручную</dcscor:value>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Назначение</dataPath>
+			<field>Назначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоступилоВес</dataPath>
+			<field>ПоступилоВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступило всего, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоступилоОбъем</dataPath>
+			<field>ПоступилоОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступило всего, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаКонтроле</dataPath>
+			<field>НаКонтроле</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На контроле</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаКонтролеВес</dataPath>
+			<field>НаКонтролеВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На контроле, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаКонтролеОбъем</dataPath>
+			<field>НаКонтролеОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На контроле, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пройден</dataPath>
+			<field>Пройден</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пройден</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПройденВес</dataPath>
+			<field>ПройденВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пройден, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПройденОбъем</dataPath>
+			<field>ПройденОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пройден, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИзмененоКачество</dataPath>
+			<field>ИзменитьКачество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменено качество</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИзмененоКачествоВес</dataPath>
+			<field>ИзменитьКачествоВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменено качество, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИзмененоКачествоОбъем</dataPath>
+			<field>ИзменитьКачествоОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменено качество, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвращеноПоставщику</dataPath>
+			<field>ВернутьПоставщику</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возвращено поставщику</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвращеноПоставщикуВес</dataPath>
+			<field>ВернутьПоставщикуВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возвращено поставщику, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВозвращеноПоставщикуОбъем</dataPath>
+			<field>ВернутьПоставщикуОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возвращено поставщику, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОжидаетРешения</dataPath>
+			<field>ОжидаетРешения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидает решения</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОжидаетРешенияВес</dataPath>
+			<field>ОжидаетРешенияВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидает решения, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОжидаетРешенияОбъем</dataPath>
+			<field>ОжидаетРешенияОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидает решения, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поставщик</dataPath>
+			<field>Поставщик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Партнеры</v8:Type>
+			</valueType>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameters">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Поставщик</dcscor:choiceParameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Партнер</dcscor:choiceParameter>
+							<dcscor:value>Поставщик</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поступило</dataPath>
+			<field>Поступило</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступило всего</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоступления</dataPath>
+			<field>ДокументПоступления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ поступления</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтролируемаяПартия</dataPath>
+			<field>КонтролируемаяПартия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контролируемая партия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеПриходовать</dataPath>
+			<field>НеПриходовать</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списано</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеПриходоватьВес</dataPath>
+			<field>НеПриходоватьВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списано, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеПриходоватьОбъем</dataPath>
+			<field>НеПриходоватьОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списано, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Переместить</dataPath>
+			<field>Переместить</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПереместитьВес</dataPath>
+			<field>ПереместитьВес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещено, вес</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПереместитьОбъем</dataPath>
+			<field>ПереместитьОбъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещено, объем</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=15; ЧДЦ=3</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>// Для работы отчета в профиль МенеджерПоКачеству добавлена роль
+// ЧтениеИнформацииПоПартнерам
+
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Сегменты.Номенклатура КАК Номенклатура,
+	Сегменты.Характеристика КАК Характеристика,
+	ИСТИНА КАК ИспользуетсяОтборПоСегментуНоменклатуры
+ПОМЕСТИТЬ ОтборПоСегментуНоменклатуры
+ИЗ
+	РегистрСведений.НоменклатураСегмента КАК Сегменты
+{ГДЕ
+	Сегменты.Сегмент.* КАК СегментНоменклатуры,
+	Сегменты.Номенклатура.* КАК Номенклатура,
+	Сегменты.Характеристика.* КАК Характеристика}
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Характеристика,
+	ИспользуетсяОтборПоСегментуНоменклатуры
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Реестр.Ссылка КАК Ссылка,
+	Реестр.ДатаДокументаИБ КАК ДатаДокументаИБ
+ПОМЕСТИТЬ АктыСДвижениями
+ИЗ
+	РегистрСведений.РеестрДокументов КАК Реестр
+ГДЕ
+	Не Реестр.ДополнительнаяЗапись
+	И Реестр.Проведен
+	И Реестр.ТипСсылки = &amp;ИдентификаторМетаданныхАктКонтроляКачества
+	И Реестр.Статус &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыАктовКонтроляКачества.ВРаботе)
+{ГДЕ Реестр.ДатаДокументаИБ МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода}
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТоварыНаСкладахОбороты.Период КАК Период,
+	ТоварыНаСкладахОбороты.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладахОбороты.Характеристика КАК Характеристика,
+	ТоварыНаСкладахОбороты.Назначение КАК Назначение,
+	ТоварыНаСкладахОбороты.Серия КАК Серия,
+	ТоварыНаСкладахОбороты.КонтролируемаяПартия КАК КонтролируемаяПартия,
+	ТоварыНаСкладахОбороты.Регистратор КАК Регистратор,
+	ТоварыНаСкладахОбороты.ВНаличииОборот КАК ВНаличииОборот
+ПОМЕСТИТЬ ТоварыНаСкладахОбороты
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах.Обороты({&amp;НачалоПериода}, {&amp;КонецПериода}, Регистратор,
+		КонтролируемаяПартия &lt;&gt; ЗНАЧЕНИЕ(Справочник.КонтролируемыеПартии.ПустаяСсылка)
+		{(Номенклатура, Характеристика) В(
+				ВЫБРАТЬ
+					ТаблицаОтбора.Номенклатура КАК Номенклатура,
+					ТаблицаОтбора.Характеристика КАК Характеристика
+				ИЗ
+					ОтборПоСегментуНоменклатуры КАК ТаблицаОтбора
+				ГДЕ
+					ТаблицаОтбора.ИспользуетсяОтборПоСегментуНоменклатуры = &amp;ИспользуетсяОтборПоСегментуНоменклатуры)}
+		{Номенклатура.* КАК Номенклатура,
+			Характеристика.* КАК Характеристика,
+			Назначение.* КАК Назначение,
+			Серия.* КАК Серия,
+			КонтролируемаяПартия.* КАК КонтролируемаяПартия}) КАК ТоварыНаСкладахОбороты
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура, Характеристика, Назначение, Серия, КонтролируемаяПартия
+;
+/////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Таблица.Ссылка КАК Ссылка,
+	Таблица.Склад КАК Склад,
+	Таблица.Номенклатура КАК Номенклатура,
+	Таблица.Характеристика КАК Характеристика,
+	Таблица.Назначение КАК Назначение,
+	Таблица.Упаковка КАК Упаковка,
+	Таблица.Серия КАК Серия,
+	Таблица.Действие КАК Действие,
+	Таблица.Количество Количество
+ПОМЕСТИТЬ ДанныеДокументаТаблицаТовары
+ИЗ
+	АктыСДвижениями КАК АктыСДвижениями
+		
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.АктКонтроляКачестваТоваров.Товары КАК Таблица
+		ПО Таблица.Ссылка = АктыСДвижениями.Ссылка
+{ГДЕ
+	Таблица.Ссылка.КонтролируемаяПартия.Партнер.* КАК Поставщик,
+	Таблица.Ссылка.КонтролируемаяПартия.Договор.* КАК Договор,
+	Таблица.Ссылка.КонтролируемаяПартия.Партия КАК ДокументПоступления}
+{ГДЕ
+	(Таблица.Номенклатура, Таблица.Характеристика) В(
+		ВЫБРАТЬ
+			ТаблицаОтбора.Номенклатура КАК Номенклатура,
+			ТаблицаОтбора.Характеристика КАК Характеристика
+		ИЗ
+			ОтборПоСегментуНоменклатуры КАК ТаблицаОтбора
+		ГДЕ
+			ТаблицаОтбора.ИспользуетсяОтборПоСегментуНоменклатуры = &amp;ИспользуетсяОтборПоСегментуНоменклатуры)}
+{ГДЕ
+	Таблица.Номенклатура.* КАК Номенклатура,
+	Таблица.Характеристика.* КАК Характеристика,
+	Таблица.Назначение.* КАК Назначение,
+	Таблица.Серия.* КАК Серия,
+	Таблица.Ссылка.КонтролируемаяПартия.* КАК КонтролируемаяПартия}
+;
+
+/////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Товары.Ссылка КАК Ссылка,
+	Товары.Склад КАК Склад,
+	Товары.Номенклатура КАК Номенклатура,
+	Товары.Характеристика КАК Характеристика,
+	Товары.Назначение КАК Назначение,
+	Товары.Серия КАК Серия,
+	Товары.Действие КАК Действие,
+	Товары.Количество Количество
+ПОМЕСТИТЬ ДанныеДокументаТаблицаТоварыСвернутьТоварныеМеста
+ИЗ
+	ДанныеДокументаТаблицаТовары КАК Товары
+ГДЕ
+	ЕСТЬNULL(ВЫРАЗИТЬ(Товары.Упаковка КАК Справочник.УпаковкиЕдиницыИзмерения).ТипУпаковки,
+		НЕОПРЕДЕЛЕНО) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыУпаковокНоменклатуры.ТоварноеМесто)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Комплектующие.Ссылка КАК Ссылка,
+	Комплектующие.Склад КАК Склад,
+	Комплектующие.Номенклатура КАК Номенклатура,
+	Комплектующие.Характеристика КАК Характеристика,
+	Комплектующие.Назначение КАК Назначение,
+	Комплектующие.Серия КАК Серия,
+	Комплектующие.Действие КАК Действие,
+	МИНИМУМ(Комплектующие.Количество) КАК Количество
+ИЗ(
+	ВЫБРАТЬ
+		Товары.Ссылка КАК Ссылка,
+		Товары.Склад КАК Склад,
+		Товары.Номенклатура КАК Номенклатура,
+		Товары.Характеристика КАК Характеристика,
+		Товары.Назначение КАК Назначение,
+		Товары.Серия КАК Серия,
+		Товары.Действие КАК Действие,
+		СУММА(Товары.Количество) КАК Количество
+ИЗ
+	ДанныеДокументаТаблицаТовары КАК Товары
+ГДЕ
+	ВЫРАЗИТЬ(Товары.Упаковка КАК Справочник.УпаковкиЕдиницыИзмерения).ТипУпаковки
+		= ЗНАЧЕНИЕ(Перечисление.ТипыУпаковокНоменклатуры.ТоварноеМесто)
+	СГРУППИРОВАТЬ ПО
+		Товары.Ссылка,
+		Товары.Склад,
+		Товары.Номенклатура,
+		Товары.Характеристика,
+		Товары.Назначение,
+		Товары.Серия,
+		Товары.Действие) КАК Комплектующие
+	СГРУППИРОВАТЬ ПО
+		Комплектующие.Ссылка,
+		Комплектующие.Склад,
+		Комплектующие.Номенклатура,
+		Комплектующие.Характеристика,
+		Комплектующие.Назначение,
+		Комплектующие.Серия,
+		Комплектующие.Действие
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура
+;
+
+/////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Таблица.Период КАК Период,
+	Таблица.Номенклатура КАК Номенклатура,
+	Таблица.Характеристика КАК Характеристика,
+	Таблица.Назначение КАК Назначение,
+	Таблица.Серия КАК Серия,
+	Таблица.КонтролируемаяПартия КАК КонтролируемаяПартия,
+	Таблица.КонтролируемаяПартия.Партнер КАК Поставщик,
+	Таблица.КонтролируемаяПартия.Договор КАК Договор,
+	Таблица.КонтролируемаяПартия.Партия КАК ДокументПоступления,
+	Таблица.Регистратор КАК Регистратор,
+	Таблица.ВНаличииОборот * &amp;ТекстЕдиницыКоличества КАК Поступило,
+	Таблица.ВНаличииОборот * &amp;ТекстЗапросаВесНоменклатуры КАК ПоступилоВес,
+	Таблица.ВНаличииОборот * &amp;ТекстЗапросаОбъемНоменклатуры КАК ПоступилоОбъем,
+	Таблица.ВНаличииОборот * &amp;ТекстЕдиницыКоличества КАК НаКонтроле,
+	Таблица.ВНаличииОборот * &amp;ТекстЗапросаВесНоменклатуры КАК НаКонтролеВес,
+	Таблица.ВНаличииОборот * &amp;ТекстЗапросаОбъемНоменклатуры КАК НаКонтролеОбъем,
+	0 КАК Пройден,
+	0 КАК ПройденВес,
+	0 КАК ПройденОбъем,
+	0 КАК ИзменитьКачество,
+	0 КАК ИзменитьКачествоВес,
+	0 КАК ИзменитьКачествоОбъем,
+	0 КАК ВернутьПоставщику,
+	0 КАК ВернутьПоставщикуВес,
+	0 КАК ВернутьПоставщикуОбъем,
+	0 КАК НеПриходовать,
+	0 КАК НеПриходоватьВес,
+	0 КАК НеПриходоватьОбъем,
+	0 КАК Переместить,
+	0 КАК ПереместитьВес,
+	0 КАК ПереместитьОбъем,
+	0 КАК ОжидаетРешения,
+	0 КАК ОжидаетРешенияВес,
+	0 КАК ОжидаетРешенияОбъем
+{ВЫБРАТЬ
+	Номенклатура.* КАК Номенклатура,
+	Характеристика.* КАК Характеристика,
+	Назначение.* КАК Назначение,
+	Серия.* КАК Серия,
+	КонтролируемаяПартия.* КАК КонтролируемаяПартия,
+	Поставщик.* КАК Поставщик,
+	Договор.* КАК Договор,
+	ДокументПоступления КАК ДокументПоступления,
+	Регистратор КАК Регистратор,
+	Поступило КАК Поступило,
+	ПоступилоВес КАК ПоступилоВес,
+	ПоступилоОбъем КАК ПоступилоОбъем,
+	НаКонтроле КАК НаКонтроле,
+	НаКонтролеВес КАК НаКонтролеВес,
+	НаКонтролеОбъем КАК НаКонтролеОбъем,
+	Пройден КАК Пройден,
+	ПройденВес КАК ПройденВес,
+	ПройденОбъем КАК ПройденОбъем,
+	ИзменитьКачество КАК ИзменитьКачество,
+	ИзменитьКачествоВес КАК ИзменитьКачествоВес,
+	ИзменитьКачествоОбъем КАК ИзменитьКачествоОбъем,
+	ВернутьПоставщику КАК ВернутьПоставщику,
+	ВернутьПоставщикуВес КАК ВернутьПоставщикуВес,
+	ВернутьПоставщикуОбъем КАК ВернутьПоставщикуОбъем,
+	НеПриходовать КАК НеПриходовать,
+	НеПриходоватьВес КАК НеПриходоватьВес,
+	НеПриходоватьОбъем КАК НеПриходоватьОбъем,
+	Переместить КАК Переместить,
+	ПереместитьВес КАК ПереместитьВес,
+	ПереместитьОбъем КАК ПереместитьОбъем,
+	ОжидаетРешения КАК ОжидаетРешения,
+	ОжидаетРешенияВес КАК ОжидаетРешенияВес,
+	ОжидаетРешенияОбъем КАК ОжидаетРешенияОбъем}
+ИЗ
+	ТоварыНаСкладахОбороты КАК Таблица
+{ГДЕ
+	Таблица.КонтролируемаяПартия.Партнер.* КАК Поставщик,
+	Таблица.КонтролируемаяПартия.Договор.* КАК Договор,
+	Таблица.КонтролируемаяПартия.Партия КАК ДокументПоступления}
+ГДЕ
+	НЕ ТИПЗНАЧЕНИЯ(Таблица.Регистратор) В(
+		ТИП(Документ.АктКонтроляКачестваТоваров),
+		ТИП(Документ.ПорчаТоваров),
+		ТИП(Документ.СписаниеНедостачТоваров))
+	И НЕ ИСТИНА В(
+	ВЫБРАТЬ ПЕРВЫЕ 1
+		ИСТИНА ЭтоВозвратПоАктуКонтроляКачества
+	ИЗ
+		Документ.РасходныйОрдерНаТовары КАК Ордера
+	ГДЕ
+		Ордера.Ссылка = Таблица.Регистратор
+			И Ордера.СкладскаяОперация = ЗНАЧЕНИЕ(Перечисление.СкладскиеОперации.ОтгрузкаПоВозвратуПоставщику))
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Таблица.Ссылка.Дата КАК Период,
+	Таблица.Номенклатура КАК Номенклатура,
+	Таблица.Характеристика КАК Характеристика,
+	Таблица.Назначение КАК Назначение,
+	Таблица.Серия КАК Серия,
+	Таблица.Ссылка.КонтролируемаяПартия КАК КонтролируемаяПартия,
+	Таблица.Ссылка.КонтролируемаяПартия.Партнер КАК Поставщик,
+	Таблица.Ссылка.КонтролируемаяПартия.Договор КАК Договор,
+	Таблица.Ссылка.КонтролируемаяПартия.Партия КАК ДокументПоступления,
+	Таблица.Ссылка КАК Регистратор,
+	0 КАК Поступило,
+	0 КАК ПоступилоВес,
+	0 КАК ПоступилоОбъем,
+	- Таблица.Количество * &amp;ТекстЕдиницыКоличества КАК НаКонтроле,
+	- Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры КАК НаКонтролеВес,
+	- Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры КАК НаКонтролеОбъем,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.Разблокировать)
+			ТОГДА Таблица.Количество * &amp;ТекстЕдиницыКоличества
+		ИНАЧЕ 0
+	КОНЕЦ КАК Пройден,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.Разблокировать)
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПройденВес,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.Разблокировать)
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПройденОбъем,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ИзменитьКачество),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьПорчу))
+			ТОГДА Таблица.Количество * &amp;ТекстЕдиницыКоличества
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИзменитьКачество,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ИзменитьКачество),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьПорчу))
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИзменитьКачествоВес,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ИзменитьКачество),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьПорчу))
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИзменитьКачествоОбъем,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ВернутьПоставщику),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьВозврат))
+			ТОГДА Таблица.Количество * &amp;ТекстЕдиницыКоличества
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВернутьПоставщику,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ВернутьПоставщику),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьВозврат))
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВернутьПоставщикуВес,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ВернутьПоставщику),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьВозврат))
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВернутьПоставщикуОбъем,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.НеПриходовать),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьСписание))
+			ТОГДА Таблица.Количество * &amp;ТекстЕдиницыКоличества
+		ИНАЧЕ 0
+	КОНЕЦ КАК НеПриходовать,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.НеПриходовать),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьСписание))
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК НеПриходоватьВес,
+	ВЫБОР
+		КОГДА Таблица.Действие В(
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.НеПриходовать),
+			ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьСписание))
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК НеПриходоватьОбъем,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьПеремещение)
+			ТОГДА Таблица.Количество * &amp;ТекстЕдиницыКоличества
+		ИНАЧЕ 0
+	КОНЕЦ КАК Переместить,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьПеремещение)
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПереместитьВес,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ОформитьПеремещение)
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПереместитьОбъем,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ПустаяСсылка)
+			ТОГДА Таблица.Количество * &amp;ТекстЕдиницыКоличества
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОжидаетРешения,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ПустаяСсылка)
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОжидаетРешенияВес,
+	ВЫБОР
+		КОГДА Таблица.Действие = ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ПустаяСсылка)
+			ТОГДА Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОжидаетРешенияОбъем
+ИЗ
+	АктыСДвижениями КАК АктыСДвижениями
+		
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДанныеДокументаТаблицаТоварыСвернутьТоварныеМеста КАК Таблица
+		ПО Таблица.Ссылка = АктыСДвижениями.Ссылка
+		
+ОБЪЕДИНИТЬ ВСЕ
+
+// Действия вернуть, не приходовать или изменить качество приводят к расхождениям (недопоставке).
+// На неордерных складах недопоставка будет отражена путем уменьшения прихода товара на склад будет скорректирован актом о расхождениях, непосредственным уменьшением накладной, корректировкой приобретения, либо пересчетом на складе.
+// Необходимо увеличить приход на склад и на контроль.
+// На ордерном складе недопоставка отражается актом контроля качества.
+ВЫБРАТЬ
+	Таблица.Ссылка.Дата КАК Период,
+	Таблица.Номенклатура КАК Номенклатура,
+	Таблица.Характеристика КАК Характеристика,
+	Таблица.Назначение КАК Назначение,
+	Таблица.Серия КАК Серия,
+	Таблица.Ссылка.КонтролируемаяПартия КАК КонтролируемаяПартия,
+	Таблица.Ссылка.КонтролируемаяПартия.Партнер КАК Поставщик,
+	Таблица.Ссылка.КонтролируемаяПартия.Договор КАК Договор,
+	Таблица.Ссылка.КонтролируемаяПартия.Партия КАК ДокументПоступления,
+	Таблица.Ссылка КАК Регистратор,
+	- Таблица.Количество * &amp;ТекстЕдиницыКоличества КАК Поступило,
+	- Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры КАК ПоступилоВес,
+	- Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры КАК ПоступилоОбъем,
+	- Таблица.Количество * &amp;ТекстЕдиницыКоличества КАК НаКонтроле,
+	- Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры КАК НаКонтролеВес,
+	- Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры КАК НаКонтролеОбъем,
+	0 КАК Пройден,
+	0 КАК ПройденВес,
+	0 КАК ПройденОбъем,
+	0 КАК ИзменитьКачество,
+	0 КАК ИзменитьКачествоВес,
+	0 КАК ИзменитьКачествоОбъем,
+	0 КАК ВернутьПоставщику,
+	0 КАК ВернутьПоставщикуВес,
+	0 КАК ВернутьПоставщикуОбъем,
+	0 КАК НеПриходовать,
+	0 КАК НеПриходоватьВес,
+	0 КАК НеПриходоватьОбъем,
+	0 КАК Переместить,
+	0 КАК ПереместитьВес,
+	0 КАК ПереместитьОбъем,
+	0 КАК ОжидаетРешения,
+	0 КАК ОжидаетРешенияВес,
+	0 КАК ОжидаетРешенияОбъем
+ИЗ
+	АктыСДвижениями КАК АктыСДвижениями
+		
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДанныеДокументаТаблицаТоварыСвернутьТоварныеМеста КАК Таблица
+		ПО Таблица.Ссылка = АктыСДвижениями.Ссылка
+ГДЕ
+	Таблица.Действие В(
+		ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ВернутьПоставщику),
+		ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ИзменитьКачество),
+		ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.НеПриходовать))
+	И Таблица.Склад.ИспользоватьОрдернуюСхемуПриПоступлении
+	И Таблица.Склад.ДатаНачалаОрдернойСхемыПриПоступлении &lt;= Таблица.Ссылка.Дата
+	
+ОБЪЕДИНИТЬ ВСЕ
+	
+ВЫБРАТЬ
+	Таблица.Ссылка.Дата КАК Период,
+	Таблица.Номенклатура КАК Номенклатура,
+	Таблица.Характеристика КАК Характеристика,
+	Таблица.Назначение КАК Назначение,
+	Таблица.Серия КАК Серия,
+	Таблица.Ссылка.КонтролируемаяПартия КАК КонтролируемаяПартия,
+	Таблица.Ссылка.КонтролируемаяПартия.Партнер КАК Поставщик,
+	Таблица.Ссылка.КонтролируемаяПартия.Договор КАК Договор,
+	Таблица.Ссылка.КонтролируемаяПартия.Партия КАК ДокументПоступления,
+	Таблица.Ссылка КАК Регистратор,
+	Таблица.Количество * &amp;ТекстЕдиницыКоличества КАК Поступило,
+	Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры КАК ПоступилоВес,
+	Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры КАК ПоступилоОбъем,
+	Таблица.Количество * &amp;ТекстЕдиницыКоличества КАК НаКонтроле,
+	Таблица.Количество * &amp;ТекстЗапросаВесНоменклатуры КАК НаКонтролеВес,
+	Таблица.Количество * &amp;ТекстЗапросаОбъемНоменклатуры КАК НаКонтролеОбъем,
+	0 КАК Пройден,
+	0 КАК ПройденВес,
+	0 КАК ПройденОбъем,
+	0 КАК ИзменитьКачество,
+	0 КАК ИзменитьКачествоВес,
+	0 КАК ИзменитьКачествоОбъем,
+	0 КАК ВернутьПоставщику,
+	0 КАК ВернутьПоставщикуВес,
+	0 КАК ВернутьПоставщикуОбъем,
+	0 КАК НеПриходовать,
+	0 КАК НеПриходоватьВес,
+	0 КАК НеПриходоватьОбъем,
+	0 КАК Переместить,
+	0 КАК ПереместитьВес,
+	0 КАК ПереместитьОбъем,
+	0 КАК ОжидаетРешения,
+	0 КАК ОжидаетРешенияВес,
+	0 КАК ОжидаетРешенияОбъем
+ИЗ
+	АктыСДвижениями КАК АктыСДвижениями
+		
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДанныеДокументаТаблицаТоварыСвернутьТоварныеМеста КАК Таблица
+		ПО Таблица.Ссылка = АктыСДвижениями.Ссылка
+ГДЕ
+	Таблица.Действие В(
+		ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ВернутьПоставщику),
+		ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.ИзменитьКачество),
+		ЗНАЧЕНИЕ(Перечисление.ДействияПоТоварамВАктеКонтроляКачества.НеПриходовать))</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Номенклатура.ЕдиницаИзмерения</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;ЕдиницыКоличества = 0 ТОГДА
+		Номенклатура.ЕдиницаИзмерения
+	КОГДА &amp;ЕдиницыКоличества = 1 ТОГДА
+		Номенклатура.ЕдиницаДляОтчетов
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ед. изм.</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЕдиницаОтчета</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;ЕдиницыКоличества = 0 ТОГДА
+		Номенклатура.ЕдиницаИзмерения
+	КОГДА &amp;ЕдиницыКоличества = 1 ТОГДА
+		Номенклатура.ЕдиницаДляОтчетов
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Единица отчета</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<field>true</field>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+	</calculatedField>
+	<totalField>
+		<dataPath>Поступило</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(Поступило)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НаКонтроле</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(НаКонтроле)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Пройден</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(Пройден)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИзмененоКачество</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(ИзмененоКачество)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВозвращеноПоставщику</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(ВозвращеноПоставщику)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПоступилоВес</dataPath>
+		<expression>Сумма(ПоступилоВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НаКонтролеВес</dataPath>
+		<expression>Сумма(НаКонтролеВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПройденВес</dataPath>
+		<expression>Сумма(ПройденВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИзмененоКачествоВес</dataPath>
+		<expression>Сумма(ИзмененоКачествоВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВозвращеноПоставщикуВес</dataPath>
+		<expression>Сумма(ВозвращеноПоставщикуВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПоступилоОбъем</dataPath>
+		<expression>Сумма(ПоступилоОбъем)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НаКонтролеОбъем</dataPath>
+		<expression>Сумма(НаКонтролеОбъем)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПройденОбъем</dataPath>
+		<expression>Сумма(ПройденОбъем)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИзмененоКачествоОбъем</dataPath>
+		<expression>Сумма(ИзмененоКачествоОбъем)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВозвращеноПоставщикуОбъем</dataPath>
+		<expression>Сумма(ВозвращеноПоставщикуОбъем)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОжидаетРешения</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(ОжидаетРешения)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОжидаетРешенияВес</dataPath>
+		<expression>Сумма(ОжидаетРешенияВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОжидаетРешенияОбъем</dataPath>
+		<expression>Сумма(ОжидаетРешенияОбъем)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеПриходовать</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(НеПриходовать)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеПриходоватьВес</dataPath>
+		<expression>Сумма(НеПриходоватьВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеПриходоватьОбъем</dataPath>
+		<expression>Сумма(НеПриходоватьОбъем)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Переместить</dataPath>
+		<expression>ВЫБОР
+	КОГДА &amp;КоличественныеИтогиПоЕдИзм И Количество(Различные ЕдиницаОтчета) &gt; 1
+		ТОГДА 0
+	ИНАЧЕ Сумма(Переместить)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПереместитьВес</dataPath>
+		<expression>Сумма(ПереместитьВес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПереместитьОбъем</dataPath>
+		<expression>Сумма(ПереместитьОбъем)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Today</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КоличественныеИтогиПоЕдИзм</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количественные итоги</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:boolean">true</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С учетом единиц измерения</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:boolean">false</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без учета единиц измерения</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ТекстЕдиницыКоличества</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текст единицы количества</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекстЗапросаВесНоменклатуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текст запроса вес номенклатуры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоСегментуНоменклатуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по сегменту номенклатуры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТекстЗапросаОбъемНоменклатуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текст запроса объем номенклатуры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ЕдиницыКоличества</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество товаров</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>1</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">0</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В единицах хранения</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В единицах для отчетов</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<parameter>
+		<name>ИдентификаторМетаданныхАктКонтроляКачества</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Идентификатор метаданных акт контроля качества</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>ОбщегоНазначения.ИдентификаторОбъектаМетаданных("Документ.АктКонтроляКачестваТоваров")</expression>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>АнализПрохожденияКонтроляКачестваТоваров</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Анализ прохождения контроля качества товаров</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.Артикул</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Поступило</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПоступилоВес</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступило %12%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПоступилоОбъем</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступило %13%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаКонтроле</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>НаКонтролеВес</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На контроле %12%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>НаКонтролеОбъем</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На контроле %13%</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль завершен</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОжидаетРешения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ОжидаетРешенияВес</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ожидает решения %12%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ОжидаетРешенияОбъем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ожидает решения %13%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Пройден</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ПройденВес</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пройден %12%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ПройденОбъем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пройден %13%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИзмененоКачество</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ИзмененоКачествоВес</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменено качество %12%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ИзмененоКачествоОбъем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменено качество %13%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Переместить</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ПереместитьВес</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Перемещено %12%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ПереместитьОбъем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Перемещено %13%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВозвращеноПоставщику</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ВозвращеноПоставщикуВес</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Возвращено поставщику %12%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ВозвращеноПоставщикуОбъем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Возвращено поставщику %13%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НеПриходовать</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НеПриходоватьВес</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Списано %12%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НеПриходоватьОбъем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Списано %13%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>984c8826-53d2-4a7f-9863-68507bcdc7a3</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Поставщик</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>4eb63638-340a-4591-a7c0-f498b159af2e</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Артикул</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+					<dcsset:userSettingID>3b3014bf-5e19-43b4-ae0f-7993d6f9d371</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:userSettingID>bd4db467-bfe2-4b22-9c5a-97a5a4887471</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Серия</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>190f49d9-0aac-45c2-ab15-a35cbc477a90</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Назначение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>051091be-6324-4639-9241-5e2774ab6250</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КонтролируемаяПартия</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>d32a3435-41a0-4bc4-b1c5-c1aabcd0ce47</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СегментНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>845db55c-f125-412a-8956-2979e3e746a7</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДокументПоступления</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>07fac840-d6bc-4b39-bfe0-faa1c073f6b6</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Договор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>113dff38-ef7f-4e24-b312-4331aac59b12</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>d0ed0e62-66c7-4b65-9594-d093d6ae3f3d</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>eade7e96-2b33-4666-bbfe-e749cdc8f89b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КоличественныеИтогиПоЕдИзм</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ЕдиницыКоличества</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>115da9c0-fc84-4e71-86df-96397de239c5</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>f9da4fbf-838c-4e6d-b18b-4df7ae4ade8f</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Анализ прохождения контроля качества</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Поставщик</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Договор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Характеристика</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Серия</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Номенклатура.Артикул</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Артикул</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Номенклатура</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Характеристика</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Серия</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Together</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Номенклатура.ЕдиницаИзмерения</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ед. изм.</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Регистратор</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:userSettingID>0aa40f8c-f84d-471c-934d-a28047daeced</dcsset:userSettingID>
+						<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Детализация до регистратора</v8:content>
+							</v8:item>
+						</dcsset:userSettingPresentation>
+						<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+				</dcsset:item>
+				<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
